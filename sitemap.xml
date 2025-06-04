@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <url>
+    <loc>https://strandsnation.xyz/</loc>
+    <lastmod>2025-05-20</lastmod> <changefreq>monthly</changefreq> <priority>1.0</priority>
+    <xhtml:link
+               rel="alternate"
+               hreflang="en"
+               href="https://strandsnation.xyz/" />
+    <xhtml:link
+               rel="alternate"
+               hreflang="en-SG"
+               href="https://strandsnation.xyz/" />
+    <xhtml:link
+               rel="alternate"
+               hreflang="en-MY"
+               href="https://strandsnation.xyz/" />
+    <xhtml:link
+               rel="alternate"
+               hreflang="en-ID"
+               href="https://strandsnation.xyz/" />
+    <xhtml:link
+               rel="alternate"
+               hreflang="en-AU"
+               href="https://strandsnation.xyz/" />
+    <xhtml:link
+               rel="alternate"
+               hreflang="en-NZ"
+               href="https://strandsnation.xyz/" />
+    <xhtml:link
+               rel="alternate"
+               hreflang="en-HK"
+               href="https://strandsnation.xyz/" />
+    <xhtml:link
+               rel="alternate"
+               hreflang="x-default"
+               href="https://strandsnation.xyz/" />
+  </url>
+
+  </urlset>

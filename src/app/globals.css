@@ -1,26 +1,315 @@
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700;900&display=swap');
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ========================
+   CUSTOM FONT SETUP & CSS VARIABLES
+========================= */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  --font-exo2: 'Exo 2', sans-serif;
+  
+  /* Executive Electric Palette (Adapted for Dark Theme) */
+  --ee-anchor: #171923; /* Slightly desaturated dark blue/grey - Page BG */
+  --ee-action-taker: #00C2FF; /* Bright Blue/Cyan */
+  --ee-communicator: #2F2E91; 
+  --ee-text: #E2E8F0; /* Slightly off-white (Tailwind gray-200) */
+  --ee-text-secondary: #A0AEC0; /* Tailwind gray-500 */
+  --ee-accent1: #F9E100; /* Yellow */
+  --ee-accent2: #C9A33A; /* Dark Gold/Bronze */
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --ee-glow1: rgba(0, 194, 255, 0.07); /* Action Taker glow */
+  --ee-glow2: rgba(249, 225, 0, 0.05); /* Accent 1 glow */
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --ee-glass-bg-primary: rgba(0, 194, 255, 0.12); 
+  --ee-glass-border-primary: rgba(0, 194, 255, 0.25);
+  --ee-glass-bg-primary-hover: rgba(0, 194, 255, 0.22);
+  --ee-glass-border-primary-hover: rgba(0, 194, 255, 0.45);
+  --ee-glass-shadow-primary-hover: rgba(0, 194, 255, 0.25);
+
+  --ee-glass-bg-secondary: rgba(249, 225, 0, 0.12); 
+  --ee-glass-border-secondary: rgba(249, 225, 0, 0.25);
+  --ee-glass-bg-secondary-hover: rgba(249, 225, 0, 0.22);
+  --ee-glass-border-secondary-hover: rgba(249, 225, 0, 0.45);
+  --ee-glass-shadow-secondary-hover: rgba(249, 225, 0, 0.25);
+  
+  --ee-glass-bg-tertiary: rgba(200, 200, 220, 0.06); 
+  --ee-glass-border-tertiary: rgba(200, 200, 220, 0.15);
+  --ee-glass-bg-tertiary-hover: rgba(200, 200, 220, 0.12);
+  --ee-glass-border-tertiary-hover: rgba(200, 200, 220, 0.3);
+  --ee-glass-shadow-tertiary-hover: rgba(200, 200, 220, 0.1);
+
+  --card-frame-base-bg: rgba(30, 33, 48, 0.25); /* Darker base for cards to contrast page */
+  --card-frame-base-bg-hover: rgba(35, 38, 53, 0.35);
+  --card-frame-border: rgba(255, 255, 255, 0.07);
+  --card-frame-border-hover: rgba(255, 255, 255, 0.12);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-exo2);
+  background-color: var(--ee-anchor);
+  background-image: 
+    radial-gradient(circle at 15% 25%, var(--ee-glow1) 0%, transparent 40%),
+    radial-gradient(circle at 85% 75%, var(--ee-glow2) 0%, transparent 40%);
+  color: var(--ee-text);
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  position: relative; 
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
+
+/* Scanlines & VHS Glitch Overlay */
+body::before { /* VHS Glitch rolling bar */
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(transparent, rgba(0, 194, 255, 0.015), transparent); /* Very subtle EE Action Taker color */
+  animation: vhs-glitch-roll 3.5s infinite linear;
+  z-index: 0; /* Behind content, above body background fixed */
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+body::after { /* Scanlines */
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.08) 2px, 
+    rgba(0, 0, 0, 0.08) 3px 
+  );
+  pointer-events: none;
+  z-index: 10000; 
+  opacity: 0.3;
+  mix-blend-mode: multiply; 
+}
+
+@keyframes vhs-glitch-roll {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
+
+/* ========================
+   HERO TITLE & TEXT STYLES
+========================= */
+.strands-title {
+  font-weight: 900; 
+  color: var(--ee-text);
+  text-shadow: 
+    0 0 2px var(--ee-text),
+    0 0 5px var(--ee-text),
+    0 0 10px var(--ee-action-taker), 
+    0 0 15px var(--ee-action-taker),
+    0 0 20px var(--ee-accent1);
+  letter-spacing: 0.01em;
+  line-height: 1.1;
+}
+
+.pulsing-glow-text {
+  color: var(--ee-text);
+  animation: pulse-glow-animation-subtext 3s ease-in-out infinite;
+}
+.pulsing-glow-text.italic-subtitle {
+  color: var(--ee-action-taker); /* Making italic one brighter */
+  opacity: 0.85;
+}
+
+@keyframes pulse-glow-animation-subtext {
+  0%, 100% {
+    text-shadow: 0 0 1px var(--ee-text), 0 0 3px var(--ee-accent1);
+  }
+  50% {
+    text-shadow: 0 0 3px var(--ee-text), 0 0 6px var(--ee-accent1), 0 0 9px var(--ee-accent1);
+  }
+}
+
+/* ========================
+   GLASSMORPHIC BUTTON STYLES
+========================= */
+.btn-glass {
+  padding: 0.9rem 2.2rem; /* Slightly adjusted padding */
+  border-radius: 10px; 
+  font-weight: 700; 
+  font-size: 1.05rem; /* Adjusted for balance */
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.2s ease-out; /* Faster transition */
+  cursor: pointer;
+  z-index: 10; /* Above hero glow if needed */
+  color: var(--ee-text);
+  min-width: 180px; 
+  border: 1px solid; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0,0,0,0.05) inset; /* Softer shadow */
+  backdrop-filter: blur(5px); /* Slightly less blur for clarity */
+}
+.btn-glass .btn-text-content {
+  position: relative;
+  z-index: 2;
+}
+.btn-glass::after {
+  content: "";
+  position: absolute;
+  top: -50%; left: -50%; width: 200%; height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 60%);
+  transform: scale(0);
+  transition: transform 0.35s ease, opacity 0.35s ease;
+  opacity: 0;
+  z-index: 1;
+  border-radius: inherit;
+}
+.btn-glass:hover::after { transform: scale(1); opacity: 1; }
+.btn-glass:hover {
+  transform: translateY(-2px);
+  /* Shadow defined by specific type */
+}
+.btn-glass:active {
+  transform: translateY(0px) scale(0.98);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(0,0,0,0.05) inset;
+}
+
+.btn-glass.primary {
+  background-color: var(--ee-glass-bg-primary);
+  border-color: var(--ee-glass-border-primary);
+}
+.btn-glass.primary:hover {
+  background-color: var(--ee-glass-bg-primary-hover);
+  border-color: var(--ee-glass-border-primary-hover);
+  box-shadow: 0 6px 18px var(--ee-glass-shadow-primary-hover), 0 2px 3px rgba(0,0,0,0.1) inset;
+}
+.btn-glass.secondary {
+  background-color: var(--ee-glass-bg-secondary);
+  border-color: var(--ee-glass-border-secondary);
+}
+.btn-glass.secondary:hover {
+  background-color: var(--ee-glass-bg-secondary-hover);
+  border-color: var(--ee-glass-border-secondary-hover);
+  box-shadow: 0 6px 18px var(--ee-glass-shadow-secondary-hover), 0 2px 3px rgba(0,0,0,0.1) inset;
+}
+.btn-glass.tertiary {
+  background-color: var(--ee-glass-bg-tertiary);
+  border-color: var(--ee-glass-border-tertiary);
+  color: var(--ee-text-secondary); /* Slightly dimmer text for tertiary */
+}
+.btn-glass.tertiary:hover {
+  background-color: var(--ee-glass-bg-tertiary-hover);
+  border-color: var(--ee-glass-border-tertiary-hover);
+  box-shadow: 0 6px 18px var(--ee-glass-shadow-tertiary-hover), 0 2px 3px rgba(0,0,0,0.1) inset;
+  color: var(--ee-text);
+}
+
+/* ========================
+   CARD FRAME STYLES (with cardframe.png)
+========================= */
+.card-frame {
+  background-color: var(--card-frame-base-bg);
+  backdrop-filter: blur(5px);
+  border-radius: 12px; 
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.35), 0 1px 2px rgba(0,0,0,0.1) inset;
+  border: 1px solid var(--card-frame-border);
+  padding: 20px; /* Slightly reduced padding */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.25s ease-in-out;
+  z-index: 5; /* Above body pseudo elements */
+  width: 100%; 
+  min-height: 200px; 
+}
+.card-frame::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: url('/cards/cardframe.png');
+  background-size: 100% 100%; 
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.85; 
+  z-index: 0;   
+  border-radius: inherit;
+  pointer-events: none;
+}
+.card-frame > * {
+  position: relative;
+  z-index: 2; 
+}
+.card-frame:hover {
+  transform: translateY(-3px) scale(1.02); 
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.4), 0 2px 3px rgba(0,0,0,0.15) inset, 0 0 10px var(--ee-accent1); 
+  background-color: var(--card-frame-base-bg-hover);
+  border-color: var(--card-frame-border-hover);
+}
+.card-frame:hover::before { opacity: 1; }
+
+/* ========================
+   DONATION BUTTON
+========================= */
+/* Wrapper style is in page.js for fixed positioning */
+/* Img and Span styles are applied via Tailwind in page.js */
+
+/* ========================
+   ANIMATIONS
+========================= */
+/* Original pulse-signal for hero box glow */
+@keyframes pulse-signal { 
+  0%, 100% { box-shadow: 0 0 0px var(--ee-action-taker); } 
+  50% { box-shadow: 0 0 24px var(--ee-action-taker); }
+}
+
+/* ========================
+   YOUTUBE EMBED (No change)
+========================= */
+.aspect-video { position: relative; padding-bottom: 56.25%;}
+.aspect-video iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
+
+/* ========================
+   RESPONSIVE ADJUSTMENTS (General, specific in page.js)
+========================= */
+@media (max-width: 768px) {
+  .strands-title { font-size: 3rem; /* Further adjust if needed */ }
+  .pulsing-glow-text { font-size: 1rem; } /* Base for subs */
+  .pulsing-glow-text.italic-subtitle { font-size: 0.9rem; }
+  .btn-glass { padding: 0.8rem 1.5rem; font-size: 0.95rem; min-width: 150px; }
+  .card-frame { min-height: 180px; padding: 16px; }
+}
+@media (max-width: 480px) { /* Extra small screens */
+  .strands-title { font-size: 2rem; }
+  .pulsing-glow-text { font-size: 0.9rem; }
+  .pulsing-glow-text.italic-subtitle { font-size: 0.8rem; }
+  .btn-glass { font-size: 0.85rem; padding: 0.7rem 1.2rem; min-width: auto; }
+}
+
+/* ========================
+   MODAL 
+========================= */
+/* Modal styling in page.js is mostly Tailwind, but can add base here if needed */
+/* Example: ensure modal text color from EE palette */
+/* .modal-text-color { color: var(--ee-text); } */
+
+/* ========================
+   SOCIAL ICONS
+========================= */
+.social-icon { color: var(--ee-text-secondary); }
+.social-icon:hover {
+  color: var(--ee-action-taker); /* EE Blue on hover */
+  transform: scale(1.15);
+  filter: drop-shadow(0 0 5px var(--ee-action-taker));
+}
+

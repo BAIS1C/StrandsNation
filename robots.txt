@@ -1,0 +1,24 @@
+# robots.txt for StrandsNation (https://strandsnation.xyz)
+
+# Allow all user agents to crawl the site
+User-agent: *
+Allow: /
+
+# Disallow crawling of Next.js specific build/development folders
+Disallow: /_next/static/webpack/ # Next.js development hot-reload files
+Disallow: /_next/static/chunks/ # Potentially noisy, less critical for direct indexing
+Disallow: /api/ # Disallow API routes if you don't want them indexed (adjust if specific API routes SHOULD be public/indexed)
+
+# Allow important Next.js static assets for rendering
+Allow: /_next/static/css/
+Allow: /_next/static/media/ # Or specific image/font folders if structured differently
+Allow: /_next/static/image/
+
+# Allow public assets
+Allow: /cards/ # Where your Open Graph and other images are stored
+Allow: /AVAX-donate.png
+Allow: /favicon.ico # Or path to your favicon
+# Add other specific public files or directories you want ensured are crawlable
+
+# Sitemap location
+Sitemap: https://strandsnation.xyz/sitemap.xml
