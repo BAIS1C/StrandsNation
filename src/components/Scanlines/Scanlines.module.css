@@ -1,0 +1,38 @@
+.scanlines {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: var(--z-overlay);
+  mix-blend-mode: screen;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 194, 255, 0.02) 2px,
+    rgba(0, 194, 255, 0.02) 4px
+  );
+  animation: flicker 3s infinite;
+}
+
+@keyframes flicker {
+  0% { opacity: 1; }
+  4% { opacity: 0.35; }
+  5% { opacity: 1; }
+  14% { opacity: 0.7; }
+  15% { opacity: 1; }
+  15.5% { opacity: 0.25; }
+  16% { opacity: 1; }
+  35% { opacity: 0.85; }
+  36% { opacity: 1; }
+  48% { opacity: 0.45; }
+  49% { opacity: 0.9; }
+  50% { opacity: 1; }
+  68% { opacity: 1; }
+  69% { opacity: 0.3; }
+  70% { opacity: 0.8; }
+  70.5% { opacity: 1; }
+  85% { opacity: 0.55; }
+  86% { opacity: 1; }
+  95% { opacity: 0.7; }
+  96% { opacity: 1; }
+}

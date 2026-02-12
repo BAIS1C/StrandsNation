@@ -1,0 +1,79 @@
+/* ═══════════════════════════════════════════════════
+   DESIGN TOKENS — CSS Custom Properties
+   Single source of truth for the entire app.
+   Components use var(--token) exclusively.
+   ═══════════════════════════════════════════════════ */
+
+:root {
+  /* ─── PALETTE ─── */
+  --c-accent: #00C2FF;
+  --c-pink: #F000B8;
+  --c-yellow: #F9E100;
+  --c-purple: #8b5cf6;
+  --c-red: #FF4444;
+  --c-green: #22c55e;
+  --c-bg: #0A0B0D;
+  --c-surface: rgba(20, 21, 28, 0.85);
+  --c-surface-hover: rgba(0, 194, 255, 0.06);
+  --c-text: #E2E8F0;
+  --c-sub: #A0AEC0;
+  --c-dim: #6b7280;
+  --c-border: rgba(255, 255, 255, 0.06);
+  --c-glass: rgba(255, 255, 255, 0.08);
+
+  /* ─── ALPHA OVERLAYS ─── */
+  --a-accent-bg: rgba(0, 194, 255, 0.04);
+  --a-pink-bg: rgba(240, 0, 184, 0.04);
+  --a-yellow-bg: rgba(249, 225, 0, 0.04);
+  --a-purple-bg: rgba(139, 92, 246, 0.04);
+  --a-red-bg: rgba(255, 68, 68, 0.04);
+  --a-accent-hover: rgba(0, 194, 255, 0.06);
+  --a-pink-hover: rgba(240, 0, 184, 0.06);
+
+  /* ─── TYPOGRAPHY ─── */
+  --font-display: 'Orbitron', sans-serif;
+  --font-body: 'Rajdhani', 'Exo 2', sans-serif;
+
+  /* ─── SPACING ─── */
+  --space-section: 80px;
+  --space-card-pad: 28px;
+  --space-grid-gap: 16px;
+  --space-page-x: 32px;
+  --space-nav-h: 56px;
+  --max-content: 1100px;
+  --max-prose: 900px;
+
+  /* ─── CLIP PATHS ─── */
+  --clip-card: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 16px 100%, 0 calc(100% - 16px));
+  --clip-card-inner: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+  --clip-button: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+  --clip-button-sm: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+
+  /* ─── TRANSITIONS ─── */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --t-fast: 0.15s;
+  --t-med: 0.3s;
+
+  /* ─── Z-INDEX LAYERS ─── */
+  --z-bg: -1;
+  --z-content: 1;
+  --z-nav: 1001;
+  --z-overlay: 9999;
+}
+
+/* ─── RESPONSIVE OVERRIDES ─── */
+@media (max-width: 768px) {
+  :root {
+    --space-section: 48px;
+    --space-card-pad: 20px;
+    --space-page-x: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --space-section: 32px;
+    --space-card-pad: 16px;
+    --space-page-x: 16px;
+  }
+}

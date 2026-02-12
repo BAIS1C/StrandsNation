@@ -1,0 +1,129 @@
+.docLabel {
+  font: 700 10px var(--font-display);
+  letter-spacing: 3px;
+  display: block;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.docLabel[data-variant='cyan']   { color: var(--c-accent); }
+.docLabel[data-variant='purple'] { color: var(--c-purple); }
+.docLabel[data-variant='yellow'] { color: var(--c-yellow); }
+
+.cardTitle {
+  font: 800 22px var(--font-display);
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+}
+
+.cardTitle[data-variant='cyan']   { color: var(--c-accent); }
+.cardTitle[data-variant='purple'] { color: var(--c-purple); }
+.cardTitle[data-variant='yellow'] { color: var(--c-yellow); }
+.cardTitle[data-variant='red']    { color: var(--c-red); }
+
+.prose {
+  color: var(--c-sub);
+  font-size: 15px;
+  line-height: 1.9;
+  margin-bottom: 12px;
+}
+
+.prose:last-of-type {
+  margin-bottom: 16px;
+}
+
+/* ─── Doc link buttons ─── */
+.docLink {
+  display: inline-block;
+  padding: 10px 24px;
+  font: 700 12px var(--font-display);
+  letter-spacing: 2px;
+  text-decoration: none;
+  clip-path: var(--clip-button-sm);
+  transition: background 0.2s;
+  margin-top: 8px;
+}
+
+.docLink[data-variant='cyan'] {
+  border: 1px solid var(--c-accent);
+  color: var(--c-accent);
+}
+
+.docLink[data-variant='cyan']:hover {
+  background: rgba(0, 194, 255, 0.08);
+}
+
+.docLink[data-variant='purple'] {
+  border: 1px solid var(--c-purple);
+  color: var(--c-purple);
+}
+
+.docLink[data-variant='purple']:hover {
+  background: rgba(139, 92, 246, 0.08);
+}
+
+.docLink[data-variant='yellow'] {
+  border: 1px solid var(--c-yellow);
+  color: var(--c-yellow);
+}
+
+.docLink[data-variant='yellow']:hover {
+  background: rgba(249, 225, 0, 0.08);
+}
+
+/* ─── Book row with cover ─── */
+.bookRow {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+.bookContent {
+  flex: 1;
+}
+
+.bookCover {
+  flex-shrink: 0;
+  width: 200px;
+}
+
+.coverImg {
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid rgba(249, 225, 0, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+/* ─── Quote ─── */
+.bigQuote {
+  font: 900 20px var(--font-display);
+  letter-spacing: 2px;
+  line-height: 1.6;
+  color: var(--c-text);
+  margin-bottom: 20px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(249, 225, 0, 0.15);
+}
+
+.quoteYellow {
+  color: var(--c-yellow);
+}
+
+@media (max-width: 768px) {
+  .bookRow {
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+
+  .bookCover {
+    width: 160px;
+  }
+
+  .bigQuote {
+    font-size: 18px;
+  }
+
+  .cardTitle {
+    font-size: 18px;
+  }
+}

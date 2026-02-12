@@ -1,0 +1,40 @@
+.wrapper {
+  margin-bottom: 40px;
+}
+
+.num {
+  font: 400 11px var(--font-display);
+  color: var(--c-accent);
+  letter-spacing: 3px;
+  opacity: 0.5;
+  display: block;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.title {
+  font: 900 32px var(--font-display);
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+  background: linear-gradient(135deg, var(--c-text), var(--c-accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  font: 400 16px var(--font-body);
+  color: var(--c-sub);
+  max-width: 700px;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 24px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+}

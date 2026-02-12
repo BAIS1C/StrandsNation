@@ -1,0 +1,247 @@
+/* ═══════════════════════════════════════════════════
+   CODEX SHARED STYLES
+   Common patterns across all codex section components
+   ═══════════════════════════════════════════════════ */
+
+/* ─── Archive notice ─── */
+.archiveNotice {
+  padding: 12px 16px;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.02);
+  border-left: 2px solid var(--c-dim);
+  margin-bottom: 32px;
+}
+
+.archiveNotice p {
+  color: var(--c-dim);
+  font-size: 12px;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+/* ─── Card titles ─── */
+.cardTitle {
+  font: 800 20px var(--font-display);
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+}
+
+.cardTitleSm {
+  font: 800 14px var(--font-display);
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.cardTitleMd {
+  font: 800 18px var(--font-display);
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.cardTitle[data-variant='cyan'],
+.cardTitleSm[data-variant='cyan'],
+.cardTitleMd[data-variant='cyan']     { color: var(--c-accent); }
+
+.cardTitle[data-variant='pink'],
+.cardTitleSm[data-variant='pink'],
+.cardTitleMd[data-variant='pink']     { color: var(--c-pink); }
+
+.cardTitle[data-variant='yellow'],
+.cardTitleSm[data-variant='yellow'],
+.cardTitleMd[data-variant='yellow']   { color: var(--c-yellow); }
+
+.cardTitle[data-variant='purple'],
+.cardTitleSm[data-variant='purple'],
+.cardTitleMd[data-variant='purple']   { color: var(--c-purple); }
+
+.cardTitle[data-variant='red'],
+.cardTitleSm[data-variant='red'],
+.cardTitleMd[data-variant='red']      { color: var(--c-red); }
+
+.cardTitle[data-variant='green'],
+.cardTitleSm[data-variant='green'],
+.cardTitleMd[data-variant='green']    { color: var(--c-green); }
+
+/* ─── Prose ─── */
+.prose {
+  color: var(--c-sub);
+  font-size: 14px;
+  line-height: 1.9;
+  margin-bottom: 12px;
+}
+
+.prose:last-child {
+  margin-bottom: 0;
+}
+
+.proseStrong {
+  color: var(--c-text);
+  font-size: 15px;
+  line-height: 1.9;
+  font-weight: 600;
+}
+
+.proseAccent {
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 12px;
+}
+
+.proseAccent[data-variant='cyan']   { color: var(--c-accent); }
+.proseAccent[data-variant='pink']   { color: var(--c-pink); }
+.proseAccent[data-variant='yellow'] { color: var(--c-yellow); }
+.proseAccent[data-variant='purple'] { color: var(--c-purple); }
+
+/* ─── Creed blockquote ─── */
+.creed {
+  font: 700 14px var(--font-display);
+  letter-spacing: 2px;
+  color: var(--c-accent);
+  padding: 12px 16px;
+  border-left: 2px solid var(--c-accent);
+  background: var(--a-accent-bg);
+  margin-bottom: 16px;
+}
+
+/* ─── VS Grid (Propaganda vs Whispers) ─── */
+.vsGrid {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.vsDivider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding-top: 20px;
+}
+
+.vsLineTop {
+  width: 1px;
+  height: 60px;
+  background: linear-gradient(180deg, var(--c-accent), var(--c-pink));
+}
+
+.vsLineBottom {
+  width: 1px;
+  height: 60px;
+  background: linear-gradient(180deg, var(--c-pink), var(--c-accent));
+}
+
+.vsLabel {
+  font: 900 10px var(--font-display);
+  letter-spacing: 3px;
+  color: var(--c-dim);
+}
+
+/* ─── Mini spacer ─── */
+.miniSpacer {
+  margin-top: 8px;
+}
+
+/* ─── Label tag above card title ─── */
+.sectionTag {
+  font: 700 10px var(--font-display);
+  letter-spacing: 3px;
+  display: block;
+  text-transform: uppercase;
+}
+
+.sectionTag[data-variant='cyan']   { color: var(--c-accent); }
+.sectionTag[data-variant='pink']   { color: var(--c-pink); }
+.sectionTag[data-variant='yellow'] { color: var(--c-yellow); }
+.sectionTag[data-variant='purple'] { color: var(--c-purple); }
+
+/* ─── Grid layouts ─── */
+.gridTwo {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-grid-gap);
+}
+
+.gridThree {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-grid-gap);
+}
+
+.gridFour {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+/* ─── Body text sizes ─── */
+.body {
+  color: var(--c-sub);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.bodySm {
+  color: var(--c-sub);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* ─── Tags row ─── */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+/* ─── Description before content ─── */
+.sectionDesc {
+  color: var(--c-sub);
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 768px) {
+  .vsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .vsDivider {
+    flex-direction: row;
+    padding: 0;
+    justify-content: center;
+  }
+
+  .vsLineTop,
+  .vsLineBottom {
+    width: 60px;
+    height: 1px;
+  }
+
+  .vsLineTop {
+    background: linear-gradient(90deg, var(--c-accent), var(--c-pink));
+  }
+
+  .vsLineBottom {
+    background: linear-gradient(90deg, var(--c-pink), var(--c-accent));
+  }
+
+  .gridTwo,
+  .gridThree,
+  .gridFour {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .gridThree {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gridFour {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

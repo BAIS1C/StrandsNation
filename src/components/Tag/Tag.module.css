@@ -1,0 +1,21 @@
+.tag {
+  --tag-color: var(--c-accent);
+
+  display: inline-block;
+  padding: 3px 10px;
+  border: 1px solid color-mix(in srgb, var(--tag-color) 20%, transparent);
+  border-radius: 2px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--tag-color);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.tag[data-variant='cyan']   { --tag-color: var(--c-accent); }
+.tag[data-variant='pink']   { --tag-color: var(--c-pink); }
+.tag[data-variant='yellow'] { --tag-color: var(--c-yellow); }
+.tag[data-variant='purple'] { --tag-color: var(--c-purple); }
+.tag[data-variant='red']    { --tag-color: var(--c-red); }
+.tag[data-variant='green']  { --tag-color: var(--c-green); }

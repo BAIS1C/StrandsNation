@@ -1,0 +1,31 @@
+.callout {
+  --callout-color: var(--c-accent);
+  --callout-bg: var(--a-accent-bg);
+
+  padding: 16px 20px;
+  border-radius: 2px;
+  margin-top: 16px;
+  border-left: 3px solid var(--callout-color);
+  background: var(--callout-bg);
+}
+
+.label {
+  font: 700 11px var(--font-display);
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+  color: var(--callout-color);
+  text-transform: uppercase;
+}
+
+.text {
+  color: var(--c-sub);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* ─── Variants ─── */
+.callout[data-variant='cyan']   { --callout-color: var(--c-accent); --callout-bg: var(--a-accent-bg); }
+.callout[data-variant='pink']   { --callout-color: var(--c-pink);   --callout-bg: var(--a-pink-bg); }
+.callout[data-variant='yellow'] { --callout-color: var(--c-yellow); --callout-bg: var(--a-yellow-bg); }
+.callout[data-variant='purple'] { --callout-color: var(--c-purple); --callout-bg: var(--a-purple-bg); }
+.callout[data-variant='red']    { --callout-color: var(--c-red);    --callout-bg: var(--a-red-bg); }

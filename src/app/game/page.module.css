@@ -1,0 +1,28 @@
+.cardTitle {
+  font: 800 18px var(--font-display);
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.cardTitle[data-variant='cyan']   { color: var(--c-accent); }
+.cardTitle[data-variant='pink']   { color: var(--c-pink); }
+.cardTitle[data-variant='yellow'] { color: var(--c-yellow); }
+.cardTitle[data-variant='green']  { color: var(--c-green); }
+
+.body {
+  color: var(--c-sub);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+@media (max-width: 768px) {
+  .grid2 {
+    grid-template-columns: 1fr;
+  }
+}

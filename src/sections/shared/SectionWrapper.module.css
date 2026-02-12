@@ -1,0 +1,13 @@
+.section {
+  padding: var(--space-section) var(--space-page-x);
+  max-width: var(--max-content);
+  margin: 0 auto;
+}
+
+.bordered {
+  border-top: 1px solid rgba(0, 194, 255, 0.08);
+}
+
+.narrow {
+  max-width: var(--max-prose);
+}

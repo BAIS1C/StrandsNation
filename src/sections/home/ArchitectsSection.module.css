@@ -1,0 +1,43 @@
+.cardTitle {
+  font: 800 18px var(--font-display);
+  letter-spacing: 1px;
+  color: var(--c-yellow);
+  margin-bottom: 12px;
+}
+
+.body {
+  color: var(--c-sub);
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.quote {
+  font: 900 20px var(--font-display);
+  letter-spacing: 2px;
+  line-height: 1.6;
+  color: var(--c-text);
+  margin-bottom: 20px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(249, 225, 0, 0.15);
+}
+
+.quoteAccent {
+  color: var(--c-yellow);
+}
+
+.bookLink {
+  display: inline-block;
+  padding: 8px 20px;
+  font: 700 11px var(--font-display);
+  letter-spacing: 2px;
+  border: 1px solid var(--c-yellow);
+  color: var(--c-yellow);
+  text-decoration: none;
+  clip-path: var(--clip-button-sm);
+  transition: background 0.2s;
+}
+
+.bookLink:hover {
+  background: rgba(249, 225, 0, 0.08);
+}

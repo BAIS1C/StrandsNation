@@ -1,0 +1,29 @@
+.mini {
+  --mini-color: var(--c-accent);
+  padding: 14px 16px;
+  border-radius: 2px;
+  background: rgba(0, 0, 0, 0.3);
+  border-left: 2px solid var(--mini-color);
+}
+
+.title {
+  font: 700 12px var(--font-display);
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+  color: var(--mini-color);
+  text-transform: uppercase;
+}
+
+.body {
+  font-size: 12px;
+  color: var(--c-dim);
+  line-height: 1.5;
+}
+
+/* ─── Variant colors ─── */
+.mini[data-variant='cyan']   { --mini-color: var(--c-accent); }
+.mini[data-variant='pink']   { --mini-color: var(--c-pink); }
+.mini[data-variant='yellow'] { --mini-color: var(--c-yellow); }
+.mini[data-variant='purple'] { --mini-color: var(--c-purple); }
+.mini[data-variant='red']    { --mini-color: var(--c-red); }
+.mini[data-variant='green']  { --mini-color: var(--c-green); }

@@ -1,0 +1,12 @@
+.footer {
+  padding: 32px;
+  text-align: center;
+  border-top: 1px solid rgba(0, 194, 255, 0.06);
+}
+
+.text {
+  font: 400 10px var(--font-display);
+  letter-spacing: 3px;
+  color: var(--c-dim);
+  opacity: 0.5;
+}
