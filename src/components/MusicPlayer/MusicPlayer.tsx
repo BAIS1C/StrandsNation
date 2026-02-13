@@ -1,86 +1,56 @@
 'use client';
 
-import { useRef, useState, useEffect, useCallback } from 'react';
-import { soundtrack, type Track } from '@/data/soundtrack';
+import React from 'react';
 import styles from './MusicPlayer.module.css';
+import { useAudioPlayer } from '@/hooks/useAudioPlayer';
+
+// Optional, if you want the global mute icon to appear without touching layout,
+// render it from inside MusicPlayer. If your file path differs, adjust.
+// import GlobalMuteToggle from '@/components/GlobalMuteToggle';
+
+const fmt = (s: number) => {
+  const m = Math.floor(s / 60);
+  const sec = Math.floor(s % 60);
+  return `${m}:${sec.toString().padStart(2, '0')}`;
+};
 
 export default function MusicPlayer() {
-  const audioRef = useRef<HTMLAudioElement>(null);
-  const [playing, setPlaying] = useState(false);
-  const [trackIdx, setTrackIdx] = useState(0);
-  const [progress, setProgress] = useState(0);
-  const [duration, setDuration] = useState(0);
-  const [expanded, setExpanded] = useState(false);
+  const {
+    audioRef,
+    tracks,
+    trackIdx,
+    track,
 
-  const track: Track = soundtrack[trackIdx];
+    playing,
+    toggle,
 
-  const toggle = useCallback(() => {
-    const a = audioRef.current;
-    if (!a) return;
-    if (playing) {
-      a.pause();
-    } else {
-      a.play().catch(() => {});
-    }
-    setPlaying(!playing);
-  }, [playing]);
+    skip,
+    selectTrack,
 
-  const skip = useCallback((dir: 1 | -1) => {
-    setTrackIdx((prev) => {
-      const next = prev + dir;
-      if (next < 0) return soundtrack.length - 1;
-      if (next >= soundtrack.length) return 0;
-      return next;
-    });
-  }, []);
+    progress,
+    durationSec,
+    seekToPct,
 
-  const selectTrack = useCallback((idx: number) => {
-    setTrackIdx(idx);
-    setExpanded(false);
-  }, []);
+    expanded,
+    toggleExpanded,
+    closeExpanded,
 
-  // Auto-play on track change
-  useEffect(() => {
-    const a = audioRef.current;
-    if (!a) return;
-    a.load();
-    if (playing) {
-      a.play().catch(() => {});
-    }
-  }, [trackIdx]);
+    volume,
+    muted,
+    toggleMute,
+    setVolumePct,
+  } = useAudioPlayer();
 
-  // Progress updates
-  useEffect(() => {
-    const a = audioRef.current;
-    if (!a) return;
-    const onTime = () => setProgress(a.currentTime);
-    const onMeta = () => setDuration(a.duration);
-    const onEnd = () => skip(1);
-    a.addEventListener('timeupdate', onTime);
-    a.addEventListener('loadedmetadata', onMeta);
-    a.addEventListener('ended', onEnd);
-    return () => {
-      a.removeEventListener('timeupdate', onTime);
-      a.removeEventListener('loadedmetadata', onMeta);
-      a.removeEventListener('ended', onEnd);
-    };
-  }, [skip]);
+  if (!track || tracks.length === 0) return null;
+
+  const pct = durationSec ? (progress / durationSec) * 100 : 0;
 
   const seek = (e: React.MouseEvent<HTMLDivElement>) => {
-    const a = audioRef.current;
-    if (!a || !duration) return;
+    if (!durationSec) return;
     const rect = e.currentTarget.getBoundingClientRect();
     const pct = (e.clientX - rect.left) / rect.width;
-    a.currentTime = pct * duration;
+    seekToPct(pct);
   };
-
-  const fmt = (s: number) => {
-    const m = Math.floor(s / 60);
-    const sec = Math.floor(s % 60);
-    return `${m}:${sec.toString().padStart(2, '0')}`;
-  };
-
-  const pct = duration ? (progress / duration) * 100 : 0;
 
   return (
     <>
@@ -88,37 +58,40 @@ export default function MusicPlayer() {
         <source src={track.file} type="audio/mpeg" />
       </audio>
 
-      {/* Expanded track list */}
+      {/* If you want the global mute toggle visible without touching layout,
+          uncomment the import above and render it here */}
+      {/* <GlobalMuteToggle /> */}
+
       {expanded && (
         <div className={styles.trackList}>
           <div className={styles.trackListHeader}>
             <span className={styles.trackListTitle}>SOUNDTRACK</span>
-            <button className={styles.closeBtn} onClick={() => setExpanded(false)}>✕</button>
+            <button className={styles.closeBtn} onClick={closeExpanded}>✕</button>
           </div>
+
           <div className={styles.trackListScroll}>
-            {soundtrack.map((t, i) => (
+            {tracks.map((t, i) => (
               <button
-                key={i}
+                key={`${t.file}-${i}`}
                 className={`${styles.trackItem} ${i === trackIdx ? styles.trackItemActive : ''}`}
                 onClick={() => selectTrack(i)}
               >
                 <span className={styles.trackNum}>{String(i + 1).padStart(2, '0')}</span>
                 <span className={styles.trackName}>{t.title}</span>
-                <span className={styles.trackDur}>{t.duration}</span>
+                <span className={styles.trackDur}>{t.duration ?? '--:--'}</span>
               </button>
             ))}
           </div>
         </div>
       )}
 
-      {/* Mini player bar */}
       <div className={styles.player}>
         <div className={styles.progressBar} onClick={seek}>
           <div className={styles.progressFill} style={{ width: `${pct}%` }} />
         </div>
 
         <div className={styles.controls}>
-          <button className={styles.listBtn} onClick={() => setExpanded(!expanded)}>☰</button>
+          <button className={styles.listBtn} onClick={toggleExpanded}>☰</button>
           <button className={styles.skipBtn} onClick={() => skip(-1)}>⏮</button>
           <button className={styles.playBtn} onClick={toggle}>
             {playing ? '⏸' : '▶'}
@@ -130,8 +103,28 @@ export default function MusicPlayer() {
             <span className={styles.artist}>{track.artist}</span>
           </div>
 
+          {/* New, mute + volume, minimal impact on layout */}
+          <button
+            className={styles.skipBtn}
+            onClick={toggleMute}
+            aria-label={muted ? 'Unmute' : 'Mute'}
+            title={muted ? 'Unmute' : 'Mute'}
+          >
+            {muted ? '🔇' : '🔊'}
+          </button>
+
+          <input
+            type="range"
+            min={0}
+            max={100}
+            value={muted ? 0 : Math.round(volume * 100)}
+            onChange={(e) => setVolumePct(Number(e.target.value) / 100)}
+            aria-label="Volume"
+            className={styles.volumeSlider ?? ''}
+          />
+
           <span className={styles.time}>
-            {fmt(progress)} / {fmt(duration || 0)}
+            {fmt(progress)} / {fmt(durationSec || 0)}
           </span>
         </div>
       </div>
