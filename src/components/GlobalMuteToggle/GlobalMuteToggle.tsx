@@ -4,7 +4,7 @@ import { useAudioPlayer } from '@/hooks/useAudioPlayer';
 import { SpeakerWaveIcon, SpeakerXMarkIcon } from '@heroicons/react/24/solid';
 
 const GlobalMuteToggle = () => {
-  const { muted, toggleMute } = useAudioPlayer();
+  const { if muted, toggleMute } = useAudioPlayer();
 
   return (
     <button
