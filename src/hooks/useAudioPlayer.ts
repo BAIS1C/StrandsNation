@@ -140,7 +140,7 @@ export function useAudioPlayer() {
     closeExpanded,
 
     volume,
-    ismuted: muted,
+    muted: muted,
     toggleMute,
     setVolumePct,
   };
