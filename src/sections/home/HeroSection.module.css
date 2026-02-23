@@ -35,8 +35,6 @@
 }
 
 .content {
-  max-width: var(--max-content);
-  width: 100%;
   position: relative;
   z-index: var(--z-content);
 }
@@ -156,6 +154,34 @@
   .orbPink {
     width: 250px;
     height: 250px;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  max-width: var(--max-content);
+  width: 100%;
+  position: relative;
+  z-index: var(--z-content);
+}
+
+.particlePane {
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .particlePane {
+    order: -1;
+    max-height: 350px;
   }
 }
 

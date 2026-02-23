@@ -34,6 +34,11 @@ export const playlist = [
     "artist": "SpacemanTheDJ"
   },
   {
+    "src": "/audio/soundtrack/Nya Nya Strands Bed Remix.mp3",
+    "title": "Nya Nya Strands Bed Remix",
+    "artist": "spacemanthedj"
+  },
+  {
     "src": "/audio/soundtrack/Strands Bed long form Ultimate prog (Remix).mp3",
     "title": "Strands Bed (Epsilon Version)",
     "artist": "SpacemanTheDJ"
@@ -57,6 +62,16 @@ export const playlist = [
     "src": "/audio/soundtrack/Strands The Game (Scatty mcMuffin Mix) - Spaceman The DJ.mp3",
     "title": "XYZ (Scatty XYZ miix)",
     "artist": "SpacemanTheDJ"
+  },
+  {
+    "src": "/audio/soundtrack/Strands Theme (Gala Wuxia Mix).mp3",
+    "title": "Strands the Soundtrack2025-09-16_19h12m11 (Extend)",
+    "artist": "spacemanthedj"
+  },
+  {
+    "src": "/audio/soundtrack/Strands Theme (XG Tweak Something Aint Wuxia Mix).mp3",
+    "title": "XG Tweak Something Aint Wuxia",
+    "artist": "spacemanthedj"
   },
   {
     "src": "/audio/soundtrack/Strands Theme 90 s Breakbeat Trance Hooj Choons MIx (99 mix).mp3",
