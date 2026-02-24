@@ -39,16 +39,6 @@ export const playlist = [
     "artist": "spacemanthedj"
   },
   {
-    "src": "/audio/soundtrack/Strands Bed long form Ultimate prog (Remix).mp3",
-    "title": "Strands Bed (Epsilon Version)",
-    "artist": "SpacemanTheDJ"
-  },
-  {
-    "src": "/audio/soundtrack/Strands Bed Orbit foreshadowing (Remix).mp3",
-    "title": "Strands Bed (Orbital Tension)",
-    "artist": "SpacemanTheDJ"
-  },
-  {
     "src": "/audio/soundtrack/Strands Bed Triumph Mix.mp3",
     "title": "Winning (Triumph Mix)",
     "artist": "SpacemanTheDJ"
@@ -64,24 +54,9 @@ export const playlist = [
     "artist": "SpacemanTheDJ"
   },
   {
-    "src": "/audio/soundtrack/Strands Theme (Gala Wuxia Mix).mp3",
-    "title": "Strands the Soundtrack2025-09-16_19h12m11 (Extend)",
-    "artist": "spacemanthedj"
-  },
-  {
     "src": "/audio/soundtrack/Strands Theme (XG Tweak Something Aint Wuxia Mix).mp3",
     "title": "XG Tweak Something Aint Wuxia",
     "artist": "spacemanthedj"
-  },
-  {
-    "src": "/audio/soundtrack/Strands Theme 90 s Breakbeat Trance Hooj Choons MIx (99 mix).mp3",
-    "title": "Strands Theme (90 s B Hooj Choons Mix)",
-    "artist": "SpacemanTheDJ"
-  },
-  {
-    "src": "/audio/soundtrack/StrandsnationXYZ (Down on It Mux).mp3",
-    "title": "Elder Icon (Down on It Mux)",
-    "artist": "SpacemanTheDJ"
   },
   {
     "src": "/audio/soundtrack/StrandsnationXYZ (Spelling Bee Mix).mp3",
@@ -91,11 +66,6 @@ export const playlist = [
   {
     "src": "/audio/soundtrack/StrandsnationXYZ (Synthwave Morse Mix).mp3",
     "title": "Yeah! (Ron Hubbard was a Badass Mix)",
-    "artist": "SpacemanTheDJ"
-  },
-  {
-    "src": "/audio/soundtrack/StrandsnationXYZ Sawtoothy Morse mix.mp3",
-    "title": "Wavy (Sawtoothy Morse Mix)",
     "artist": "SpacemanTheDJ"
   },
   {

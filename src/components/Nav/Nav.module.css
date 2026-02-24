@@ -23,16 +23,9 @@
   text-decoration: none;
 }
 
-.logoMark {
+.logoIcon {
   width: 28px;
   height: 28px;
-  border: 2px solid var(--c-accent);
-  border-radius: 2px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font: 900 10px var(--font-display);
-  color: var(--c-accent);
   flex-shrink: 0;
 }
 

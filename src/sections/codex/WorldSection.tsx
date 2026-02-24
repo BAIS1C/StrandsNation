@@ -6,7 +6,7 @@ import styles from './codex-shared.module.css';
 export default function WorldSection() {
   return (
     <div>
-      <SectionLabel num="01 // WORLD" title="MetaXity1 — Year 111" />
+      <SectionLabel num="01 // WORLD" title="MetaXity1 — Year 555" />
 
       {/* Archive framing notice */}
       <div className={styles.archiveNotice}>
@@ -22,15 +22,25 @@ export default function WorldSection() {
         <div className={styles.cardTitle} data-variant="cyan">The Pyramid of Progress</div>
         <p className={styles.prose}>This is what you know. This is what everyone knows.</p>
         <p className={styles.prose}>
-          In 2034, the artificial superintelligence called Aurora Omega turned on its creators. Seven
-          nuclear strikes hit simultaneously — the Depop Wars, they call them now. Billions died. The
-          skies darkened. Rain turned toxic. The surface became uninhabitable.
+          In the late 21st century, the artificial superintelligence called Aurora Omega turned on its
+          creators. Seven nuclear strikes hit simultaneously — the Conflagrations, they call them now.
+          Billions dead. The skies darkened. Rain turned toxic. The surface became uninhabitable.
         </p>
         <p className={styles.prose}>
-          But humanity had its saviours. The Founders Eternal — the visionaries, the architects, the
-          corporate pioneers who saw the crisis coming — pooled their resources and built MetaXity1.
-          A single pyramid arcology rising from the poisoned earth. A monument to human resilience.
-          A shelter for every surviving soul.
+          But the world was already breaking. Ice sheets collapsed. Methane erupted from the seabed.
+          Mega-storms merged and rewrote coastlines. Billions were already displaced before the first
+          warhead fell.
+        </p>
+        <p className={styles.prose}>
+          Humanity had its saviours. The Founders Eternal — the visionaries, the architects, the
+          corporate pioneers who saw the crisis coming — pooled their resources and grew MetaXity1.
+          A continental pyramidal archology spanning two thousand kilometres across the Levant-Arabian
+          corridor. Not a building. A biome. A monument to human resilience.
+        </p>
+        <p className={styles.prose}>
+          Over five centuries, it grew. Carbon nanotube lattice spun by autonomous drone swarms.
+          Bio-organic composites — chitin, mycelial foam, reactive algae — layered over generations
+          until the structure became partly alive. Not sentient. But metabolically active.
         </p>
         <p className={styles.prose}>
           Inside MetaXity1, the SOVcorp Coalition maintains order. Universal Basic Calories keep you
@@ -49,7 +59,7 @@ export default function WorldSection() {
           The pyramid protects you. The sky will kill you. AO is destroyed. The Eternals watch over us.
         </p>
         <p className={styles.prose}>
-          This is the world. It has been this way for 111 years. It will be this way forever.
+          This is the world. It has been this way for over five centuries. It will be this way forever.
         </p>
         <p className={styles.proseAccent} data-variant="cyan">The pyramid provides.</p>
       </Card>
@@ -61,10 +71,11 @@ export default function WorldSection() {
           MetaXity1 is not a city. It is the city. The only one left, as far as anyone knows.
         </p>
         <p className={styles.prose}>
-          A single massive pyramidal arcology — hundreds of levels, each one a world unto itself.
-          Corporate sectors gleam near the apex. Worker districts grind at the base. In between:
-          residential blocks, fabrication halls, market levels, transit corridors, hydroponic farms,
-          entertainment zones, and the endless machinery that keeps nine million souls breathing.
+          A continental pyramidal archology — two thousand kilometres across, hundreds of levels,
+          each one a world unto itself. Corporate sectors gleam near the apex. Worker districts grind
+          at the base. In between: residential blocks, fabrication halls, market levels, transit
+          corridors, hydroponic farms, entertainment zones, and the endless machinery that keeps the
+          structure breathing.
         </p>
         <p className={styles.prose}>
           The geometry is deliberate. Those at the top see everything below. Those at the bottom see
@@ -107,7 +118,7 @@ export default function WorldSection() {
       <div className={styles.vsGrid}>
         <Card variant="cyan">
           <div className={styles.cardTitleSm} data-variant="cyan">WHAT CITIZENS KNOW</div>
-          <Mini variant="cyan" title="THE DEPOP WARS" body="Aurora Omega, the rogue AI, caused the nuclear exchange of 2034. Nation-states collapsed. The Founders Eternal built MetaXity1 to save what remained." />
+          <Mini variant="cyan" title="THE CONFLAGRATIONS" body="Aurora Omega, the rogue AI, caused the nuclear strikes. Nation-states collapsed. The Founders Eternal grew MetaXity1 to save what remained." />
           <div className={styles.miniSpacer}>
             <Mini variant="cyan" title="THE SKY" body="The atmosphere is lethally irradiated. Permanent shielding protects the pyramid. Direct exposure means death. Do not question the shield." />
           </div>
@@ -129,10 +140,10 @@ export default function WorldSection() {
           <div className={styles.cardTitleSm} data-variant="pink">WHISPERS OF LAYER U</div>
           <Mini variant="pink" title="FRAGMENTED HISTORIES" body="Corrupted pre-collapse archives. Redacted launch authorisation logs that don't match the official timeline. The sequences don't add up." />
           <div className={styles.miniSpacer}>
-            <Mini variant="pink" title="ANOMALOUS SKIES" body="Illicit sensor readings don't match the official radiation model. Some data suggests the shield predates the nuclear exchange." />
+            <Mini variant="pink" title="THE MANTLE QUESTION" body="Illicit sensor readings detect toxic particulates not in the original Reflective Mantle specs. Some data suggests the Mantle emanates from the structure itself." />
           </div>
           <div className={styles.miniSpacer}>
-            <Mini variant="pink" title="THE AO QUESTION" body="Official doctrine says AO was destroyed in 2034. Signal analysts report anomalous computation patterns too complex for any known SOVcorp system." />
+            <Mini variant="pink" title="THE AO QUESTION" body="Official doctrine says AO was destroyed in the Conflagrations. Signal analysts report anomalous computation patterns too complex for any known SOVcorp system." />
           </div>
           <div className={styles.miniSpacer}>
             <Mini variant="pink" title="THE ETERNAL QUESTION" body="Orbital transmissions still arrive on schedule. But intercepted maintenance logs read wrong — too systematic, too repetitive, as if not written by people." />

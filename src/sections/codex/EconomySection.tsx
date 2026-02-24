@@ -9,7 +9,7 @@ export default function EconomySection() {
       <SectionLabel
         num="05 // ECONOMY"
         title="The Three Primitives"
-        subtitle="In 2145, compute isn't just power — it's control. The economy runs on three primitives, priced by two competing systems."
+        subtitle="In Year 555, compute isn't just power — it's control. The economy runs on three primitives, priced by two competing systems."
       />
       <Card variant="cyan">
         <div className={styles.cardTitleMd} data-variant="cyan">Energy / Process Power / Storage</div>

@@ -11,6 +11,13 @@ import '@/styles/global.css';
 export const metadata: Metadata = {
   title: 'StrandsNation — Ready Player You',
   description: 'A post-capitalist MMORPG where the world remembers your choices, NPCs adapt to how you think, and the community builds the civilisation they play in.',
+  icons: {
+    icon: [
+      { url: '/icon-32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/icon-192.png', sizes: '192x192', type: 'image/png' },
+    ],
+    apple: '/apple-touch-icon.png',
+  },
   openGraph: {
     title: 'StrandsNation — Ready Player You',
     description: 'A post-capitalist MMORPG. Your world. Your rules. Your playstyle.',

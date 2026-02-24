@@ -22,7 +22,13 @@ export default function Nav() {
   return (
     <nav className={styles.nav}>
       <Link href="/" className={styles.logo}>
-        <div className={styles.logoMark}>SN</div>
+        <img
+          src="/strands-logo-color.svg"
+          alt="Strands Nation"
+          className={styles.logoIcon}
+          width={28}
+          height={28}
+        />
         <span className={styles.logoText}>
           STRANDS<span className={styles.logoAccent}>NATION</span>
         </span>
