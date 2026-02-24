@@ -9,11 +9,6 @@ export const playlist = [
     "artist": "SpacemanTheDJ"
   },
   {
-    "src": "/audio/soundtrack/B-Hole.mp3",
-    "title": "B-Hole",
-    "artist": "SpacemanTheDJ"
-  },
-  {
     "src": "/audio/soundtrack/Dash Dot.mp3",
     "title": "Dot dot dot! (National Lumpinis Squeak Mix)",
     "artist": "SpacemanTheDJ"
@@ -37,11 +32,6 @@ export const playlist = [
     "src": "/audio/soundtrack/Nya Nya Strands Bed Remix.mp3",
     "title": "Nya Nya Strands Bed Remix",
     "artist": "spacemanthedj"
-  },
-  {
-    "src": "/audio/soundtrack/Strands Bed Triumph Mix.mp3",
-    "title": "Winning (Triumph Mix)",
-    "artist": "SpacemanTheDJ"
   },
   {
     "src": "/audio/soundtrack/Strands Drift Away.mp3",
@@ -71,11 +61,6 @@ export const playlist = [
   {
     "src": "/audio/soundtrack/Together (Remix).mp3",
     "title": "Together (Prog Remix)",
-    "artist": "SpacemanTheDJ"
-  },
-  {
-    "src": "/audio/soundtrack/Under the Strands.mp3",
-    "title": "Under the Strands",
     "artist": "SpacemanTheDJ"
   },
   {
