@@ -19,10 +19,10 @@ const GAME_TRACKS = [
 ];
 
 interface GameDesktopProps {
-  mode: 'browser' | 'miniapp';
+  mode?: 'browser' | 'miniapp';
 }
 
-export default function GameDesktop({ mode }: GameDesktopProps) {
+export default function GameDesktop({ mode }: GameDesktopProps = {}) {
   const inTG = mode === 'miniapp' || isTelegramMiniApp();
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const sitePlayerRef = useRef<HTMLAudioElement | null>(null);

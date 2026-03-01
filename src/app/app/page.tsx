@@ -16,10 +16,8 @@ import GameDesktop from '@/components/GameDesktop/GameDesktop';
  */
 export default function MiniAppPage() {
   const [ready, setReady] = useState(false);
-  const [mode, setMode] = useState<'browser' | 'miniapp'>('browser');
 
-  const handleReady = useCallback((selectedMode: 'browser' | 'miniapp') => {
-    setMode(selectedMode);
+  const handleReady = useCallback(() => {
     setReady(true);
   }, []);
 
@@ -27,5 +25,5 @@ export default function MiniAppPage() {
     return <AuthGate onReady={handleReady} />;
   }
 
-  return <GameDesktop mode={mode} />;
+  return <GameDesktop />;
 }
