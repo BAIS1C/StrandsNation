@@ -11,6 +11,7 @@ import { loadState, setAuthed } from '@/lib/playerState';
 import styles from './AuthGate.module.css';
 
 const TG_BOT_USERNAME = 'StrandsNation_bot';
+const TG_BOT_ID = '8685415138';
 const MINI_APP_URL = `https://t.me/${TG_BOT_USERNAME}/strands`;
 
 interface AuthGateProps {
@@ -126,7 +127,7 @@ export default function AuthGate({ onReady }: AuthGateProps) {
       const TG = (window as any).Telegram;
       if (TG?.Login?.auth) {
         TG.Login.auth(
-          { bot_id: TG_BOT_USERNAME, request_access: 'write' },
+          { bot_id: TG_BOT_ID, request_access: 'write' },
           (data: any) => { if (data) handleTGAuth(data); }
         );
       } else {
@@ -139,7 +140,7 @@ export default function AuthGate({ onReady }: AuthGateProps) {
     } catch (err) {
       // Cross-origin errors from TG widget — fallback to redirect
       console.warn('TG widget cross-origin error, using redirect fallback');
-      const authUrl = `https://oauth.telegram.org/auth?bot_id=${TG_BOT_USERNAME}&origin=${encodeURIComponent(window.location.origin)}&request_access=write&return_to=${encodeURIComponent(window.location.href)}`;
+      const authUrl = `https://oauth.telegram.org/auth?bot_id=${TG_BOT_ID}&origin=${encodeURIComponent(window.location.origin)}&request_access=write&return_to=${encodeURIComponent(window.location.href)}`;
       window.location.href = authUrl;
     }
   }, [handleTGAuth]);
