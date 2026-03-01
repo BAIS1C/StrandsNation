@@ -39,19 +39,29 @@ export default function GamePage() {
     const storedName = typeof window !== 'undefined' 
       ? localStorage.getItem('strands_player_name') || 'Blank'
       : 'Blank';
-    setPlayerData({
+    
+    const data: PlayerData = {
       playerID: state.playerID || `dev-${Date.now()}`,
       tgID: tgUser?.id || 0,
       username: tgUser?.username || storedName.toLowerCase().replace(/\s+/g, '_'),
       firstName: storedName,
       lastName: tgUser?.last_name || '',
-      phone: '',
-      dob: '',
-    });
-    setPhase('register');
+      phone: localStorage.getItem('strands_player_phone') || '',
+      dob: localStorage.getItem('strands_player_dob') || '',
+    };
+    setPlayerData(data);
+
+    // If registration already done (phone+dob saved), skip to game
+    if (data.phone && data.dob) {
+      setPhase('game');
+    } else {
+      setPhase('register');
+    }
   }, []);
 
   const handleRegistration = useCallback((data: { phone: string; dob: string }) => {
+    localStorage.setItem('strands_player_phone', data.phone);
+    localStorage.setItem('strands_player_dob', data.dob);
     setPlayerData(prev => prev ? { ...prev, phone: data.phone, dob: data.dob } : null);
     setPhase('game');
   }, []);
@@ -74,7 +84,14 @@ export default function GamePage() {
 
 function GameDesktop({ playerData }: { playerData: PlayerData }) {
   // State
-  const [scene, setScene] = useState<Scene>('desktop');
+  const [scene, setScene] = useState<Scene>(() => {
+    // Check if returning player already completed the quiz
+    if (typeof window !== 'undefined') {
+      const savedScene = localStorage.getItem('strands_game_scene');
+      if (savedScene === 'reveal') return 'reveal' as Scene;
+    }
+    return 'desktop';
+  });
   const [messages, setMessages] = useState<ChatMsg[]>([]);
   const choicesLog = useRef<string[]>([]);
   const playerName = playerData.firstName;
@@ -136,6 +153,33 @@ function GameDesktop({ playerData }: { playerData: PlayerData }) {
     return () => { audio.pause(); audio.src = ''; if (sitePlayer) (sitePlayer as HTMLAudioElement).play().catch(() => {}); };
   }, []);
 
+
+
+  // ═══ RETURNING PLAYER — already completed quiz ═══
+  useEffect(() => {
+    if (scene === 'reveal') {
+      setShowChat(true);
+      addMsg('SYSTEM', `<div style="text-align:center;padding:20px 0">
+        <div style="color:var(--c-accent);font-family:var(--font-display);font-size:14px;margin-bottom:16px">SIGNAL LOCKED</div>
+        <div style="color:var(--c-sub);font-size:13px;line-height:1.8;max-width:340px;margin:0 auto">
+          Welcome back, ${playerName}.<br/>Your signal is still active.<br/>Full connection available Q4 2026.<br/><br/>
+          <span style="color:var(--c-dim)">The others are already gathering.</span>
+        </div>
+      </div>`, 'system', 0);
+      setTimeout(() => showChoices([
+        { id: 'telegram', label: '✈ Find the others (Telegram)', style: 'alt', next: () => window.open('https://t.me/+WZTkHqJjUOI3YjQ1', '_blank') },
+        { id: 'replay', label: '↺ Replay the signal', next: () => {
+          localStorage.removeItem('strands_game_scene');
+          setMessages([]);
+          setCurrentChoices([]);
+          setScene('desktop');
+          setShowChat(false);
+        }},
+        { id: 'back', label: '← Return to site', next: () => { window.location.href = '/'; } },
+      ]), 500);
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
 
   // ═══ HELPERS ═══
@@ -205,6 +249,8 @@ function GameDesktop({ playerData }: { playerData: PlayerData }) {
   const runScene = useCallback(async (sceneName: Scene) => {
     setScene(sceneName);
     sceneStartRef.current = performance.now();
+    // Persist progress so returning players resume here
+    try { localStorage.setItem('strands_game_scene', sceneName); } catch {}
   }, []);
 
   // Open chat → start scene 1

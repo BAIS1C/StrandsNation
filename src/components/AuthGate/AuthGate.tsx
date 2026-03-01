@@ -10,12 +10,15 @@ import {
 import { loadState, setAuthed } from '@/lib/playerState';
 import styles from './AuthGate.module.css';
 
+const TG_BOT_USERNAME = 'StrandsNation_bot';
+const MINI_APP_URL = `https://t.me/${TG_BOT_USERNAME}/strands`;
+
 interface AuthGateProps {
   onReady: () => void;
 }
 
 export default function AuthGate({ onReady }: AuthGateProps) {
-  const [phase, setPhase] = useState<'detect' | 'entry' | 'booting'>('detect');
+  const [phase, setPhase] = useState<'detect' | 'entry' | 'choose' | 'booting'>('detect');
   const [playerName, setPlayerName] = useState('');
   const [error, setError] = useState('');
   const [bootLines, setBootLines] = useState<string[]>([]);
@@ -82,7 +85,7 @@ export default function AuthGate({ onReady }: AuthGateProps) {
       username: name.toLowerCase().replace(/\s+/g, '_'),
     });
 
-    runBootSequence(name);
+    setPhase('choose');
   }, [playerName]);
 
   const handleKeyDown = useCallback((e: React.KeyboardEvent) => {
@@ -103,6 +106,16 @@ export default function AuthGate({ onReady }: AuthGateProps) {
     });
     setTimeout(() => onReady(), lines.length * 350 + 400);
   }
+
+  const handleContinueBrowser = useCallback(() => {
+    const name = localStorage.getItem('strands_player_name') || 'Blank';
+    runBootSequence(name);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [onReady]);
+
+  const handleOpenTG = useCallback(() => {
+    window.open(MINI_APP_URL, '_blank');
+  }, []);
 
   // ═══ RENDER ═══
 
@@ -133,6 +146,38 @@ export default function AuthGate({ onReady }: AuthGateProps) {
     );
   }
 
+  if (phase === 'choose') {
+    const name = localStorage.getItem('strands_player_name') || 'Blank';
+    return (
+      <div className={styles.gate}>
+        <div className={styles.choosePanel}>
+          <div className={styles.terminalLines}>
+            <span className={styles.termLineGreen}>{'>'} signal_verified</span>
+            <span className={styles.termLine}>{'>'} handle: {name}</span>
+          </div>
+          <h2 className={styles.chooseTitle}>SIGNAL LOCKED</h2>
+          <p className={styles.chooseDesc}>
+            Choose your interface. Same experience either way.
+          </p>
+          <div className={styles.chooseOptions}>
+            <button className={styles.chooseBrowser} onClick={handleContinueBrowser}>
+              <span className={styles.chooseIcon}>🖥</span>
+              <span className={styles.chooseLabel}>CONTINUE HERE</span>
+              <span className={styles.chooseSub}>Full experience in your browser</span>
+            </button>
+            <button className={styles.chooseTG} onClick={handleOpenTG}>
+              <span className={styles.chooseIcon}>✈</span>
+              <span className={styles.chooseLabel}>OPEN IN TELEGRAM</span>
+              <span className={styles.chooseSub}>Native app · Haptics · Cross-device sync</span>
+            </button>
+          </div>
+          <p className={styles.chooseNote}>Your progress syncs between both.</p>
+        </div>
+      </div>
+    );
+  }
+
+  // Entry — name input
   return (
     <div className={styles.gate}>
       <div className={styles.entryPanel}>
