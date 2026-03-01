@@ -144,6 +144,57 @@
   font: 400 12px var(--font-body, 'Rajdhani', sans-serif);
 }
 
+.termLineAccent {
+  composes: termLine;
+  color: var(--c-accent, #00C2FF) !important;
+}
+
+/* ── NAME INPUT ── */
+.nameField {
+  display: flex; flex-direction: column; gap: 6px;
+  margin-bottom: 20px;
+}
+.nameLabel {
+  font: 600 9px var(--font-display, 'Orbitron', monospace);
+  color: var(--c-dim, #6b7280);
+  letter-spacing: 2px;
+}
+.nameInput {
+  padding: 14px 16px;
+  border: 1px solid var(--c-border, rgba(255,255,255,0.06));
+  border-radius: 6px;
+  background: rgba(0,194,255,0.03);
+  color: var(--c-text, #E2E8F0);
+  font: 400 16px var(--font-body, 'Rajdhani', sans-serif);
+  outline: none;
+  caret-color: var(--c-accent, #00C2FF);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  letter-spacing: 1px;
+}
+.nameInput:focus {
+  border-color: var(--c-accent, #00C2FF);
+  box-shadow: 0 0 20px rgba(0,194,255,0.15);
+}
+.nameInput::placeholder {
+  color: var(--c-dim, #6b7280);
+  opacity: 0.4;
+}
+.nameHint {
+  font: 400 10px var(--font-display, 'Orbitron', monospace);
+  color: var(--c-dim, #6b7280);
+  letter-spacing: 0.5px;
+  opacity: 0.5;
+}
+
+.connectBtn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+.connectBtn:disabled:hover {
+  background: transparent;
+  box-shadow: none;
+}
+
 .entryFallback {
   font: 400 11px var(--font-body, 'Rajdhani', sans-serif);
   color: var(--c-dim, #6b7280);

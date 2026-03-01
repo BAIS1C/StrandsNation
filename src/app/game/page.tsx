@@ -34,14 +34,16 @@ export default function GamePage() {
   const [playerData, setPlayerData] = useState<PlayerData | null>(null);
 
   const handleAuthReady = useCallback(async () => {
-    // Grab player data from state (set by AuthGate)
     const state = await loadState();
     const tgUser = state.tgUser;
+    const storedName = typeof window !== 'undefined' 
+      ? localStorage.getItem('strands_player_name') || 'Blank'
+      : 'Blank';
     setPlayerData({
       playerID: state.playerID || `dev-${Date.now()}`,
       tgID: tgUser?.id || 0,
-      username: tgUser?.username || 'unknown',
-      firstName: tgUser?.first_name || 'Blank',
+      username: tgUser?.username || storedName.toLowerCase().replace(/\s+/g, '_'),
+      firstName: storedName,
       lastName: tgUser?.last_name || '',
       phone: '',
       dob: '',
@@ -75,6 +77,7 @@ function GameDesktop({ playerData }: { playerData: PlayerData }) {
   const [scene, setScene] = useState<Scene>('desktop');
   const [messages, setMessages] = useState<ChatMsg[]>([]);
   const choicesLog = useRef<string[]>([]);
+  const playerName = playerData.firstName;
   const [currentChoices, setCurrentChoices] = useState<Choice[]>([]);
   const [choicesMade, setChoicesMade] = useState<Set<string>>(new Set());
   const [selectedChoice, setSelectedChoice] = useState<string | null>(null);
@@ -699,7 +702,7 @@ function GameDesktop({ playerData }: { playerData: PlayerData }) {
                   <div className={styles.avatar}>{authorInitials[m.author] || '?'}</div>
                   <div className={styles.msgContent}>
                     <div className={styles.msgAuthor} style={{ color: authorColors[m.cls] || 'var(--c-text)' }}>
-                      {m.author === 'you' ? 'You' : m.author}
+                      {m.author === 'you' ? playerName : m.author}
                     </div>
                     <div className={styles.msgText} dangerouslySetInnerHTML={{ __html: m.text }} />
                   </div>
