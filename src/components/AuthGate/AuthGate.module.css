@@ -1,0 +1,227 @@
+/* ═══════════════════════════════════════════
+   AuthGate — diegetic entry + TG popup auth
+   Uses site design tokens from tokens.css
+   ═══════════════════════════════════════════ */
+
+.gate {
+  min-height: 100vh; min-height: 100dvh;
+  background: var(--c-bg, #0A0B0D);
+  display: flex; align-items: center; justify-content: center;
+  padding: 24px;
+  position: relative;
+}
+
+/* ── DETECT ── */
+.detectText { text-align: center; }
+.detectLine {
+  font: 400 11px var(--font-display, 'Orbitron', monospace);
+  color: var(--c-dim, #6b7280); letter-spacing: 2px;
+  animation: pulse 1.2s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+
+/* ── BOOT SEQUENCE ── */
+.bootSequence {
+  display: flex; flex-direction: column; gap: 10px;
+}
+.bootLine {
+  font: 400 12px var(--font-display, 'Orbitron', monospace);
+  color: var(--c-dim, #6b7280); letter-spacing: 1px;
+  animation: bootIn 0.3s ease forwards;
+}
+.bootAccent { color: var(--c-accent, #00C2FF) !important; }
+@keyframes bootIn {
+  from { opacity: 0; transform: translateX(-8px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* ── TERMINAL HEADER (shared) ── */
+.terminalLines {
+  display: flex; flex-direction: column; gap: 4px;
+  margin-bottom: 24px;
+  font: 400 10px var(--font-display, 'Orbitron', monospace);
+  letter-spacing: 1px;
+}
+.termLine { color: var(--c-dim, #6b7280); opacity: 0.5; }
+.termLineGreen { color: var(--c-green, #22c55e); opacity: 0.6; }
+
+/* ── ENTRY SCREEN (replaces widget iframe) ── */
+.entryPanel {
+  max-width: 420px; width: 100%;
+  display: flex; flex-direction: column;
+  align-items: center; gap: 12px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.entryGlow {
+  position: absolute;
+  width: 300px; height: 300px;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(
+    circle,
+    rgba(0,194,255,0.04) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: -1;
+}
+
+.entryTitle {
+  font: 900 clamp(22px, 5vw, 30px) var(--font-display, 'Orbitron', monospace);
+  color: var(--c-accent, #00C2FF);
+  letter-spacing: 4px;
+  text-shadow: 0 0 30px rgba(0,194,255,0.12);
+  margin-top: 8px;
+}
+
+.entryDesc {
+  font: 400 14px var(--font-body, 'Rajdhani', sans-serif);
+  color: var(--c-sub, #A0AEC0);
+  line-height: 1.7;
+  max-width: 360px;
+}
+
+/* ── CONNECT BUTTON (the big CTA) ── */
+.connectBtn {
+  display: flex; align-items: center; justify-content: center;
+  gap: 12px;
+  width: 100%; max-width: 320px;
+  padding: 18px 24px;
+  margin-top: 12px;
+  background: linear-gradient(135deg, rgba(0,194,255,0.08) 0%, rgba(0,194,255,0.02) 100%);
+  border: 1px solid rgba(0,194,255,0.2);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s var(--ease-out, ease);
+  position: relative;
+  overflow: hidden;
+}
+.connectBtn::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(0,194,255,0.06), transparent);
+  transform: translateX(-100%);
+  animation: shimmer 3s ease-in-out infinite;
+}
+@keyframes shimmer {
+  0%, 100% { transform: translateX(-100%); }
+  50% { transform: translateX(100%); }
+}
+.connectBtn:hover {
+  border-color: rgba(0,194,255,0.4);
+  background: rgba(0,194,255,0.1);
+  box-shadow: 0 0 30px rgba(0,194,255,0.1);
+  transform: translateY(-1px);
+}
+.connectBtn:active { transform: scale(0.98); }
+
+.connectIcon {
+  font-size: 20px;
+  filter: none;
+}
+.connectLabel {
+  font: 700 13px var(--font-display, 'Orbitron', monospace);
+  color: var(--c-accent, #00C2FF);
+  letter-spacing: 3px;
+}
+
+.entryNote {
+  font: 400 11px var(--font-body, 'Rajdhani', sans-serif);
+  color: var(--c-dim, #6b7280);
+  max-width: 280px;
+  line-height: 1.6;
+  opacity: 0.7;
+}
+
+.entryError {
+  color: var(--c-red, #FF4444);
+  font: 400 12px var(--font-body, 'Rajdhani', sans-serif);
+}
+
+.entryFallback {
+  font: 400 11px var(--font-body, 'Rajdhani', sans-serif);
+  color: var(--c-dim, #6b7280);
+  margin-top: 8px;
+}
+.entryFallback a {
+  color: rgba(0,194,255,0.5);
+  text-decoration: underline;
+}
+
+/* ── CHOOSE MODE ── */
+.choosePanel {
+  max-width: 420px; width: 100%;
+  display: flex; flex-direction: column;
+  align-items: center; gap: 12px;
+  text-align: center;
+}
+
+.chooseTitle {
+  font: 900 24px var(--font-display, 'Orbitron', monospace);
+  color: var(--c-accent, #00C2FF);
+  letter-spacing: 3px;
+}
+
+.chooseDesc {
+  font: 400 14px var(--font-body, 'Rajdhani', sans-serif);
+  color: var(--c-sub, #A0AEC0);
+  line-height: 1.7;
+}
+
+.chooseOptions {
+  display: flex; flex-direction: column; gap: 12px;
+  width: 100%; margin-top: 8px;
+}
+
+.chooseBrowser, .chooseTG {
+  display: flex; flex-direction: column;
+  align-items: center; gap: 6px;
+  padding: 24px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: center;
+}
+.chooseBrowser:active, .chooseTG:active { transform: scale(0.97); }
+
+.chooseBrowser {
+  background: var(--a-accent-bg, rgba(0,194,255,0.04));
+  border: 1px solid var(--c-border, rgba(255,255,255,0.06));
+}
+.chooseBrowser:hover {
+  background: var(--a-accent-hover, rgba(0,194,255,0.06));
+  border-color: rgba(0,194,255,0.2);
+}
+
+.chooseTG {
+  background: var(--a-pink-bg, rgba(240,0,184,0.04));
+  border: 1px solid var(--c-border, rgba(255,255,255,0.06));
+}
+.chooseTG:hover {
+  background: var(--a-pink-hover, rgba(240,0,184,0.06));
+  border-color: rgba(240,0,184,0.2);
+}
+
+.chooseIcon { font-size: 28px; }
+.chooseLabel {
+  font: 700 12px var(--font-display, 'Orbitron', monospace);
+  color: var(--c-accent, #00C2FF); letter-spacing: 2px;
+}
+.chooseTG .chooseLabel { color: var(--c-pink, #F000B8); }
+
+.chooseSub {
+  font: 400 12px var(--font-body, 'Rajdhani', sans-serif);
+  color: var(--c-dim, #6b7280);
+}
+
+.chooseNote {
+  font: 400 10px var(--font-display, 'Orbitron', monospace);
+  color: var(--c-dim, #6b7280); letter-spacing: 1px;
+  margin-top: 4px; opacity: 0.4;
+}

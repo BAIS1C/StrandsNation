@@ -1,28 +1,403 @@
-.cardTitle {
-  font: 800 18px var(--font-display);
-  letter-spacing: 1px;
-  margin-bottom: 12px;
+/* ═══════════════════════════════════════════
+   GAME SYNC — CSS Module
+   Uses site design tokens from tokens.css
+   ═══════════════════════════════════════════ */
+
+/* ═══ BOOT ═══ */
+.bootScreen {
+  position: fixed; inset: 0;
+  background: var(--c-bg);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  z-index: 9999;
+  padding-top: var(--space-nav-h);
+}
+.bootText {
+  font: 400 13px var(--font-display);
+  color: var(--c-dim);
+  text-align: left; line-height: 1.8;
+  max-width: 600px; padding: 20px;
+}
+.bootLine {
+  opacity: 0;
+  animation: bootLineIn 0.3s ease forwards;
+}
+@keyframes bootLineIn {
+  from { opacity: 0; transform: translateX(-5px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+.cursor {
+  display: inline-block;
+  width: 8px; height: 16px;
+  background: var(--c-accent);
+  animation: blink 0.6s infinite;
+  margin-left: 4px; vertical-align: middle;
+}
+@keyframes blink { 0%,50%{opacity:1} 51%,100%{opacity:0} }
+
+/* ═══ DESKTOP ═══ */
+.desktop {
+  width: 100vw;
+  height: calc(100vh - var(--space-nav-h));
+  margin-top: var(--space-nav-h);
+  display: flex; flex-direction: column;
+  background: var(--c-bg);
+  position: relative;
+  overflow: hidden;
 }
 
-.cardTitle[data-variant='cyan']   { color: var(--c-accent); }
-.cardTitle[data-variant='pink']   { color: var(--c-pink); }
-.cardTitle[data-variant='yellow'] { color: var(--c-yellow); }
-.cardTitle[data-variant='green']  { color: var(--c-green); }
-
-.body {
-  color: var(--c-sub);
-  font-size: 14px;
-  line-height: 1.8;
+.workspace {
+  flex: 1; position: relative; overflow: hidden;
+}
+.workspace::before {
+  content: ''; position: absolute; inset: 0;
+  background-image:
+    radial-gradient(circle at 50% 50%, rgba(0,194,255,0.02) 0%, transparent 70%),
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 100% 100%, 40px 40px, 40px 40px;
+  pointer-events: none;
 }
 
-.grid2 {
+/* ═══ ICONS ═══ */
+.icons {
+  position: absolute; top: 24px; left: 24px;
+  display: flex; flex-direction: column; gap: 16px;
+  z-index: 2;
+}
+.icon {
+  display: flex; flex-direction: column;
+  align-items: center; gap: 6px;
+  cursor: pointer; width: 72px; padding: 8px;
+  border-radius: 8px; transition: background 0.2s;
+  background: none; border: none;
+}
+.icon:hover { background: rgba(255,255,255,0.03); }
+.iconGlyph {
+  width: 44px; height: 44px;
+  border: 1px solid var(--c-border);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px; background: var(--c-surface);
+  transition: all 0.2s; position: relative;
+}
+.icon:hover .iconGlyph {
+  border-color: var(--c-accent);
+  box-shadow: 0 0 16px rgba(0,194,255,0.2);
+}
+.iconLabel {
+  font: 500 10px var(--font-display);
+  color: var(--c-sub); text-align: center;
+  letter-spacing: 0.5px;
+}
+.iconNotify .iconGlyph::after {
+  content: ''; position: absolute;
+  top: -3px; right: -3px;
+  width: 10px; height: 10px;
+  background: var(--c-pink);
+  border-radius: 50%;
+  animation: pulseGlow 1.5s infinite;
+}
+
+/* ═══ WINDOWS ═══ */
+.window {
+  position: absolute;
+  background: rgba(13,14,17,0.98);
+  border: 1px solid var(--c-border);
+  border-radius: 12px; overflow: hidden;
+  display: flex; flex-direction: column;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+  animation: windowOpen 0.3s var(--ease-out);
+  z-index: 10;
+}
+.window[data-window="chat"] { top: 20px; left: 100px; width: min(540px, calc(100vw - 30px)); height: min(480px, calc(100vh - var(--space-nav-h) - 80px)); }
+.window[data-window="doc"] { top: 60px; right: 24px; width: min(400px, calc(100vw - 30px)); height: min(340px, calc(100vh - var(--space-nav-h) - 140px)); }
+.window[data-window="puzzle"] { top: 20px; left: 80px; width: min(600px, calc(100vw - 20px)); height: min(420px, calc(100vh - var(--space-nav-h) - 80px)); z-index: 20; }
+.window[data-window="pattern"] { top: 20px; left: 80px; width: min(580px, calc(100vw - 20px)); height: min(480px, calc(100vh - var(--space-nav-h) - 80px)); z-index: 20; }
+
+@keyframes windowOpen {
+  from { opacity: 0; transform: scale(0.95) translateY(10px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.windowHeader {
+  height: 36px; background: rgba(26,27,31,0.95);
+  border-bottom: 1px solid var(--c-border);
+  display: flex; align-items: center;
+  padding: 0 12px; gap: 8px; flex-shrink: 0;
+}
+.windowDots { display: flex; gap: 5px; }
+.dotClose, .dotMin, .dotMax {
+  width: 10px; height: 10px; border-radius: 50%; cursor: pointer; display: block;
+}
+.dotClose { background: var(--c-red); }
+.dotMin { background: var(--c-yellow); }
+.dotMax { background: var(--c-green); }
+.windowTitle {
+  font: 400 11px var(--font-display);
+  color: var(--c-dim); flex: 1; text-align: center;
+  letter-spacing: 0.5px;
+}
+
+/* ═══ CHAT ═══ */
+.chatBar {
+  padding: 8px 16px;
+  border-bottom: 1px solid var(--c-border);
+  font: 400 11px var(--font-display);
+  color: var(--c-dim);
+  display: flex; align-items: center; gap: 8px;
+  background: rgba(0,194,255,0.02);
+  letter-spacing: 0.5px;
+}
+.channel { color: var(--c-accent); }
+.members { margin-left: auto; }
+
+.chatMessages {
+  flex: 1; overflow-y: auto; padding: 16px;
+  display: flex; flex-direction: column; gap: 12px;
+}
+
+.chatMsg {
+  display: flex; gap: 10px;
+  animation: msgIn 0.4s ease both;
+}
+.msgFading { opacity: 0.15; transition: opacity 0.5s; }
+
+@keyframes msgIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.avatar {
+  width: 30px; height: 30px; border-radius: 8px;
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  display: flex; align-items: center; justify-content: center;
+  font: 500 10px var(--font-display);
+  color: var(--c-dim); flex-shrink: 0;
+}
+.msgContent { flex: 1; }
+.msgAuthor {
+  font: 600 12px var(--font-body);
+  margin-bottom: 2px;
+}
+.msgText {
+  font: 400 13px var(--font-body);
+  line-height: 1.6; color: var(--c-sub);
+}
+.msgText em { color: var(--c-text); font-style: italic; }
+
+/* Choices */
+.choices {
+  display: flex; gap: 10px; margin-top: 14px; flex-wrap: wrap;
+}
+.choiceBtn {
+  padding: 11px 16px;
+  border: 1px solid var(--c-border);
+  border-radius: 8px;
+  background: var(--c-surface);
+  color: var(--c-text);
+  font: 500 12px var(--font-display);
+  letter-spacing: 0.3px;
+  cursor: pointer; transition: all 0.2s;
+  flex: 1; min-width: 140px; text-align: center;
+  line-height: 1.4;
+}
+.choiceBtn:hover {
+  border-color: var(--c-accent);
+  box-shadow: 0 0 16px rgba(0,194,255,0.2);
+  color: var(--c-accent);
+}
+.choiceBtnAlt:hover {
+  border-color: var(--c-pink);
+  box-shadow: 0 0 16px rgba(240,0,184,0.2);
+  color: var(--c-pink);
+}
+.choiceChosen { opacity: 0.25; pointer-events: none; }
+.choiceSelected {
+  border-color: var(--c-accent);
+  background: rgba(0,194,255,0.06);
+  color: var(--c-accent);
+}
+
+/* ═══ DOC VIEWER ═══ */
+.docBody {
+  font: 400 11px var(--font-display);
+  line-height: 1.8; color: var(--c-sub);
+  padding: 16px; overflow-y: auto; flex: 1;
+  letter-spacing: 0.3px;
+}
+.docHeader {
+  color: var(--c-dim);
+  border-bottom: 1px solid var(--c-border);
+  padding-bottom: 8px; margin-bottom: 12px;
+}
+.emphasis { color: var(--c-yellow); }
+.errorText { color: var(--c-red); }
+.corrupted { color: var(--c-red); text-decoration: line-through; opacity: 0.5; }
+.redacted {
+  background: var(--c-pink); color: var(--c-pink);
+  padding: 0 6px; border-radius: 2px;
+  cursor: pointer; transition: 0.3s;
+  font-size: 10px;
+}
+.redacted:hover { color: var(--c-bg); }
+
+/* ═══ CODE PUZZLE ═══ */
+.codeEditor {
+  flex: 1; overflow-y: auto; padding: 20px;
+  font: 400 12px var(--font-display);
+  line-height: 1.8; background: rgba(5,5,6,0.8);
+  letter-spacing: 0.3px;
+}
+.codeLine { display: flex; align-items: flex-start; gap: 10px; min-height: 28px; }
+.codeComment { color: var(--c-dim); font-style: italic; }
+.codePrompt { color: var(--c-accent); font-weight: 700; width: 16px; flex-shrink: 0; }
+.scrambledText {
+  color: var(--c-green); font-size: 16px;
+  letter-spacing: 3px; user-select: all;
+}
+.codeInput {
+  display: inline-block; min-width: 260px;
+  padding: 4px 10px;
+  border: 1px solid var(--c-border); border-radius: 4px;
+  background: rgba(0,194,255,0.03);
+  color: var(--c-accent);
+  font: 400 12px var(--font-display);
+  outline: none; caret-color: var(--c-accent);
+  transition: all 0.2s; letter-spacing: 0.5px;
+}
+.codeInput:focus { border-color: var(--c-accent); box-shadow: 0 0 12px rgba(0,194,255,0.2); }
+.codeInputCorrect { border-color: var(--c-green) !important; color: var(--c-green) !important; background: rgba(34,197,94,0.06); }
+.codeInputWrong { border-color: var(--c-red) !important; color: var(--c-red) !important; animation: shake 0.3s; }
+@keyframes shake { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-4px)} 75%{transform:translateX(4px)} }
+
+.codeProgress {
+  padding: 10px 16px;
+  border-top: 1px solid var(--c-border);
+  display: flex; align-items: center; gap: 12px;
+  font: 400 11px var(--font-display);
+  color: var(--c-dim); letter-spacing: 0.5px;
+}
+.progressBar { flex: 1; height: 3px; background: rgba(255,255,255,0.06); border-radius: 2px; overflow: hidden; }
+.progressFill { height: 100%; background: var(--c-accent); border-radius: 2px; transition: width 0.4s ease; }
+
+/* ═══ PATTERN MATCH ═══ */
+.patternGame {
+  flex: 1; display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 20px; padding: 24px;
+}
+.patternInfo {
+  font: 400 12px var(--font-display);
+  color: var(--c-dim); text-align: center;
+  letter-spacing: 0.5px; line-height: 1.6;
+}
+.patternScore { color: var(--c-accent); font-size: 14px; }
+.patternGrid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
+  grid-template-columns: repeat(4, 50px);
+  gap: 6px;
+}
+.patternCell {
+  width: 50px; height: 50px; border-radius: 8px;
+  border: 1px solid var(--c-border);
+  background: var(--c-surface);
+  cursor: pointer; transition: all 0.15s;
+  display: flex; align-items: center; justify-content: center;
+  font: 400 18px var(--font-body);
+  color: transparent; user-select: none;
+}
+.patternCell:hover { border-color: var(--c-accent); }
+.patternRevealed {
+  color: var(--c-text) !important;
+  border-color: var(--c-accent);
+  background: rgba(0,194,255,0.06);
+}
+.patternMatched {
+  color: var(--c-green) !important;
+  border-color: var(--c-green);
+  background: rgba(34,197,94,0.06);
+  pointer-events: none;
 }
 
+/* ═══ TASKBAR ═══ */
+.taskbar {
+  height: 40px;
+  background: rgba(10,11,13,0.95);
+  border-top: 1px solid var(--c-border);
+  display: flex; align-items: center;
+  padding: 0 16px; gap: 4px;
+  backdrop-filter: blur(10px); flex-shrink: 0;
+}
+.taskbarItem {
+  height: 30px; padding: 0 12px; border-radius: 6px;
+  display: flex; align-items: center; gap: 6px;
+  font: 500 11px var(--font-display);
+  color: var(--c-dim); cursor: pointer;
+  transition: all 0.2s;
+  border: 1px solid transparent;
+  background: none; letter-spacing: 0.5px;
+}
+.taskbarItem:hover { background: var(--c-surface); color: var(--c-sub); }
+.taskbarActive { background: var(--c-surface); border-color: var(--c-border); color: var(--c-accent); }
+.taskbarClock {
+  margin-left: auto;
+  font: 400 11px var(--font-display);
+  color: var(--c-dim); letter-spacing: 0.5px;
+}
+
+/* ═══ GLITCH / TOAST ═══ */
+.glitchOverlay {
+  position: fixed; inset: 0;
+  pointer-events: none; z-index: 9998;
+  animation: glitchAnim 0.12s linear 3;
+}
+@keyframes glitchAnim {
+  0%{background:transparent}
+  25%{background:rgba(240,0,184,0.04);transform:translateX(-2px)}
+  50%{background:rgba(0,194,255,0.03);transform:translateX(1px) skewX(-0.3deg)}
+  75%{background:transparent;transform:none}
+  100%{background:rgba(240,0,184,0.02);transform:translateX(1px)}
+}
+
+.toast {
+  position: fixed; top: calc(var(--space-nav-h) + 12px); right: 20px;
+  background: rgba(26,27,31,0.95);
+  border: 1px solid var(--c-pink);
+  border-radius: 10px; padding: 14px 18px;
+  font: 400 12px var(--font-display);
+  color: var(--c-text);
+  box-shadow: 0 0 20px rgba(240,0,184,0.2), 0 8px 30px rgba(0,0,0,0.4);
+  z-index: 1000;
+  animation: toastIn 0.4s ease;
+  max-width: 300px; letter-spacing: 0.3px;
+}
+@keyframes toastIn {
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+.toastLabel {
+  font-size: 10px; color: var(--c-pink);
+  text-transform: uppercase; letter-spacing: 2px;
+  margin-bottom: 4px;
+}
+
+/* ═══ RESPONSIVE ═══ */
 @media (max-width: 768px) {
-  .grid2 {
-    grid-template-columns: 1fr;
+  .window[data-window="chat"],
+  .window[data-window="puzzle"],
+  .window[data-window="pattern"] {
+    top: 4px; left: 4px;
+    width: calc(100vw - 8px);
+    height: calc(100vh - var(--space-nav-h) - 60px);
   }
+  .window[data-window="doc"] {
+    top: 4px; left: 4px;
+    width: calc(100vw - 8px);
+    height: calc(100vh - var(--space-nav-h) - 60px);
+  }
+  .icons { top: 8px; left: 8px; }
+  .patternGrid { grid-template-columns: repeat(4, 44px); gap: 4px; }
+  .patternCell { width: 44px; height: 44px; font-size: 16px; }
 }

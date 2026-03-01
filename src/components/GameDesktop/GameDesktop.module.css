@@ -1,0 +1,129 @@
+/* ═══════════════════════════════════════════
+   GameDesktop — OS-style game shell
+   ═══════════════════════════════════════════ */
+
+.desktop {
+  min-height: 100vh; min-height: 100dvh;
+  background: var(--c-bg, #0A0B0D);
+  display: flex; flex-direction: column;
+  font-family: var(--font-body, 'Rajdhani', sans-serif);
+  color: var(--c-text, #E2E8F0);
+  position: relative;
+  overflow: hidden;
+}
+
+/* ── STATUS BAR ── */
+.statusBar {
+  display: flex; align-items: center;
+  gap: 16px; padding: 8px 16px;
+  font: 400 9px var(--font-display, 'Orbitron', monospace);
+  letter-spacing: 1px;
+  border-bottom: 1px solid var(--c-border, rgba(255,255,255,0.04));
+  color: var(--c-dim, #6b7280);
+}
+.statusSignal { color: var(--c-green, #22c55e); }
+.statusMode { opacity: 0.4; }
+.statusAudio {
+  cursor: pointer; font-size: 14px;
+  opacity: 0.6; transition: opacity 0.15s;
+  margin-left: auto;
+}
+.statusAudio:hover { opacity: 1; }
+.statusClock { opacity: 0.3; }
+
+/* ── WORKSPACE ── */
+.workspace {
+  flex: 1; display: flex;
+  flex-direction: column;
+  padding: 16px;
+  position: relative;
+}
+
+/* ── ICON GRID ── */
+.iconGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  max-width: 360px;
+  padding: 16px 0;
+}
+
+.icon {
+  display: flex; flex-direction: column;
+  align-items: center; gap: 6px;
+  padding: 12px 8px;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s;
+  position: relative;
+}
+.icon:hover {
+  background: var(--a-accent-bg, rgba(0,194,255,0.04));
+  border-color: var(--c-border, rgba(255,255,255,0.04));
+}
+.icon:active { transform: scale(0.95); }
+
+.iconGlyph { font-size: 28px; }
+.iconLabel {
+  font: 400 9px var(--font-display, 'Orbitron', monospace);
+  color: var(--c-sub, #A0AEC0);
+  letter-spacing: 1px;
+}
+
+/* Notification dot */
+.iconDot {
+  position: absolute; top: 8px; right: 12px;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--c-accent, #00C2FF);
+  animation: dotPulse 2s ease-in-out infinite;
+}
+@keyframes dotPulse {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.3); }
+}
+
+/* Locked state */
+.iconLocked {
+  opacity: 0.25;
+  cursor: not-allowed;
+  filter: grayscale(1);
+}
+.iconLocked:hover { background: transparent; border-color: transparent; }
+
+/* ── PLACEHOLDER ── */
+.placeholder {
+  flex: 1;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  text-align: center; gap: 8px;
+  opacity: 0.3;
+}
+.placeholder p {
+  font: 400 12px var(--font-display, 'Orbitron', monospace);
+  letter-spacing: 1px;
+}
+.placeholderSub {
+  font-size: 10px !important;
+  opacity: 0.5;
+}
+
+/* ── TASKBAR ── */
+.taskbar {
+  display: flex; align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+  border-top: 1px solid var(--c-border, rgba(255,255,255,0.04));
+  font: 400 9px var(--font-display, 'Orbitron', monospace);
+  letter-spacing: 1px;
+  color: var(--c-dim, #6b7280);
+}
+.taskbarSignal { opacity: 0.5; }
+.taskbarClock { opacity: 0.3; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 400px) {
+  .iconGrid { grid-template-columns: repeat(3, 1fr); }
+}

@@ -1,0 +1,328 @@
+/* ═══════════════════════════════════════════
+   STRANDS MINI APP — Desktop OS Styles
+   Matches site aesthetic: Orbitron, cyan/magenta
+   ═══════════════════════════════════════════ */
+
+/* ── BOOT ── */
+.bootScreen {
+  min-height: 100vh; min-height: 100dvh;
+  background: #010204;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  padding: 24px;
+}
+.bootText {
+  display: flex; flex-direction: column; gap: 10px;
+  max-width: 360px; width: 100%;
+}
+.bootLine {
+  font: 400 12px 'Orbitron', monospace;
+  color: #4a5568; letter-spacing: 1px;
+  opacity: 0; transition: opacity 0.4s ease;
+}
+.bootVisible { opacity: 1; }
+.bootAccent { color: #00C2FF; }
+.bootError {
+  margin-top: 20px; color: #ef4444;
+  font: 400 11px 'Orbitron', monospace;
+}
+
+/* ── DESKTOP ── */
+.desktop {
+  min-height: 100vh; min-height: 100dvh;
+  background: #010204;
+  display: flex; flex-direction: column;
+  position: relative; overflow: hidden;
+}
+
+.scanlines {
+  position: fixed; inset: 0; pointer-events: none; z-index: 50;
+  background: repeating-linear-gradient(
+    0deg, transparent, transparent 2px,
+    rgba(0,194,255,0.01) 2px, rgba(0,194,255,0.01) 3px
+  );
+}
+
+/* ── STATUS BAR ── */
+.statusBar {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 8px 14px;
+  font: 400 9px 'Orbitron', monospace;
+  color: #4a5568; letter-spacing: 1px;
+  border-bottom: 1px solid rgba(0,194,255,0.04);
+  flex-shrink: 0;
+}
+.statusSignal { color: #22c55e; }
+.statusUser { color: rgba(0,194,255,0.4); }
+.statusTime { color: #333; }
+
+/* ── WORKSPACE ── */
+.workspace {
+  flex: 1; display: flex; flex-direction: column;
+  padding: 16px; overflow-y: auto;
+}
+
+/* ── ICON GRID ── */
+.iconGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px; padding: 20px 8px;
+}
+@media (max-width: 380px) {
+  .iconGrid { grid-template-columns: repeat(3, 1fr); gap: 10px; }
+}
+
+.icon {
+  display: flex; flex-direction: column;
+  align-items: center; gap: 6px;
+  background: none; border: none; cursor: pointer;
+  padding: 12px 4px; border-radius: 8px;
+  transition: all 0.15s; position: relative;
+}
+.icon:active { transform: scale(0.94); }
+.icon:hover { background: rgba(0,194,255,0.03); }
+
+.iconEmoji { font-size: 28px; line-height: 1; }
+
+.iconLabel {
+  font: 400 8px 'Orbitron', monospace;
+  color: rgba(0,194,255,0.5); letter-spacing: 0.5px;
+  text-align: center; max-width: 72px;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+
+/* States */
+.iconLocked {
+  opacity: 0.2; cursor: default; pointer-events: auto;
+}
+.iconLocked .iconEmoji { filter: grayscale(1); }
+
+.iconPulse .iconEmoji {
+  animation: iconPulse 2s ease-in-out infinite;
+}
+@keyframes iconPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.iconComplete .iconLabel { color: rgba(34,197,94,0.5); }
+
+.iconDot {
+  position: absolute; top: 8px; right: 12px;
+  width: 6px; height: 6px; border-radius: 50%;
+  background: #00C2FF;
+  box-shadow: 0 0 6px rgba(0,194,255,0.4);
+  animation: dotPulse 1.5s ease-in-out infinite;
+}
+@keyframes dotPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.7); }
+}
+
+.iconCheck {
+  position: absolute; top: 8px; right: 12px;
+  font: 700 9px monospace; color: #22c55e;
+}
+
+/* ── WINDOW ── */
+.window {
+  flex: 1; display: flex; flex-direction: column;
+  border: 1px solid rgba(0,194,255,0.08);
+  border-radius: 8px;
+  background: rgba(0,194,255,0.01);
+  overflow: hidden;
+  animation: windowOpen 0.2s ease;
+}
+@keyframes windowOpen {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.windowHeader {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 10px 14px;
+  background: rgba(0,194,255,0.03);
+  border-bottom: 1px solid rgba(0,194,255,0.06);
+}
+.windowTitle {
+  font: 400 10px 'Orbitron', monospace;
+  color: rgba(0,194,255,0.6); letter-spacing: 1px;
+}
+.windowClose {
+  background: none; border: none; cursor: pointer;
+  color: #4a5568; font-size: 18px; line-height: 1;
+  padding: 0 4px;
+}
+.windowClose:hover { color: #ef4444; }
+
+.windowBody {
+  flex: 1; overflow-y: auto; padding: 16px;
+  display: flex; flex-direction: column;
+}
+
+/* ── GAME IFRAME ── */
+.gameFrame {
+  width: 100%; flex: 1; min-height: 400px;
+  border: none; border-radius: 4px;
+  background: #010204;
+}
+
+/* ── PLACEHOLDER ── */
+.placeholder {
+  flex: 1; display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  color: #4a5568; text-align: center;
+}
+.placeholderSub {
+  font-size: 11px; color: #333; margin-top: 8px;
+}
+
+/* ── TASKBAR ── */
+.taskbar {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 8px 14px;
+  border-top: 1px solid rgba(0,194,255,0.04);
+  flex-shrink: 0;
+}
+.taskbarItem {
+  background: none; border: none; cursor: pointer;
+  font: 400 10px 'Orbitron', monospace;
+  color: #00C2FF; letter-spacing: 1px;
+}
+.taskbarItem:hover { text-decoration: underline; }
+.taskbarSignal {
+  font: 400 8px 'Orbitron', monospace;
+  color: #2a2a2a; letter-spacing: 0.5px;
+}
+
+/* ── VOICE CONSENT ── */
+.voiceConsent {
+  display: flex; flex-direction: column;
+  align-items: center; gap: 16px; padding: 20px 0;
+}
+.voiceTitle {
+  font: 700 13px 'Orbitron', monospace;
+  color: #00C2FF; letter-spacing: 2px; text-align: center;
+}
+.voiceDesc {
+  font: 400 12px 'Rajdhani', sans-serif;
+  color: #6b7280; text-align: center; max-width: 280px;
+  line-height: 1.6;
+}
+.voiceOptions {
+  display: flex; flex-direction: column; gap: 10px;
+  width: 100%; max-width: 300px;
+}
+.voiceBtn, .voiceBtnAlt, .voiceBtnDim {
+  padding: 12px 20px; border-radius: 4px;
+  font: 500 11px 'Orbitron', monospace; letter-spacing: 1px;
+  cursor: pointer; transition: all 0.15s; text-align: center;
+}
+.voiceBtn {
+  background: rgba(0,194,255,0.06); border: 1px solid rgba(0,194,255,0.2);
+  color: #00C2FF;
+}
+.voiceBtn:hover { background: rgba(0,194,255,0.1); border-color: #00C2FF; }
+.voiceBtnAlt {
+  background: rgba(240,0,184,0.04); border: 1px solid rgba(240,0,184,0.15);
+  color: rgba(240,0,184,0.7);
+}
+.voiceBtnAlt:hover { background: rgba(240,0,184,0.08); }
+.voiceBtnDim {
+  background: transparent; border: 1px solid rgba(255,255,255,0.06);
+  color: #4a5568;
+}
+.voiceBtnDim:hover { border-color: rgba(255,255,255,0.12); }
+
+.voiceRecord {
+  display: flex; flex-direction: column;
+  align-items: center; gap: 16px; padding: 24px 0;
+}
+.voicePhrase {
+  font: 700 16px 'Orbitron', monospace;
+  color: #F9E100; letter-spacing: 2px; text-align: center;
+}
+.voiceTimer {
+  font: 400 11px 'Orbitron', monospace;
+  color: #4a5568; letter-spacing: 1px;
+}
+.voicePulse {
+  width: 40px; height: 40px; border-radius: 50%;
+  border: 2px solid rgba(240,0,184,0.3);
+  animation: voicePulse 1s ease-in-out infinite;
+}
+@keyframes voicePulse {
+  0%, 100% { transform: scale(1); opacity: 0.5; }
+  50% { transform: scale(1.3); opacity: 1; }
+}
+
+.voiceDone { text-align: center; }
+
+/* ── FRAGMENT PLAYER ── */
+.fragmentList {
+  display: flex; flex-direction: column; gap: 8px;
+}
+.fragmentHeader {
+  font: 400 9px 'Orbitron', monospace;
+  color: rgba(0,194,255,0.3); letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+.fragmentItem {
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 12px; border-radius: 4px;
+  font: 400 11px 'Share Tech Mono', monospace;
+}
+.fragmentUnlocked {
+  background: rgba(0,194,255,0.03);
+  border: 1px solid rgba(0,194,255,0.08);
+  color: rgba(0,194,255,0.7);
+  cursor: pointer;
+}
+.fragmentUnlocked:hover { background: rgba(0,194,255,0.06); }
+.fragmentLocked {
+  background: rgba(255,255,255,0.01);
+  border: 1px solid rgba(255,255,255,0.03);
+  color: #2a2a2a;
+}
+.fragmentIdx { font-size: 14px; }
+.fragmentTitle { flex: 1; letter-spacing: 1px; }
+.fragmentDuration { font-size: 10px; opacity: 0.5; }
+.fragmentNote {
+  font: 400 10px 'Orbitron', monospace;
+  color: #333; letter-spacing: 0.5px;
+  margin-top: 12px; text-align: center;
+}
+
+/* ── MYMORIES ── */
+.mymoryList {
+  display: flex; flex-direction: column; gap: 8px;
+}
+.mymoryHeader {
+  font: 400 9px 'Orbitron', monospace;
+  color: rgba(0,194,255,0.3); letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+.mymoryItem {
+  display: flex; align-items: center; gap: 12px;
+  padding: 10px 12px; border-radius: 4px;
+  background: rgba(0,194,255,0.02);
+  border: 1px solid rgba(0,194,255,0.06);
+}
+.mymoryIcon { font-size: 20px; }
+.mymoryInfo {
+  display: flex; flex-direction: column; gap: 2px;
+}
+.mymoryLabel {
+  font: 500 11px 'Orbitron', monospace;
+  color: rgba(0,194,255,0.6); letter-spacing: 0.5px;
+}
+.mymoryDate {
+  font: 400 9px 'Share Tech Mono', monospace;
+  color: #333;
+}
+.mymoryEmpty {
+  flex: 1; display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  color: #4a5568; text-align: center;
+}
+.mymoryEmptySub { font-size: 11px; color: #333; margin-top: 6px; }

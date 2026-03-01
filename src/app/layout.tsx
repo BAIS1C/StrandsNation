@@ -5,6 +5,8 @@ import MusicPlayer from '@/components/MusicPlayer/MusicPlayer';
 import CursorGlow from '@/components/CursorGlow/CursorGlow';
 import Scanlines from '@/components/Scanlines/Scanlines';
 import CircuitBg from '@/components/CircuitBg/CircuitBg';
+import SiteChrome from '@/components/SiteChrome/SiteChrome';
+import MainWrapper from '@/components/MainWrapper/MainWrapper';
 import '@/styles/tokens.css';
 import '@/styles/global.css';
 
@@ -36,12 +38,16 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body>
-        <Scanlines />
-        <CircuitBg />
-        <CursorGlow />
+        <SiteChrome>
+          <Scanlines />
+          <CircuitBg />
+          <CursorGlow />
+        </SiteChrome>
         <Nav />
-        <main style={{ paddingBottom: 52 }}>{children}</main>
-        <MusicPlayer />
+        <MainWrapper>{children}</MainWrapper>
+        <SiteChrome>
+          <MusicPlayer />
+        </SiteChrome>
       </body>
     </html>
   );

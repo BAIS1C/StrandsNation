@@ -73,18 +73,15 @@ const LOGO_RAW: [number, number][] = [
 ];
 
 const BANNER_COLORS = ['#00C2FF','#F000B8','#F9E100','#8b5cf6','#22c55e'];
-const CYCLE = 40000;
+const CYCLE = 4000;
 
 interface PhaseRange { start: number; end: number }
 const PHASES: Record<string, PhaseRange> = {
-  GLOBE:            { start: 0,     end: 0.375 },
-  GLOBE_DISSOLVE:   { start: 0.375, end: 0.45 },
-  CLOUD_A:          { start: 0.45,  end: 0.50 },
-  LOGO_FORM:        { start: 0.50,  end: 0.575 },
-  LOGO_HOLD_BW:     { start: 0.575, end: 0.60 },
-  LOGO_HOLD_COLOR:  { start: 0.60, end: 0.85 },
-  LOGO_DISSOLVE:    { start: 0.85,  end: 0.9 },
-  CLOUD_B:          { start: 0.9, end: 1.0 },
+  GLOBE:            { start: 0,     end: 0.28 },
+  LOGO_FORM:        { start: 0.28,  end: 0.40 },
+  LOGO_HOLD_BW:     { start: 0.40,  end: 0.48 },
+  LOGO_HOLD_COLOR:  { start: 0.48,  end: 0.82 },
+  GLOBE_RETURN:     { start: 0.82,  end: 1.0 },
 };
 
 function getPhase(t: number) {
@@ -100,7 +97,7 @@ function getGlobePoint(index: number, total: number, time: number) {
   const latLines = 12, lonLines = 20;
   const gridIdx = index % (latLines * lonLines);
   const lat = (Math.floor(gridIdx / lonLines) / (latLines - 1)) * Math.PI - Math.PI / 2;
-  const lon = ((gridIdx % lonLines) / lonLines) * Math.PI * 2 + time * 0.0003;
+  const lon = ((gridIdx % lonLines) / lonLines) * Math.PI * 2 + time * 0.001;
   const r = 0.38;
   const x = Math.cos(lat) * Math.sin(lon) * r;
   const y = Math.sin(lat) * r;
@@ -169,7 +166,7 @@ export default function ParticleHero() {
       connected[i] = 1;
     }
 
-    let cloudAssigned = false, lastPhase = '';
+    let lastPhase = '';
     const startTime = performance.now();
     let rafId: number;
 
@@ -182,13 +179,12 @@ export default function ParticleHero() {
 
       ctx.clearRect(0, 0, W, H);
 
-      if (phase.name !== lastPhase) { cloudAssigned = false; lastPhase = phase.name; }
+      if (phase.name !== lastPhase) { lastPhase = phase.name; }
 
       // Update targets
       for (let i = 0; i < COUNT; i++) {
         switch (phase.name) {
-          case 'GLOBE':
-          case 'CLOUD_B': {
+          case 'GLOBE': {
             const gp = getGlobePoint(i, COUNT, elapsed);
             tx[i] = cx + gp.x * d; ty[i] = cy + gp.y * d;
             tr[i] = gp.isPeel ? 200 : 120; tg[i] = tr[i]; tb[i] = tr[i];
@@ -197,18 +193,6 @@ export default function ParticleHero() {
             connected[i] = gp.isPeel ? 1 : 0;
             break;
           }
-          case 'GLOBE_DISSOLVE':
-          case 'CLOUD_A':
-          case 'LOGO_DISSOLVE':
-            if (!cloudAssigned) {
-              tx[i] = cx + (Math.random() - 0.5) * W * 0.6;
-              ty[i] = cy + (Math.random() - 0.5) * H * 0.6;
-              tr[i] = 136; tg[i] = 136; tb[i] = 136;
-              opacity[i] = 0.25 + Math.random() * 0.2;
-              size[i] = baseSize[i];
-              connected[i] = 0;
-            }
-            break;
           case 'LOGO_FORM':
           case 'LOGO_HOLD_BW': {
             const coord = LOGO_RAW[i % LOGO_RAW.length];
@@ -231,26 +215,31 @@ export default function ParticleHero() {
             opacity[i] = 0.9; connected[i] = 1;
             break;
           }
+          case 'GLOBE_RETURN': {
+            // Morph directly from logo back to globe — no scatter
+            const gp = getGlobePoint(i, COUNT, elapsed);
+            tx[i] = cx + gp.x * d; ty[i] = cy + gp.y * d;
+            // Fade color from current back to grey
+            tr[i] = 200; tg[i] = 200; tb[i] = 200;
+            opacity[i] = (gp.scale * 0.5 + 0.3) * (gp.isPeel ? 0.8 : 0.45);
+            size[i] = baseSize[i] * gp.scale;
+            connected[i] = gp.isPeel ? 1 : 0;
+            break;
+          }
         }
       }
 
-      if (!cloudAssigned && (phase.name.includes('CLOUD') || phase.name.includes('DISSOLVE'))) {
-        cloudAssigned = true;
-      }
-
       // Physics + draw
-      const moveSpeed = phase.name === 'GLOBE' || phase.name === 'CLOUD_B' ? 0.08
-        : phase.name.includes('FORM') ? 0.04 + phase.progress * 0.04 : 0.04;
-      const isCloud = phase.name.includes('CLOUD') || phase.name.includes('DISSOLVE');
+      const moveSpeed = phase.name === 'GLOBE' || phase.name === 'GLOBE_RETURN' ? 0.25
+        : phase.name.includes('FORM') ? 0.22 + phase.progress * 0.1 : 0.2;
 
       // Globe wireframe
-      if (phase.name === 'GLOBE' || phase.name === 'GLOBE_DISSOLVE' || phase.name === 'CLOUD_B') {
+      if (phase.name === 'GLOBE' || phase.name === 'GLOBE_RETURN') {
         const wireOpacity = phase.name === 'GLOBE' ? 0.25
-          : phase.name === 'GLOBE_DISSOLVE' ? 0.25 * (1 - phase.progress)
           : 0.25 * phase.progress;
         if (wireOpacity > 0.01) {
           const r = 0.38 * d;
-          const rotY = elapsed * 0.0003;
+          const rotY = elapsed * 0.001;
           ctx.strokeStyle = `rgba(100,100,100,${wireOpacity})`;
           ctx.lineWidth = 0.5;
           for (let lat = -80; lat <= 80; lat += 20) {
@@ -303,14 +292,16 @@ export default function ParticleHero() {
 
       for (let i = 0; i < COUNT; i++) {
         // Color lerp
-        pr[i] += (tr[i] - pr[i]) * 0.06;
-        pg[i] += (tg[i] - pg[i]) * 0.06;
-        pb[i] += (tb[i] - pb[i]) * 0.06;
+        pr[i] += (tr[i] - pr[i]) * 0.25;
+        pg[i] += (tg[i] - pg[i]) * 0.25;
+        pb[i] += (tb[i] - pb[i]) * 0.25;
 
         // Move
         let vx = (tx[i] - px[i]) * moveSpeed * speed[i];
         let vy = (ty[i] - py[i]) * moveSpeed * speed[i];
-        if (isCloud) { vx += (Math.random() - 0.5) * 1.2; vy += (Math.random() - 0.5) * 1.2; }
+        // Ambient drift — particles never fully stop
+        vx += Math.sin(elapsed * 0.002 + i * 0.7) * 0.15;
+        vy += Math.cos(elapsed * 0.002 + i * 1.1) * 0.15;
 
         // Mouse repulsion
         const mdx = px[i] - mouseX, mdy = py[i] - mouseY;
