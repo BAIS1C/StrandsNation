@@ -1,25 +1,19 @@
-import HeroSection from '@/sections/home/HeroSection';
-import Marquee from '@/components/Marquee/Marquee';
-import ArchitectsSection from '@/sections/home/ArchitectsSection';
-import GameSection from '@/sections/home/GameSection';
-import EcosystemSection from '@/sections/home/EcosystemSection';
-import FoundersSection from '@/sections/home/FoundersSection';
-import RoadmapSection from '@/sections/home/RoadmapSection';
-import ConnectSection from '@/sections/home/ConnectSection';
-import Footer from '@/components/Footer/Footer';
+'use client';
 
-export default function HomePage() {
-  return (
-    <div className="page-enter">
-      <HeroSection />
-      <Marquee />
-      <ArchitectsSection />
-      <GameSection />
-      <EcosystemSection />
-      <FoundersSection />
-      <RoadmapSection />
-      <ConnectSection />
-      <Footer />
-    </div>
-  );
+import { useState, useCallback } from 'react';
+import AuthGate from '@/components/AuthGate/AuthGate';
+import GameDesktop from '@/components/GameDesktop/GameDesktop';
+
+export default function MiniAppPage() {
+  const [ready, setReady] = useState(false);
+
+  const handleReady = useCallback(() => {
+    setReady(true);
+  }, []);
+
+  if (!ready) {
+    return <AuthGate onReady={handleReady} />;
+  }
+
+  return <GameDesktop />;
 }
