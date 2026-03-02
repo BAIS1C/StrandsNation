@@ -13,6 +13,7 @@ const navLinks = [
   { href: '/game', label: 'GAME' },
   { href: '/network', label: 'NETWORK' },
   { href: '/manifesto', label: 'MANIFESTO' },
+  { href: '/whitepaper', label: 'WHITEPAPER' },
 ] as const;
 
 export default function Nav() {

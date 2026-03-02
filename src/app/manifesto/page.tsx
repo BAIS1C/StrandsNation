@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import SectionWrapper from '@/sections/shared/SectionWrapper';
 import SectionLabel from '@/components/SectionLabel/SectionLabel';
 import Card from '@/components/Card/Card';
@@ -38,7 +39,7 @@ export default function ManifestoPage() {
           </a>
         </Card>
 
-        {/* ─── Whitepaper ─── */}
+        {/* ─── Whitepaper — now links to internal /whitepaper route ─── */}
         <Card variant="purple">
           <span className={styles.docLabel} data-variant="purple">WHITEPAPER</span>
           <div className={styles.cardTitle} data-variant="purple">
@@ -54,15 +55,13 @@ export default function ManifestoPage() {
             incentive loop, every infrastructure decision — documented, reasoned, and open for
             scrutiny.
           </p>
-          <a
-            href="https://strandsnation.gitbook.io/strands/"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/whitepaper"
             className={styles.docLink}
             data-variant="purple"
           >
             READ THE WHITEPAPER →
-          </a>
+          </Link>
         </Card>
 
         {/* ─── Architects Book ─── */}
