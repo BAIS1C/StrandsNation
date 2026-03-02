@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a0a14"/>
+      <stop offset="100%" stop-color="#06060c"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <g opacity="0.04" stroke="#00f0ff">
+    <line x1="0" y1="200" x2="1200" y2="200" stroke-dasharray="2,8"/>
+    <line x1="0" y1="400" x2="1200" y2="400" stroke-dasharray="2,8"/>
+    <line x1="0" y1="600" x2="1200" y2="600" stroke-dasharray="2,8"/>
+  </g>
+
+  <text x="600" y="48" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="700" letter-spacing="2">ANTI-DEATH-SPIRAL DESIGN</text>
+  <text x="600" y="72" text-anchor="middle" fill="#00f0ff" font-size="12" letter-spacing="4" opacity="0.7">FAILURE ISOLATION — CHAPTER 10</text>
+  <line x1="380" y1="86" x2="820" y2="86" stroke="#00f0ff" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Scenario 1: Chain fails -->
+  <rect x="60" y="120" width="350" height="270" rx="4" fill="#ff4060" fill-opacity="0.04" stroke="#ff4060" stroke-width="0.8"/>
+  <rect x="60" y="120" width="350" height="36" rx="4" fill="#ff4060" fill-opacity="0.12"/>
+  <text x="235" y="143" text-anchor="middle" fill="#ff4060" font-size="14" font-weight="700">SCENARIO A: $KREDS CHAIN FAILS</text>
+  
+  <text x="85" y="180" fill="#ff4060" font-size="11" font-weight="600">✕ $KREDS token value → 0</text>
+  <text x="85" y="200" fill="#ff4060" font-size="11" font-weight="600">✕ Validator rewards cease</text>
+  <text x="85" y="220" fill="#ff4060" font-size="11" font-weight="600">✕ On-chain UBI distribution stops</text>
+  
+  <line x1="90" y1="238" x2="380" y2="238" stroke="#40f080" stroke-width="0.5" opacity="0.3"/>
+  <text x="85" y="260" fill="#40f080" font-size="11" font-weight="600">✓ Game runs on fiat — unaffected</text>
+  <text x="85" y="280" fill="#40f080" font-size="11" font-weight="600">✓ A.R.E. ads pay in fiat — unaffected</text>
+  <text x="85" y="300" fill="#40f080" font-size="11" font-weight="600">✓ Layer U DAOs hold fiat treasuries</text>
+  <text x="85" y="320" fill="#40f080" font-size="11" font-weight="600">✓ Founders Pass retains game utility</text>
+  <text x="85" y="348" fill="#a0a8b8" font-size="10">Impact: UBI redistribution pauses. Core economy intact.</text>
+  <rect x="85" y="360" width="300" height="16" rx="8" fill="#40f080" fill-opacity="0.1" stroke="#40f080" stroke-width="0.4"/>
+  <text x="235" y="372" text-anchor="middle" fill="#40f080" font-size="9" font-weight="600">SURVIVAL: GAME + LAYER U CONTINUE AT FULL CAPACITY</text>
+
+  <!-- Scenario 2: Game fails -->
+  <rect x="425" y="120" width="350" height="270" rx="4" fill="#ff4060" fill-opacity="0.04" stroke="#ff4060" stroke-width="0.8"/>
+  <rect x="425" y="120" width="350" height="36" rx="4" fill="#ff4060" fill-opacity="0.12"/>
+  <text x="600" y="143" text-anchor="middle" fill="#ff4060" font-size="14" font-weight="700">SCENARIO B: GAME FAILS</text>
+  
+  <text x="450" y="180" fill="#ff4060" font-size="11" font-weight="600">✕ Player count → 0</text>
+  <text x="450" y="200" fill="#ff4060" font-size="11" font-weight="600">✕ IAP / Seasonal Pass revenue → 0</text>
+  <text x="450" y="220" fill="#ff4060" font-size="11" font-weight="600">✕ No new onboarding into ecosystem</text>
+  
+  <line x1="455" y1="238" x2="745" y2="238" stroke="#40f080" stroke-width="0.5" opacity="0.3"/>
+  <text x="450" y="260" fill="#40f080" font-size="11" font-weight="600">✓ Layer U = real-world ad business</text>
+  <text x="450" y="280" fill="#40f080" font-size="11" font-weight="600">✓ XR parcels retain advertiser value</text>
+  <text x="450" y="300" fill="#40f080" font-size="11" font-weight="600">✓ $KREDS mints from device activation</text>
+  <text x="450" y="320" fill="#40f080" font-size="11" font-weight="600">✓ EveryWear browser → standalone tool</text>
+  <text x="450" y="348" fill="#a0a8b8" font-size="10">Impact: Growth slows. Existing infrastructure profitable.</text>
+  <rect x="450" y="360" width="300" height="16" rx="8" fill="#40f080" fill-opacity="0.1" stroke="#40f080" stroke-width="0.4"/>
+  <text x="600" y="372" text-anchor="middle" fill="#40f080" font-size="9" font-weight="600">SURVIVAL: LAYER U + $KREDS OPERATE INDEPENDENTLY</text>
+
+  <!-- Scenario 3: Layer U fails -->
+  <rect x="790" y="120" width="350" height="270" rx="4" fill="#ff4060" fill-opacity="0.04" stroke="#ff4060" stroke-width="0.8"/>
+  <rect x="790" y="120" width="350" height="36" rx="4" fill="#ff4060" fill-opacity="0.12"/>
+  <text x="965" y="143" text-anchor="middle" fill="#ff4060" font-size="14" font-weight="700">SCENARIO C: LAYER U FAILS</text>
+  
+  <text x="815" y="180" fill="#ff4060" font-size="11" font-weight="600">✕ DAO treasuries depleted</text>
+  <text x="815" y="200" fill="#ff4060" font-size="11" font-weight="600">✕ XR ad network loses advertisers</text>
+  <text x="815" y="220" fill="#ff4060" font-size="11" font-weight="600">✕ 20% revenue → $KREDS buy stops</text>
+  
+  <line x1="820" y1="238" x2="1110" y2="238" stroke="#40f080" stroke-width="0.5" opacity="0.3"/>
+  <text x="815" y="260" fill="#40f080" font-size="11" font-weight="600">✓ Game IAP/ads/passes = standalone</text>
+  <text x="815" y="280" fill="#40f080" font-size="11" font-weight="600">✓ $KREDS minting = device-based</text>
+  <text x="815" y="300" fill="#40f080" font-size="11" font-weight="600">✓ Marketplace runs on game economy</text>
+  <text x="815" y="320" fill="#40f080" font-size="11" font-weight="600">✓ Skin the World™ = compute credits</text>
+  <text x="815" y="348" fill="#a0a8b8" font-size="10">Impact: Real-world bridge pauses. Digital economy intact.</text>
+  <rect x="815" y="360" width="300" height="16" rx="8" fill="#40f080" fill-opacity="0.1" stroke="#40f080" stroke-width="0.4"/>
+  <text x="965" y="372" text-anchor="middle" fill="#40f080" font-size="9" font-weight="600">SURVIVAL: GAME + $KREDS OPERATE INDEPENDENTLY</text>
+
+  <!-- KEY INSIGHT BOX -->
+  <rect x="120" y="430" width="960" height="140" rx="4" fill="#ffffff" fill-opacity="0.02" stroke="#ffffff" stroke-width="0.5" opacity="0.6"/>
+  <text x="600" y="460" text-anchor="middle" fill="#ffffff" font-size="15" font-weight="700">WHY THIS MATTERS</text>
+  <line x1="480" y1="470" x2="720" y2="470" stroke="#00f0ff" stroke-width="0.4" opacity="0.3"/>
+  <text x="600" y="498" text-anchor="middle" fill="#a0a8b8" font-size="12">Traditional crypto games die when the token crashes. Strands can't — because the token isn't the business model.</text>
+  <text x="600" y="520" text-anchor="middle" fill="#a0a8b8" font-size="12">Traditional ad businesses die when attention leaves. Strands can't — because Layer U generates its own foot traffic.</text>
+  <text x="600" y="542" text-anchor="middle" fill="#a0a8b8" font-size="12">Traditional games die when players churn. Strands can't — because the infrastructure has standalone utility.</text>
+
+  <!-- COMPARISON TABLE -->
+  <rect x="120" y="600" width="960" height="28" rx="3" fill="#00f0ff" fill-opacity="0.08"/>
+  <text x="350" y="618" text-anchor="middle" fill="#00f0ff" font-size="11" font-weight="700">STRANDS (3-LAYER)</text>
+  <text x="600" y="618" text-anchor="middle" fill="#ff4060" font-size="11" font-weight="700">AXIE INFINITY</text>
+  <text x="850" y="618" text-anchor="middle" fill="#ff4060" font-size="11" font-weight="700">STAR ATLAS</text>
+  
+  <line x1="120" y1="632" x2="1080" y2="632" stroke="#ffffff" stroke-width="0.3" opacity="0.2"/>
+  <text x="140" y="652" fill="#a0a8b8" font-size="10">Revenue without token</text>
+  <text x="350" y="652" text-anchor="middle" fill="#40f080" font-size="10" font-weight="600">6 fiat revenue layers</text>
+  <text x="600" y="652" text-anchor="middle" fill="#ff4060" font-size="10">None — all SLP/AXS</text>
+  <text x="850" y="652" text-anchor="middle" fill="#ff4060" font-size="10">None — all ATLAS/POLIS</text>
+  
+  <line x1="120" y1="664" x2="1080" y2="664" stroke="#ffffff" stroke-width="0.2" opacity="0.1"/>
+  <text x="140" y="684" fill="#a0a8b8" font-size="10">Token entry</text>
+  <text x="350" y="684" text-anchor="middle" fill="#40f080" font-size="10" font-weight="600">Earned only — True Value</text>
+  <text x="600" y="684" text-anchor="middle" fill="#ff4060" font-size="10">Bought to play</text>
+  <text x="850" y="684" text-anchor="middle" fill="#ff4060" font-size="10">Bought to play</text>
+  
+  <line x1="120" y1="696" x2="1080" y2="696" stroke="#ffffff" stroke-width="0.2" opacity="0.1"/>
+  <text x="140" y="716" fill="#a0a8b8" font-size="10">Real-world revenue</text>
+  <text x="350" y="716" text-anchor="middle" fill="#40f080" font-size="10" font-weight="600">Layer U XR ad business</text>
+  <text x="600" y="716" text-anchor="middle" fill="#ff4060" font-size="10">None</text>
+  <text x="850" y="716" text-anchor="middle" fill="#ff4060" font-size="10">None</text>
+  
+  <line x1="120" y1="728" x2="1080" y2="728" stroke="#ffffff" stroke-width="0.2" opacity="0.1"/>
+  <text x="140" y="748" fill="#a0a8b8" font-size="10">Death spiral risk</text>
+  <text x="350" y="748" text-anchor="middle" fill="#40f080" font-size="10" font-weight="600">Isolated — 3 independent layers</text>
+  <text x="600" y="748" text-anchor="middle" fill="#ff4060" font-size="10">Total — 95% crash in 2022</text>
+  <text x="850" y="748" text-anchor="middle" fill="#ff4060" font-size="10">Total — 99% crash in 2022</text>
+  
+  <text x="1170" y="785" text-anchor="end" fill="#ffffff" font-size="9" opacity="0.2">Fig. 2</text>
+</svg>

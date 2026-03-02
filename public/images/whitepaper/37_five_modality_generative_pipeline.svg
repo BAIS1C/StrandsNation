@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0a0a14"/><stop offset="100%" stop-color="#06060c"/></linearGradient>
+  </defs>
+  <rect width="1200" height="750" fill="url(#bg)"/>
+
+  <text x="600" y="42" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="700" letter-spacing="2">FIVE-MODALITY GENERATIVE PIPELINE</text>
+  <text x="600" y="64" text-anchor="middle" fill="#00f0ff" font-size="11" letter-spacing="4" opacity="0.7">OPEN-SOURCE CREATIVE STACK — CHAPTER 6</text>
+  <line x1="350" y1="76" x2="850" y2="76" stroke="#00f0ff" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Modality 1: VISUAL -->
+  <rect x="60" y="100" width="210" height="460" rx="4" fill="#00f0ff" fill-opacity="0.04" stroke="#00f0ff" stroke-width="0.8"/>
+  <rect x="60" y="100" width="210" height="36" rx="4" fill="#00f0ff" fill-opacity="0.12"/>
+  <text x="165" y="123" text-anchor="middle" fill="#00f0ff" font-size="13" font-weight="700">👁 VISUAL</text>
+  
+  <text x="75" y="155" fill="#a0a8b8" font-size="9" font-weight="600">TOOLS</text>
+  <text x="75" y="175" fill="#ffffff" font-size="10">ComfyUI (node-based)</text>
+  <text x="75" y="192" fill="#ffffff" font-size="10">Flux (image gen backbone)</text>
+  <text x="75" y="209" fill="#ffffff" font-size="10">InsightFace (face detect)</text>
+  <text x="75" y="226" fill="#ffffff" font-size="10">LoRA (style fine-tuning)</text>
+  
+  <line x1="80" y1="240" x2="250" y2="240" stroke="#00f0ff" stroke-width="0.2" opacity="0.3"/>
+  <text x="75" y="260" fill="#a0a8b8" font-size="9" font-weight="600">USE CASES</text>
+  <text x="75" y="280" fill="#ffffff" font-size="10">▸ Founders Pass NFT art</text>
+  <text x="75" y="297" fill="#ffffff" font-size="10">▸ Skin the World™ skins</text>
+  <text x="75" y="314" fill="#ffffff" font-size="10">▸ Sublime VIP face fusion</text>
+  <text x="75" y="331" fill="#ffffff" font-size="10">▸ NPC portrait generation</text>
+  <text x="75" y="348" fill="#ffffff" font-size="10">▸ World texture creation</text>
+  
+  <line x1="80" y1="362" x2="250" y2="362" stroke="#00f0ff" stroke-width="0.2" opacity="0.3"/>
+  <text x="75" y="382" fill="#a0a8b8" font-size="9" font-weight="600">HOSTING</text>
+  <text x="75" y="402" fill="#ffffff" font-size="10">RunPod (cloud GPU)</text>
+  <text x="75" y="419" fill="#ffffff" font-size="10">Auto-scaling per demand</text>
+  
+  <line x1="80" y1="435" x2="250" y2="435" stroke="#00f0ff" stroke-width="0.2" opacity="0.3"/>
+  <text x="75" y="455" fill="#a0a8b8" font-size="9" font-weight="600">COST MODEL</text>
+  <text x="75" y="475" fill="#ffffff" font-size="10">Compute credits (IAP)</text>
+  <text x="75" y="492" fill="#ffffff" font-size="10">Free: 4 gens at onboard</text>
+  
+  <rect x="80" y="515" width="170" height="18" rx="9" fill="#00f0ff" fill-opacity="0.1" stroke="#00f0ff" stroke-width="0.4"/>
+  <text x="165" y="528" text-anchor="middle" fill="#00f0ff" font-size="9" font-weight="600">OPEN-SOURCE ✓</text>
+
+  <!-- Modality 2: MOTION -->
+  <rect x="290" y="100" width="210" height="460" rx="4" fill="#f0c040" fill-opacity="0.04" stroke="#f0c040" stroke-width="0.8"/>
+  <rect x="290" y="100" width="210" height="36" rx="4" fill="#f0c040" fill-opacity="0.12"/>
+  <text x="395" y="123" text-anchor="middle" fill="#f0c040" font-size="13" font-weight="700">🎬 MOTION</text>
+  
+  <text x="305" y="155" fill="#a0a8b8" font-size="9" font-weight="600">TOOLS</text>
+  <text x="305" y="175" fill="#ffffff" font-size="10">WanVideo</text>
+  <text x="305" y="192" fill="#ffffff" font-size="10">LoRA motion fine-tune</text>
+  <text x="305" y="209" fill="#ffffff" font-size="10">ComfyUI (pipeline)</text>
+  
+  <line x1="310" y1="225" x2="480" y2="225" stroke="#f0c040" stroke-width="0.2" opacity="0.3"/>
+  <text x="305" y="245" fill="#a0a8b8" font-size="9" font-weight="600">USE CASES</text>
+  <text x="305" y="265" fill="#ffffff" font-size="10">▸ Cutscene generation</text>
+  <text x="305" y="282" fill="#ffffff" font-size="10">▸ Proper Gander clips</text>
+  <text x="305" y="299" fill="#ffffff" font-size="10">▸ Player-created shorts</text>
+  <text x="305" y="316" fill="#ffffff" font-size="10">▸ NPC animation clips</text>
+  
+  <line x1="310" y1="332" x2="480" y2="332" stroke="#f0c040" stroke-width="0.2" opacity="0.3"/>
+  <text x="305" y="352" fill="#a0a8b8" font-size="9" font-weight="600">HOSTING</text>
+  <text x="305" y="372" fill="#ffffff" font-size="10">RunPod (GPU intensive)</text>
+  <text x="305" y="389" fill="#ffffff" font-size="10">Batch rendering queue</text>
+  
+  <line x1="310" y1="405" x2="480" y2="405" stroke="#f0c040" stroke-width="0.2" opacity="0.3"/>
+  <text x="305" y="425" fill="#a0a8b8" font-size="9" font-weight="600">COST MODEL</text>
+  <text x="305" y="445" fill="#ffffff" font-size="10">Premium compute credits</text>
+  <text x="305" y="462" fill="#ffffff" font-size="10">Phase 2+ feature</text>
+  
+  <rect x="310" y="515" width="170" height="18" rx="9" fill="#f0c040" fill-opacity="0.1" stroke="#f0c040" stroke-width="0.4"/>
+  <text x="395" y="528" text-anchor="middle" fill="#f0c040" font-size="9" font-weight="600">OPEN-SOURCE ✓</text>
+
+  <!-- Modality 3: MUSIC -->
+  <rect x="520" y="100" width="210" height="460" rx="4" fill="#40f080" fill-opacity="0.04" stroke="#40f080" stroke-width="0.8"/>
+  <rect x="520" y="100" width="210" height="36" rx="4" fill="#40f080" fill-opacity="0.12"/>
+  <text x="625" y="123" text-anchor="middle" fill="#40f080" font-size="13" font-weight="700">🎵 MUSIC</text>
+  
+  <text x="535" y="155" fill="#a0a8b8" font-size="9" font-weight="600">TOOLS</text>
+  <text x="535" y="175" fill="#ffffff" font-size="10">Ace Studio Step 1.5</text>
+  <text x="535" y="192" fill="#ffffff" font-size="10">(forked, self-hosted)</text>
+  <text x="535" y="209" fill="#ffffff" font-size="10">Near-Suno quality</text>
+  
+  <line x1="540" y1="225" x2="710" y2="225" stroke="#40f080" stroke-width="0.2" opacity="0.3"/>
+  <text x="535" y="245" fill="#a0a8b8" font-size="9" font-weight="600">USE CASES</text>
+  <text x="535" y="265" fill="#ffffff" font-size="10">▸ Onboarding music quest</text>
+  <text x="535" y="282" fill="#ffffff" font-size="10">▸ Player compositions</text>
+  <text x="535" y="299" fill="#ffffff" font-size="10">▸ Gang/faction anthems</text>
+  <text x="535" y="316" fill="#ffffff" font-size="10">▸ Ambient zone tracks</text>
+  
+  <line x1="540" y1="332" x2="710" y2="332" stroke="#40f080" stroke-width="0.2" opacity="0.3"/>
+  <text x="535" y="352" fill="#a0a8b8" font-size="9" font-weight="600">HOSTING</text>
+  <text x="535" y="372" fill="#ffffff" font-size="10">Self-hosted pipeline</text>
+  <text x="535" y="389" fill="#ffffff" font-size="10">NOT Suno API</text>
+  
+  <line x1="540" y1="405" x2="710" y2="405" stroke="#40f080" stroke-width="0.2" opacity="0.3"/>
+  <text x="535" y="425" fill="#a0a8b8" font-size="9" font-weight="600">COST MODEL</text>
+  <text x="535" y="445" fill="#ffffff" font-size="10">Free: 4 gens at onboard</text>
+  <text x="535" y="462" fill="#ffffff" font-size="10">More access in full game</text>
+  
+  <rect x="540" y="515" width="170" height="18" rx="9" fill="#40f080" fill-opacity="0.1" stroke="#40f080" stroke-width="0.4"/>
+  <text x="625" y="528" text-anchor="middle" fill="#40f080" font-size="9" font-weight="600">OPEN-SOURCE ✓</text>
+
+  <!-- Modality 4: SPEECH -->
+  <rect x="750" y="100" width="210" height="460" rx="4" fill="#ff6080" fill-opacity="0.04" stroke="#ff6080" stroke-width="0.8"/>
+  <rect x="750" y="100" width="210" height="36" rx="4" fill="#ff6080" fill-opacity="0.12"/>
+  <text x="855" y="123" text-anchor="middle" fill="#ff6080" font-size="13" font-weight="700">🗣 SPEECH</text>
+  
+  <text x="765" y="155" fill="#a0a8b8" font-size="9" font-weight="600">TOOLS</text>
+  <text x="765" y="175" fill="#ffffff" font-size="10">Chatterbox TTS</text>
+  <text x="765" y="192" fill="#ffffff" font-size="10">(Resemble AI, self-hosted)</text>
+  <text x="765" y="209" fill="#ffffff" font-size="10">12-second voice clone</text>
+  
+  <line x1="770" y1="225" x2="940" y2="225" stroke="#ff6080" stroke-width="0.2" opacity="0.3"/>
+  <text x="765" y="245" fill="#a0a8b8" font-size="9" font-weight="600">USE CASES</text>
+  <text x="765" y="265" fill="#ffffff" font-size="10">▸ "I am my own key" capture</text>
+  <text x="765" y="282" fill="#ffffff" font-size="10">▸ NPC voiced dialogue</text>
+  <text x="765" y="299" fill="#ffffff" font-size="10">▸ Player voice identity</text>
+  <text x="765" y="316" fill="#ffffff" font-size="10">▸ My Mait voice matching</text>
+  
+  <line x1="770" y1="332" x2="940" y2="332" stroke="#ff6080" stroke-width="0.2" opacity="0.3"/>
+  <text x="765" y="352" fill="#a0a8b8" font-size="9" font-weight="600">HOSTING</text>
+  <text x="765" y="372" fill="#ffffff" font-size="10">Self-hosted pipeline</text>
+  <text x="765" y="389" fill="#ffffff" font-size="10">GDPR: on-device first</text>
+  
+  <line x1="770" y1="405" x2="940" y2="405" stroke="#ff6080" stroke-width="0.2" opacity="0.3"/>
+  <text x="765" y="425" fill="#a0a8b8" font-size="9" font-weight="600">COST MODEL</text>
+  <text x="765" y="445" fill="#ffffff" font-size="10">Included in game</text>
+  <text x="765" y="462" fill="#ffffff" font-size="10">Voice = identity layer</text>
+  
+  <rect x="770" y="515" width="170" height="18" rx="9" fill="#ff6080" fill-opacity="0.1" stroke="#ff6080" stroke-width="0.4"/>
+  <text x="855" y="528" text-anchor="middle" fill="#ff6080" font-size="9" font-weight="600">OPEN-SOURCE ✓</text>
+
+  <!-- Modality 5: TEXT -->
+  <rect x="980" y="100" width="165" height="460" rx="4" fill="#a060ff" fill-opacity="0.04" stroke="#a060ff" stroke-width="0.8"/>
+  <rect x="980" y="100" width="165" height="36" rx="4" fill="#a060ff" fill-opacity="0.12"/>
+  <text x="1062" y="123" text-anchor="middle" fill="#a060ff" font-size="13" font-weight="700">📝 TEXT</text>
+  
+  <text x="995" y="155" fill="#a0a8b8" font-size="9" font-weight="600">TOOLS</text>
+  <text x="995" y="175" fill="#ffffff" font-size="10">Ollama (local LLM)</text>
+  <text x="995" y="192" fill="#ffffff" font-size="10">Claude (escalation)</text>
+  <text x="995" y="209" fill="#ffffff" font-size="10">GPT-4o (KASAI)</text>
+  
+  <line x1="1000" y1="225" x2="1130" y2="225" stroke="#a060ff" stroke-width="0.2" opacity="0.3"/>
+  <text x="995" y="245" fill="#a0a8b8" font-size="9" font-weight="600">USE CASES</text>
+  <text x="995" y="265" fill="#ffffff" font-size="10">▸ NPC dialogue</text>
+  <text x="995" y="282" fill="#ffffff" font-size="10">▸ Quest generation</text>
+  <text x="995" y="299" fill="#ffffff" font-size="10">▸ Lore expansion</text>
+  <text x="995" y="316" fill="#ffffff" font-size="10">▸ Player journals</text>
+  
+  <line x1="1000" y1="332" x2="1130" y2="332" stroke="#a060ff" stroke-width="0.2" opacity="0.3"/>
+  <text x="995" y="352" fill="#a0a8b8" font-size="9" font-weight="600">HOSTING</text>
+  <text x="995" y="372" fill="#ffffff" font-size="10">Local first</text>
+  <text x="995" y="389" fill="#ffffff" font-size="10">Cloud escalation</text>
+  
+  <rect x="1000" y="515" width="130" height="18" rx="9" fill="#a060ff" fill-opacity="0.1" stroke="#a060ff" stroke-width="0.4"/>
+  <text x="1062" y="528" text-anchor="middle" fill="#a060ff" font-size="9" font-weight="600">OPEN-SOURCE ✓</text>
+
+  <!-- Bottom bar: key principle -->
+  <rect x="60" y="590" width="1085" height="50" rx="4" fill="#ffffff" fill-opacity="0.02" stroke="#ffffff" stroke-width="0.4" opacity="0.5"/>
+  <text x="600" y="615" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="700">100% OPEN-SOURCE GENERATIVE STACK — NO VENDOR LOCK-IN — SELF-HOSTED PIPELINES</text>
+  <text x="600" y="633" text-anchor="middle" fill="#a0a8b8" font-size="10">Every modality uses forkable, auditable, self-hostable tools. No API dependency on Suno, Midjourney, or OpenAI for core generation.</text>
+
+  <!-- Trademark callout -->
+  <rect x="60" y="660" width="1085" height="36" rx="4" fill="#00f0ff" fill-opacity="0.02" stroke="#00f0ff" stroke-width="0.3"/>
+  <text x="600" y="683" text-anchor="middle" fill="#00f0ff" font-size="11" font-weight="600">SKIN THE WORLD™ — Players generate their own skins, characters, worlds, and music using this stack</text>
+
+  <text x="1170" y="740" text-anchor="end" fill="#ffffff" font-size="9" opacity="0.2">Fig. 37</text>
+</svg>

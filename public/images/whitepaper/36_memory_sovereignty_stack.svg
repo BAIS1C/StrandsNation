@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 900" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0a0a14"/><stop offset="100%" stop-color="#06060c"/></linearGradient>
+    <marker id="arrDown" markerWidth="8" markerHeight="10" refX="4" refY="10" orient="auto"><polygon points="0,0 8,0 4,10" fill="#00f0ff" opacity="0.5"/></marker>
+    <marker id="arrUp" markerWidth="8" markerHeight="10" refX="4" refY="0" orient="auto"><polygon points="0,10 8,10 4,0" fill="#40f080" opacity="0.5"/></marker>
+  </defs>
+  <rect width="1000" height="900" fill="url(#bg)"/>
+
+  <text x="500" y="42" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="700" letter-spacing="2">MEMORY SOVEREIGNTY STACK</text>
+  <text x="500" y="64" text-anchor="middle" fill="#00f0ff" font-size="11" letter-spacing="4" opacity="0.7">PLAYER-OWNED PERSISTENT MEMORY — CHAPTER 5</text>
+  <line x1="250" y1="78" x2="750" y2="78" stroke="#00f0ff" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Layer 5 (top): MyMories NFT-RAG -->
+  <rect x="150" y="100" width="700" height="90" rx="6" fill="#f0c040" fill-opacity="0.06" stroke="#f0c040" stroke-width="1"/>
+  <rect x="150" y="100" width="700" height="30" rx="6" fill="#f0c040" fill-opacity="0.1"/>
+  <text x="500" y="120" text-anchor="middle" fill="#f0c040" font-size="13" font-weight="700">LAYER 5: MyMORIES NFT-RAG</text>
+  <text x="170" y="150" fill="#ffffff" font-size="10">▸ Player-owned .mmr memory file — NFT-backed on Strands Chain</text>
+  <text x="170" y="168" fill="#ffffff" font-size="10">▸ Portable across games/platforms — player takes memories when they leave</text>
+  <text x="170" y="186" fill="#a0a8b8" font-size="9">Format: Directed Acyclic Graph (DAG) — temporal, relational, weighted memory nodes</text>
+
+  <!-- Arrow down -->
+  <line x1="500" y1="192" x2="500" y2="216" stroke="#00f0ff" stroke-width="1" opacity="0.4" marker-end="url(#arrDown)"/>
+
+  <!-- Layer 4: ClawdBot -->
+  <rect x="150" y="220" width="700" height="90" rx="6" fill="#a060ff" fill-opacity="0.06" stroke="#a060ff" stroke-width="1"/>
+  <rect x="150" y="220" width="700" height="30" rx="6" fill="#a060ff" fill-opacity="0.1"/>
+  <text x="500" y="240" text-anchor="middle" fill="#a060ff" font-size="13" font-weight="700">LAYER 4: ClawdBot (CLAUDE INTEGRATION)</text>
+  <text x="170" y="270" fill="#ffffff" font-size="10">▸ Anthropic Claude-powered conversation layer — high-context reasoning</text>
+  <text x="170" y="288" fill="#ffffff" font-size="10">▸ Handles complex narrative decisions, philosophical dialogue, emergent storytelling</text>
+  <text x="170" y="306" fill="#a0a8b8" font-size="9">Orchestrates: when local LLM insufficient → escalates to Claude for deep reasoning</text>
+
+  <!-- Arrow down -->
+  <line x1="500" y1="312" x2="500" y2="336" stroke="#00f0ff" stroke-width="1" opacity="0.4" marker-end="url(#arrDown)"/>
+
+  <!-- Layer 3: KASAI -->
+  <rect x="150" y="340" width="700" height="90" rx="6" fill="#00f0ff" fill-opacity="0.06" stroke="#00f0ff" stroke-width="1"/>
+  <rect x="150" y="340" width="700" height="30" rx="6" fill="#00f0ff" fill-opacity="0.1"/>
+  <text x="500" y="360" text-anchor="middle" fill="#00f0ff" font-size="13" font-weight="700">LAYER 3: KASAI (PRIMARY AI COMPANION)</text>
+  <text x="170" y="390" fill="#ffffff" font-size="10">▸ GPT-4/4o architecture — player's primary AI guide within MetaXity1</text>
+  <text x="170" y="408" fill="#ffffff" font-size="10">▸ Personality-matched via SAL — adapts to player's psychometric profile</text>
+  <text x="170" y="426" fill="#a0a8b8" font-size="9">Context: 128K token window, maintains narrative continuity across sessions</text>
+
+  <!-- Arrow down -->
+  <line x1="500" y1="432" x2="500" y2="456" stroke="#00f0ff" stroke-width="1" opacity="0.4" marker-end="url(#arrDown)"/>
+
+  <!-- Layer 2: SAL -->
+  <rect x="150" y="460" width="700" height="90" rx="6" fill="#40f080" fill-opacity="0.06" stroke="#40f080" stroke-width="1"/>
+  <rect x="150" y="460" width="700" height="30" rx="6" fill="#40f080" fill-opacity="0.1"/>
+  <text x="500" y="480" text-anchor="middle" fill="#40f080" font-size="13" font-weight="700">LAYER 2: SAL (SEMANTIC ALIGNMENT LAYER)</text>
+  <text x="170" y="510" fill="#ffffff" font-size="10">▸ Personality-driven matching engine — psychometric → content selection</text>
+  <text x="170" y="528" fill="#ffffff" font-size="10">▸ Determines NPC behaviour, quest routing, faction affinity, dialogue style</text>
+  <text x="170" y="546" fill="#a0a8b8" font-size="9">Input: NKQ assessment results → Output: Trait Shard configuration → personalised game build</text>
+
+  <!-- Arrow down -->
+  <line x1="500" y1="552" x2="500" y2="576" stroke="#00f0ff" stroke-width="1" opacity="0.4" marker-end="url(#arrDown)"/>
+
+  <!-- Layer 1 (bottom): MyMories Core -->
+  <rect x="150" y="580" width="700" height="90" rx="6" fill="#ff6080" fill-opacity="0.06" stroke="#ff6080" stroke-width="1"/>
+  <rect x="150" y="580" width="700" height="30" rx="6" fill="#ff6080" fill-opacity="0.1"/>
+  <text x="500" y="600" text-anchor="middle" fill="#ff6080" font-size="13" font-weight="700">LAYER 1: MyMORIES CORE (LOCAL MEMORY ENGINE)</text>
+  <text x="170" y="630" fill="#ffffff" font-size="10">▸ Ollama-powered local LLM — runs on-device for privacy</text>
+  <text x="170" y="648" fill="#ffffff" font-size="10">▸ Stores: decisions, relationships, emotional states, quest history, NPC interactions</text>
+  <text x="170" y="666" fill="#a0a8b8" font-size="9">GDPR-compliant: all memory processing on-device first, chain storage opt-in only</text>
+
+  <!-- Data flow label -->
+  <text x="95" y="420" text-anchor="middle" fill="#00f0ff" font-size="10" font-weight="600" transform="rotate(-90, 95, 420)">QUERY FLOW ↓</text>
+  <text x="905" y="420" text-anchor="middle" fill="#40f080" font-size="10" font-weight="600" transform="rotate(90, 905, 420)">MEMORY FLOW ↑</text>
+
+  <!-- Sovereignty callout -->
+  <rect x="150" y="700" width="700" height="80" rx="4" fill="#ffffff" fill-opacity="0.02" stroke="#ffffff" stroke-width="0.5" opacity="0.5"/>
+  <text x="500" y="725" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="700">SOVEREIGNTY PRINCIPLE</text>
+  <text x="500" y="748" text-anchor="middle" fill="#a0a8b8" font-size="10">Player owns their .mmr file. If they leave Strands, their memories go with them.</text>
+  <text x="500" y="766" text-anchor="middle" fill="#a0a8b8" font-size="10">No platform lock-in. No data hostage. Memory is property, not a service.</text>
+
+  <!-- GDPR badge -->
+  <rect x="350" y="800" width="300" height="24" rx="12" fill="#40f080" fill-opacity="0.08" stroke="#40f080" stroke-width="0.4"/>
+  <text x="500" y="816" text-anchor="middle" fill="#40f080" font-size="10" font-weight="600">GDPR COMPLIANT — TIERED CONSENT — ON-DEVICE FIRST</text>
+
+  <text x="970" y="885" text-anchor="end" fill="#ffffff" font-size="9" opacity="0.2">Fig. 36</text>
+</svg>

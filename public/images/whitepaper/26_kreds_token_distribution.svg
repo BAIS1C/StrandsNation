@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0a0a14"/><stop offset="100%" stop-color="#06060c"/></linearGradient>
+  </defs>
+  <rect width="1000" height="700" fill="url(#bg)"/>
+
+  <text x="500" y="42" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="700" letter-spacing="2">$KREDS TOKEN DISTRIBUTION</text>
+  <text x="500" y="64" text-anchor="middle" fill="#40f080" font-size="11" letter-spacing="4" opacity="0.7">TRUE VALUE LAUNCH — NO VC / NO PRESALE / NO ICO — CHAPTER 13</text>
+  <line x1="250" y1="78" x2="750" y2="78" stroke="#40f080" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Donut chart -->
+  <g transform="translate(380,340)">
+    <!-- 80% Validators/Staking: 0° to 288° -->
+    <path d="M0,-200 A200,200 0 1,1 -190.2,61.8 L-114.1,37.1 A120,120 0 1,0 0,-120 Z" fill="#40f080" fill-opacity="0.45" stroke="#40f080" stroke-width="1"/>
+    
+    <!-- 10% DEX Liquidity: 288° to 324° -->
+    <path d="M-190.2,61.8 A200,200 0 0,1 -117.6,-161.8 L-70.5,-97.1 A120,120 0 0,0 -114.1,37.1 Z" fill="#00f0ff" fill-opacity="0.45" stroke="#00f0ff" stroke-width="1"/>
+    
+    <!-- 5% Dev Treasury: 324° to 342° -->
+    <path d="M-117.6,-161.8 A200,200 0 0,1 -61.8,-190.2 L-37.1,-114.1 A120,120 0 0,0 -70.5,-97.1 Z" fill="#f0c040" fill-opacity="0.45" stroke="#f0c040" stroke-width="1"/>
+    
+    <!-- 5% Community: 342° to 360° -->
+    <path d="M-61.8,-190.2 A200,200 0 0,1 0,-200 L0,-120 A120,120 0 0,0 -37.1,-114.1 Z" fill="#ff6080" fill-opacity="0.4" stroke="#ff6080" stroke-width="1"/>
+
+    <!-- Centre text -->
+    <text x="0" y="-15" text-anchor="middle" fill="#ffffff" font-size="28" font-weight="700">100B</text>
+    <text x="0" y="10" text-anchor="middle" fill="#a0a8b8" font-size="12">SUPPLY CAP</text>
+    <text x="0" y="32" text-anchor="middle" fill="#40f080" font-size="10" font-weight="600">0% VC ALLOCATION</text>
+  </g>
+
+  <!-- Labels with lines -->
+  <!-- 80% Validators -->
+  <line x1="480" y1="180" x2="680" y2="130" stroke="#40f080" stroke-width="0.5" opacity="0.5"/>
+  <circle cx="680" cy="130" r="3" fill="#40f080"/>
+  <text x="694" y="126" fill="#40f080" font-size="16" font-weight="700">80%</text>
+  <text x="694" y="146" fill="#ffffff" font-size="12" font-weight="600">Validators &amp; Staking</text>
+  <text x="694" y="164" fill="#a0a8b8" font-size="10">Algorithmic distribution via device</text>
+  <text x="694" y="180" fill="#a0a8b8" font-size="10">activation minting + validation rewards</text>
+
+  <!-- 10% DEX Liquidity -->
+  <line x1="220" y1="420" x2="80" y2="420" stroke="#00f0ff" stroke-width="0.5" opacity="0.5"/>
+  <circle cx="80" cy="420" r="3" fill="#00f0ff"/>
+  <text x="80" y="410" fill="#00f0ff" font-size="16" font-weight="700">10%</text>
+  <text x="80" y="440" fill="#ffffff" font-size="12" font-weight="600">DEX Liquidity</text>
+  <text x="80" y="458" fill="#a0a8b8" font-size="10">Initial AMM pool seeding</text>
+  <text x="80" y="474" fill="#a0a8b8" font-size="10">on decentralised exchanges</text>
+
+  <!-- 5% Dev Treasury -->
+  <line x1="280" y1="180" x2="80" y2="180" stroke="#f0c040" stroke-width="0.5" opacity="0.5"/>
+  <circle cx="80" cy="180" r="3" fill="#f0c040"/>
+  <text x="80" y="170" fill="#f0c040" font-size="16" font-weight="700">5%</text>
+  <text x="80" y="198" fill="#ffffff" font-size="12" font-weight="600">Dev &amp; Treasury</text>
+  <text x="80" y="216" fill="#a0a8b8" font-size="10">18-month time-lock vesting</text>
+  <text x="80" y="232" fill="#a0a8b8" font-size="10">No early access, no team dump</text>
+
+  <!-- 5% Community -->
+  <line x1="340" y1="150" x2="80" y2="290" stroke="#ff6080" stroke-width="0.5" opacity="0.5"/>
+  <circle cx="80" cy="290" r="3" fill="#ff6080"/>
+  <text x="80" y="280" fill="#ff6080" font-size="16" font-weight="700">5%</text>
+  <text x="80" y="308" fill="#ffffff" font-size="12" font-weight="600">Community &amp; Marketing</text>
+  <text x="80" y="326" fill="#a0a8b8" font-size="10">SIGOPS rewards, ecosystem growth</text>
+  <text x="80" y="342" fill="#a0a8b8" font-size="10">campaigns, creator incentives</text>
+
+  <!-- Key differentiator box -->
+  <rect x="100" y="540" width="800" height="110" rx="4" fill="#40f080" fill-opacity="0.03" stroke="#40f080" stroke-width="0.6"/>
+  <text x="500" y="570" text-anchor="middle" fill="#40f080" font-size="13" font-weight="700">TRUE VALUE LAUNCH — HOW THIS DIFFERS</text>
+  <line x1="300" y1="580" x2="700" y2="580" stroke="#40f080" stroke-width="0.3" opacity="0.3"/>
+  <text x="200" y="604" fill="#ffffff" font-size="10">▸ $KREDS enters circulation exclusively through earned mechanisms — device activation, validation, SIGOPS</text>
+  <text x="200" y="622" fill="#ffffff" font-size="10">▸ Metafintek does not sell $KREDS to any party at any price — no investment contract exists</text>
+  <text x="200" y="640" fill="#ffffff" font-size="10">▸ No VC rounds, no presale, no ICO, no private allocation — 0% speculative distribution</text>
+
+  <text x="970" y="685" text-anchor="end" fill="#ffffff" font-size="9" opacity="0.2">Fig. 26</text>
+</svg>

@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0a0a14"/><stop offset="100%" stop-color="#06060c"/></linearGradient>
+  </defs>
+  <rect width="1200" height="700" fill="url(#bg)"/>
+
+  <text x="600" y="42" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="700" letter-spacing="2">DEVELOPMENT ROADMAP</text>
+  <text x="600" y="64" text-anchor="middle" fill="#00f0ff" font-size="11" letter-spacing="4" opacity="0.7">SEVEN PHASES WITH PROOF GATES — CHAPTER 15</text>
+  <line x1="350" y1="76" x2="850" y2="76" stroke="#00f0ff" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Timeline backbone -->
+  <line x1="100" y1="130" x2="1100" y2="130" stroke="#ffffff" stroke-width="1" opacity="0.15"/>
+  
+  <!-- Phase 1 -->
+  <circle cx="170" cy="130" r="8" fill="#00f0ff" fill-opacity="0.3" stroke="#00f0ff" stroke-width="1"/>
+  <text x="170" y="115" text-anchor="middle" fill="#00f0ff" font-size="10" font-weight="700">P1</text>
+  <rect x="100" y="150" width="140" height="200" rx="4" fill="#00f0ff" fill-opacity="0.04" stroke="#00f0ff" stroke-width="0.6"/>
+  <text x="170" y="172" text-anchor="middle" fill="#00f0ff" font-size="11" font-weight="700">FOUNDATION</text>
+  <text x="112" y="195" fill="#ffffff" font-size="9">TG Mini App</text>
+  <text x="112" y="210" fill="#ffffff" font-size="9">2D Onboarding</text>
+  <text x="112" y="225" fill="#ffffff" font-size="9">NKQ Assessment</text>
+  <text x="112" y="240" fill="#ffffff" font-size="9">Auth (TG + UUID)</text>
+  <text x="112" y="255" fill="#ffffff" font-size="9">Founders Pass</text>
+  <text x="112" y="278" fill="#a0a8b8" font-size="8">PROOF GATE:</text>
+  <text x="112" y="292" fill="#a0a8b8" font-size="8">1K onboarded players</text>
+  <rect x="110" y="310" width="120" height="14" rx="7" fill="#00f0ff" fill-opacity="0.15"/>
+  <text x="170" y="320" text-anchor="middle" fill="#00f0ff" font-size="8" font-weight="600">Q3–Q4 2025</text>
+
+  <!-- Phase 2 -->
+  <circle cx="310" cy="130" r="8" fill="#00f0ff" fill-opacity="0.3" stroke="#00f0ff" stroke-width="1"/>
+  <text x="310" y="115" text-anchor="middle" fill="#00f0ff" font-size="10" font-weight="700">P2</text>
+  <rect x="242" y="150" width="140" height="200" rx="4" fill="#00f0ff" fill-opacity="0.04" stroke="#00f0ff" stroke-width="0.6"/>
+  <text x="312" y="172" text-anchor="middle" fill="#00f0ff" font-size="11" font-weight="700">GENERATIVE</text>
+  <text x="254" y="195" fill="#ffffff" font-size="9">Music Gen Quest</text>
+  <text x="254" y="210" fill="#ffffff" font-size="9">Face Fusion (Sublime)</text>
+  <text x="254" y="225" fill="#ffffff" font-size="9">Skin the World™ v1</text>
+  <text x="254" y="240" fill="#ffffff" font-size="9">Proper Gander v1</text>
+  <text x="254" y="278" fill="#a0a8b8" font-size="8">PROOF GATE:</text>
+  <text x="254" y="292" fill="#a0a8b8" font-size="8">Gen pipeline at scale</text>
+  <rect x="252" y="310" width="120" height="14" rx="7" fill="#00f0ff" fill-opacity="0.15"/>
+  <text x="312" y="320" text-anchor="middle" fill="#00f0ff" font-size="8" font-weight="600">Q1 2026</text>
+
+  <!-- Phase 3 -->
+  <circle cx="452" cy="130" r="8" fill="#f0c040" fill-opacity="0.3" stroke="#f0c040" stroke-width="1"/>
+  <text x="452" y="115" text-anchor="middle" fill="#f0c040" font-size="10" font-weight="700">P3</text>
+  <rect x="384" y="150" width="140" height="200" rx="4" fill="#f0c040" fill-opacity="0.04" stroke="#f0c040" stroke-width="0.6"/>
+  <text x="454" y="172" text-anchor="middle" fill="#f0c040" font-size="11" font-weight="700">ARG LAYER</text>
+  <text x="396" y="195" fill="#ffffff" font-size="9">2D + AR Hybrid</text>
+  <text x="396" y="210" fill="#ffffff" font-size="9">Location Quests</text>
+  <text x="396" y="225" fill="#ffffff" font-size="9">A.R.E. Launch</text>
+  <text x="396" y="240" fill="#ffffff" font-size="9">Marketplace v1</text>
+  <text x="396" y="278" fill="#a0a8b8" font-size="8">PROOF GATE:</text>
+  <text x="396" y="292" fill="#a0a8b8" font-size="8">Revenue from A.R.E.</text>
+  <rect x="394" y="310" width="120" height="14" rx="7" fill="#f0c040" fill-opacity="0.15"/>
+  <text x="454" y="320" text-anchor="middle" fill="#f0c040" font-size="8" font-weight="600">Q2–Q3 2026</text>
+
+  <!-- Phase 4 -->
+  <circle cx="594" cy="130" r="8" fill="#f0c040" fill-opacity="0.3" stroke="#f0c040" stroke-width="1"/>
+  <text x="594" y="115" text-anchor="middle" fill="#f0c040" font-size="10" font-weight="700">P4</text>
+  <rect x="526" y="150" width="140" height="200" rx="4" fill="#f0c040" fill-opacity="0.04" stroke="#f0c040" stroke-width="0.6"/>
+  <text x="596" y="172" text-anchor="middle" fill="#f0c040" font-size="11" font-weight="700">ALPHA</text>
+  <text x="538" y="195" fill="#ffffff" font-size="9">EveryWear Browser</text>
+  <text x="538" y="210" fill="#ffffff" font-size="9">WebGL Game Client</text>
+  <text x="538" y="225" fill="#ffffff" font-size="9">KASAI Integration</text>
+  <text x="538" y="240" fill="#ffffff" font-size="9">SAL Personalisation</text>
+  <text x="538" y="278" fill="#a0a8b8" font-size="8">PROOF GATE:</text>
+  <text x="538" y="292" fill="#a0a8b8" font-size="8">10K DAU sustained</text>
+  <rect x="536" y="310" width="120" height="14" rx="7" fill="#f0c040" fill-opacity="0.15"/>
+  <text x="596" y="320" text-anchor="middle" fill="#f0c040" font-size="8" font-weight="600">Q4 2026</text>
+
+  <!-- Phase 5 -->
+  <circle cx="736" cy="130" r="8" fill="#40f080" fill-opacity="0.3" stroke="#40f080" stroke-width="1"/>
+  <text x="736" y="115" text-anchor="middle" fill="#40f080" font-size="10" font-weight="700">P5</text>
+  <rect x="668" y="150" width="140" height="200" rx="4" fill="#40f080" fill-opacity="0.04" stroke="#40f080" stroke-width="0.6"/>
+  <text x="738" y="172" text-anchor="middle" fill="#40f080" font-size="11" font-weight="700">BETA</text>
+  <text x="680" y="195" fill="#ffffff" font-size="9">"Prologue" Launch</text>
+  <text x="680" y="210" fill="#ffffff" font-size="9">Layer U KL Pilot</text>
+  <text x="680" y="225" fill="#ffffff" font-size="9">Strands Chain Live</text>
+  <text x="680" y="240" fill="#ffffff" font-size="9">$KREDS Minting</text>
+  <text x="680" y="278" fill="#a0a8b8" font-size="8">PROOF GATE:</text>
+  <text x="680" y="292" fill="#a0a8b8" font-size="8">50K DAU + revenue</text>
+  <rect x="678" y="310" width="120" height="14" rx="7" fill="#40f080" fill-opacity="0.15"/>
+  <text x="738" y="320" text-anchor="middle" fill="#40f080" font-size="8" font-weight="600">2027</text>
+
+  <!-- Phase 6 -->
+  <circle cx="878" cy="130" r="8" fill="#40f080" fill-opacity="0.3" stroke="#40f080" stroke-width="1"/>
+  <text x="878" y="115" text-anchor="middle" fill="#40f080" font-size="10" font-weight="700">P6</text>
+  <rect x="810" y="150" width="140" height="200" rx="4" fill="#40f080" fill-opacity="0.04" stroke="#40f080" stroke-width="0.6"/>
+  <text x="880" y="172" text-anchor="middle" fill="#40f080" font-size="11" font-weight="700">EXPANSION</text>
+  <text x="822" y="195" fill="#ffffff" font-size="9">WiFi DensePose</text>
+  <text x="822" y="210" fill="#ffffff" font-size="9">Standalone Client</text>
+  <text x="822" y="225" fill="#ffffff" font-size="9">Console Ports</text>
+  <text x="822" y="240" fill="#ffffff" font-size="9">Layer U Multi-City</text>
+  <text x="822" y="278" fill="#a0a8b8" font-size="8">PROOF GATE:</text>
+  <text x="822" y="292" fill="#a0a8b8" font-size="8">200K DAU + profit</text>
+  <rect x="820" y="310" width="120" height="14" rx="7" fill="#40f080" fill-opacity="0.15"/>
+  <text x="880" y="320" text-anchor="middle" fill="#40f080" font-size="8" font-weight="600">2027–28</text>
+
+  <!-- Phase 7 -->
+  <circle cx="1020" cy="130" r="8" fill="#a060ff" fill-opacity="0.3" stroke="#a060ff" stroke-width="1"/>
+  <text x="1020" y="115" text-anchor="middle" fill="#a060ff" font-size="10" font-weight="700">P7</text>
+  <rect x="952" y="150" width="140" height="200" rx="4" fill="#a060ff" fill-opacity="0.04" stroke="#a060ff" stroke-width="0.6"/>
+  <text x="1022" y="172" text-anchor="middle" fill="#a060ff" font-size="11" font-weight="700">MATURITY</text>
+  <text x="964" y="195" fill="#ffffff" font-size="9">IP Licensing</text>
+  <text x="964" y="210" fill="#ffffff" font-size="9">Novella Series</text>
+  <text x="964" y="225" fill="#ffffff" font-size="9">Film/TV Adaptation</text>
+  <text x="964" y="240" fill="#ffffff" font-size="9">Global Layer U</text>
+  <text x="964" y="278" fill="#a0a8b8" font-size="8">PROOF GATE:</text>
+  <text x="964" y="292" fill="#a0a8b8" font-size="8">1M DAU + ecosystem</text>
+  <rect x="962" y="310" width="120" height="14" rx="7" fill="#a060ff" fill-opacity="0.15"/>
+  <text x="1022" y="320" text-anchor="middle" fill="#a060ff" font-size="8" font-weight="600">2028+</text>
+
+  <!-- Progress scale bar -->
+  <rect x="100" y="390" width="285" height="6" rx="3" fill="#00f0ff" fill-opacity="0.3"/>
+  <rect x="385" y="390" width="280" height="6" rx="3" fill="#f0c040" fill-opacity="0.3"/>
+  <rect x="665" y="390" width="280" height="6" rx="3" fill="#40f080" fill-opacity="0.3"/>
+  <rect x="945" y="390" width="155" height="6" rx="3" fill="#a060ff" fill-opacity="0.3"/>
+  
+  <text x="240" y="418" text-anchor="middle" fill="#00f0ff" font-size="9" font-weight="600">BUILDING</text>
+  <text x="520" y="418" text-anchor="middle" fill="#f0c040" font-size="9" font-weight="600">PROVING</text>
+  <text x="800" y="418" text-anchor="middle" fill="#40f080" font-size="9" font-weight="600">SCALING</text>
+  <text x="1020" y="418" text-anchor="middle" fill="#a060ff" font-size="9" font-weight="600">ECOSYSTEM</text>
+
+  <!-- Key principle box -->
+  <rect x="100" y="450" width="1000" height="50" rx="4" fill="#ffffff" fill-opacity="0.02" stroke="#ffffff" stroke-width="0.4"/>
+  <text x="600" y="472" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="700">PROOF-GATED PROGRESSION: No phase begins until the previous gate is cleared</text>
+  <text x="600" y="492" text-anchor="middle" fill="#a0a8b8" font-size="10">Each phase has measurable criteria. No "roadmap as marketing." Delivery or pivot — no vaporware.</text>
+
+  <!-- Client evolution -->
+  <rect x="100" y="520" width="1000" height="110" rx="4" fill="#ffffff" fill-opacity="0.01" stroke="#ffffff" stroke-width="0.3"/>
+  <text x="600" y="545" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="600">CLIENT EVOLUTION PATH</text>
+  
+  <rect x="130" y="560" width="160" height="50" rx="4" fill="#00f0ff" fill-opacity="0.06" stroke="#00f0ff" stroke-width="0.4"/>
+  <text x="210" y="580" text-anchor="middle" fill="#00f0ff" font-size="10" font-weight="600">TG MINI APP</text>
+  <text x="210" y="596" text-anchor="middle" fill="#a0a8b8" font-size="8">EveryWear-lite</text>
+  
+  <text x="310" y="588" fill="#a0a8b8" font-size="14">→</text>
+  
+  <rect x="340" y="560" width="200" height="50" rx="4" fill="#f0c040" fill-opacity="0.06" stroke="#f0c040" stroke-width="0.4"/>
+  <text x="440" y="580" text-anchor="middle" fill="#f0c040" font-size="10" font-weight="600">EVERYWEAR BROWSER</text>
+  <text x="440" y="596" text-anchor="middle" fill="#a0a8b8" font-size="8">Data vault + game host (~1yr)</text>
+  
+  <text x="560" y="588" fill="#a0a8b8" font-size="14">→</text>
+  
+  <rect x="590" y="560" width="180" height="50" rx="4" fill="#40f080" fill-opacity="0.06" stroke="#40f080" stroke-width="0.4"/>
+  <text x="680" y="580" text-anchor="middle" fill="#40f080" font-size="10" font-weight="600">STANDALONE CLIENT</text>
+  <text x="680" y="596" text-anchor="middle" fill="#a0a8b8" font-size="8">Native rendering</text>
+  
+  <text x="790" y="588" fill="#a0a8b8" font-size="14">→</text>
+  
+  <rect x="820" y="560" width="250" height="50" rx="4" fill="#a060ff" fill-opacity="0.06" stroke="#a060ff" stroke-width="0.4"/>
+  <text x="945" y="580" text-anchor="middle" fill="#a060ff" font-size="10" font-weight="600">CONSOLE + PC</text>
+  <text x="945" y="596" text-anchor="middle" fill="#a0a8b8" font-size="8">Android / PS5 / Steam / Epic</text>
+
+  <!-- Model reference -->
+  <rect x="300" y="640" width="500" height="24" rx="12" fill="#ffffff" fill-opacity="0.03" stroke="#ffffff" stroke-width="0.3"/>
+  <text x="550" y="656" text-anchor="middle" fill="#a0a8b8" font-size="10">TARGET MODEL: Where Winds Meet (solo + MMO, multi-platform)</text>
+
+  <text x="1170" y="690" text-anchor="end" fill="#ffffff" font-size="9" opacity="0.2">Fig. 32</text>
+</svg>

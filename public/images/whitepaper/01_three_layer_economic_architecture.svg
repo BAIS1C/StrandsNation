@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a0a14"/>
+      <stop offset="100%" stop-color="#06060c"/>
+    </linearGradient>
+    <linearGradient id="cyanGlow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#00f0ff" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="goldGlow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f0c040" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#f0c040" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="greenGlow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#40f080" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#40f080" stop-opacity="0.05"/>
+    </linearGradient>
+    <marker id="arrowWhite" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.5"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <g opacity="0.05" stroke="#00f0ff">
+    <line x1="0" y1="200" x2="1200" y2="200" stroke-dasharray="2,8"/>
+    <line x1="0" y1="400" x2="1200" y2="400" stroke-dasharray="2,8"/>
+    <line x1="0" y1="600" x2="1200" y2="600" stroke-dasharray="2,8"/>
+    <line x1="400" y1="0" x2="400" y2="800" stroke-dasharray="2,8"/>
+    <line x1="800" y1="0" x2="800" y2="800" stroke-dasharray="2,8"/>
+  </g>
+  <text x="600" y="52" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="700" letter-spacing="2">THREE-LAYER ECONOMIC ARCHITECTURE</text>
+  <text x="600" y="76" text-anchor="middle" fill="#00f0ff" font-size="12" letter-spacing="4" opacity="0.7">STRANDS WHITEPAPER v6 — CHAPTER 10</text>
+  <line x1="350" y1="90" x2="850" y2="90" stroke="#00f0ff" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- GAME ECONOMY -->
+  <rect x="60" y="140" width="320" height="480" rx="4" fill="url(#cyanGlow)" stroke="#00f0ff" stroke-width="1" opacity="0.8"/>
+  <rect x="60" y="140" width="320" height="48" rx="4" fill="#00f0ff" fill-opacity="0.15"/>
+  <text x="220" y="170" text-anchor="middle" fill="#00f0ff" font-size="16" font-weight="700" letter-spacing="1">GAME ECONOMY</text>
+  <text x="220" y="210" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="600">CURRENCY: FIAT (USD / USDT / Stars)</text>
+  <line x1="100" y1="222" x2="340" y2="222" stroke="#00f0ff" stroke-width="0.3" opacity="0.4"/>
+  <text x="90" y="250" fill="#a0a8b8" font-size="11">Revenue Layers:</text>
+  <text x="90" y="275" fill="#ffffff" font-size="11">▸ Founders Pass ($20–$40)</text>
+  <text x="90" y="297" fill="#ffffff" font-size="11">▸ In-App Purchases</text>
+  <text x="90" y="319" fill="#ffffff" font-size="11">▸ A.R.E. Rewarded Ads (60/40)</text>
+  <text x="90" y="341" fill="#ffffff" font-size="11">▸ Seasonal Passes ($10–$15)</text>
+  <text x="90" y="363" fill="#ffffff" font-size="11">▸ Skin the World™ Compute</text>
+  <text x="90" y="385" fill="#ffffff" font-size="11">▸ EveryWear Data Vault SaaS</text>
+  <line x1="100" y1="402" x2="340" y2="402" stroke="#00f0ff" stroke-width="0.3" opacity="0.4"/>
+  <text x="90" y="425" fill="#a0a8b8" font-size="11">Payment Rails:</text>
+  <text x="90" y="448" fill="#ffffff" font-size="11">▸ Stripe / PayPal (97% retained)</text>
+  <text x="90" y="470" fill="#ffffff" font-size="11">▸ Telegram Stars</text>
+  <text x="90" y="492" fill="#ffffff" font-size="11">▸ USDT via TON Pay (&lt;$0.01 fee)</text>
+  <line x1="100" y1="510" x2="340" y2="510" stroke="#00f0ff" stroke-width="0.3" opacity="0.4"/>
+  <text x="90" y="535" fill="#a0a8b8" font-size="11">Failure Mode:</text>
+  <text x="90" y="558" fill="#ffffff" font-size="10">Game economy runs on fiat — survives</text>
+  <text x="90" y="575" fill="#ffffff" font-size="10">independently of chain or Layer U status</text>
+  <rect x="130" y="592" width="180" height="18" rx="9" fill="#00f0ff" fill-opacity="0.15" stroke="#00f0ff" stroke-width="0.5"/>
+  <text x="220" y="605" text-anchor="middle" fill="#00f0ff" font-size="10" font-weight="600">$2.5M–$6.1M @ 50K DAU</text>
+
+  <!-- LAYER U -->
+  <rect x="440" y="140" width="320" height="480" rx="4" fill="url(#goldGlow)" stroke="#f0c040" stroke-width="1" opacity="0.8"/>
+  <rect x="440" y="140" width="320" height="48" rx="4" fill="#f0c040" fill-opacity="0.15"/>
+  <text x="600" y="170" text-anchor="middle" fill="#f0c040" font-size="16" font-weight="700" letter-spacing="1">LAYER U</text>
+  <text x="600" y="210" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="600">CURRENCY: FIAT → DAO TREASURY</text>
+  <line x1="480" y1="222" x2="720" y2="222" stroke="#f0c040" stroke-width="0.3" opacity="0.4"/>
+  <text x="470" y="250" fill="#a0a8b8" font-size="11">Revenue Model:</text>
+  <text x="470" y="275" fill="#ffffff" font-size="11">▸ XR Ad Space (10m³ volumetric)</text>
+  <text x="470" y="297" fill="#ffffff" font-size="11">▸ Advertiser licensing per m³/yr</text>
+  <text x="470" y="319" fill="#ffffff" font-size="11">▸ DAO + Ltd hybrid governance</text>
+  <text x="470" y="341" fill="#ffffff" font-size="11">▸ 2–5% marketplace commission</text>
+  <line x1="480" y1="362" x2="720" y2="362" stroke="#f0c040" stroke-width="0.3" opacity="0.4"/>
+  <text x="470" y="385" fill="#a0a8b8" font-size="11">Structure:</text>
+  <text x="470" y="408" fill="#ffffff" font-size="11">▸ City-level DAOs (KL pilot first)</text>
+  <text x="470" y="430" fill="#ffffff" font-size="11">▸ Real-world Ltd entity per DAO</text>
+  <text x="470" y="452" fill="#ffffff" font-size="11">▸ Revenue split: 60% members /</text>
+  <text x="470" y="470" fill="#ffffff" font-size="11">   20% infra / 20% $KREDS buy</text>
+  <line x1="480" y1="490" x2="720" y2="490" stroke="#f0c040" stroke-width="0.3" opacity="0.4"/>
+  <text x="470" y="515" fill="#a0a8b8" font-size="11">Failure Mode:</text>
+  <text x="470" y="538" fill="#ffffff" font-size="10">Real-world fiat revenue — survives</text>
+  <text x="470" y="555" fill="#ffffff" font-size="10">independently of game or chain failure</text>
+  <rect x="510" y="592" width="180" height="18" rx="9" fill="#f0c040" fill-opacity="0.15" stroke="#f0c040" stroke-width="0.5"/>
+  <text x="600" y="605" text-anchor="middle" fill="#f0c040" font-size="10" font-weight="600">$75K → $1.75M (3yr pilot)</text>
+
+  <!-- $KREDS CHAIN -->
+  <rect x="820" y="140" width="320" height="480" rx="4" fill="url(#greenGlow)" stroke="#40f080" stroke-width="1" opacity="0.8"/>
+  <rect x="820" y="140" width="320" height="48" rx="4" fill="#40f080" fill-opacity="0.15"/>
+  <text x="980" y="170" text-anchor="middle" fill="#40f080" font-size="16" font-weight="700" letter-spacing="1">$KREDS CHAIN</text>
+  <text x="980" y="210" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="600">CURRENCY: $KREDS (100B CAP)</text>
+  <line x1="860" y1="222" x2="1100" y2="222" stroke="#40f080" stroke-width="0.3" opacity="0.4"/>
+  <text x="850" y="250" fill="#a0a8b8" font-size="11">Token Mechanics:</text>
+  <text x="850" y="275" fill="#ffffff" font-size="11">▸ Device-activation minting</text>
+  <text x="850" y="297" fill="#ffffff" font-size="11">▸ Validation rewards (80%)</text>
+  <text x="850" y="319" fill="#ffffff" font-size="11">▸ SIGOPS contribution rewards</text>
+  <text x="850" y="341" fill="#ffffff" font-size="11">▸ No VC / No presale / No ICO</text>
+  <line x1="860" y1="362" x2="1100" y2="362" stroke="#40f080" stroke-width="0.3" opacity="0.4"/>
+  <text x="850" y="385" fill="#a0a8b8" font-size="11">Distribution:</text>
+  <text x="850" y="408" fill="#ffffff" font-size="11">▸ 80% Validators / Staking</text>
+  <text x="850" y="430" fill="#ffffff" font-size="11">▸ 10% DEX Liquidity</text>
+  <text x="850" y="452" fill="#ffffff" font-size="11">▸ 5% Dev Treasury (18mo lock)</text>
+  <text x="850" y="474" fill="#ffffff" font-size="11">▸ 5% Community / Marketing</text>
+  <line x1="860" y1="492" x2="1100" y2="492" stroke="#40f080" stroke-width="0.3" opacity="0.4"/>
+  <text x="850" y="515" fill="#a0a8b8" font-size="11">Failure Mode:</text>
+  <text x="850" y="538" fill="#ffffff" font-size="10">Earned-only token — no speculative</text>
+  <text x="850" y="555" fill="#ffffff" font-size="10">crash vector. Survives on device base</text>
+  <rect x="890" y="592" width="180" height="18" rx="9" fill="#40f080" fill-opacity="0.15" stroke="#40f080" stroke-width="0.5"/>
+  <text x="980" y="605" text-anchor="middle" fill="#40f080" font-size="10" font-weight="600">TRUE VALUE LAUNCH</text>
+
+  <!-- Connection arrows -->
+  <line x1="380" y1="320" x2="440" y2="320" stroke="#ffffff" stroke-width="1.5" opacity="0.4" marker-end="url(#arrowWhite)"/>
+  <text x="410" y="308" text-anchor="middle" fill="#ffffff" font-size="8" opacity="0.6">Game trains</text>
+  <text x="410" y="336" text-anchor="middle" fill="#ffffff" font-size="8" opacity="0.6">Layer U skills</text>
+  <line x1="760" y1="320" x2="820" y2="320" stroke="#ffffff" stroke-width="1.5" opacity="0.4" marker-end="url(#arrowWhite)"/>
+  <text x="790" y="308" text-anchor="middle" fill="#ffffff" font-size="8" opacity="0.6">20% revenue</text>
+  <text x="790" y="336" text-anchor="middle" fill="#ffffff" font-size="8" opacity="0.6">→ $KREDS buy</text>
+  <path d="M980 620 L980 680 L220 680 L220 620" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.3" stroke-dasharray="4,4"/>
+  <text x="600" y="700" text-anchor="middle" fill="#ffffff" font-size="9" opacity="0.5">$KREDS UBI redistributes value back to game participants</text>
+  <rect x="200" y="730" width="800" height="40" rx="20" fill="#ffffff" fill-opacity="0.03" stroke="#ffffff" stroke-width="0.5" opacity="0.5"/>
+  <text x="600" y="755" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="600" opacity="0.8">ANTI-DEATH-SPIRAL: Each layer survives the failure of the other two</text>
+  <text x="1170" y="785" text-anchor="end" fill="#ffffff" font-size="9" opacity="0.2">Fig. 1</text>
+</svg>

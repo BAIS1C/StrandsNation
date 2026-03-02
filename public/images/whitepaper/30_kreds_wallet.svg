@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0a0a14"/><stop offset="100%" stop-color="#06060c"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1000" height="700" fill="url(#bg)"/>
+
+  <text x="500" y="42" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="700" letter-spacing="2">$KREDS WALLET ARCHITECTURE</text>
+  <text x="500" y="64" text-anchor="middle" fill="#40f080" font-size="11" letter-spacing="4" opacity="0.7">TWO-TIER STRUCTURE — LOCKED PRINCIPAL + LIQUID BALANCE — CHAPTER 13</text>
+  <line x1="200" y1="78" x2="800" y2="78" stroke="#40f080" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Wallet outer container -->
+  <rect x="200" y="100" width="600" height="500" rx="14" fill="#ffffff" fill-opacity="0.02" stroke="#ffffff" stroke-width="1" opacity="0.3"/>
+  <text x="500" y="128" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="700" letter-spacing="2">DEVICE WALLET</text>
+  <text x="500" y="144" text-anchor="middle" fill="#a0a8b8" font-size="9">One wallet per EveryWear device · One active epoch per wallet</text>
+
+  <!-- TIER 1: Locked Principal (top half) -->
+  <rect x="230" y="165" width="540" height="185" rx="10" fill="#ff6080" fill-opacity="0.06" stroke="#ff6080" stroke-width="1.5"/>
+  <text x="500" y="192" text-anchor="middle" fill="#ff6080" font-size="16" font-weight="700">🔒 TIER 1 — LOCKED PRINCIPAL</text>
+  <text x="500" y="210" text-anchor="middle" fill="#a0a8b8" font-size="10">Infrastructure stake — ensures long-term commitment</text>
+
+  <!-- Locked items -->
+  <rect x="256" y="226" width="150" height="56" rx="6" fill="#ff6080" fill-opacity="0.08" stroke="#ff6080" stroke-width="0.5"/>
+  <text x="331" y="248" text-anchor="middle" fill="#ff6080" font-size="10" font-weight="600">DEVICE MINT</text>
+  <text x="331" y="264" text-anchor="middle" fill="#a0a8b8" font-size="9">Auto-minted at activation</text>
+  <text x="331" y="276" text-anchor="middle" fill="#a0a8b8" font-size="8">∝ device compute capacity</text>
+
+  <rect x="425" y="226" width="150" height="56" rx="6" fill="#ff6080" fill-opacity="0.08" stroke="#ff6080" stroke-width="0.5"/>
+  <text x="500" y="248" text-anchor="middle" fill="#ff6080" font-size="10" font-weight="600">ACCRUED EMISSIONS</text>
+  <text x="500" y="264" text-anchor="middle" fill="#a0a8b8" font-size="9">Cliff phase: accumulates</text>
+  <text x="500" y="276" text-anchor="middle" fill="#a0a8b8" font-size="8">Taper phase: unlocks linearly</text>
+
+  <rect x="594" y="226" width="150" height="56" rx="6" fill="#ff6080" fill-opacity="0.08" stroke="#ff6080" stroke-width="0.5"/>
+  <text x="669" y="248" text-anchor="middle" fill="#ff6080" font-size="10" font-weight="600">VOLUNTARY STAKE</text>
+  <text x="669" y="264" text-anchor="middle" fill="#a0a8b8" font-size="9">Optional additional stake</text>
+  <text x="669" y="276" text-anchor="middle" fill="#a0a8b8" font-size="8">Same 18-month epoch rules</text>
+
+  <!-- Lock rules -->
+  <rect x="256" y="296" width="488" height="40" rx="4" fill="#ff6080" fill-opacity="0.04" stroke="#ff6080" stroke-width="0.3"/>
+  <text x="500" y="312" text-anchor="middle" fill="#ff6080" font-size="9" font-weight="600">M0–M8: 100% LOCKED · M9–M18: LINEAR UNLOCK · M18+: FULLY BURNED</text>
+  <text x="500" y="326" text-anchor="middle" fill="#a0a8b8" font-size="8">Hardware upgrade = new epoch, old stake burned, unclaimed emissions ported</text>
+
+  <!-- Separator with arrow showing unlock flow -->
+  <line x1="300" y1="368" x2="700" y2="368" stroke="#f0c040" stroke-width="0.5" stroke-dasharray="4,4" opacity="0.4"/>
+  <text x="500" y="380" text-anchor="middle" fill="#f0c040" font-size="9" font-weight="600" opacity="0.6">↓ TAPER PHASE UNLOCK FLOW ↓</text>
+
+  <!-- TIER 2: Liquid Balance (bottom half) -->
+  <rect x="230" y="395" width="540" height="185" rx="10" fill="#40f080" fill-opacity="0.06" stroke="#40f080" stroke-width="1.5"/>
+  <text x="500" y="422" text-anchor="middle" fill="#40f080" font-size="16" font-weight="700">💧 TIER 2 — LIQUID BALANCE</text>
+  <text x="500" y="440" text-anchor="middle" fill="#a0a8b8" font-size="10">Earned rewards — spendable immediately</text>
+
+  <!-- Liquid sources -->
+  <rect x="246" y="456" width="120" height="48" rx="6" fill="#40f080" fill-opacity="0.08" stroke="#40f080" stroke-width="0.5"/>
+  <text x="306" y="474" text-anchor="middle" fill="#40f080" font-size="10" font-weight="600">A.R.E.</text>
+  <text x="306" y="490" text-anchor="middle" fill="#a0a8b8" font-size="8">Attention rewards</text>
+
+  <rect x="382" y="456" width="120" height="48" rx="6" fill="#f0c040" fill-opacity="0.08" stroke="#f0c040" stroke-width="0.5"/>
+  <text x="442" y="474" text-anchor="middle" fill="#f0c040" font-size="10" font-weight="600">HARDWARE</text>
+  <text x="442" y="490" text-anchor="middle" fill="#a0a8b8" font-size="8">Uptime rewards</text>
+
+  <rect x="518" y="456" width="120" height="48" rx="6" fill="#00f0ff" fill-opacity="0.08" stroke="#00f0ff" stroke-width="0.5"/>
+  <text x="578" y="474" text-anchor="middle" fill="#00f0ff" font-size="10" font-weight="600">SIGOPS</text>
+  <text x="578" y="490" text-anchor="middle" fill="#a0a8b8" font-size="8">Community tasks</text>
+
+  <rect x="654" y="456" width="100" height="48" rx="6" fill="#c080ff" fill-opacity="0.08" stroke="#c080ff" stroke-width="0.5"/>
+  <text x="704" y="474" text-anchor="middle" fill="#c080ff" font-size="10" font-weight="600">DATA</text>
+  <text x="704" y="490" text-anchor="middle" fill="#a0a8b8" font-size="8">Consent revenue</text>
+
+  <!-- Liquid actions -->
+  <rect x="256" y="518" width="488" height="46" rx="4" fill="#40f080" fill-opacity="0.04" stroke="#40f080" stroke-width="0.3"/>
+  <text x="500" y="536" text-anchor="middle" fill="#40f080" font-size="10" font-weight="600">IMMEDIATELY SPENDABLE — NO LOCK-UP ON EARNED INCOME</text>
+  <text x="320" y="554" text-anchor="middle" fill="#a0a8b8" font-size="8">Spend in marketplace</text>
+  <text x="440" y="554" text-anchor="middle" fill="#a0a8b8" font-size="8">Convert to fiat</text>
+  <text x="560" y="554" text-anchor="middle" fill="#a0a8b8" font-size="8">Governance votes</text>
+  <text x="680" y="554" text-anchor="middle" fill="#a0a8b8" font-size="8">Transfer to others</text>
+
+  <!-- External annotations -->
+  <!-- Left: Inflows -->
+  <rect x="30" y="230" width="150" height="80" rx="6" fill="#ffffff" fill-opacity="0.03" stroke="#ffffff" stroke-width="0.5" opacity="0.3"/>
+  <text x="105" y="250" text-anchor="middle" fill="#ffffff" font-size="10" font-weight="600">INFLOWS</text>
+  <text x="105" y="268" text-anchor="middle" fill="#a0a8b8" font-size="9">Device activation mint</text>
+  <text x="105" y="283" text-anchor="middle" fill="#a0a8b8" font-size="9">Validator onboarding</text>
+  <text x="105" y="298" text-anchor="middle" fill="#a0a8b8" font-size="9">Earned rewards</text>
+  <line x1="180" y1="270" x2="225" y2="270" stroke="#40f080" stroke-width="1" opacity="0.4"/>
+  <polygon points="222,266 230,270 222,274" fill="#40f080" opacity="0.5"/>
+
+  <!-- Right: Outflows -->
+  <rect x="820" y="230" width="150" height="80" rx="6" fill="#ffffff" fill-opacity="0.03" stroke="#ffffff" stroke-width="0.5" opacity="0.3"/>
+  <text x="895" y="250" text-anchor="middle" fill="#ffffff" font-size="10" font-weight="600">OUTFLOWS</text>
+  <text x="895" y="268" text-anchor="middle" fill="#a0a8b8" font-size="9">Device retirement burn</text>
+  <text x="895" y="283" text-anchor="middle" fill="#a0a8b8" font-size="9">Epoch expiry burn</text>
+  <text x="895" y="298" text-anchor="middle" fill="#a0a8b8" font-size="9">Transaction fee burn</text>
+  <line x1="775" y1="270" x2="815" y2="270" stroke="#ff6080" stroke-width="1" opacity="0.4"/>
+  <polygon points="812,266 820,270 812,274" fill="#ff6080" opacity="0.5"/>
+
+  <!-- Design rationale -->
+  <rect x="120" y="618" width="760" height="40" rx="6" fill="#ffffff" fill-opacity="0.03" stroke="#ffffff" stroke-width="0.5" opacity="0.2"/>
+  <text x="500" y="636" text-anchor="middle" fill="#ffffff" font-size="10" font-weight="600" opacity="0.8">DESIGN RATIONALE: Locked principal ensures infrastructure commitment. Liquid balance ensures immediate benefit.</text>
+  <text x="500" y="650" text-anchor="middle" fill="#a0a8b8" font-size="9">No passive hoarding mechanism. No staking-without-contribution reward. Every $KREDS is earned.</text>
+
+  <text x="500" y="690" text-anchor="middle" fill="#4a4e5c" font-size="9" letter-spacing="1">STRANDS WHITEPAPER v6 — APPENDIX H — FIG. 30</text>
+</svg>

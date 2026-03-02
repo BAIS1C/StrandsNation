@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 700" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0a0a14"/><stop offset="100%" stop-color="#06060c"/></linearGradient>
+  </defs>
+  <rect width="1100" height="700" fill="url(#bg)"/>
+  <text x="550" y="42" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="700" letter-spacing="2">DUAL SOFT CURRENCY CIRCULATION</text>
+  <text x="550" y="64" text-anchor="middle" fill="#00f0ff" font-size="11" letter-spacing="4" opacity="0.7">UBC (ENERGY) + UBComp (PROCESS POWER) — CHAPTER 11</text>
+  <line x1="300" y1="76" x2="800" y2="76" stroke="#00f0ff" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- UBC -->
+  <rect x="60" y="110" width="440" height="340" rx="6" fill="#00f0ff" fill-opacity="0.03" stroke="#00f0ff" stroke-width="0.8"/>
+  <rect x="60" y="110" width="440" height="36" rx="6" fill="#00f0ff" fill-opacity="0.1"/>
+  <text x="280" y="133" text-anchor="middle" fill="#00f0ff" font-size="16" font-weight="700">UBC — ENERGY</text>
+  <text x="80" y="168" fill="#ffffff" font-size="11" font-weight="600">Universal action currency. Everything costs energy.</text>
+  <line x1="90" y1="182" x2="480" y2="182" stroke="#00f0ff" stroke-width="0.2" opacity="0.3"/>
+  <text x="80" y="205" fill="#40f080" font-size="10" font-weight="600">EARN:</text>
+  <text x="80" y="225" fill="#ffffff" font-size="10">▸ Daily login / time-based regeneration</text>
+  <text x="80" y="243" fill="#ffffff" font-size="10">▸ Quest completion rewards</text>
+  <text x="80" y="261" fill="#ffffff" font-size="10">▸ A.R.E. rewarded ad viewing (60% share)</text>
+  <text x="80" y="279" fill="#ffffff" font-size="10">▸ SIGOPS tasks &amp; marketplace sales</text>
+  <line x1="90" y1="295" x2="480" y2="295" stroke="#00f0ff" stroke-width="0.2" opacity="0.3"/>
+  <text x="80" y="318" fill="#ff6080" font-size="10" font-weight="600">SPEND / SINK:</text>
+  <text x="80" y="338" fill="#ffffff" font-size="10">▸ Crafting, fast travel, marketplace buys</text>
+  <text x="80" y="356" fill="#ffffff" font-size="10">▸ Time-decay sink (use it or lose it)</text>
+  <rect x="100" y="380" width="370" height="22" rx="11" fill="#00f0ff" fill-opacity="0.08" stroke="#00f0ff" stroke-width="0.4"/>
+  <text x="285" y="395" text-anchor="middle" fill="#00f0ff" font-size="9" font-weight="600">INFLATIONARY — REGENERATIVE — LIKE STAMINA/ENERGY</text>
+  <rect x="100" y="412" width="370" height="22" rx="11" fill="#00f0ff" fill-opacity="0.05" stroke="#00f0ff" stroke-width="0.3"/>
+  <text x="285" y="427" text-anchor="middle" fill="#a0a8b8" font-size="9">Funded via USDT through TON Wallet</text>
+
+  <!-- UBComp -->
+  <rect x="600" y="110" width="440" height="340" rx="6" fill="#f0c040" fill-opacity="0.03" stroke="#f0c040" stroke-width="0.8"/>
+  <rect x="600" y="110" width="440" height="36" rx="6" fill="#f0c040" fill-opacity="0.1"/>
+  <text x="820" y="133" text-anchor="middle" fill="#f0c040" font-size="16" font-weight="700">UBComp — PROCESS POWER</text>
+  <text x="620" y="168" fill="#ffffff" font-size="11" font-weight="600">Generative compute currency. Create anything.</text>
+  <line x1="630" y1="182" x2="1020" y2="182" stroke="#f0c040" stroke-width="0.2" opacity="0.3"/>
+  <text x="620" y="205" fill="#40f080" font-size="10" font-weight="600">EARN:</text>
+  <text x="620" y="225" fill="#ffffff" font-size="10">▸ Purchased via IAP (compute credits)</text>
+  <text x="620" y="243" fill="#ffffff" font-size="10">▸ Seasonal / Founders Pass allocation</text>
+  <text x="620" y="261" fill="#ffffff" font-size="10">▸ SIGOPS high-value task rewards</text>
+  <text x="620" y="279" fill="#ffffff" font-size="10">▸ Free: 4 generations at onboarding</text>
+  <line x1="630" y1="295" x2="1020" y2="295" stroke="#f0c040" stroke-width="0.2" opacity="0.3"/>
+  <text x="620" y="318" fill="#ff6080" font-size="10" font-weight="600">SPEND / SINK:</text>
+  <text x="620" y="338" fill="#ffffff" font-size="10">▸ Skin the World™ / music / voice gen</text>
+  <text x="620" y="356" fill="#ffffff" font-size="10">▸ Consumed permanently on each use</text>
+  <rect x="640" y="380" width="370" height="22" rx="11" fill="#f0c040" fill-opacity="0.08" stroke="#f0c040" stroke-width="0.4"/>
+  <text x="825" y="395" text-anchor="middle" fill="#f0c040" font-size="9" font-weight="600">DEFLATIONARY — SCARCE — LIKE PREMIUM GEMS</text>
+  <rect x="640" y="412" width="370" height="22" rx="11" fill="#f0c040" fill-opacity="0.05" stroke="#f0c040" stroke-width="0.3"/>
+  <text x="825" y="427" text-anchor="middle" fill="#a0a8b8" font-size="9">Primary IAP revenue driver</text>
+
+  <!-- Cross-currency flow -->
+  <rect x="60" y="480" width="980" height="80" rx="4" fill="#ffffff" fill-opacity="0.02" stroke="#ffffff" stroke-width="0.4"/>
+  <text x="550" y="505" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="700">CROSS-CURRENCY INTERACTION</text>
+  <text x="200" y="530" fill="#00f0ff" font-size="10">UBC → UBComp: Small bundles purchasable</text>
+  <text x="200" y="548" fill="#a0a8b8" font-size="9">(energy can buy limited compute)</text>
+  <text x="650" y="530" fill="#f0c040" font-size="10">UBComp → UBC: Generated assets sell for energy</text>
+  <text x="650" y="548" fill="#a0a8b8" font-size="9">(creation feeds the marketplace)</text>
+
+  <!-- Bottom principle -->
+  <rect x="60" y="580" width="980" height="50" rx="4" fill="#40f080" fill-opacity="0.03" stroke="#40f080" stroke-width="0.4"/>
+  <text x="550" y="603" text-anchor="middle" fill="#40f080" font-size="12" font-weight="700">NEITHER CURRENCY IS BLOCKCHAIN — BOTH ARE INTERNAL SOFT CURRENCIES</text>
+  <text x="550" y="622" text-anchor="middle" fill="#a0a8b8" font-size="10">No token volatility. No speculation. Pure in-game utility. Blockchain is invisible infrastructure underneath.</text>
+
+  <text x="1070" y="690" text-anchor="end" fill="#ffffff" font-size="9" opacity="0.2">Fig. 8</text>
+</svg>

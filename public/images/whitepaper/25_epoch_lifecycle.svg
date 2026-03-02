@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0a0a14"/><stop offset="100%" stop-color="#06060c"/></linearGradient>
+    <linearGradient id="cliffGrad" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#ff6080" stop-opacity="0.2"/><stop offset="100%" stop-color="#ff6080" stop-opacity="0.05"/></linearGradient>
+    <linearGradient id="taperGrad" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#f0c040" stop-opacity="0.2"/><stop offset="100%" stop-color="#f0c040" stop-opacity="0.05"/></linearGradient>
+    <linearGradient id="postGrad" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#40f080" stop-opacity="0.2"/><stop offset="100%" stop-color="#40f080" stop-opacity="0.05"/></linearGradient>
+  </defs>
+  <rect width="1000" height="700" fill="url(#bg)"/>
+
+  <text x="500" y="42" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="700" letter-spacing="2">EIGHTEEN-MONTH EPOCH LIFECYCLE</text>
+  <text x="500" y="64" text-anchor="middle" fill="#40f080" font-size="11" letter-spacing="4" opacity="0.7">DEVICE WALLET STAKING — CLIFF / TAPER / POST-EPOCH — CHAPTER 13</text>
+  <line x1="200" y1="78" x2="800" y2="78" stroke="#40f080" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Timeline axis -->
+  <line x1="80" y1="480" x2="920" y2="480" stroke="#ffffff" stroke-width="1" opacity="0.3"/>
+  <!-- Month markers -->
+  <text x="80" y="500" text-anchor="middle" fill="#a0a8b8" font-size="9">M0</text>
+  <line x1="80" y1="475" x2="80" y2="485" stroke="#ffffff" stroke-width="0.5" opacity="0.5"/>
+  <text x="456" y="500" text-anchor="middle" fill="#a0a8b8" font-size="9">M8</text>
+  <line x1="456" y1="475" x2="456" y2="485" stroke="#ffffff" stroke-width="0.5" opacity="0.5"/>
+  <text x="456" y="514" text-anchor="middle" fill="#f0c040" font-size="8" font-weight="600">FIRST UNLOCK</text>
+  <text x="880" y="500" text-anchor="middle" fill="#a0a8b8" font-size="9">M18</text>
+  <line x1="880" y1="475" x2="880" y2="485" stroke="#ffffff" stroke-width="0.5" opacity="0.5"/>
+  <text x="880" y="514" text-anchor="middle" fill="#40f080" font-size="8" font-weight="600">FULL BURN</text>
+  <text x="940" y="500" text-anchor="middle" fill="#a0a8b8" font-size="9">M18+</text>
+
+  <!-- Phase background zones -->
+  <rect x="80" y="130" width="376" height="340" rx="0" fill="url(#cliffGrad)"/>
+  <rect x="456" y="130" width="424" height="340" rx="0" fill="url(#taperGrad)"/>
+
+  <!-- Phase labels -->
+  <text x="268" y="118" text-anchor="middle" fill="#ff6080" font-size="15" font-weight="700">CLIFF</text>
+  <text x="268" y="134" text-anchor="middle" fill="#ff6080" font-size="10" opacity="0.7">Months 0–8</text>
+  <text x="668" y="118" text-anchor="middle" fill="#f0c040" font-size="15" font-weight="700">TAPER</text>
+  <text x="668" y="134" text-anchor="middle" fill="#f0c040" font-size="10" opacity="0.7">Months 9–18</text>
+
+  <!-- Locked amount line (stays flat during cliff, linearly decreases during taper) -->
+  <text x="75" y="200" text-anchor="end" fill="#ff6080" font-size="9">Locked</text>
+  <polyline points="80,200 456,200 880,430" fill="none" stroke="#ff6080" stroke-width="2.5" opacity="0.8"/>
+  <!-- Locked label -->
+  <rect x="200" y="175" width="140" height="24" rx="4" fill="#ff6080" fill-opacity="0.12" stroke="#ff6080" stroke-width="0.5"/>
+  <text x="270" y="191" text-anchor="middle" fill="#ff6080" font-size="10" font-weight="600">🔒 ZERO UNLOCKED</text>
+
+  <!-- Accruing emissions (grows during cliff, converts to liquid during taper) -->
+  <text x="75" y="310" text-anchor="end" fill="#00f0ff" font-size="9">Accrued</text>
+  <polyline points="80,400 200,370 350,330 456,300 600,260 750,220 880,190" fill="none" stroke="#00f0ff" stroke-width="2" stroke-dasharray="6,3" opacity="0.7"/>
+
+  <!-- Liquid balance (zero during cliff, rises during taper) -->
+  <text x="75" y="430" text-anchor="end" fill="#40f080" font-size="9">Liquid</text>
+  <polyline points="80,430 456,430 600,380 750,310 880,200" fill="none" stroke="#40f080" stroke-width="2.5" opacity="0.8"/>
+
+  <!-- Taper unlock annotation -->
+  <rect x="560" y="290" width="200" height="44" rx="4" fill="#f0c040" fill-opacity="0.1" stroke="#f0c040" stroke-width="0.5"/>
+  <text x="660" y="306" text-anchor="middle" fill="#f0c040" font-size="10" font-weight="600">LINEAR UNLOCK</text>
+  <text x="660" y="322" text-anchor="middle" fill="#a0a8b8" font-size="9">No cliff-day sell-offs</text>
+
+  <!-- Post-epoch box -->
+  <rect x="890" y="130" width="100" height="340" rx="0" fill="url(#postGrad)"/>
+  <text x="940" y="118" text-anchor="middle" fill="#40f080" font-size="13" font-weight="700">POST</text>
+  <text x="940" y="134" text-anchor="middle" fill="#40f080" font-size="9" opacity="0.7">M18+</text>
+  <!-- Post-epoch content -->
+  <text x="940" y="200" text-anchor="middle" fill="#d0d4dc" font-size="9">All rewards</text>
+  <text x="940" y="214" text-anchor="middle" fill="#40f080" font-size="9" font-weight="600">LIQUID</text>
+  <text x="940" y="240" text-anchor="middle" fill="#d0d4dc" font-size="9">Original</text>
+  <text x="940" y="254" text-anchor="middle" fill="#d0d4dc" font-size="9">stake</text>
+  <text x="940" y="268" text-anchor="middle" fill="#ff6080" font-size="9" font-weight="600">BURNED</text>
+  <text x="940" y="300" text-anchor="middle" fill="#d0d4dc" font-size="9">Option to</text>
+  <text x="940" y="314" text-anchor="middle" fill="#00f0ff" font-size="9" font-weight="600">RESTAKE</text>
+  <text x="940" y="330" text-anchor="middle" fill="#d0d4dc" font-size="9">new epoch</text>
+
+  <!-- Legend -->
+  <line x1="80" y1="560" x2="110" y2="560" stroke="#ff6080" stroke-width="2.5"/>
+  <text x="118" y="564" fill="#ff6080" font-size="10">Locked Principal</text>
+  <line x1="250" y1="560" x2="280" y2="560" stroke="#00f0ff" stroke-width="2" stroke-dasharray="6,3"/>
+  <text x="288" y="564" fill="#00f0ff" font-size="10">Accruing Emissions</text>
+  <line x1="450" y1="560" x2="480" y2="560" stroke="#40f080" stroke-width="2.5"/>
+  <text x="488" y="564" fill="#40f080" font-size="10">Liquid Balance</text>
+
+  <!-- Key rules box -->
+  <rect x="80" y="585" width="840" height="70" rx="6" fill="#ffffff" fill-opacity="0.03" stroke="#ffffff" stroke-width="0.5" opacity="0.2"/>
+  <text x="500" y="608" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="600" opacity="0.8">KEY DESIGN PRINCIPLES</text>
+  <text x="260" y="630" text-anchor="middle" fill="#a0a8b8" font-size="9">Device must stay online to advance epoch</text>
+  <text x="500" y="630" text-anchor="middle" fill="#a0a8b8" font-size="9">Speculators earn nothing (offline = frozen)</text>
+  <text x="760" y="630" text-anchor="middle" fill="#a0a8b8" font-size="9">Hardware upgrade → new epoch, old stake burned</text>
+  <text x="500" y="646" text-anchor="middle" fill="#40f080" font-size="9" font-weight="600">A.R.E. attention rewards are ALWAYS liquid — no lock-up on earned engagement income</text>
+
+  <text x="500" y="690" text-anchor="middle" fill="#4a4e5c" font-size="9" letter-spacing="1">STRANDS WHITEPAPER v6 — APPENDIX H — FIG. 25</text>
+</svg>

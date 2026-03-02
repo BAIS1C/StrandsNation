@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0a0a14"/><stop offset="100%" stop-color="#06060c"/></linearGradient>
+  </defs>
+  <rect width="1200" height="700" fill="url(#bg)"/>
+  
+  <text x="600" y="42" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="700" letter-spacing="2">REVENUE COMPOSITION AT SCALE</text>
+  <text x="600" y="64" text-anchor="middle" fill="#00f0ff" font-size="11" letter-spacing="4" opacity="0.7">PROJECTED MIX BY DAU TIER — CHAPTER 11</text>
+  <line x1="350" y1="76" x2="850" y2="76" stroke="#00f0ff" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- 50K DAU Pie Chart -->
+  <text x="200" y="115" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="700">50K DAU</text>
+  <text x="200" y="133" text-anchor="middle" fill="#00f0ff" font-size="11">$2.5M–$6.1M/yr</text>
+  
+  <g transform="translate(200,300)">
+    <!-- A.R.E. 25% -->
+    <path d="M0,0 L0,-130 A130,130 0 0,1 92,-92 Z" fill="#00f0ff" fill-opacity="0.5" stroke="#00f0ff" stroke-width="0.5"/>
+    <!-- IAP 12% -->
+    <path d="M0,0 L92,-92 A130,130 0 0,1 127,-28 Z" fill="#f0c040" fill-opacity="0.5" stroke="#f0c040" stroke-width="0.5"/>
+    <!-- Marketplace 18% -->
+    <path d="M0,0 L127,-28 A130,130 0 0,1 105,77 Z" fill="#40f080" fill-opacity="0.5" stroke="#40f080" stroke-width="0.5"/>
+    <!-- Skin the World 14% -->
+    <path d="M0,0 L105,77 A130,130 0 0,1 20,128 Z" fill="#ff6080" fill-opacity="0.4" stroke="#ff6080" stroke-width="0.5"/>
+    <!-- EveryWear SaaS 10% -->
+    <path d="M0,0 L20,128 A130,130 0 0,1 -75,106 Z" fill="#a060ff" fill-opacity="0.4" stroke="#a060ff" stroke-width="0.5"/>
+    <!-- Seasonal 11% -->
+    <path d="M0,0 L-75,106 A130,130 0 0,1 -130,0 Z" fill="#ff9040" fill-opacity="0.4" stroke="#ff9040" stroke-width="0.5"/>
+    <!-- Community 5% + Other 5% -->
+    <path d="M0,0 L-130,0 A130,130 0 0,1 0,-130 Z" fill="#ffffff" fill-opacity="0.08" stroke="#ffffff" stroke-width="0.3"/>
+  </g>
+
+  <!-- 200K DAU Pie Chart -->
+  <text x="600" y="115" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="700">200K DAU</text>
+  <text x="600" y="133" text-anchor="middle" fill="#f0c040" font-size="11">$12M–$28M/yr</text>
+  
+  <g transform="translate(600,300)">
+    <!-- A.R.E. grows to 30% -->
+    <path d="M0,0 L0,-130 A130,130 0 0,1 113,-65 Z" fill="#00f0ff" fill-opacity="0.5" stroke="#00f0ff" stroke-width="0.5"/>
+    <!-- Marketplace grows to 22% -->
+    <path d="M0,0 L113,-65 A130,130 0 0,1 124,40 Z" fill="#40f080" fill-opacity="0.5" stroke="#40f080" stroke-width="0.5"/>
+    <!-- IAP stays 10% -->
+    <path d="M0,0 L124,40 A130,130 0 0,1 92,92 Z" fill="#f0c040" fill-opacity="0.5" stroke="#f0c040" stroke-width="0.5"/>
+    <!-- Skin the World grows to 15% -->
+    <path d="M0,0 L92,92 A130,130 0 0,1 -20,128 Z" fill="#ff6080" fill-opacity="0.4" stroke="#ff6080" stroke-width="0.5"/>
+    <!-- EveryWear SaaS 10% -->
+    <path d="M0,0 L-20,128 A130,130 0 0,1 -105,77 Z" fill="#a060ff" fill-opacity="0.4" stroke="#a060ff" stroke-width="0.5"/>
+    <!-- Seasonal 8% -->
+    <path d="M0,0 L-105,77 A130,130 0 0,1 -130,0 Z" fill="#ff9040" fill-opacity="0.4" stroke="#ff9040" stroke-width="0.5"/>
+    <!-- Other 5% -->
+    <path d="M0,0 L-130,0 A130,130 0 0,1 0,-130 Z" fill="#ffffff" fill-opacity="0.08" stroke="#ffffff" stroke-width="0.3"/>
+  </g>
+
+  <!-- 1M DAU Pie Chart -->
+  <text x="1000" y="115" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="700">1M DAU</text>
+  <text x="1000" y="133" text-anchor="middle" fill="#40f080" font-size="11">$60M–$150M/yr</text>
+  
+  <g transform="translate(1000,300)">
+    <!-- A.R.E. dominates at 35% -->
+    <path d="M0,0 L0,-130 A130,130 0 0,1 126,-33 Z" fill="#00f0ff" fill-opacity="0.5" stroke="#00f0ff" stroke-width="0.5"/>
+    <!-- Marketplace 25% -->
+    <path d="M0,0 L126,-33 A130,130 0 0,1 65,113 Z" fill="#40f080" fill-opacity="0.5" stroke="#40f080" stroke-width="0.5"/>
+    <!-- Skin the World 18% -->
+    <path d="M0,0 L65,113 A130,130 0 0,1 -65,113 Z" fill="#ff6080" fill-opacity="0.4" stroke="#ff6080" stroke-width="0.5"/>
+    <!-- EveryWear + B2B 12% -->
+    <path d="M0,0 L-65,113 A130,130 0 0,1 -130,0 Z" fill="#a060ff" fill-opacity="0.4" stroke="#a060ff" stroke-width="0.5"/>
+    <!-- IAP + Seasonal + Other 10% -->
+    <path d="M0,0 L-130,0 A130,130 0 0,1 0,-130 Z" fill="#ffffff" fill-opacity="0.08" stroke="#ffffff" stroke-width="0.3"/>
+  </g>
+
+  <!-- Key insight callout -->
+  <rect x="100" y="460" width="1000" height="36" rx="4" fill="#ffffff" fill-opacity="0.02" stroke="#ffffff" stroke-width="0.4" opacity="0.5"/>
+  <text x="600" y="483" text-anchor="middle" fill="#a0a8b8" font-size="11">KEY SHIFT: A.R.E. (consent-based ads) + Marketplace dominate at scale. Direct purchases shrink proportionally. Generative compute grows.</text>
+
+  <!-- Legend -->
+  <g transform="translate(100,520)">
+    <rect width="14" height="14" rx="2" fill="#00f0ff" fill-opacity="0.5"/>
+    <text x="22" y="12" fill="#ffffff" font-size="10">A.R.E. (Consent Ads)</text>
+    
+    <rect x="180" width="14" height="14" rx="2" fill="#40f080" fill-opacity="0.5"/>
+    <text x="202" y="12" fill="#ffffff" font-size="10">The Exchange (Marketplace)</text>
+    
+    <rect x="400" width="14" height="14" rx="2" fill="#f0c040" fill-opacity="0.5"/>
+    <text x="422" y="12" fill="#ffffff" font-size="10">In-App Purchases</text>
+    
+    <rect x="570" width="14" height="14" rx="2" fill="#ff6080" fill-opacity="0.4"/>
+    <text x="592" y="12" fill="#ffffff" font-size="10">Skin the World™</text>
+    
+    <rect x="730" width="14" height="14" rx="2" fill="#a060ff" fill-opacity="0.4"/>
+    <text x="752" y="12" fill="#ffffff" font-size="10">EveryWear SaaS + B2B</text>
+    
+    <rect x="920" width="14" height="14" rx="2" fill="#ff9040" fill-opacity="0.4"/>
+    <text x="942" y="12" fill="#ffffff" font-size="10">Seasonal</text>
+  </g>
+
+  <!-- Scale annotations -->
+  <g transform="translate(100,570)">
+    <text fill="#a0a8b8" font-size="10" font-weight="600">SCALING DYNAMICS:</text>
+    <text y="22" fill="#a0a8b8" font-size="10">▸ A.R.E. grows from 25% → 35% (eCPM improves with data quality + audience size)</text>
+    <text y="40" fill="#a0a8b8" font-size="10">▸ Marketplace grows from 18% → 25% (network effects compound creator economy)</text>
+    <text y="58" fill="#a0a8b8" font-size="10">▸ Skin the World™ grows from 14% → 18% (GPU costs decrease, compute demand increases)</text>
+    <text y="76" fill="#a0a8b8" font-size="10">▸ Direct IAP shrinks proportionally — not in absolute terms — as passive revenue dominates</text>
+  </g>
+
+  <text x="1170" y="685" text-anchor="end" fill="#ffffff" font-size="9" opacity="0.2">Fig. 5</text>
+</svg>

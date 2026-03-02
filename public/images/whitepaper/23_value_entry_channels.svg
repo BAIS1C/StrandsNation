@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0a0a14"/><stop offset="100%" stop-color="#06060c"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <marker id="arrowG" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="none" stroke="#f0c040" stroke-width="1"/></marker>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <text x="600" y="42" text-anchor="middle" fill="#00f0ff" font-size="11" letter-spacing="4" opacity="0.6">CHAPTER 13 — $KREDS</text>
+  <text x="600" y="72" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold" letter-spacing="1">VALUE ENTRY CHANNELS</text>
+  <text x="600" y="96" text-anchor="middle" fill="#ffffff" font-size="13" opacity="0.5">Five revenue streams that create buy pressure for $KREDS — all from real economic activity</text>
+
+  <!-- 5 input channels on left, converging to center -->
+  <!-- Channel 1 -->
+  <rect x="50" y="140" width="350" height="80" rx="6" fill="#f0c040" fill-opacity="0.08" stroke="#f0c040" stroke-opacity="0.4" stroke-width="1.5"/>
+  <text x="70" y="168" fill="#f0c040" font-size="14" font-weight="bold">① A.R.E. GAME REVENUE</text>
+  <text x="70" y="188" fill="#ffffff" font-size="10" opacity="0.5">In-game attention ads · 60/40 split · eCPM $2-7</text>
+  <text x="70" y="206" fill="#f0c040" font-size="10" font-weight="bold">Est. $2M/mo at 1M DAU</text>
+
+  <!-- Channel 2 -->
+  <rect x="50" y="240" width="350" height="80" rx="6" fill="#00f0ff" fill-opacity="0.08" stroke="#00f0ff" stroke-opacity="0.4" stroke-width="1.5"/>
+  <text x="70" y="268" fill="#00f0ff" font-size="14" font-weight="bold">② LAYER U PARCEL REVENUE</text>
+  <text x="70" y="288" fill="#ffffff" font-size="10" opacity="0.5">Real-world XR advertising · WiFi DensePose verified</text>
+  <text x="70" y="306" fill="#00f0ff" font-size="10" font-weight="bold">Est. $33K/mo at KL pilot scale</text>
+
+  <!-- Channel 3 -->
+  <rect x="50" y="340" width="350" height="80" rx="6" fill="#40f080" fill-opacity="0.08" stroke="#40f080" stroke-opacity="0.4" stroke-width="1.5"/>
+  <text x="70" y="368" fill="#40f080" font-size="14" font-weight="bold">③ MARKETPLACE FEES</text>
+  <text x="70" y="388" fill="#ffffff" font-size="10" opacity="0.5">5% commission on all player-to-player trades</text>
+  <text x="70" y="406" fill="#40f080" font-size="10" font-weight="bold">Scales with economy volume</text>
+
+  <!-- Channel 4 -->
+  <rect x="50" y="440" width="350" height="80" rx="6" fill="#a060ff" fill-opacity="0.08" stroke="#a060ff" stroke-opacity="0.4" stroke-width="1.5"/>
+  <text x="70" y="468" fill="#a060ff" font-size="14" font-weight="bold">④ FOUNDERS PASS + DLC</text>
+  <text x="70" y="488" fill="#ffffff" font-size="10" opacity="0.5">6,000 passes · Sublime upgrades · Future content</text>
+  <text x="70" y="506" fill="#a060ff" font-size="10" font-weight="bold">$277K-$427K initial + recurring</text>
+
+  <!-- Channel 5 -->
+  <rect x="50" y="540" width="350" height="80" rx="6" fill="#ff6080" fill-opacity="0.08" stroke="#ff6080" stroke-opacity="0.4" stroke-width="1.5"/>
+  <text x="70" y="568" fill="#ff6080" font-size="14" font-weight="bold">⑤ DATA LICENSING (Future)</text>
+  <text x="70" y="588" fill="#ffffff" font-size="10" opacity="0.5">Anonymised urban analytics · Smart city partnerships</text>
+  <text x="70" y="606" fill="#ff6080" font-size="10" font-weight="bold">Phase 7+ · Enterprise SaaS model</text>
+
+  <!-- Convergence arrows -->
+  <line x1="400" y1="180" x2="550" y2="390" stroke="#f0c040" stroke-width="1.5" marker-end="url(#arrowG)" opacity="0.4"/>
+  <line x1="400" y1="280" x2="550" y2="390" stroke="#f0c040" stroke-width="1.5" marker-end="url(#arrowG)" opacity="0.4"/>
+  <line x1="400" y1="380" x2="550" y2="395" stroke="#f0c040" stroke-width="1.5" marker-end="url(#arrowG)" opacity="0.4"/>
+  <line x1="400" y1="480" x2="550" y2="400" stroke="#f0c040" stroke-width="1.5" marker-end="url(#arrowG)" opacity="0.4"/>
+  <line x1="400" y1="580" x2="550" y2="410" stroke="#f0c040" stroke-width="1.5" marker-end="url(#arrowG)" opacity="0.4"/>
+
+  <!-- Central hub: $KREDS Market -->
+  <rect x="550" y="340" width="250" height="120" rx="10" fill="#f0c040" fill-opacity="0.1" stroke="#f0c040" stroke-opacity="0.6" stroke-width="2"/>
+  <text x="675" y="380" text-anchor="middle" fill="#f0c040" font-size="18" font-weight="bold" filter="url(#glow)">$KREDS MARKET</text>
+  <text x="675" y="405" text-anchor="middle" fill="#ffffff" font-size="11" opacity="0.5">Fiat → USDT → DEX → $KREDS</text>
+  <text x="675" y="425" text-anchor="middle" fill="#ffffff" font-size="11" opacity="0.5">Constant buy pressure from revenue</text>
+  <text x="675" y="445" text-anchor="middle" fill="#f0c040" font-size="10">0% from token sales. 100% from use.</text>
+
+  <!-- Output arrows to right -->
+  <line x1="800" y1="370" x2="870" y2="250" stroke="#f0c040" stroke-width="1.5" marker-end="url(#arrowG)" opacity="0.4"/>
+  <line x1="800" y1="400" x2="870" y2="400" stroke="#f0c040" stroke-width="1.5" marker-end="url(#arrowG)" opacity="0.4"/>
+  <line x1="800" y1="430" x2="870" y2="550" stroke="#f0c040" stroke-width="1.5" marker-end="url(#arrowG)" opacity="0.4"/>
+
+  <!-- Right: Where buy pressure goes -->
+  <rect x="870" y="200" width="280" height="100" rx="6" fill="#40f080" fill-opacity="0.06" stroke="#40f080" stroke-opacity="0.3" stroke-width="1"/>
+  <text x="1010" y="230" text-anchor="middle" fill="#40f080" font-size="13" font-weight="bold">PRICE APPRECIATION</text>
+  <text x="1010" y="252" text-anchor="middle" fill="#ffffff" font-size="10" opacity="0.5">More revenue → more buying</text>
+  <text x="1010" y="270" text-anchor="middle" fill="#ffffff" font-size="10" opacity="0.5">→ higher token value</text>
+  <text x="1010" y="290" text-anchor="middle" fill="#40f080" font-size="10">Non-speculative growth</text>
+
+  <rect x="870" y="350" width="280" height="100" rx="6" fill="#00f0ff" fill-opacity="0.06" stroke="#00f0ff" stroke-opacity="0.3" stroke-width="1"/>
+  <text x="1010" y="380" text-anchor="middle" fill="#00f0ff" font-size="13" font-weight="bold">VALIDATOR REWARDS</text>
+  <text x="1010" y="402" text-anchor="middle" fill="#ffffff" font-size="10" opacity="0.5">80% of mint → device operators</text>
+  <text x="1010" y="420" text-anchor="middle" fill="#ffffff" font-size="10" opacity="0.5">Real yield for real work</text>
+  <text x="1010" y="440" text-anchor="middle" fill="#00f0ff" font-size="10">Incentivises network growth</text>
+
+  <rect x="870" y="500" width="280" height="100" rx="6" fill="#a060ff" fill-opacity="0.06" stroke="#a060ff" stroke-opacity="0.3" stroke-width="1"/>
+  <text x="1010" y="530" text-anchor="middle" fill="#a060ff" font-size="13" font-weight="bold">UBI REDISTRIBUTION</text>
+  <text x="1010" y="552" text-anchor="middle" fill="#ffffff" font-size="10" opacity="0.5">Revenue → buy → distribute</text>
+  <text x="1010" y="570" text-anchor="middle" fill="#ffffff" font-size="10" opacity="0.5">to all network participants</text>
+  <text x="1010" y="590" text-anchor="middle" fill="#a060ff" font-size="10">The endgame: equitable income</text>
+
+  <!-- Bottom -->
+  <rect x="100" y="700" width="1000" height="55" rx="4" fill="#ffffff" fill-opacity="0.03" stroke="#f0c040" stroke-opacity="0.3" stroke-width="1"/>
+  <text x="600" y="722" text-anchor="middle" fill="#f0c040" font-size="12" font-weight="bold">EVERY CHANNEL IS FIAT-DENOMINATED REVENUE FROM REAL ECONOMIC ACTIVITY</text>
+  <text x="600" y="742" text-anchor="middle" fill="#ffffff" font-size="11" opacity="0.6">No ICO. No IDO. No token pre-sale. $KREDS only gains value when the ecosystem generates real revenue.</text>
+  <text x="1170" y="780" text-anchor="end" fill="#ffffff" font-size="10" opacity="0.3">Fig. 23</text>
+</svg>

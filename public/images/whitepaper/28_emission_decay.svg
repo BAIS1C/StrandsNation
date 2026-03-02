@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0a0a14"/><stop offset="100%" stop-color="#06060c"/></linearGradient>
+    <linearGradient id="areaFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#40f080" stop-opacity="0.25"/><stop offset="100%" stop-color="#40f080" stop-opacity="0.02"/></linearGradient>
+  </defs>
+  <rect width="1000" height="700" fill="url(#bg)"/>
+
+  <text x="500" y="42" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="700" letter-spacing="2">EMISSION DECAY CURVE</text>
+  <text x="500" y="64" text-anchor="middle" fill="#40f080" font-size="11" letter-spacing="4" opacity="0.7">LOGARITHMIC DECAY — REWARDS EARLY ADOPTION — CHAPTER 13</text>
+  <line x1="200" y1="78" x2="800" y2="78" stroke="#40f080" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Axes -->
+  <line x1="120" y1="100" x2="120" y2="530" stroke="#ffffff" stroke-width="0.8" opacity="0.3"/>
+  <line x1="120" y1="530" x2="920" y2="530" stroke="#ffffff" stroke-width="0.8" opacity="0.3"/>
+
+  <!-- Y-axis label -->
+  <text x="30" y="320" text-anchor="middle" fill="#a0a8b8" font-size="11" transform="rotate(-90, 30, 320)">$KREDS per Epoch (Validation Reward)</text>
+  <!-- Y-axis ticks -->
+  <text x="110" y="140" text-anchor="end" fill="#a0a8b8" font-size="9">100%</text>
+  <line x1="115" y1="136" x2="125" y2="136" stroke="#ffffff" stroke-width="0.3" opacity="0.4"/>
+  <text x="110" y="235" text-anchor="end" fill="#a0a8b8" font-size="9">75%</text>
+  <line x1="115" y1="231" x2="920" y2="231" stroke="#ffffff" stroke-width="0.3" opacity="0.1" stroke-dasharray="4,4"/>
+  <text x="110" y="335" text-anchor="end" fill="#a0a8b8" font-size="9">50%</text>
+  <line x1="115" y1="331" x2="920" y2="331" stroke="#ffffff" stroke-width="0.3" opacity="0.1" stroke-dasharray="4,4"/>
+  <text x="110" y="435" text-anchor="end" fill="#a0a8b8" font-size="9">25%</text>
+  <line x1="115" y1="431" x2="920" y2="431" stroke="#ffffff" stroke-width="0.3" opacity="0.1" stroke-dasharray="4,4"/>
+  <text x="110" y="534" text-anchor="end" fill="#a0a8b8" font-size="9">0%</text>
+
+  <!-- X-axis label -->
+  <text x="520" y="580" text-anchor="middle" fill="#a0a8b8" font-size="11">Network Scale (Active Devices)</text>
+  <!-- X-axis ticks -->
+  <text x="120" y="554" text-anchor="middle" fill="#a0a8b8" font-size="9">0</text>
+  <text x="280" y="554" text-anchor="middle" fill="#a0a8b8" font-size="9">10K</text>
+  <text x="440" y="554" text-anchor="middle" fill="#a0a8b8" font-size="9">100K</text>
+  <text x="600" y="554" text-anchor="middle" fill="#a0a8b8" font-size="9">1M</text>
+  <text x="760" y="554" text-anchor="middle" fill="#a0a8b8" font-size="9">100M</text>
+  <text x="920" y="554" text-anchor="middle" fill="#a0a8b8" font-size="9">10B</text>
+
+  <!-- Logarithmic decay curve (area fill) -->
+  <path d="M120,136 C200,136 220,180 280,220 C340,260 380,310 440,350 C500,385 540,410 600,430 C660,445 720,462 760,475 C800,483 860,492 920,500" fill="none" stroke="transparent"/>
+  <path d="M120,136 C200,136 220,180 280,220 C340,260 380,310 440,350 C500,385 540,410 600,430 C660,445 720,462 760,475 C800,483 860,492 920,500 L920,530 L120,530 Z" fill="url(#areaFill)"/>
+
+  <!-- Logarithmic decay curve (line) -->
+  <path d="M120,136 C200,136 220,180 280,220 C340,260 380,310 440,350 C500,385 540,410 600,430 C660,445 720,462 760,475 C800,483 860,492 920,500" fill="none" stroke="#40f080" stroke-width="2.5"/>
+
+  <!-- Equilibrium line -->
+  <line x1="120" y1="500" x2="920" y2="500" stroke="#f0c040" stroke-width="1" stroke-dasharray="8,4" opacity="0.6"/>
+  <text x="930" y="504" fill="#f0c040" font-size="9" font-weight="600">EQUILIBRIUM</text>
+
+  <!-- Annotation: Early adopters -->
+  <rect x="140" y="150" width="180" height="50" rx="4" fill="#40f080" fill-opacity="0.1" stroke="#40f080" stroke-width="0.5"/>
+  <text x="230" y="170" text-anchor="middle" fill="#40f080" font-size="10" font-weight="600">EARLY ADOPTERS</text>
+  <text x="230" y="186" text-anchor="middle" fill="#a0a8b8" font-size="9">Maximum reward per epoch</text>
+  <text x="230" y="198" text-anchor="middle" fill="#a0a8b8" font-size="9">Small network = high contribution value</text>
+
+  <!-- Annotation: Mid-scale -->
+  <rect x="380" y="360" width="170" height="38" rx="4" fill="#00f0ff" fill-opacity="0.08" stroke="#00f0ff" stroke-width="0.5"/>
+  <text x="465" y="378" text-anchor="middle" fill="#00f0ff" font-size="10" font-weight="600">GROWTH PHASE</text>
+  <text x="465" y="392" text-anchor="middle" fill="#a0a8b8" font-size="9">Diminishing but still meaningful</text>
+
+  <!-- Annotation: Equilibrium zone -->
+  <rect x="720" y="410" width="190" height="50" rx="4" fill="#f0c040" fill-opacity="0.08" stroke="#f0c040" stroke-width="0.5"/>
+  <text x="815" y="428" text-anchor="middle" fill="#f0c040" font-size="10" font-weight="600">EQUILIBRIUM ZONE</text>
+  <text x="815" y="443" text-anchor="middle" fill="#a0a8b8" font-size="9">Minting ≈ Burning</text>
+  <text x="815" y="456" text-anchor="middle" fill="#a0a8b8" font-size="9">Stable circulating supply</text>
+
+  <!-- Supply cap annotation -->
+  <rect x="260" y="600" width="480" height="52" rx="6" fill="#ffffff" fill-opacity="0.03" stroke="#ffffff" stroke-width="0.5" opacity="0.2"/>
+  <text x="500" y="618" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="600" opacity="0.8">TOTAL SUPPLY CAP: 100 BILLION $KREDS</text>
+  <text x="500" y="636" text-anchor="middle" fill="#a0a8b8" font-size="9">Ceiling, not target. Actual supply determined by mint/burn equilibrium at any given network scale.</text>
+
+  <!-- Data points on curve -->
+  <circle cx="280" cy="220" r="4" fill="#40f080"/>
+  <circle cx="440" cy="350" r="4" fill="#40f080"/>
+  <circle cx="600" cy="430" r="4" fill="#40f080"/>
+  <circle cx="760" cy="475" r="4" fill="#40f080"/>
+  <circle cx="920" cy="500" r="4" fill="#f0c040"/>
+
+  <text x="500" y="690" text-anchor="middle" fill="#4a4e5c" font-size="9" letter-spacing="1">STRANDS WHITEPAPER v6 — APPENDIX H — FIG. 28</text>
+</svg>

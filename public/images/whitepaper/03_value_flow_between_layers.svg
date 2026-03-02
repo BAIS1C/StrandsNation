@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0a0a14"/><stop offset="100%" stop-color="#06060c"/></linearGradient>
+    <marker id="arrCyan" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#00f0ff" opacity="0.7"/></marker>
+    <marker id="arrGold" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#f0c040" opacity="0.7"/></marker>
+    <marker id="arrGreen" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#40f080" opacity="0.7"/></marker>
+    <marker id="arrWhite" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#ffffff" opacity="0.4"/></marker>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  
+  <text x="600" y="48" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="700" letter-spacing="2">VALUE FLOW BETWEEN LAYERS</text>
+  <text x="600" y="72" text-anchor="middle" fill="#00f0ff" font-size="12" letter-spacing="4" opacity="0.7">FIAT ENTRY → DAO TREASURY → $KREDS MARKET-MAKING → REDISTRIBUTION</text>
+  <line x1="300" y1="86" x2="900" y2="86" stroke="#00f0ff" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- EXTERNAL ENTRY: Players / Advertisers / Subscribers -->
+  <rect x="60" y="120" width="240" height="100" rx="4" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-width="0.6"/>
+  <text x="180" y="148" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="700">EXTERNAL FIAT</text>
+  <text x="180" y="170" text-anchor="middle" fill="#a0a8b8" font-size="10">Players • Advertisers</text>
+  <text x="180" y="188" text-anchor="middle" fill="#a0a8b8" font-size="10">Subscribers • Brands</text>
+
+  <!-- GAME ECONOMY NODE -->
+  <rect x="420" y="110" width="360" height="130" rx="6" fill="#00f0ff" fill-opacity="0.06" stroke="#00f0ff" stroke-width="1"/>
+  <text x="600" y="142" text-anchor="middle" fill="#00f0ff" font-size="16" font-weight="700">GAME ECONOMY</text>
+  <text x="440" y="168" fill="#ffffff" font-size="10">Founders Pass    IAP    Seasonal Pass</text>
+  <text x="440" y="186" fill="#ffffff" font-size="10">A.R.E. Ads    Skin the World™    SaaS</text>
+  <rect x="440" y="200" width="340" height="22" rx="11" fill="#00f0ff" fill-opacity="0.1" stroke="#00f0ff" stroke-width="0.4"/>
+  <text x="600" y="215" text-anchor="middle" fill="#00f0ff" font-size="10" font-weight="600">$2.5M–$6.1M/yr @ 50K DAU</text>
+
+  <!-- Arrow: External → Game -->
+  <line x1="300" y1="170" x2="418" y2="170" stroke="#ffffff" stroke-width="1.5" opacity="0.4" marker-end="url(#arrWhite)"/>
+  <text x="360" y="160" text-anchor="middle" fill="#ffffff" font-size="9" opacity="0.6">fiat entry</text>
+
+  <!-- LAYER U NODE -->
+  <rect x="120" y="340" width="360" height="130" rx="6" fill="#f0c040" fill-opacity="0.06" stroke="#f0c040" stroke-width="1"/>
+  <text x="300" y="372" text-anchor="middle" fill="#f0c040" font-size="16" font-weight="700">LAYER U DAO</text>
+  <text x="140" y="398" fill="#ffffff" font-size="10">XR Ad Licensing    Marketplace Fees</text>
+  <text x="140" y="416" fill="#ffffff" font-size="10">City DAO Treasury    Ltd Entity Revenue</text>
+  <rect x="140" y="430" width="340" height="22" rx="11" fill="#f0c040" fill-opacity="0.1" stroke="#f0c040" stroke-width="0.4"/>
+  <text x="300" y="445" text-anchor="middle" fill="#f0c040" font-size="10" font-weight="600">60% Members / 20% Infra / 20% $KREDS</text>
+
+  <!-- $KREDS NODE -->
+  <rect x="720" y="340" width="360" height="130" rx="6" fill="#40f080" fill-opacity="0.06" stroke="#40f080" stroke-width="1"/>
+  <text x="900" y="372" text-anchor="middle" fill="#40f080" font-size="16" font-weight="700">$KREDS MARKET</text>
+  <text x="740" y="398" fill="#ffffff" font-size="10">Device Activation Minting</text>
+  <text x="740" y="416" fill="#ffffff" font-size="10">Validator Rewards    SIGOPS Rewards</text>
+  <rect x="740" y="430" width="340" height="22" rx="11" fill="#40f080" fill-opacity="0.1" stroke="#40f080" stroke-width="0.4"/>
+  <text x="900" y="445" text-anchor="middle" fill="#40f080" font-size="10" font-weight="600">100B Supply Cap — Logarithmic Decay</text>
+
+  <!-- Arrow: Game → Layer U (players learn skills that transfer) -->
+  <path d="M500 242 Q400 290 380 338" fill="none" stroke="#00f0ff" stroke-width="1.5" opacity="0.5" marker-end="url(#arrGold)"/>
+  <text x="400" y="280" text-anchor="middle" fill="#00f0ff" font-size="9" opacity="0.8">Player skills</text>
+  <text x="400" y="292" text-anchor="middle" fill="#00f0ff" font-size="9" opacity="0.8">transfer to real</text>
+
+  <!-- Arrow: Layer U → $KREDS (20% revenue buy) -->
+  <line x1="482" y1="405" x2="718" y2="405" stroke="#f0c040" stroke-width="2" opacity="0.5" marker-end="url(#arrGreen)"/>
+  <text x="600" y="395" text-anchor="middle" fill="#f0c040" font-size="10" font-weight="600" opacity="0.9">20% Revenue → $KREDS Buy</text>
+
+  <!-- REDISTRIBUTION NODE -->
+  <rect x="420" y="550" width="360" height="100" rx="6" fill="#40f080" fill-opacity="0.04" stroke="#40f080" stroke-width="0.8"/>
+  <text x="600" y="578" text-anchor="middle" fill="#40f080" font-size="14" font-weight="700">UBI REDISTRIBUTION</text>
+  <text x="600" y="602" text-anchor="middle" fill="#ffffff" font-size="10">Per-participant income from $KREDS staking rewards</text>
+  <text x="600" y="622" text-anchor="middle" fill="#ffffff" font-size="10">Validators • Players • DAO Members • Creators • SIGOPS Workers</text>
+
+  <!-- Arrow: $KREDS → Redistribution -->
+  <path d="M900 472 Q900 510 720 560" fill="none" stroke="#40f080" stroke-width="1.5" opacity="0.5" marker-end="url(#arrGreen)"/>
+  <text x="850" y="520" text-anchor="middle" fill="#40f080" font-size="9" opacity="0.8">Staking yields</text>
+
+  <!-- Arrow: Redistribution → back to Game (spending) -->
+  <path d="M500 548 Q400 500 500 242" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.25" stroke-dasharray="4,4" marker-end="url(#arrCyan)"/>
+  <text x="430" y="440" text-anchor="middle" fill="#ffffff" font-size="9" opacity="0.5" transform="rotate(-70, 430, 440)">UBI → in-game spending</text>
+
+  <!-- Arrow: Redistribution → back to Layer U (participation) -->
+  <path d="M480 548 Q300 520 300 472" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.25" stroke-dasharray="4,4" marker-end="url(#arrGold)"/>
+  <text x="350" y="510" text-anchor="middle" fill="#ffffff" font-size="9" opacity="0.5">UBI → DAO participation</text>
+
+  <!-- LEGEND -->
+  <rect x="60" y="690" width="1080" height="80" rx="4" fill="#ffffff" fill-opacity="0.02" stroke="#ffffff" stroke-width="0.3" opacity="0.4"/>
+  <text x="100" y="715" fill="#ffffff" font-size="11" font-weight="600">FLOW KEY:</text>
+  <line x1="200" y1="710" x2="260" y2="710" stroke="#ffffff" stroke-width="1.5" opacity="0.4"/>
+  <text x="270" y="715" fill="#a0a8b8" font-size="10">Fiat entry</text>
+  <line x1="370" y1="710" x2="430" y2="710" stroke="#00f0ff" stroke-width="1.5" opacity="0.5"/>
+  <text x="440" y="715" fill="#a0a8b8" font-size="10">Game → Layer U skill transfer</text>
+  <line x1="620" y1="710" x2="680" y2="710" stroke="#f0c040" stroke-width="2" opacity="0.5"/>
+  <text x="690" y="715" fill="#a0a8b8" font-size="10">Revenue → $KREDS market buy</text>
+  <line x1="910" y1="710" x2="970" y2="710" stroke="#40f080" stroke-width="1.5" opacity="0.5"/>
+  <text x="980" y="715" fill="#a0a8b8" font-size="10">$KREDS distribution</text>
+  <line x1="200" y1="740" x2="260" y2="740" stroke="#ffffff" stroke-width="1" opacity="0.25" stroke-dasharray="4,4"/>
+  <text x="270" y="745" fill="#a0a8b8" font-size="10">Recirculation (UBI → spending/participation)</text>
+
+  <text x="1170" y="785" text-anchor="end" fill="#ffffff" font-size="9" opacity="0.2">Fig. 3</text>
+</svg>

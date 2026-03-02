@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0a0a14"/><stop offset="100%" stop-color="#06060c"/></linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+
+  <text x="600" y="42" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="700" letter-spacing="2">SWG STRIP-FOR-PARTS ARCHITECTURE</text>
+  <text x="600" y="64" text-anchor="middle" fill="#00f0ff" font-size="11" letter-spacing="4" opacity="0.7">WHAT WE TAKE / DISCARD / REIMPLEMENT — CHAPTER 4</text>
+  <line x1="300" y1="78" x2="900" y2="78" stroke="#00f0ff" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Column Headers -->
+  <rect x="60" y="100" width="340" height="40" rx="4" fill="#40f080" fill-opacity="0.12" stroke="#40f080" stroke-width="0.6"/>
+  <text x="230" y="125" text-anchor="middle" fill="#40f080" font-size="14" font-weight="700">✓ TAKEN &amp; ADAPTED</text>
+  
+  <rect x="430" y="100" width="340" height="40" rx="4" fill="#ff4060" fill-opacity="0.12" stroke="#ff4060" stroke-width="0.6"/>
+  <text x="600" y="125" text-anchor="middle" fill="#ff4060" font-size="14" font-weight="700">✕ DISCARDED</text>
+  
+  <rect x="800" y="100" width="340" height="40" rx="4" fill="#00f0ff" fill-opacity="0.12" stroke="#00f0ff" stroke-width="0.6"/>
+  <text x="970" y="125" text-anchor="middle" fill="#00f0ff" font-size="14" font-weight="700">◆ REIMPLEMENTED</text>
+
+  <!-- TAKEN column -->
+  <rect x="60" y="155" width="340" height="580" rx="4" fill="#40f080" fill-opacity="0.02" stroke="#40f080" stroke-width="0.3"/>
+  
+  <text x="80" y="185" fill="#40f080" font-size="11" font-weight="700">SERVER ARCHITECTURE</text>
+  <text x="80" y="205" fill="#ffffff" font-size="10">▸ Zone-based authoritative server model</text>
+  <text x="80" y="222" fill="#ffffff" font-size="10">▸ Object persistence layer</text>
+  <text x="80" y="239" fill="#ffffff" font-size="10">▸ Client-server message protocol</text>
+  <text x="80" y="256" fill="#a0a8b8" font-size="9">C++ → TypeScript via conversion tooling</text>
+  
+  <line x1="90" y1="272" x2="370" y2="272" stroke="#40f080" stroke-width="0.2" opacity="0.3"/>
+  <text x="80" y="295" fill="#40f080" font-size="11" font-weight="700">GAME SYSTEMS</text>
+  <text x="80" y="315" fill="#ffffff" font-size="10">▸ Crafting system (recipe-based)</text>
+  <text x="80" y="332" fill="#ffffff" font-size="10">▸ Resource harvesting framework</text>
+  <text x="80" y="349" fill="#ffffff" font-size="10">▸ Player housing / placement system</text>
+  <text x="80" y="366" fill="#ffffff" font-size="10">▸ Skill tree progression model</text>
+  <text x="80" y="383" fill="#a0a8b8" font-size="9">Core loops proven over 20+ years</text>
+  
+  <line x1="90" y1="399" x2="370" y2="399" stroke="#40f080" stroke-width="0.2" opacity="0.3"/>
+  <text x="80" y="422" fill="#40f080" font-size="11" font-weight="700">SOCIAL SYSTEMS</text>
+  <text x="80" y="442" fill="#ffffff" font-size="10">▸ Guild/faction management</text>
+  <text x="80" y="459" fill="#ffffff" font-size="10">▸ Player economy / trade protocol</text>
+  <text x="80" y="476" fill="#ffffff" font-size="10">▸ Mail / messaging system</text>
+  <text x="80" y="493" fill="#a0a8b8" font-size="9">Social fabric = retention driver</text>
+  
+  <line x1="90" y1="509" x2="370" y2="509" stroke="#40f080" stroke-width="0.2" opacity="0.3"/>
+  <text x="80" y="532" fill="#40f080" font-size="11" font-weight="700">DATA MODELS</text>
+  <text x="80" y="552" fill="#ffffff" font-size="10">▸ Object template system (.iff format)</text>
+  <text x="80" y="569" fill="#ffffff" font-size="10">▸ World snapshot persistence</text>
+  <text x="80" y="586" fill="#ffffff" font-size="10">▸ Character state serialisation</text>
+  <text x="80" y="603" fill="#ffffff" font-size="10">▸ Auth via UUID v4 + TG Login Widget</text>
+  
+  <rect x="100" y="625" width="260" height="22" rx="11" fill="#40f080" fill-opacity="0.1" stroke="#40f080" stroke-width="0.4"/>
+  <text x="230" y="640" text-anchor="middle" fill="#40f080" font-size="10" font-weight="600">8 REPOS — github.com/BAIS1C</text>
+
+  <!-- DISCARDED column -->
+  <rect x="430" y="155" width="340" height="580" rx="4" fill="#ff4060" fill-opacity="0.02" stroke="#ff4060" stroke-width="0.3"/>
+  
+  <text x="450" y="185" fill="#ff4060" font-size="11" font-weight="700">STAR WARS IP</text>
+  <text x="450" y="205" fill="#ffffff" font-size="10">▸ All Lucasfilm-owned content</text>
+  <text x="450" y="222" fill="#ffffff" font-size="10">▸ Character models / names</text>
+  <text x="450" y="239" fill="#ffffff" font-size="10">▸ World geometry (Tatooine, etc)</text>
+  <text x="450" y="256" fill="#a0a8b8" font-size="9">Replaced: MetaXity1 canonical lore</text>
+  
+  <line x1="460" y1="272" x2="740" y2="272" stroke="#ff4060" stroke-width="0.2" opacity="0.3"/>
+  <text x="450" y="295" fill="#ff4060" font-size="11" font-weight="700">LEGACY CLIENT</text>
+  <text x="450" y="315" fill="#ffffff" font-size="10">▸ C++ desktop client binary</text>
+  <text x="450" y="332" fill="#ffffff" font-size="10">▸ DirectX 9 rendering pipeline</text>
+  <text x="450" y="349" fill="#ffffff" font-size="10">▸ Custom terrain engine</text>
+  <text x="450" y="366" fill="#ffffff" font-size="10">▸ Login server (SOE protocol)</text>
+  <text x="450" y="383" fill="#a0a8b8" font-size="9">Replaced: Web-first (Next.js / WebGL)</text>
+  
+  <line x1="460" y1="399" x2="740" y2="399" stroke="#ff4060" stroke-width="0.2" opacity="0.3"/>
+  <text x="450" y="422" fill="#ff4060" font-size="11" font-weight="700">COMBAT SYSTEM</text>
+  <text x="450" y="442" fill="#ffffff" font-size="10">▸ Pre-CU / CU / NGE combat models</text>
+  <text x="450" y="459" fill="#ffffff" font-size="10">▸ Jedi progression system</text>
+  <text x="450" y="476" fill="#ffffff" font-size="10">▸ PvP / GCW frameworks</text>
+  <text x="450" y="493" fill="#a0a8b8" font-size="9">Replaced: NKQ-driven progression</text>
+  
+  <line x1="460" y1="509" x2="740" y2="509" stroke="#ff4060" stroke-width="0.2" opacity="0.3"/>
+  <text x="450" y="532" fill="#ff4060" font-size="11" font-weight="700">MONETISATION</text>
+  <text x="450" y="552" fill="#ffffff" font-size="10">▸ Subscription model ($15/mo)</text>
+  <text x="450" y="569" fill="#ffffff" font-size="10">▸ Station Pass integration</text>
+  <text x="450" y="586" fill="#a0a8b8" font-size="9">Replaced: 9-layer free-to-play</text>
+
+  <!-- REIMPLEMENTED column -->
+  <rect x="800" y="155" width="340" height="580" rx="4" fill="#00f0ff" fill-opacity="0.02" stroke="#00f0ff" stroke-width="0.3"/>
+  
+  <text x="820" y="185" fill="#00f0ff" font-size="11" font-weight="700">AI SYSTEMS (NEW)</text>
+  <text x="820" y="205" fill="#ffffff" font-size="10">▸ KASAI / My Mait AI companions</text>
+  <text x="820" y="222" fill="#ffffff" font-size="10">▸ Psychometric-driven NPC dialogue</text>
+  <text x="820" y="239" fill="#ffffff" font-size="10">▸ Generative quest generation</text>
+  <text x="820" y="256" fill="#ffffff" font-size="10">▸ SAL personality matching</text>
+  <text x="820" y="273" fill="#a0a8b8" font-size="9">SWG had no AI — fully new layer</text>
+  
+  <line x1="830" y1="289" x2="1110" y2="289" stroke="#00f0ff" stroke-width="0.2" opacity="0.3"/>
+  <text x="820" y="312" fill="#00f0ff" font-size="11" font-weight="700">GENERATIVE CONTENT (NEW)</text>
+  <text x="820" y="332" fill="#ffffff" font-size="10">▸ Skin the World™ (Flux/ComfyUI)</text>
+  <text x="820" y="349" fill="#ffffff" font-size="10">▸ Music generation (Ace Studio)</text>
+  <text x="820" y="366" fill="#ffffff" font-size="10">▸ Voice cloning (Chatterbox TTS)</text>
+  <text x="820" y="383" fill="#ffffff" font-size="10">▸ Face fusion (Sublime VIP)</text>
+  <text x="820" y="400" fill="#a0a8b8" font-size="9">Player agency via AI generation</text>
+  
+  <line x1="830" y1="416" x2="1110" y2="416" stroke="#00f0ff" stroke-width="0.2" opacity="0.3"/>
+  <text x="820" y="439" fill="#00f0ff" font-size="11" font-weight="700">BLOCKCHAIN LAYER (NEW)</text>
+  <text x="820" y="459" fill="#ffffff" font-size="10">▸ Strands Chain (TON-derived L1)</text>
+  <text x="820" y="476" fill="#ffffff" font-size="10">▸ $KREDS token economics</text>
+  <text x="820" y="493" fill="#ffffff" font-size="10">▸ NFT ownership (TEP-62)</text>
+  <text x="820" y="510" fill="#ffffff" font-size="10">▸ zk-SNARK privacy proofs</text>
+  <text x="820" y="527" fill="#a0a8b8" font-size="9">Invisible infra — no wallet required</text>
+  
+  <line x1="830" y1="543" x2="1110" y2="543" stroke="#00f0ff" stroke-width="0.2" opacity="0.3"/>
+  <text x="820" y="566" fill="#00f0ff" font-size="11" font-weight="700">MEMORY / IDENTITY (NEW)</text>
+  <text x="820" y="586" fill="#ffffff" font-size="10">▸ MyMories persistent memory DAG</text>
+  <text x="820" y="603" fill="#ffffff" font-size="10">▸ Player-owned .mmr file format</text>
+  <text x="820" y="620" fill="#ffffff" font-size="10">▸ Memory sovereignty / portability</text>
+  
+  <rect x="860" y="640" width="240" height="22" rx="11" fill="#00f0ff" fill-opacity="0.1" stroke="#00f0ff" stroke-width="0.4"/>
+  <text x="980" y="655" text-anchor="middle" fill="#00f0ff" font-size="10" font-weight="600">SWG SKELETON + STRANDS SOUL</text>
+
+  <text x="1170" y="785" text-anchor="end" fill="#ffffff" font-size="9" opacity="0.2">Fig. 34</text>
+</svg>

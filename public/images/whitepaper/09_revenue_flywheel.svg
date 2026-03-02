@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0a0a14"/><stop offset="100%" stop-color="#06060c"/></linearGradient>
+    <marker id="arrW" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="#ffffff" opacity="0.5"/></marker>
+  </defs>
+  <rect width="900" height="900" fill="url(#bg)"/>
+
+  <text x="450" y="42" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="700" letter-spacing="2">REVENUE RECIRCULATION FLYWHEEL</text>
+  <text x="450" y="64" text-anchor="middle" fill="#00f0ff" font-size="11" letter-spacing="4" opacity="0.7">HOW REVENUE COMPOUNDS ACROSS ALL THREE LAYERS</text>
+  <line x1="200" y1="76" x2="700" y2="76" stroke="#00f0ff" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Centre hub -->
+  <circle cx="450" cy="440" r="80" fill="#ffffff" fill-opacity="0.03" stroke="#ffffff" stroke-width="1" opacity="0.4"/>
+  <text x="450" y="430" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="700">FLYWHEEL</text>
+  <text x="450" y="450" text-anchor="middle" fill="#a0a8b8" font-size="10">CORE</text>
+
+  <!-- Node 1: Players Join (top) -->
+  <rect x="340" y="100" width="220" height="70" rx="6" fill="#00f0ff" fill-opacity="0.06" stroke="#00f0ff" stroke-width="0.8"/>
+  <text x="450" y="128" text-anchor="middle" fill="#00f0ff" font-size="13" font-weight="700">1. PLAYERS JOIN</text>
+  <text x="450" y="148" text-anchor="middle" fill="#a0a8b8" font-size="9">TG Mini App → Onboarding → NKQ</text>
+
+  <!-- Node 2: Play & Create (right) -->
+  <rect x="640" y="260" width="220" height="70" rx="6" fill="#f0c040" fill-opacity="0.06" stroke="#f0c040" stroke-width="0.8"/>
+  <text x="750" y="288" text-anchor="middle" fill="#f0c040" font-size="13" font-weight="700">2. PLAY &amp; CREATE</text>
+  <text x="750" y="308" text-anchor="middle" fill="#a0a8b8" font-size="9">Quests, crafting, Skin the World™</text>
+
+  <!-- Node 3: Revenue Generated (bottom-right) -->
+  <rect x="640" y="530" width="220" height="70" rx="6" fill="#40f080" fill-opacity="0.06" stroke="#40f080" stroke-width="0.8"/>
+  <text x="750" y="558" text-anchor="middle" fill="#40f080" font-size="13" font-weight="700">3. REVENUE</text>
+  <text x="750" y="578" text-anchor="middle" fill="#a0a8b8" font-size="9">IAP + A.R.E. + Marketplace + SaaS</text>
+
+  <!-- Node 4: Revenue Split (bottom) -->
+  <rect x="340" y="680" width="220" height="70" rx="6" fill="#ff6080" fill-opacity="0.06" stroke="#ff6080" stroke-width="0.8"/>
+  <text x="450" y="708" text-anchor="middle" fill="#ff6080" font-size="13" font-weight="700">4. REVENUE SPLIT</text>
+  <text x="450" y="728" text-anchor="middle" fill="#a0a8b8" font-size="9">60% player / 40% platform</text>
+
+  <!-- Node 5: Layer U Growth (bottom-left) -->
+  <rect x="40" y="530" width="220" height="70" rx="6" fill="#a060ff" fill-opacity="0.06" stroke="#a060ff" stroke-width="0.8"/>
+  <text x="150" y="558" text-anchor="middle" fill="#a060ff" font-size="13" font-weight="700">5. LAYER U GROWTH</text>
+  <text x="150" y="578" text-anchor="middle" fill="#a0a8b8" font-size="9">XR ad sales + DAO treasury</text>
+
+  <!-- Node 6: $KREDS Buy (left) -->
+  <rect x="40" y="260" width="220" height="70" rx="6" fill="#40f080" fill-opacity="0.06" stroke="#40f080" stroke-width="0.8"/>
+  <text x="150" y="288" text-anchor="middle" fill="#40f080" font-size="13" font-weight="700">6. $KREDS BUY</text>
+  <text x="150" y="308" text-anchor="middle" fill="#a0a8b8" font-size="9">20% Layer U revenue → buy pressure</text>
+
+  <!-- Circular arrows connecting nodes -->
+  <!-- 1→2 -->
+  <path d="M560 140 Q620 160 640 270" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.3" marker-end="url(#arrW)"/>
+  <!-- 2→3 -->
+  <path d="M780 330 Q800 430 780 530" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.3" marker-end="url(#arrW)"/>
+  <!-- 3→4 -->
+  <path d="M640 580 Q560 640 560 690" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.3" marker-end="url(#arrW)"/>
+  <!-- 4→5 -->
+  <path d="M340 720 Q260 730 260 590" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.3" marker-end="url(#arrW)"/>
+  <!-- 5→6 -->
+  <path d="M120 530 Q100 430 120 330" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.3" marker-end="url(#arrW)"/>
+  <!-- 6→1 (back to top - completing the flywheel) -->
+  <path d="M200 260 Q280 160 340 140" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.3" marker-end="url(#arrW)"/>
+
+  <!-- Inner feedback loop annotations -->
+  <text x="600" y="200" fill="#00f0ff" font-size="9" opacity="0.6">Onboarding drives</text>
+  <text x="600" y="212" fill="#00f0ff" font-size="9" opacity="0.6">engagement</text>
+
+  <text x="800" y="440" fill="#f0c040" font-size="9" opacity="0.6">Activity generates</text>
+  <text x="800" y="452" fill="#f0c040" font-size="9" opacity="0.6">revenue</text>
+
+  <text x="550" y="650" fill="#ff6080" font-size="9" opacity="0.6">Players earn</text>
+  <text x="550" y="662" fill="#ff6080" font-size="9" opacity="0.6">from playing</text>
+
+  <text x="60" y="460" fill="#a060ff" font-size="9" opacity="0.6">Layer U grows</text>
+  <text x="60" y="472" fill="#a060ff" font-size="9" opacity="0.6">real-world value</text>
+
+  <text x="100" y="200" fill="#40f080" font-size="9" opacity="0.6">$KREDS UBI attracts</text>
+  <text x="100" y="212" fill="#40f080" font-size="9" opacity="0.6">new players</text>
+
+  <!-- Acceleration callout -->
+  <rect x="150" y="800" width="600" height="50" rx="4" fill="#ffffff" fill-opacity="0.02" stroke="#ffffff" stroke-width="0.4"/>
+  <text x="450" y="822" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="700">EACH REVOLUTION ACCELERATES THE NEXT</text>
+  <text x="450" y="840" text-anchor="middle" fill="#a0a8b8" font-size="10">More players → more revenue → more Layer U growth → more $KREDS value → more players</text>
+
+  <text x="870" y="890" text-anchor="end" fill="#ffffff" font-size="9" opacity="0.2">Fig. 9</text>
+</svg>

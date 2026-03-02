@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0a0a14"/><stop offset="100%" stop-color="#06060c"/></linearGradient>
+  </defs>
+  <rect width="1000" height="700" fill="url(#bg)"/>
+
+  <text x="500" y="42" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="700" letter-spacing="2">COMPETITIVE COMPARISON MATRIX</text>
+  <text x="500" y="64" text-anchor="middle" fill="#40f080" font-size="11" letter-spacing="4" opacity="0.7">LAYER U vs TRADITIONAL OOH vs METAVERSE vs AR vs BRAVE — CHAPTER 12</text>
+  <line x1="200" y1="78" x2="800" y2="78" stroke="#40f080" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Table header row -->
+  <rect x="30" y="100" width="145" height="44" rx="0" fill="#ffffff" fill-opacity="0.06"/>
+  <text x="102" y="126" text-anchor="middle" fill="#ffffff" font-size="10" font-weight="700">CAPABILITY</text>
+
+  <rect x="175" y="100" width="145" height="44" rx="0" fill="#40f080" fill-opacity="0.1"/>
+  <text x="247" y="120" text-anchor="middle" fill="#40f080" font-size="11" font-weight="700">LAYER U</text>
+  <text x="247" y="134" text-anchor="middle" fill="#40f080" font-size="8" opacity="0.7">Strands</text>
+
+  <rect x="320" y="100" width="145" height="44" rx="0" fill="#ffffff" fill-opacity="0.03"/>
+  <text x="392" y="120" text-anchor="middle" fill="#a0a8b8" font-size="11" font-weight="700">TRAD OOH</text>
+  <text x="392" y="134" text-anchor="middle" fill="#a0a8b8" font-size="8" opacity="0.7">JCDecaux etc.</text>
+
+  <rect x="465" y="100" width="145" height="44" rx="0" fill="#ffffff" fill-opacity="0.03"/>
+  <text x="537" y="120" text-anchor="middle" fill="#a0a8b8" font-size="11" font-weight="700">METAVERSE</text>
+  <text x="537" y="134" text-anchor="middle" fill="#a0a8b8" font-size="8" opacity="0.7">Decentraland etc.</text>
+
+  <rect x="610" y="100" width="145" height="44" rx="0" fill="#ffffff" fill-opacity="0.03"/>
+  <text x="682" y="120" text-anchor="middle" fill="#a0a8b8" font-size="11" font-weight="700">AR PLATFORMS</text>
+  <text x="682" y="134" text-anchor="middle" fill="#a0a8b8" font-size="8" opacity="0.7">Snap / Niantic</text>
+
+  <rect x="755" y="100" width="145" height="44" rx="0" fill="#ffffff" fill-opacity="0.03"/>
+  <text x="827" y="120" text-anchor="middle" fill="#a0a8b8" font-size="11" font-weight="700">BRAVE ADS</text>
+  <text x="827" y="134" text-anchor="middle" fill="#a0a8b8" font-size="8" opacity="0.7">BAT Token</text>
+
+  <!-- Row separator -->
+  <line x1="30" y1="144" x2="900" y2="144" stroke="#ffffff" stroke-width="0.5" opacity="0.15"/>
+
+  <!-- Row 1: Spatial Anchoring -->
+  <text x="102" y="172" text-anchor="middle" fill="#d0d4dc" font-size="10">Spatial Anchoring</text>
+  <text x="247" y="172" text-anchor="middle" fill="#40f080" font-size="12" font-weight="700">●</text>
+  <text x="247" y="184" text-anchor="middle" fill="#40f080" font-size="8">Volumetric 10m³</text>
+  <text x="392" y="172" text-anchor="middle" fill="#ff6080" font-size="12" font-weight="700">●</text>
+  <text x="392" y="184" text-anchor="middle" fill="#a0a8b8" font-size="8">Physical only</text>
+  <text x="537" y="172" text-anchor="middle" fill="#f0c040" font-size="12" font-weight="700">◐</text>
+  <text x="537" y="184" text-anchor="middle" fill="#a0a8b8" font-size="8">Virtual parcels</text>
+  <text x="682" y="172" text-anchor="middle" fill="#f0c040" font-size="12" font-weight="700">◐</text>
+  <text x="682" y="184" text-anchor="middle" fill="#a0a8b8" font-size="8">AR markers</text>
+  <text x="827" y="172" text-anchor="middle" fill="#ff6080" font-size="12" font-weight="700">✕</text>
+  <text x="827" y="184" text-anchor="middle" fill="#a0a8b8" font-size="8">Browser only</text>
+  <line x1="30" y1="194" x2="900" y2="194" stroke="#ffffff" stroke-width="0.3" opacity="0.08"/>
+
+  <!-- Row 2: Consent-Based -->
+  <text x="102" y="218" text-anchor="middle" fill="#d0d4dc" font-size="10">Consent Layer</text>
+  <text x="247" y="218" text-anchor="middle" fill="#40f080" font-size="12" font-weight="700">●</text>
+  <text x="247" y="230" text-anchor="middle" fill="#40f080" font-size="8">Tier 0–3 GDPR</text>
+  <text x="392" y="218" text-anchor="middle" fill="#ff6080" font-size="12" font-weight="700">✕</text>
+  <text x="392" y="230" text-anchor="middle" fill="#a0a8b8" font-size="8">None</text>
+  <text x="537" y="218" text-anchor="middle" fill="#ff6080" font-size="12" font-weight="700">✕</text>
+  <text x="537" y="230" text-anchor="middle" fill="#a0a8b8" font-size="8">None</text>
+  <text x="682" y="218" text-anchor="middle" fill="#ff6080" font-size="12" font-weight="700">✕</text>
+  <text x="682" y="230" text-anchor="middle" fill="#a0a8b8" font-size="8">None</text>
+  <text x="827" y="218" text-anchor="middle" fill="#40f080" font-size="12" font-weight="700">●</text>
+  <text x="827" y="230" text-anchor="middle" fill="#a0a8b8" font-size="8">Opt-in ads</text>
+  <line x1="30" y1="240" x2="900" y2="240" stroke="#ffffff" stroke-width="0.3" opacity="0.08"/>
+
+  <!-- Row 3: Revenue Share -->
+  <text x="102" y="264" text-anchor="middle" fill="#d0d4dc" font-size="10">Revenue Share</text>
+  <text x="247" y="264" text-anchor="middle" fill="#40f080" font-size="12" font-weight="700">●</text>
+  <text x="247" y="276" text-anchor="middle" fill="#40f080" font-size="8">60% to viewer</text>
+  <text x="392" y="264" text-anchor="middle" fill="#ff6080" font-size="12" font-weight="700">✕</text>
+  <text x="392" y="276" text-anchor="middle" fill="#a0a8b8" font-size="8">0% to viewer</text>
+  <text x="537" y="264" text-anchor="middle" fill="#f0c040" font-size="12" font-weight="700">◐</text>
+  <text x="537" y="276" text-anchor="middle" fill="#a0a8b8" font-size="8">Landowner only</text>
+  <text x="682" y="264" text-anchor="middle" fill="#ff6080" font-size="12" font-weight="700">✕</text>
+  <text x="682" y="276" text-anchor="middle" fill="#a0a8b8" font-size="8">Platform keeps</text>
+  <text x="827" y="264" text-anchor="middle" fill="#f0c040" font-size="12" font-weight="700">◐</text>
+  <text x="827" y="276" text-anchor="middle" fill="#a0a8b8" font-size="8">70% BAT token</text>
+  <line x1="30" y1="286" x2="900" y2="286" stroke="#ffffff" stroke-width="0.3" opacity="0.08"/>
+
+  <!-- Row 4: Camera-Free Sensing -->
+  <text x="102" y="310" text-anchor="middle" fill="#d0d4dc" font-size="10">Camera-Free</text>
+  <text x="247" y="310" text-anchor="middle" fill="#40f080" font-size="12" font-weight="700">●</text>
+  <text x="247" y="322" text-anchor="middle" fill="#40f080" font-size="8">WiFi DensePose</text>
+  <text x="392" y="310" text-anchor="middle" fill="#ff6080" font-size="12" font-weight="700">✕</text>
+  <text x="392" y="322" text-anchor="middle" fill="#a0a8b8" font-size="8">No sensing</text>
+  <text x="537" y="310" text-anchor="middle" fill="#ff6080" font-size="12" font-weight="700">✕</text>
+  <text x="537" y="322" text-anchor="middle" fill="#a0a8b8" font-size="8">N/A</text>
+  <text x="682" y="310" text-anchor="middle" fill="#ff6080" font-size="12" font-weight="700">✕</text>
+  <text x="682" y="322" text-anchor="middle" fill="#a0a8b8" font-size="8">Camera required</text>
+  <text x="827" y="310" text-anchor="middle" fill="#ff6080" font-size="12" font-weight="700">✕</text>
+  <text x="827" y="322" text-anchor="middle" fill="#a0a8b8" font-size="8">No sensing</text>
+  <line x1="30" y1="332" x2="900" y2="332" stroke="#ffffff" stroke-width="0.3" opacity="0.08"/>
+
+  <!-- Row 5: DAO Governance -->
+  <text x="102" y="356" text-anchor="middle" fill="#d0d4dc" font-size="10">DAO Governance</text>
+  <text x="247" y="356" text-anchor="middle" fill="#40f080" font-size="12" font-weight="700">●</text>
+  <text x="247" y="368" text-anchor="middle" fill="#40f080" font-size="8">DAO + Ltd hybrid</text>
+  <text x="392" y="356" text-anchor="middle" fill="#ff6080" font-size="12" font-weight="700">✕</text>
+  <text x="392" y="368" text-anchor="middle" fill="#a0a8b8" font-size="8">Corporate</text>
+  <text x="537" y="356" text-anchor="middle" fill="#f0c040" font-size="12" font-weight="700">◐</text>
+  <text x="537" y="368" text-anchor="middle" fill="#a0a8b8" font-size="8">DAO (no Ltd)</text>
+  <text x="682" y="356" text-anchor="middle" fill="#ff6080" font-size="12" font-weight="700">✕</text>
+  <text x="682" y="368" text-anchor="middle" fill="#a0a8b8" font-size="8">Corporate</text>
+  <text x="827" y="356" text-anchor="middle" fill="#ff6080" font-size="12" font-weight="700">✕</text>
+  <text x="827" y="368" text-anchor="middle" fill="#a0a8b8" font-size="8">Foundation</text>
+  <line x1="30" y1="378" x2="900" y2="378" stroke="#ffffff" stroke-width="0.3" opacity="0.08"/>
+
+  <!-- Row 6: Game-Validated -->
+  <text x="102" y="402" text-anchor="middle" fill="#d0d4dc" font-size="10">Game-Validated</text>
+  <text x="247" y="402" text-anchor="middle" fill="#40f080" font-size="12" font-weight="700">●</text>
+  <text x="247" y="414" text-anchor="middle" fill="#40f080" font-size="8">In-game → real</text>
+  <text x="392" y="402" text-anchor="middle" fill="#ff6080" font-size="12" font-weight="700">✕</text>
+  <text x="537" y="402" text-anchor="middle" fill="#ff6080" font-size="12" font-weight="700">✕</text>
+  <text x="682" y="402" text-anchor="middle" fill="#ff6080" font-size="12" font-weight="700">✕</text>
+  <text x="827" y="402" text-anchor="middle" fill="#ff6080" font-size="12" font-weight="700">✕</text>
+  <line x1="30" y1="424" x2="900" y2="424" stroke="#ffffff" stroke-width="0.3" opacity="0.08"/>
+
+  <!-- Row 7: Inventory Model -->
+  <text x="102" y="448" text-anchor="middle" fill="#d0d4dc" font-size="10">Inventory Model</text>
+  <text x="247" y="448" text-anchor="middle" fill="#40f080" font-size="12" font-weight="700">●</text>
+  <text x="247" y="460" text-anchor="middle" fill="#40f080" font-size="8">Unlimited airspace</text>
+  <text x="392" y="448" text-anchor="middle" fill="#ff6080" font-size="12" font-weight="700">✕</text>
+  <text x="392" y="460" text-anchor="middle" fill="#a0a8b8" font-size="8">Finite physical</text>
+  <text x="537" y="448" text-anchor="middle" fill="#f0c040" font-size="12" font-weight="700">◐</text>
+  <text x="537" y="460" text-anchor="middle" fill="#a0a8b8" font-size="8">Finite virtual</text>
+  <text x="682" y="448" text-anchor="middle" fill="#40f080" font-size="12" font-weight="700">●</text>
+  <text x="682" y="460" text-anchor="middle" fill="#a0a8b8" font-size="8">Unlimited AR</text>
+  <text x="827" y="448" text-anchor="middle" fill="#ff6080" font-size="12" font-weight="700">✕</text>
+  <text x="827" y="460" text-anchor="middle" fill="#a0a8b8" font-size="8">Browser tabs</text>
+  <line x1="30" y1="470" x2="900" y2="470" stroke="#ffffff" stroke-width="0.3" opacity="0.08"/>
+
+  <!-- Row 8: Revenue Per Viewer -->
+  <text x="102" y="494" text-anchor="middle" fill="#d0d4dc" font-size="10">Revenue Model</text>
+  <text x="247" y="494" text-anchor="middle" fill="#40f080" font-size="12" font-weight="700">●</text>
+  <text x="247" y="506" text-anchor="middle" fill="#40f080" font-size="8">Per-viewer eCPM</text>
+  <text x="392" y="494" text-anchor="middle" fill="#ff6080" font-size="12" font-weight="700">✕</text>
+  <text x="392" y="506" text-anchor="middle" fill="#a0a8b8" font-size="8">Flat fee/location</text>
+  <text x="537" y="494" text-anchor="middle" fill="#ff6080" font-size="12" font-weight="700">✕</text>
+  <text x="537" y="506" text-anchor="middle" fill="#a0a8b8" font-size="8">Land rental</text>
+  <text x="682" y="494" text-anchor="middle" fill="#f0c040" font-size="12" font-weight="700">◐</text>
+  <text x="682" y="506" text-anchor="middle" fill="#a0a8b8" font-size="8">Impression-based</text>
+  <text x="827" y="494" text-anchor="middle" fill="#f0c040" font-size="12" font-weight="700">◐</text>
+  <text x="827" y="506" text-anchor="middle" fill="#a0a8b8" font-size="8">Per-impression</text>
+
+  <!-- Legend -->
+  <text x="270" y="545" text-anchor="middle" fill="#40f080" font-size="11">● Full support</text>
+  <text x="490" y="545" text-anchor="middle" fill="#f0c040" font-size="11">◐ Partial</text>
+  <text x="700" y="545" text-anchor="middle" fill="#ff6080" font-size="11">✕ Absent</text>
+
+  <!-- Moat summary -->
+  <rect x="100" y="570" width="800" height="65" rx="6" fill="#40f080" fill-opacity="0.04" stroke="#40f080" stroke-width="0.5"/>
+  <text x="500" y="592" text-anchor="middle" fill="#40f080" font-size="11" font-weight="700">LAYER U COMPETITIVE MOAT</text>
+  <text x="500" y="610" text-anchor="middle" fill="#d0d4dc" font-size="10">No single feature is unreplicable. The compound integration of all features — validated</text>
+  <text x="500" y="626" text-anchor="middle" fill="#d0d4dc" font-size="10">by years of in-game simulation data — is the moat.</text>
+
+  <text x="500" y="690" text-anchor="middle" fill="#4a4e5c" font-size="9" letter-spacing="1">STRANDS WHITEPAPER v6 — APPENDIX H — FIG. 31</text>
+</svg>

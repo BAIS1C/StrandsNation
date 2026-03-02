@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 850" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0a0a14"/><stop offset="100%" stop-color="#06060c"/></linearGradient>
+  </defs>
+  <rect width="1100" height="850" fill="url(#bg)"/>
+
+  <text x="550" y="42" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="700" letter-spacing="2">EVERYWEAR BROWSER ARCHITECTURE</text>
+  <text x="550" y="64" text-anchor="middle" fill="#00f0ff" font-size="11" letter-spacing="4" opacity="0.7">PRIVACY-FIRST GAME CLIENT / DATA VAULT / VALIDATOR — CHAPTER 7</text>
+  <line x1="250" y1="78" x2="850" y2="78" stroke="#00f0ff" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Outer frame: Browser Shell -->
+  <rect x="80" y="100" width="940" height="680" rx="8" fill="#ffffff" fill-opacity="0.01" stroke="#ffffff" stroke-width="1" opacity="0.3"/>
+  <text x="550" y="125" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="700" letter-spacing="1">EVERYWEAR BROWSER</text>
+  <text x="550" y="142" text-anchor="middle" fill="#a0a8b8" font-size="10">Chromium-based • Privacy-first • No Google services</text>
+
+  <!-- Layer 1: Privacy Stack -->
+  <rect x="110" y="160" width="430" height="180" rx="4" fill="#40f080" fill-opacity="0.04" stroke="#40f080" stroke-width="0.7"/>
+  <rect x="110" y="160" width="430" height="28" rx="4" fill="#40f080" fill-opacity="0.1"/>
+  <text x="325" y="179" text-anchor="middle" fill="#40f080" font-size="12" font-weight="700">PRIVACY STACK</text>
+  
+  <text x="130" y="208" fill="#ffffff" font-size="10">▸ Brave Search API (replaces Google Search)</text>
+  <text x="130" y="226" fill="#ffffff" font-size="10">▸ SearXNG self-hosted backup</text>
+  <text x="130" y="244" fill="#ffffff" font-size="10">▸ HERE Location Services (replaces GMaps)</text>
+  <text x="130" y="262" fill="#ffffff" font-size="10">▸ OpenStreetMap + MapLibre GL JS</text>
+  <text x="130" y="280" fill="#ffffff" font-size="10">▸ Nominatim geocoding / OSRM routing</text>
+  <text x="130" y="298" fill="#ffffff" font-size="10">▸ Presearch decentralised search</text>
+  <text x="130" y="320" fill="#a0a8b8" font-size="9">Zero Google dependency — complete service replacement</text>
+
+  <!-- Layer 2: Data Vault -->
+  <rect x="560" y="160" width="430" height="180" rx="4" fill="#f0c040" fill-opacity="0.04" stroke="#f0c040" stroke-width="0.7"/>
+  <rect x="560" y="160" width="430" height="28" rx="4" fill="#f0c040" fill-opacity="0.1"/>
+  <text x="775" y="179" text-anchor="middle" fill="#f0c040" font-size="12" font-weight="700">DATA VAULT (PLI)</text>
+  
+  <text x="580" y="208" fill="#ffffff" font-size="10">▸ Personal Ledger of Interactions</text>
+  <text x="580" y="226" fill="#ffffff" font-size="10">▸ MyMories .mmr file storage</text>
+  <text x="580" y="244" fill="#ffffff" font-size="10">▸ Encrypted local-first architecture</text>
+  <text x="580" y="262" fill="#ffffff" font-size="10">▸ Opt-in chain backup (zk-SNARK)</text>
+  <text x="580" y="280" fill="#ffffff" font-size="10">▸ GDPR: right to access / erasure / port</text>
+  <text x="580" y="298" fill="#ffffff" font-size="10">▸ Tiered consent (Tier 0–3)</text>
+  <text x="580" y="320" fill="#a0a8b8" font-size="9">Player owns data — portable, deletable, sovereign</text>
+
+  <!-- Layer 3: A.R.E. Host -->
+  <rect x="110" y="360" width="430" height="150" rx="4" fill="#00f0ff" fill-opacity="0.04" stroke="#00f0ff" stroke-width="0.7"/>
+  <rect x="110" y="360" width="430" height="28" rx="4" fill="#00f0ff" fill-opacity="0.1"/>
+  <text x="325" y="379" text-anchor="middle" fill="#00f0ff" font-size="12" font-weight="700">A.R.E. HOST (AD REVENUE ENGINE)</text>
+  
+  <text x="130" y="408" fill="#ffffff" font-size="10">▸ Consent-based rewarded ad delivery</text>
+  <text x="130" y="426" fill="#ffffff" font-size="10">▸ 60% player / 40% platform revenue split</text>
+  <text x="130" y="444" fill="#ffffff" font-size="10">▸ Anonymous category vector matching</text>
+  <text x="130" y="462" fill="#ffffff" font-size="10">▸ Proper Gander diegetic wrapper</text>
+  <text x="130" y="480" fill="#ffffff" font-size="10">▸ No tracking cookies — no fingerprinting</text>
+  <text x="130" y="498" fill="#a0a8b8" font-size="9">Ads feel native to MetaXity1 propaganda — not interruption</text>
+
+  <!-- Layer 4: Game Engine Carrier -->
+  <rect x="560" y="360" width="430" height="150" rx="4" fill="#ff6080" fill-opacity="0.04" stroke="#ff6080" stroke-width="0.7"/>
+  <rect x="560" y="360" width="430" height="28" rx="4" fill="#ff6080" fill-opacity="0.1"/>
+  <text x="775" y="379" text-anchor="middle" fill="#ff6080" font-size="12" font-weight="700">GAME ENGINE CARRIER</text>
+  
+  <text x="580" y="408" fill="#ffffff" font-size="10">▸ Strands game client runs inside browser</text>
+  <text x="580" y="426" fill="#ffffff" font-size="10">▸ Phase 1: HTML5 Canvas / CSS</text>
+  <text x="580" y="444" fill="#ffffff" font-size="10">▸ Phase 2: WebGL / Three.js</text>
+  <text x="580" y="462" fill="#ffffff" font-size="10">▸ Phase 3: Native rendering upgrade</text>
+  <text x="580" y="480" fill="#ffffff" font-size="10">▸ SAL integration for personalisation</text>
+  <text x="580" y="498" fill="#a0a8b8" font-size="9">EveryWear IS the game client for ~1 year before standalone</text>
+
+  <!-- Layer 5: Validator Node -->
+  <rect x="110" y="530" width="880" height="100" rx="4" fill="#40f080" fill-opacity="0.03" stroke="#40f080" stroke-width="0.7"/>
+  <rect x="110" y="530" width="880" height="28" rx="4" fill="#40f080" fill-opacity="0.08"/>
+  <text x="550" y="549" text-anchor="middle" fill="#40f080" font-size="12" font-weight="700">$KREDS VALIDATOR NODE</text>
+  
+  <text x="130" y="576" fill="#ffffff" font-size="10">▸ Every EveryWear install = potential Strands Chain validator</text>
+  <text x="130" y="594" fill="#ffffff" font-size="10">▸ Background validation → $KREDS staking rewards</text>
+  <text x="130" y="612" fill="#ffffff" font-size="10">▸ Device-activation minting (one device = one mint event)</text>
+  <text x="580" y="576" fill="#ffffff" font-size="10">▸ Phone + in-app wallet — no keys needed</text>
+  <text x="580" y="594" fill="#ffffff" font-size="10">▸ Invisible blockchain infrastructure</text>
+  <text x="580" y="612" fill="#ffffff" font-size="10">▸ TON-derived but branded Strands Chain</text>
+
+  <!-- SaaS pricing -->
+  <rect x="110" y="650" width="880" height="50" rx="4" fill="#ffffff" fill-opacity="0.02" stroke="#ffffff" stroke-width="0.4"/>
+  <text x="550" y="672" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="700">SAAS MODEL: $5/mo (Basic Privacy) → $15/mo (+ Data Vault) → $25/mo (+ Validator + A.R.E.)</text>
+  <text x="550" y="692" text-anchor="middle" fill="#a0a8b8" font-size="10">Standalone browser revenue — Revenue Layer 6 — $450K+ at 50K DAU</text>
+
+  <!-- Evolution path -->
+  <rect x="110" y="718" width="880" height="40" rx="4" fill="#00f0ff" fill-opacity="0.02" stroke="#00f0ff" stroke-width="0.3"/>
+  <text x="200" y="742" text-anchor="middle" fill="#00f0ff" font-size="10" font-weight="600">TG MINI APP</text>
+  <text x="310" y="742" fill="#a0a8b8" font-size="12">→</text>
+  <text x="420" y="742" text-anchor="middle" fill="#f0c040" font-size="10" font-weight="600">EVERYWEAR BROWSER</text>
+  <text x="540" y="742" fill="#a0a8b8" font-size="12">→</text>
+  <text x="680" y="742" text-anchor="middle" fill="#40f080" font-size="10" font-weight="600">STANDALONE CLIENT</text>
+  <text x="810" y="742" fill="#a0a8b8" font-size="12">→</text>
+  <text x="920" y="742" text-anchor="middle" fill="#ff6080" font-size="10" font-weight="600">CONSOLE/PC</text>
+
+  <text x="1070" y="840" text-anchor="end" fill="#ffffff" font-size="9" opacity="0.2">Fig. 38</text>
+</svg>

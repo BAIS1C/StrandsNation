@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0a0a14"/><stop offset="100%" stop-color="#06060c"/></linearGradient>
+    <linearGradient id="areaFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#00f0ff" stop-opacity="0.25"/><stop offset="100%" stop-color="#00f0ff" stop-opacity="0.02"/></linearGradient>
+    <linearGradient id="areaFill2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#f0c040" stop-opacity="0.2"/><stop offset="100%" stop-color="#f0c040" stop-opacity="0.02"/></linearGradient>
+  </defs>
+  <rect width="1200" height="700" fill="url(#bg)"/>
+
+  <text x="600" y="42" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="700" letter-spacing="2">A.R.E. REVENUE SCALING MODEL</text>
+  <text x="600" y="64" text-anchor="middle" fill="#00f0ff" font-size="11" letter-spacing="4" opacity="0.7">ATTENTION REDISTRIBUTION ENGINE — eCPM × DAU PROJECTION — CHAPTER 8</text>
+  <line x1="300" y1="76" x2="900" y2="76" stroke="#00f0ff" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Axes -->
+  <line x1="150" y1="520" x2="1100" y2="520" stroke="#ffffff" stroke-width="0.5" opacity="0.2"/>
+  <line x1="150" y1="120" x2="150" y2="520" stroke="#ffffff" stroke-width="0.5" opacity="0.2"/>
+
+  <!-- Y-axis labels (Revenue) -->
+  <text x="140" y="520" text-anchor="end" fill="#a0a8b8" font-size="9">$0</text>
+  <text x="140" y="420" text-anchor="end" fill="#a0a8b8" font-size="9">$2M</text>
+  <line x1="150" y1="420" x2="1100" y2="420" stroke="#ffffff" stroke-width="0.3" opacity="0.05" stroke-dasharray="3,6"/>
+  <text x="140" y="320" text-anchor="end" fill="#a0a8b8" font-size="9">$4M</text>
+  <line x1="150" y1="320" x2="1100" y2="320" stroke="#ffffff" stroke-width="0.3" opacity="0.05" stroke-dasharray="3,6"/>
+  <text x="140" y="220" text-anchor="end" fill="#a0a8b8" font-size="9">$6M</text>
+  <line x1="150" y1="220" x2="1100" y2="220" stroke="#ffffff" stroke-width="0.3" opacity="0.05" stroke-dasharray="3,6"/>
+  <text x="140" y="140" text-anchor="end" fill="#a0a8b8" font-size="9">$8M</text>
+  <line x1="150" y1="140" x2="1100" y2="140" stroke="#ffffff" stroke-width="0.3" opacity="0.05" stroke-dasharray="3,6"/>
+
+  <!-- X-axis labels (DAU) -->
+  <text x="150" y="545" text-anchor="middle" fill="#a0a8b8" font-size="9">0</text>
+  <text x="340" y="545" text-anchor="middle" fill="#a0a8b8" font-size="9">25K</text>
+  <text x="530" y="545" text-anchor="middle" fill="#a0a8b8" font-size="9">50K</text>
+  <text x="720" y="545" text-anchor="middle" fill="#a0a8b8" font-size="9">100K</text>
+  <text x="910" y="545" text-anchor="middle" fill="#a0a8b8" font-size="9">200K</text>
+  <text x="1100" y="545" text-anchor="middle" fill="#a0a8b8" font-size="9">300K+</text>
+
+  <text x="625" y="575" text-anchor="middle" fill="#a0a8b8" font-size="10">DAILY ACTIVE USERS</text>
+  <text x="70" y="320" text-anchor="middle" fill="#a0a8b8" font-size="10" transform="rotate(-90, 70, 320)">ANNUAL REVENUE</text>
+
+  <!-- Optimistic curve (upper bound) - area -->
+  <path d="M150,520 L340,488 L530,420 L720,330 L910,210 L1100,140 L1100,520 Z" fill="url(#areaFill)" stroke="none"/>
+  <!-- Optimistic line -->
+  <path d="M150,520 L340,488 L530,420 L720,330 L910,210 L1100,140" fill="none" stroke="#00f0ff" stroke-width="2" opacity="0.8"/>
+
+  <!-- Conservative curve (lower bound) - area -->
+  <path d="M150,520 L340,500 L530,465 L720,400 L910,320 L1100,260 L1100,520 Z" fill="url(#areaFill2)" stroke="none"/>
+  <!-- Conservative line -->
+  <path d="M150,520 L340,500 L530,465 L720,400 L910,320 L1100,260" fill="none" stroke="#f0c040" stroke-width="2" opacity="0.7"/>
+
+  <!-- Data points - Optimistic -->
+  <circle cx="340" cy="488" r="4" fill="#00f0ff" opacity="0.8"/>
+  <circle cx="530" cy="420" r="5" fill="#00f0ff" opacity="0.8"/>
+  <circle cx="720" cy="330" r="4" fill="#00f0ff" opacity="0.8"/>
+  <circle cx="910" cy="210" r="4" fill="#00f0ff" opacity="0.8"/>
+  <circle cx="1100" cy="140" r="4" fill="#00f0ff" opacity="0.8"/>
+
+  <!-- Data points - Conservative -->
+  <circle cx="340" cy="500" r="4" fill="#f0c040" opacity="0.7"/>
+  <circle cx="530" cy="465" r="5" fill="#f0c040" opacity="0.7"/>
+  <circle cx="720" cy="400" r="4" fill="#f0c040" opacity="0.7"/>
+  <circle cx="910" cy="320" r="4" fill="#f0c040" opacity="0.7"/>
+  <circle cx="1100" cy="260" r="4" fill="#f0c040" opacity="0.7"/>
+
+  <!-- 50K DAU marker line -->
+  <line x1="530" y1="120" x2="530" y2="520" stroke="#40f080" stroke-width="1" opacity="0.3" stroke-dasharray="4,4"/>
+  <text x="530" y="115" text-anchor="middle" fill="#40f080" font-size="9" font-weight="600">50K DAU TARGET</text>
+
+  <!-- Annotations at 50K -->
+  <rect x="545" y="405" width="135" height="18" rx="9" fill="#00f0ff" fill-opacity="0.1" stroke="#00f0ff" stroke-width="0.4"/>
+  <text x="612" y="418" text-anchor="middle" fill="#00f0ff" font-size="9" font-weight="600">$1.09M (optimistic)</text>
+  <rect x="545" y="450" width="135" height="18" rx="9" fill="#f0c040" fill-opacity="0.1" stroke="#f0c040" stroke-width="0.4"/>
+  <text x="612" y="463" text-anchor="middle" fill="#f0c040" font-size="9" font-weight="600">$547K (conservative)</text>
+
+  <!-- eCPM annotation -->
+  <rect x="730" y="145" width="340" height="80" rx="4" fill="#ffffff" fill-opacity="0.03" stroke="#ffffff" stroke-width="0.3"/>
+  <text x="900" y="168" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="600">eCPM IMPROVEMENT WITH SCALE</text>
+  <text x="750" y="188" fill="#a0a8b8" font-size="9">25K DAU: $3.00 eCPM (standard rewarded)</text>
+  <text x="750" y="204" fill="#a0a8b8" font-size="9">100K DAU: $5.00 eCPM (data quality bonus)</text>
+  <text x="750" y="220" fill="#a0a8b8" font-size="9">300K DAU: $8.00+ eCPM (premium inventory)</text>
+
+  <!-- Legend -->
+  <line x1="200" y1="610" x2="250" y2="610" stroke="#00f0ff" stroke-width="2" opacity="0.8"/>
+  <text x="260" y="614" fill="#ffffff" font-size="10">Optimistic (high eCPM + engagement)</text>
+  <line x1="550" y1="610" x2="600" y2="610" stroke="#f0c040" stroke-width="2" opacity="0.7"/>
+  <text x="610" y="614" fill="#ffffff" font-size="10">Conservative (standard eCPM)</text>
+
+  <!-- Model assumptions -->
+  <rect x="150" y="635" width="950" height="36" rx="4" fill="#ffffff" fill-opacity="0.02" stroke="#ffffff" stroke-width="0.3"/>
+  <text x="625" y="655" text-anchor="middle" fill="#a0a8b8" font-size="9">MODEL: 3 ads/day avg × 60% opt-in rate × eCPM scaling. 60/40 player-platform split applied. Revenue shown is platform's 40% share.</text>
+  <text x="625" y="668" text-anchor="middle" fill="#a0a8b8" font-size="9">Players earn 60% of gross ad revenue via A.R.E. consent mechanism — gross revenue is 2.5× values shown.</text>
+
+  <text x="1170" y="690" text-anchor="end" fill="#ffffff" font-size="9" opacity="0.2">Fig. 6</text>
+</svg>

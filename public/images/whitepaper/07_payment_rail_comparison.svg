@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0a0a14"/><stop offset="100%" stop-color="#06060c"/></linearGradient>
+  </defs>
+  <rect width="1200" height="650" fill="url(#bg)"/>
+
+  <text x="600" y="42" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="700" letter-spacing="2">PAYMENT RAIL COST COMPARISON</text>
+  <text x="600" y="64" text-anchor="middle" fill="#00f0ff" font-size="11" letter-spacing="4" opacity="0.7">REVENUE RETENTION PER $100 PROCESSED — CHAPTER 11</text>
+  <line x1="350" y1="76" x2="850" y2="76" stroke="#00f0ff" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Y-axis -->
+  <line x1="150" y1="120" x2="150" y2="500" stroke="#ffffff" stroke-width="0.5" opacity="0.2"/>
+  <text x="140" y="130" text-anchor="end" fill="#a0a8b8" font-size="9">$100</text>
+  <line x1="145" y1="125" x2="155" y2="125" stroke="#ffffff" stroke-width="0.3" opacity="0.3"/>
+  <text x="140" y="220" text-anchor="end" fill="#a0a8b8" font-size="9">$75</text>
+  <line x1="145" y1="215" x2="1100" y2="215" stroke="#ffffff" stroke-width="0.3" opacity="0.06" stroke-dasharray="3,6"/>
+  <text x="140" y="315" text-anchor="end" fill="#a0a8b8" font-size="9">$50</text>
+  <line x1="145" y1="310" x2="1100" y2="310" stroke="#ffffff" stroke-width="0.3" opacity="0.06" stroke-dasharray="3,6"/>
+  <text x="140" y="405" text-anchor="end" fill="#a0a8b8" font-size="9">$25</text>
+  <line x1="145" y1="400" x2="1100" y2="400" stroke="#ffffff" stroke-width="0.3" opacity="0.06" stroke-dasharray="3,6"/>
+  <text x="140" y="500" text-anchor="end" fill="#a0a8b8" font-size="9">$0</text>
+  <line x1="150" y1="495" x2="1100" y2="495" stroke="#ffffff" stroke-width="0.3" opacity="0.1"/>
+
+  <!-- iOS App Store: 70% retained -->
+  <rect x="200" y="237" width="120" height="258" rx="3" fill="#ff4060" fill-opacity="0.3" stroke="#ff4060" stroke-width="0.5"/>
+  <rect x="200" y="237" width="120" height="32" rx="3" fill="#ff4060" fill-opacity="0.15"/>
+  <text x="260" y="258" text-anchor="middle" fill="#ff4060" font-size="11" font-weight="700">$70</text>
+  <!-- Fee block -->
+  <rect x="200" y="125" width="120" height="112" rx="3" fill="#ff4060" fill-opacity="0.08" stroke="#ff4060" stroke-width="0.3" stroke-dasharray="3,3"/>
+  <text x="260" y="185" text-anchor="middle" fill="#ff4060" font-size="10" opacity="0.7">30% fee</text>
+  <text x="260" y="515" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="600">iOS</text>
+  <text x="260" y="530" text-anchor="middle" fill="#a0a8b8" font-size="9">30-45 day settle</text>
+
+  <!-- Google Play: 70-85% retained (show 77.5% avg) -->
+  <rect x="370" y="210" width="120" height="285" rx="3" fill="#ff9040" fill-opacity="0.3" stroke="#ff9040" stroke-width="0.5"/>
+  <rect x="370" y="210" width="120" height="32" rx="3" fill="#ff9040" fill-opacity="0.15"/>
+  <text x="430" y="231" text-anchor="middle" fill="#ff9040" font-size="11" font-weight="700">$77.50</text>
+  <rect x="370" y="125" width="120" height="85" rx="3" fill="#ff9040" fill-opacity="0.08" stroke="#ff9040" stroke-width="0.3" stroke-dasharray="3,3"/>
+  <text x="430" y="172" text-anchor="middle" fill="#ff9040" font-size="10" opacity="0.7">15-30% fee</text>
+  <text x="430" y="515" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="600">Google Play</text>
+  <text x="430" y="530" text-anchor="middle" fill="#a0a8b8" font-size="9">30 day settle</text>
+
+  <!-- Stripe: 97% retained -->
+  <rect x="540" y="136" width="120" height="359" rx="3" fill="#f0c040" fill-opacity="0.3" stroke="#f0c040" stroke-width="0.5"/>
+  <rect x="540" y="136" width="120" height="32" rx="3" fill="#f0c040" fill-opacity="0.15"/>
+  <text x="600" y="157" text-anchor="middle" fill="#f0c040" font-size="11" font-weight="700">$97</text>
+  <rect x="540" y="125" width="120" height="11" rx="3" fill="#f0c040" fill-opacity="0.08" stroke="#f0c040" stroke-width="0.3" stroke-dasharray="3,3"/>
+  <text x="600" y="515" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="600">Stripe</text>
+  <text x="600" y="530" text-anchor="middle" fill="#a0a8b8" font-size="9">2 day settle</text>
+
+  <!-- PayPal: 97% retained -->
+  <rect x="710" y="136" width="120" height="359" rx="3" fill="#f0c040" fill-opacity="0.25" stroke="#f0c040" stroke-width="0.5"/>
+  <rect x="710" y="136" width="120" height="32" rx="3" fill="#f0c040" fill-opacity="0.15"/>
+  <text x="770" y="157" text-anchor="middle" fill="#f0c040" font-size="11" font-weight="700">$97</text>
+  <rect x="710" y="125" width="120" height="11" rx="3" fill="#f0c040" fill-opacity="0.08" stroke="#f0c040" stroke-width="0.3" stroke-dasharray="3,3"/>
+  <text x="770" y="515" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="600">PayPal</text>
+  <text x="770" y="530" text-anchor="middle" fill="#a0a8b8" font-size="9">Instant-3 day</text>
+
+  <!-- Telegram Stars: ~70% retained -->
+  <rect x="880" y="237" width="120" height="258" rx="3" fill="#00a8ff" fill-opacity="0.3" stroke="#00a8ff" stroke-width="0.5"/>
+  <rect x="880" y="237" width="120" height="32" rx="3" fill="#00a8ff" fill-opacity="0.15"/>
+  <text x="940" y="258" text-anchor="middle" fill="#00a8ff" font-size="11" font-weight="700">~$70</text>
+  <rect x="880" y="125" width="120" height="112" rx="3" fill="#00a8ff" fill-opacity="0.08" stroke="#00a8ff" stroke-width="0.3" stroke-dasharray="3,3"/>
+  <text x="940" y="185" text-anchor="middle" fill="#00a8ff" font-size="10" opacity="0.7">~30% fee</text>
+  <text x="940" y="515" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="600">TG Stars</text>
+  <text x="940" y="530" text-anchor="middle" fill="#a0a8b8" font-size="9">Near-instant</text>
+
+  <!-- TON Pay: 95%+ retained -->
+  <rect x="1050" y="128" width="80" height="367" rx="3" fill="#40f080" fill-opacity="0.4" stroke="#40f080" stroke-width="1"/>
+  <rect x="1050" y="128" width="80" height="32" rx="3" fill="#40f080" fill-opacity="0.2"/>
+  <text x="1090" y="149" text-anchor="middle" fill="#40f080" font-size="11" font-weight="700">$99.99</text>
+  <text x="1090" y="515" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="600">TON Pay</text>
+  <text x="1090" y="530" text-anchor="middle" fill="#a0a8b8" font-size="9">Sub-second</text>
+
+  <!-- Strands strategy callout -->
+  <rect x="100" y="560" width="1000" height="60" rx="4" fill="#40f080" fill-opacity="0.03" stroke="#40f080" stroke-width="0.5"/>
+  <text x="600" y="582" text-anchor="middle" fill="#40f080" font-size="12" font-weight="700">STRANDS STRATEGY: PRIORITISE TON PAY + STRIPE, AVOID APP STORE LOCK-IN</text>
+  <text x="600" y="602" text-anchor="middle" fill="#a0a8b8" font-size="10">Web-first distribution via Telegram Mini App bypasses 30% platform tax. Fiat on-ramp via MoonPay (zero-fee USDT).</text>
+
+  <text x="1170" y="640" text-anchor="end" fill="#ffffff" font-size="9" opacity="0.2">Fig. 7</text>
+</svg>

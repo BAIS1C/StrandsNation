@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0a0a14"/><stop offset="100%" stop-color="#06060c"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1000" height="700" fill="url(#bg)"/>
+
+  <text x="500" y="42" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="700" letter-spacing="2">$KREDS EARNING PATHWAYS</text>
+  <text x="500" y="64" text-anchor="middle" fill="#40f080" font-size="11" letter-spacing="4" opacity="0.7">FIVE PARTICIPANT TYPES — CONTRIBUTION-WEIGHTED — CHAPTER 13</text>
+  <line x1="200" y1="78" x2="800" y2="78" stroke="#40f080" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Central $KREDS node -->
+  <circle cx="500" cy="370" r="55" fill="none" stroke="#40f080" stroke-width="2" filter="url(#glow)"/>
+  <circle cx="500" cy="370" r="45" fill="#40f080" fill-opacity="0.1"/>
+  <text x="500" y="364" text-anchor="middle" fill="#40f080" font-size="16" font-weight="700">$KREDS</text>
+  <text x="500" y="382" text-anchor="middle" fill="#a0a8b8" font-size="9">REDISTRIBUTION</text>
+
+  <!-- Participant 1: Validators (top-left) -->
+  <rect x="50" y="110" width="220" height="130" rx="8" fill="#40f080" fill-opacity="0.08" stroke="#40f080" stroke-width="1"/>
+  <text x="160" y="136" text-anchor="middle" fill="#40f080" font-size="14" font-weight="700">⚡ VALIDATORS</text>
+  <line x1="80" y1="148" x2="240" y2="148" stroke="#40f080" stroke-width="0.3" opacity="0.5"/>
+  <text x="160" y="168" text-anchor="middle" fill="#d0d4dc" font-size="10">Process network transactions</text>
+  <text x="160" y="184" text-anchor="middle" fill="#a0a8b8" font-size="9">Reward ∝ TX volume processed</text>
+  <text x="160" y="200" text-anchor="middle" fill="#a0a8b8" font-size="9">NOT proportional to stake size</text>
+  <text x="160" y="220" text-anchor="middle" fill="#40f080" font-size="10" font-weight="600">Computation &gt; Capital</text>
+  <line x1="270" y1="175" x2="455" y2="330" stroke="#40f080" stroke-width="1" opacity="0.5"/>
+  <polygon points="452,327 460,335 448,334" fill="#40f080" opacity="0.7"/>
+
+  <!-- Participant 2: Attention Providers (top-right) -->
+  <rect x="730" y="110" width="220" height="130" rx="8" fill="#00f0ff" fill-opacity="0.08" stroke="#00f0ff" stroke-width="1"/>
+  <text x="840" y="136" text-anchor="middle" fill="#00f0ff" font-size="14" font-weight="700">👁 ATTENTION PROVIDERS</text>
+  <line x1="760" y1="148" x2="920" y2="148" stroke="#00f0ff" stroke-width="0.3" opacity="0.5"/>
+  <text x="840" y="168" text-anchor="middle" fill="#d0d4dc" font-size="10">Watch A.R.E. broadcasts</text>
+  <text x="840" y="184" text-anchor="middle" fill="#a0a8b8" font-size="9">Phase 1-2: Paid in fiat (USDT)</text>
+  <text x="840" y="200" text-anchor="middle" fill="#a0a8b8" font-size="9">Phase 4: Choose $KREDS or fiat</text>
+  <text x="840" y="220" text-anchor="middle" fill="#00f0ff" font-size="10" font-weight="600">60% Revenue → Player</text>
+  <line x1="730" y1="175" x2="545" y2="330" stroke="#00f0ff" stroke-width="1" opacity="0.5"/>
+  <polygon points="548,327 540,335 552,334" fill="#00f0ff" opacity="0.7"/>
+
+  <!-- Participant 3: Hardware Operators (mid-left) -->
+  <rect x="30" y="380" width="220" height="130" rx="8" fill="#f0c040" fill-opacity="0.08" stroke="#f0c040" stroke-width="1"/>
+  <text x="140" y="406" text-anchor="middle" fill="#f0c040" font-size="14" font-weight="700">🖥 HARDWARE OPERATORS</text>
+  <line x1="60" y1="418" x2="220" y2="418" stroke="#f0c040" stroke-width="0.3" opacity="0.5"/>
+  <text x="140" y="438" text-anchor="middle" fill="#d0d4dc" font-size="10">Run EveryWear devices</text>
+  <text x="140" y="454" text-anchor="middle" fill="#a0a8b8" font-size="9">Validation + WiFi DP sensing</text>
+  <text x="140" y="470" text-anchor="middle" fill="#a0a8b8" font-size="9">Reward ∝ uptime × quality</text>
+  <text x="140" y="490" text-anchor="middle" fill="#f0c040" font-size="10" font-weight="600">24h Online &gt; Sporadic</text>
+  <line x1="250" y1="445" x2="445" y2="380" stroke="#f0c040" stroke-width="1" opacity="0.5"/>
+  <polygon points="442,382 450,376 444,388" fill="#f0c040" opacity="0.7"/>
+
+  <!-- Participant 4: Data Consenters (mid-right) -->
+  <rect x="750" y="380" width="220" height="130" rx="8" fill="#ff6080" fill-opacity="0.08" stroke="#ff6080" stroke-width="1"/>
+  <text x="860" y="406" text-anchor="middle" fill="#ff6080" font-size="14" font-weight="700">🔐 DATA CONSENTERS</text>
+  <line x1="780" y1="418" x2="940" y2="418" stroke="#ff6080" stroke-width="0.3" opacity="0.5"/>
+  <text x="860" y="438" text-anchor="middle" fill="#d0d4dc" font-size="10">Share anonymised behavioural data</text>
+  <text x="860" y="454" text-anchor="middle" fill="#a0a8b8" font-size="9">Consent tiers (0–3)</text>
+  <text x="860" y="470" text-anchor="middle" fill="#a0a8b8" font-size="9">Higher tier = more reward</text>
+  <text x="860" y="490" text-anchor="middle" fill="#ff6080" font-size="10" font-weight="600">Your Data, Your Revenue</text>
+  <line x1="750" y1="445" x2="555" y2="380" stroke="#ff6080" stroke-width="1" opacity="0.5"/>
+  <polygon points="558,382 550,376 556,388" fill="#ff6080" opacity="0.7"/>
+
+  <!-- Participant 5: Community Contributors (bottom-centre) -->
+  <rect x="340" y="530" width="320" height="130" rx="8" fill="#c080ff" fill-opacity="0.08" stroke="#c080ff" stroke-width="1"/>
+  <text x="500" y="556" text-anchor="middle" fill="#c080ff" font-size="14" font-weight="700">🎨 COMMUNITY CONTRIBUTORS</text>
+  <line x1="370" y1="568" x2="630" y2="568" stroke="#c080ff" stroke-width="0.3" opacity="0.5"/>
+  <text x="380" y="590" fill="#d0d4dc" font-size="10">Asset Architects</text>
+  <text x="380" y="606" fill="#a0a8b8" font-size="9">Create validated content</text>
+  <text x="540" y="590" fill="#d0d4dc" font-size="10">Resonance Tuners</text>
+  <text x="540" y="606" fill="#a0a8b8" font-size="9">Moderate + curate</text>
+  <text x="380" y="628" fill="#d0d4dc" font-size="10">Lore Weavers</text>
+  <text x="380" y="644" fill="#a0a8b8" font-size="9">Expand narrative</text>
+  <text x="540" y="628" fill="#d0d4dc" font-size="10">Relay Keepers</text>
+  <text x="540" y="644" fill="#a0a8b8" font-size="9">Maintain infrastructure</text>
+  <line x1="500" y1="530" x2="500" y2="425" stroke="#c080ff" stroke-width="1" opacity="0.5"/>
+  <polygon points="497,428 500,420 503,428" fill="#c080ff" opacity="0.7"/>
+
+  <!-- Core principle box -->
+  <rect x="290" y="268" width="420" height="36" rx="4" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-width="0.5" opacity="0.3"/>
+  <text x="500" y="290" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="600" opacity="0.8">NO PASSIVE HOARDING — EVERY PATHWAY REQUIRES GENUINE CONTRIBUTION</text>
+
+  <!-- Footer -->
+  <text x="500" y="688" text-anchor="middle" fill="#4a4e5c" font-size="9" letter-spacing="1">STRANDS WHITEPAPER v6 — APPENDIX H — FIG. 24</text>
+</svg>

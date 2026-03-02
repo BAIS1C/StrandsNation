@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 800" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0a0a14"/><stop offset="100%" stop-color="#06060c"/></linearGradient>
+  </defs>
+  <rect width="900" height="800" fill="url(#bg)"/>
+
+  <text x="450" y="42" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="700" letter-spacing="2">KL PILOT ZONE MAP</text>
+  <text x="450" y="64" text-anchor="middle" fill="#f0c040" font-size="11" letter-spacing="4" opacity="0.7">LAYER U FIRST DEPLOYMENT — KUALA LUMPUR — CHAPTER 12</text>
+  <line x1="200" y1="76" x2="700" y2="76" stroke="#f0c040" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Concentric zones -->
+  <!-- Zone 3: Outer ring (PJ / wider KL) -->
+  <circle cx="450" cy="400" r="260" fill="#40f080" fill-opacity="0.02" stroke="#40f080" stroke-width="0.6" stroke-dasharray="6,4"/>
+  <text x="450" y="160" text-anchor="middle" fill="#40f080" font-size="11" font-weight="600">ZONE 3: GREATER KL (Year 3+)</text>
+  <text x="450" y="176" text-anchor="middle" fill="#a0a8b8" font-size="9">PJ • Mont Kiara • TTDI • Sri Hartamas</text>
+
+  <!-- Zone 2: Middle ring (Bangsar / KLCC corridor) -->
+  <circle cx="450" cy="400" r="170" fill="#f0c040" fill-opacity="0.03" stroke="#f0c040" stroke-width="0.8" stroke-dasharray="4,3"/>
+  <text x="450" y="248" text-anchor="middle" fill="#f0c040" font-size="11" font-weight="600">ZONE 2: KL CORE (Year 2)</text>
+  <text x="450" y="264" text-anchor="middle" fill="#a0a8b8" font-size="9">Bangsar • KLCC • Pavilion • Lot 10</text>
+
+  <!-- Zone 1: Inner core (Bukit Bintang) -->
+  <circle cx="450" cy="400" r="80" fill="#00f0ff" fill-opacity="0.06" stroke="#00f0ff" stroke-width="1.2"/>
+  <text x="450" y="388" text-anchor="middle" fill="#00f0ff" font-size="13" font-weight="700">ZONE 1</text>
+  <text x="450" y="406" text-anchor="middle" fill="#00f0ff" font-size="10">Bukit Bintang</text>
+  <text x="450" y="422" text-anchor="middle" fill="#a0a8b8" font-size="9">Year 1 Launch</text>
+
+  <!-- Key locations -->
+  <circle cx="450" cy="380" r="4" fill="#ff6080" opacity="0.8"/>
+  <text x="470" y="375" fill="#ff6080" font-size="8">Pavilion KL</text>
+
+  <circle cx="420" cy="420" r="4" fill="#ff6080" opacity="0.8"/>
+  <text x="380" y="435" fill="#ff6080" font-size="8">Lot 10</text>
+
+  <circle cx="490" cy="360" r="4" fill="#ff6080" opacity="0.8"/>
+  <text x="510" y="355" fill="#ff6080" font-size="8">Fahrenheit 88</text>
+
+  <circle cx="380" cy="340" r="3" fill="#f0c040" opacity="0.6"/>
+  <text x="340" y="338" fill="#f0c040" font-size="8">Bangsar Village</text>
+
+  <circle cx="530" cy="310" r="3" fill="#f0c040" opacity="0.6"/>
+  <text x="550" y="308" fill="#f0c040" font-size="8">KLCC</text>
+
+  <circle cx="350" cy="460" r="3" fill="#f0c040" opacity="0.6"/>
+  <text x="300" y="468" fill="#f0c040" font-size="8">Mid Valley</text>
+
+  <circle cx="550" cy="480" r="3" fill="#40f080" opacity="0.4"/>
+  <text x="570" y="486" fill="#40f080" font-size="8">1 Utama (PJ)</text>
+
+  <circle cx="320" cy="280" r="3" fill="#40f080" opacity="0.4"/>
+  <text x="270" y="280" fill="#40f080" font-size="8">Mont Kiara</text>
+
+  <!-- Stats panel -->
+  <rect x="60" y="680" width="780" height="90" rx="4" fill="#ffffff" fill-opacity="0.02" stroke="#ffffff" stroke-width="0.4"/>
+  
+  <text x="180" y="706" text-anchor="middle" fill="#00f0ff" font-size="12" font-weight="700">ZONE 1 (Year 1)</text>
+  <text x="180" y="724" text-anchor="middle" fill="#ffffff" font-size="10">150 parcels</text>
+  <text x="180" y="740" text-anchor="middle" fill="#a0a8b8" font-size="9">$75K revenue</text>
+  <text x="180" y="756" text-anchor="middle" fill="#a0a8b8" font-size="9">$50/m³/yr</text>
+
+  <text x="450" y="706" text-anchor="middle" fill="#f0c040" font-size="12" font-weight="700">ZONE 2 (Year 2)</text>
+  <text x="450" y="724" text-anchor="middle" fill="#ffffff" font-size="10">500 parcels</text>
+  <text x="450" y="740" text-anchor="middle" fill="#a0a8b8" font-size="9">$500K revenue</text>
+  <text x="450" y="756" text-anchor="middle" fill="#a0a8b8" font-size="9">$100/m³/yr</text>
+
+  <text x="720" y="706" text-anchor="middle" fill="#40f080" font-size="12" font-weight="700">ZONE 3 (Year 3)</text>
+  <text x="720" y="724" text-anchor="middle" fill="#ffffff" font-size="10">1,200 parcels</text>
+  <text x="720" y="740" text-anchor="middle" fill="#a0a8b8" font-size="9">$1.75M revenue</text>
+  <text x="720" y="756" text-anchor="middle" fill="#a0a8b8" font-size="9">$150/m³/yr</text>
+
+  <text x="870" y="790" text-anchor="end" fill="#ffffff" font-size="9" opacity="0.2">Fig. 14</text>
+</svg>

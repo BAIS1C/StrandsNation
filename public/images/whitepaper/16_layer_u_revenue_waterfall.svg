@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a0a14"/>
+      <stop offset="100%" stop-color="#06060c"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <marker id="arrowW" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.4"/></marker>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <g opacity="0.04" stroke="#00f0ff">
+    <line x1="0" y1="200" x2="1200" y2="200" stroke-dasharray="2,8"/>
+    <line x1="0" y1="400" x2="1200" y2="400" stroke-dasharray="2,8"/>
+    <line x1="0" y1="600" x2="1200" y2="600" stroke-dasharray="2,8"/>
+  </g>
+  <text x="600" y="42" text-anchor="middle" fill="#00f0ff" font-size="11" letter-spacing="4" opacity="0.6">CHAPTER 12 — LAYER U</text>
+  <text x="600" y="72" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold" letter-spacing="1">REVENUE DISTRIBUTION WATERFALL</text>
+  <text x="600" y="96" text-anchor="middle" fill="#ffffff" font-size="13" opacity="0.5">Gross A.R.E. Revenue → Platform Fee → Net DAO Revenue → Member Distribution</text>
+
+  <!-- Waterfall bars -->
+  <!-- Bar 1: Gross Revenue -->
+  <rect x="80" y="140" width="180" height="500" rx="4" fill="#f0c040" fill-opacity="0.2" stroke="#f0c040" stroke-opacity="0.5" stroke-width="1.5"/>
+  <text x="170" y="170" text-anchor="middle" fill="#f0c040" font-size="14" font-weight="bold">GROSS</text>
+  <text x="170" y="190" text-anchor="middle" fill="#f0c040" font-size="14" font-weight="bold">REVENUE</text>
+  <text x="170" y="220" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="bold">100%</text>
+  <text x="170" y="245" text-anchor="middle" fill="#ffffff" font-size="10" opacity="0.5">All A.R.E. ad revenue</text>
+  <text x="170" y="262" text-anchor="middle" fill="#ffffff" font-size="10" opacity="0.5">from parcel foot traffic</text>
+  <text x="170" y="310" text-anchor="middle" fill="#f0c040" font-size="11" opacity="0.7">Example at 1M DAU:</text>
+  <text x="170" y="330" text-anchor="middle" fill="#f0c040" font-size="18" font-weight="bold" filter="url(#glow)">$2M/mo</text>
+
+  <!-- Arrow -->
+  <line x1="260" y1="390" x2="310" y2="390" stroke="#ffffff" stroke-width="1.5" marker-end="url(#arrowW)" opacity="0.4"/>
+
+  <!-- Bar 2: Platform Fee (taken out) -->
+  <rect x="310" y="140" width="140" height="200" rx="4" fill="#ff6080" fill-opacity="0.15" stroke="#ff6080" stroke-opacity="0.4" stroke-width="1"/>
+  <text x="380" y="170" text-anchor="middle" fill="#ff6080" font-size="12" font-weight="bold">PLATFORM</text>
+  <text x="380" y="188" text-anchor="middle" fill="#ff6080" font-size="12" font-weight="bold">FEE</text>
+  <text x="380" y="220" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">40%</text>
+  <text x="380" y="245" text-anchor="middle" fill="#ffffff" font-size="10" opacity="0.5">Metafintek</text>
+  <text x="380" y="262" text-anchor="middle" fill="#ffffff" font-size="10" opacity="0.5">operations</text>
+  <text x="380" y="310" text-anchor="middle" fill="#ff6080" font-size="14" font-weight="bold">$800K</text>
+
+  <!-- Bar 3: Net DAO Revenue -->
+  <rect x="310" y="340" width="140" height="300" rx="4" fill="#40f080" fill-opacity="0.15" stroke="#40f080" stroke-opacity="0.4" stroke-width="1"/>
+  <text x="380" y="370" text-anchor="middle" fill="#40f080" font-size="12" font-weight="bold">NET DAO</text>
+  <text x="380" y="388" text-anchor="middle" fill="#40f080" font-size="12" font-weight="bold">REVENUE</text>
+  <text x="380" y="418" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">60%</text>
+  <text x="380" y="445" text-anchor="middle" fill="#ffffff" font-size="10" opacity="0.5">Player share</text>
+  <text x="380" y="490" text-anchor="middle" fill="#40f080" font-size="14" font-weight="bold">$1.2M</text>
+
+  <!-- Arrow to split -->
+  <line x1="450" y1="490" x2="510" y2="490" stroke="#ffffff" stroke-width="1.5" marker-end="url(#arrowW)" opacity="0.4"/>
+
+  <!-- Split into 4 destinations -->
+  <!-- Member distribution -->
+  <rect x="510" y="140" width="220" height="130" rx="4" fill="#00f0ff" fill-opacity="0.1" stroke="#00f0ff" stroke-opacity="0.4" stroke-width="1.5"/>
+  <text x="620" y="168" text-anchor="middle" fill="#00f0ff" font-size="13" font-weight="bold">MEMBER DISTRIBUTION</text>
+  <text x="620" y="195" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">60%</text>
+  <text x="620" y="215" text-anchor="middle" fill="#ffffff" font-size="10" opacity="0.5">of net = 36% of gross</text>
+  <text x="620" y="240" text-anchor="middle" fill="#00f0ff" font-size="10" opacity="0.7">Direct to DAO token holders</text>
+  <text x="620" y="258" text-anchor="middle" fill="#00f0ff" font-size="14" font-weight="bold">$720K/mo</text>
+
+  <!-- Infrastructure -->
+  <rect x="510" y="290" width="220" height="100" rx="4" fill="#a060ff" fill-opacity="0.1" stroke="#a060ff" stroke-opacity="0.4" stroke-width="1"/>
+  <text x="620" y="318" text-anchor="middle" fill="#a060ff" font-size="13" font-weight="bold">INFRASTRUCTURE</text>
+  <text x="620" y="345" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">20%</text>
+  <text x="620" y="365" text-anchor="middle" fill="#ffffff" font-size="10" opacity="0.5">Hardware, bandwidth, maintenance</text>
+  <text x="620" y="381" text-anchor="middle" fill="#a060ff" font-size="12" font-weight="bold">$240K/mo</text>
+
+  <!-- $KREDS Buy Pressure -->
+  <rect x="510" y="410" width="220" height="100" rx="4" fill="#f0c040" fill-opacity="0.1" stroke="#f0c040" stroke-opacity="0.4" stroke-width="1"/>
+  <text x="620" y="438" text-anchor="middle" fill="#f0c040" font-size="13" font-weight="bold">$KREDS BUY</text>
+  <text x="620" y="465" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">15%</text>
+  <text x="620" y="485" text-anchor="middle" fill="#ffffff" font-size="10" opacity="0.5">Market-making → UBI redistribution</text>
+  <text x="620" y="501" text-anchor="middle" fill="#f0c040" font-size="12" font-weight="bold">$180K/mo</text>
+
+  <!-- Community Treasury -->
+  <rect x="510" y="530" width="220" height="100" rx="4" fill="#40f080" fill-opacity="0.08" stroke="#40f080" stroke-opacity="0.3" stroke-width="1"/>
+  <text x="620" y="558" text-anchor="middle" fill="#40f080" font-size="13" font-weight="bold">COMMUNITY FUND</text>
+  <text x="620" y="585" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">5%</text>
+  <text x="620" y="605" text-anchor="middle" fill="#ffffff" font-size="10" opacity="0.5">DAO-governed community initiatives</text>
+  <text x="620" y="621" text-anchor="middle" fill="#40f080" font-size="12" font-weight="bold">$60K/mo</text>
+
+  <!-- Connection lines from net DAO to splits -->
+  <line x1="500" y1="400" x2="510" y2="205" stroke="#00f0ff" stroke-opacity="0.3" stroke-width="1"/>
+  <line x1="500" y1="440" x2="510" y2="340" stroke="#a060ff" stroke-opacity="0.3" stroke-width="1"/>
+  <line x1="500" y1="480" x2="510" y2="460" stroke="#f0c040" stroke-opacity="0.3" stroke-width="1"/>
+  <line x1="500" y1="520" x2="510" y2="580" stroke="#40f080" stroke-opacity="0.3" stroke-width="1"/>
+
+  <!-- Right side: Where member distribution goes -->
+  <rect x="780" y="140" width="370" height="260" rx="6" fill="#ffffff" fill-opacity="0.02" stroke="#00f0ff" stroke-opacity="0.2" stroke-width="1"/>
+  <text x="965" y="168" text-anchor="middle" fill="#00f0ff" font-size="12" font-weight="bold">MEMBER DISTRIBUTION DETAIL</text>
+  <line x1="800" y1="178" x2="1130" y2="178" stroke="#00f0ff" stroke-opacity="0.15"/>
+  
+  <text x="800" y="200" fill="#ffffff" font-size="10" opacity="0.5">Distributed proportionally to DAO token holdings.</text>
+  <text x="800" y="218" fill="#ffffff" font-size="10" opacity="0.5">Example: 1% token share = $7,200/mo passive income.</text>
+  
+  <rect x="800" y="235" width="330" height="40" rx="3" fill="#00f0ff" fill-opacity="0.06" stroke="#00f0ff" stroke-opacity="0.2"/>
+  <text x="815" y="258" fill="#00f0ff" font-size="10" font-weight="bold">10% share holder:</text>
+  <text x="1050" y="258" text-anchor="end" fill="#00f0ff" font-size="12" font-weight="bold">$72,000/mo</text>
+  
+  <rect x="800" y="285" width="330" height="40" rx="3" fill="#00f0ff" fill-opacity="0.04" stroke="#00f0ff" stroke-opacity="0.15"/>
+  <text x="815" y="308" fill="#ffffff" font-size="10" opacity="0.6">5% share holder:</text>
+  <text x="1050" y="308" text-anchor="end" fill="#ffffff" font-size="12" font-weight="bold">$36,000/mo</text>
+  
+  <rect x="800" y="335" width="330" height="40" rx="3" fill="#00f0ff" fill-opacity="0.06" stroke="#00f0ff" stroke-opacity="0.2"/>
+  <text x="815" y="358" fill="#ffffff" font-size="10" opacity="0.6">1% share holder:</text>
+  <text x="1050" y="358" text-anchor="end" fill="#ffffff" font-size="12" font-weight="bold">$7,200/mo</text>
+
+  <!-- Right side: $KREDS flow detail -->
+  <rect x="780" y="420" width="370" height="120" rx="6" fill="#ffffff" fill-opacity="0.02" stroke="#f0c040" stroke-opacity="0.2" stroke-width="1"/>
+  <text x="965" y="448" text-anchor="middle" fill="#f0c040" font-size="12" font-weight="bold">$KREDS BUY PRESSURE MECHANISM</text>
+  <line x1="800" y1="458" x2="1130" y2="458" stroke="#f0c040" stroke-opacity="0.15"/>
+  <text x="800" y="478" fill="#ffffff" font-size="10" opacity="0.5">15% of net revenue buys $KREDS on open market.</text>
+  <text x="800" y="496" fill="#ffffff" font-size="10" opacity="0.5">Purchased tokens redistributed as UBI to validators.</text>
+  <text x="800" y="514" fill="#ffffff" font-size="10" opacity="0.5">Creates constant upward price pressure from real revenue.</text>
+  <text x="800" y="532" fill="#f0c040" font-size="10" font-weight="bold">No speculation needed — value comes from ad revenue.</text>
+
+  <!-- Bottom insight -->
+  <rect x="100" y="700" width="1000" height="55" rx="4" fill="#ffffff" fill-opacity="0.03" stroke="#40f080" stroke-opacity="0.3" stroke-width="1"/>
+  <text x="600" y="722" text-anchor="middle" fill="#40f080" font-size="12" font-weight="bold">REAL YIELD, NOT SPECULATION</text>
+  <text x="600" y="742" text-anchor="middle" fill="#ffffff" font-size="11" opacity="0.6">Every distribution comes from verified advertising revenue. No inflationary rewards. No Ponzi mechanics. Real businesses paying for real attention.</text>
+  <text x="1170" y="780" text-anchor="end" fill="#ffffff" font-size="10" opacity="0.3">Fig. 16</text>
+</svg>

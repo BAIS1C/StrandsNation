@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a0a14"/>
+      <stop offset="100%" stop-color="#06060c"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <marker id="arrowGold" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="none" stroke="#f0c040" stroke-width="1"/></marker>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <g opacity="0.04" stroke="#00f0ff">
+    <line x1="0" y1="200" x2="1200" y2="200" stroke-dasharray="2,8"/>
+    <line x1="0" y1="400" x2="1200" y2="400" stroke-dasharray="2,8"/>
+    <line x1="0" y1="600" x2="1200" y2="600" stroke-dasharray="2,8"/>
+  </g>
+  <text x="600" y="42" text-anchor="middle" fill="#00f0ff" font-size="11" letter-spacing="4" opacity="0.6">CHAPTER 12 — LAYER U</text>
+  <text x="600" y="72" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold" letter-spacing="1">IN-GAME → REAL-WORLD LAYER U MAPPING</text>
+  <text x="600" y="96" text-anchor="middle" fill="#ffffff" font-size="13" opacity="0.5">Game mechanics teach real-world deployment skills — every system has a 1:1 real-world equivalent</text>
+
+  <!-- Left column: In-Game -->
+  <text x="260" y="135" text-anchor="middle" fill="#a060ff" font-size="16" font-weight="bold" letter-spacing="2">IN-GAME (MetaXity1)</text>
+  <!-- Right column: Real-World -->
+  <text x="940" y="135" text-anchor="middle" fill="#40f080" font-size="16" font-weight="bold" letter-spacing="2">REAL-WORLD (Layer U)</text>
+  
+  <!-- Row 1: Territory -->
+  <rect x="60" y="160" width="400" height="60" rx="4" fill="#a060ff" fill-opacity="0.1" stroke="#a060ff" stroke-opacity="0.4" stroke-width="1"/>
+  <text x="80" y="185" fill="#a060ff" font-size="12" font-weight="bold">Claim a Sector Block</text>
+  <text x="80" y="203" fill="#ffffff" font-size="10" opacity="0.5">10m³ volumetric parcel in MetaXity1 pyramid</text>
+  <line x1="460" y1="190" x2="740" y2="190" stroke="#f0c040" stroke-width="1.5" stroke-dasharray="6,4" marker-end="url(#arrowGold)" opacity="0.4"/>
+  <rect x="740" y="160" width="400" height="60" rx="4" fill="#40f080" fill-opacity="0.1" stroke="#40f080" stroke-opacity="0.4" stroke-width="1"/>
+  <text x="760" y="185" fill="#40f080" font-size="12" font-weight="bold">Purchase XR Real Estate DAO Share</text>
+  <text x="760" y="203" fill="#ffffff" font-size="10" opacity="0.5">Real-world geolocated volumetric advertising parcel</text>
+
+  <!-- Row 2: Content -->
+  <rect x="60" y="240" width="400" height="60" rx="4" fill="#a060ff" fill-opacity="0.07" stroke="#a060ff" stroke-opacity="0.3" stroke-width="1"/>
+  <text x="80" y="265" fill="#a060ff" font-size="12" font-weight="bold">Design Holographic Ads</text>
+  <text x="80" y="283" fill="#ffffff" font-size="10" opacity="0.5">Skin the World™ generative content creation</text>
+  <line x1="460" y1="270" x2="740" y2="270" stroke="#f0c040" stroke-width="1.5" stroke-dasharray="6,4" marker-end="url(#arrowGold)" opacity="0.4"/>
+  <rect x="740" y="240" width="400" height="60" rx="4" fill="#40f080" fill-opacity="0.07" stroke="#40f080" stroke-opacity="0.3" stroke-width="1"/>
+  <text x="760" y="265" fill="#40f080" font-size="12" font-weight="bold">Create AR Content for Parcels</text>
+  <text x="760" y="283" fill="#ffffff" font-size="10" opacity="0.5">Real AR overlays on physical locations via EveryWear</text>
+
+  <!-- Row 3: Revenue -->
+  <rect x="60" y="320" width="400" height="60" rx="4" fill="#a060ff" fill-opacity="0.1" stroke="#a060ff" stroke-opacity="0.4" stroke-width="1"/>
+  <text x="80" y="345" fill="#a060ff" font-size="12" font-weight="bold">Earn GridScrip from Foot Traffic</text>
+  <text x="80" y="363" fill="#ffffff" font-size="10" opacity="0.5">NPCs and players pass your sector → ad views → revenue</text>
+  <line x1="460" y1="350" x2="740" y2="350" stroke="#f0c040" stroke-width="1.5" stroke-dasharray="6,4" marker-end="url(#arrowGold)" opacity="0.4"/>
+  <rect x="740" y="320" width="400" height="60" rx="4" fill="#40f080" fill-opacity="0.1" stroke="#40f080" stroke-opacity="0.4" stroke-width="1"/>
+  <text x="760" y="345" fill="#40f080" font-size="12" font-weight="bold">Earn Revenue from Real Foot Traffic</text>
+  <text x="760" y="363" fill="#ffffff" font-size="10" opacity="0.5">WiFi DensePose counts real pedestrians → A.R.E. revenue</text>
+
+  <!-- Row 4: Governance -->
+  <rect x="60" y="400" width="400" height="60" rx="4" fill="#a060ff" fill-opacity="0.07" stroke="#a060ff" stroke-opacity="0.3" stroke-width="1"/>
+  <text x="80" y="425" fill="#a060ff" font-size="12" font-weight="bold">Vote in Sector Council</text>
+  <text x="80" y="443" fill="#ffffff" font-size="10" opacity="0.5">Governance decisions for your sector/floor</text>
+  <line x1="460" y1="430" x2="740" y2="430" stroke="#f0c040" stroke-width="1.5" stroke-dasharray="6,4" marker-end="url(#arrowGold)" opacity="0.4"/>
+  <rect x="740" y="400" width="400" height="60" rx="4" fill="#40f080" fill-opacity="0.07" stroke="#40f080" stroke-opacity="0.3" stroke-width="1"/>
+  <text x="760" y="425" fill="#40f080" font-size="12" font-weight="bold">DAO Governance Vote</text>
+  <text x="760" y="443" fill="#ffffff" font-size="10" opacity="0.5">Token-weighted votes on parcel management + revenue split</text>
+
+  <!-- Row 5: Measurement -->
+  <rect x="60" y="480" width="400" height="60" rx="4" fill="#a060ff" fill-opacity="0.1" stroke="#a060ff" stroke-opacity="0.4" stroke-width="1"/>
+  <text x="80" y="505" fill="#a060ff" font-size="12" font-weight="bold">Sensor Grid Data</text>
+  <text x="80" y="523" fill="#ffffff" font-size="10" opacity="0.5">In-game environmental sensors report traffic patterns</text>
+  <line x1="460" y1="510" x2="740" y2="510" stroke="#f0c040" stroke-width="1.5" stroke-dasharray="6,4" marker-end="url(#arrowGold)" opacity="0.4"/>
+  <rect x="740" y="480" width="400" height="60" rx="4" fill="#40f080" fill-opacity="0.1" stroke="#40f080" stroke-opacity="0.4" stroke-width="1"/>
+  <text x="760" y="505" fill="#40f080" font-size="12" font-weight="bold">WiFi DensePose Hardware</text>
+  <text x="760" y="523" fill="#ffffff" font-size="10" opacity="0.5">ESP32-S3 devices measure real pedestrian flow (camera-free)</text>
+
+  <!-- Row 6: Economy bridge -->
+  <rect x="60" y="560" width="400" height="60" rx="4" fill="#a060ff" fill-opacity="0.07" stroke="#a060ff" stroke-opacity="0.3" stroke-width="1"/>
+  <text x="80" y="585" fill="#a060ff" font-size="12" font-weight="bold">GridScrip → $KREDS Bridge</text>
+  <text x="80" y="603" fill="#ffffff" font-size="10" opacity="0.5">In-game earnings bridge to chain-level token</text>
+  <line x1="460" y1="590" x2="740" y2="590" stroke="#f0c040" stroke-width="1.5" stroke-dasharray="6,4" marker-end="url(#arrowGold)" opacity="0.4"/>
+  <rect x="740" y="560" width="400" height="60" rx="4" fill="#40f080" fill-opacity="0.07" stroke="#40f080" stroke-opacity="0.3" stroke-width="1"/>
+  <text x="760" y="585" fill="#40f080" font-size="12" font-weight="bold">Fiat → $KREDS UBI Distribution</text>
+  <text x="760" y="603" fill="#ffffff" font-size="10" opacity="0.5">Real ad revenue → market-making → equitable redistribution</text>
+
+  <!-- Center arrow labels -->
+  <text x="600" y="182" text-anchor="middle" fill="#f0c040" font-size="9" opacity="0.7">MAPS TO</text>
+  <text x="600" y="262" text-anchor="middle" fill="#f0c040" font-size="9" opacity="0.7">MAPS TO</text>
+  <text x="600" y="342" text-anchor="middle" fill="#f0c040" font-size="9" opacity="0.7">MAPS TO</text>
+  <text x="600" y="422" text-anchor="middle" fill="#f0c040" font-size="9" opacity="0.7">MAPS TO</text>
+  <text x="600" y="502" text-anchor="middle" fill="#f0c040" font-size="9" opacity="0.7">MAPS TO</text>
+  <text x="600" y="582" text-anchor="middle" fill="#f0c040" font-size="9" opacity="0.7">MAPS TO</text>
+
+  <!-- Bottom insight -->
+  <rect x="100" y="650" width="1000" height="70" rx="4" fill="#ffffff" fill-opacity="0.03" stroke="#f0c040" stroke-opacity="0.3" stroke-width="1"/>
+  <text x="600" y="672" text-anchor="middle" fill="#f0c040" font-size="12" font-weight="bold">EDUCATION PIPELINE: NARRATIVE → MECHANICAL → ECONOMIC → TRANSFER READINESS</text>
+  <text x="600" y="694" text-anchor="middle" fill="#ffffff" font-size="11" opacity="0.6">Players learn real-world XR real estate management through gameplay. When Layer U launches,</text>
+  <text x="600" y="710" text-anchor="middle" fill="#ffffff" font-size="11" opacity="0.6">they already understand the system — because they've been operating it in MetaXity1.</text>
+  <text x="1170" y="780" text-anchor="end" fill="#ffffff" font-size="10" opacity="0.3">Fig. 12</text>
+</svg>

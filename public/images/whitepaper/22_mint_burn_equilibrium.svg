@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0a0a14"/><stop offset="100%" stop-color="#06060c"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <g opacity="0.04" stroke="#00f0ff"><line x1="600" y1="0" x2="600" y2="800" stroke-dasharray="2,8"/></g>
+  <text x="600" y="42" text-anchor="middle" fill="#00f0ff" font-size="11" letter-spacing="4" opacity="0.6">CHAPTER 13 — $KREDS</text>
+  <text x="600" y="72" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold" letter-spacing="1">MINT-AND-BURN EQUILIBRIUM</text>
+  <text x="600" y="96" text-anchor="middle" fill="#ffffff" font-size="13" opacity="0.5">Device Activation (Mint) ↔ Device Retirement (Burn) — Supply tied to real infrastructure</text>
+
+  <!-- Left: MINT side -->
+  <rect x="50" y="130" width="500" height="520" rx="8" fill="#40f080" fill-opacity="0.03" stroke="#40f080" stroke-opacity="0.3" stroke-width="1.5"/>
+  <text x="300" y="165" text-anchor="middle" fill="#40f080" font-size="20" font-weight="bold" filter="url(#glow)">MINT ↑</text>
+  <text x="300" y="185" text-anchor="middle" fill="#40f080" font-size="11" opacity="0.6">New tokens enter supply</text>
+
+  <rect x="80" y="210" width="440" height="70" rx="4" fill="#40f080" fill-opacity="0.08" stroke="#40f080" stroke-opacity="0.3"/>
+  <text x="300" y="238" text-anchor="middle" fill="#40f080" font-size="13" font-weight="bold">DEVICE ACTIVATION</text>
+  <text x="300" y="260" text-anchor="middle" fill="#ffffff" font-size="10" opacity="0.5">WiFi DensePose device registers on network → tokens minted as staking requirement</text>
+
+  <rect x="80" y="295" width="440" height="55" rx="4" fill="#40f080" fill-opacity="0.06" stroke="#40f080" stroke-opacity="0.2"/>
+  <text x="300" y="318" text-anchor="middle" fill="#ffffff" font-size="11" opacity="0.6">Initial mint: 1,000 $KREDS per device activation</text>
+  <text x="300" y="336" text-anchor="middle" fill="#ffffff" font-size="9" opacity="0.4">Decreases logarithmically as network grows</text>
+
+  <rect x="80" y="365" width="440" height="55" rx="4" fill="#40f080" fill-opacity="0.08" stroke="#40f080" stroke-opacity="0.3"/>
+  <text x="300" y="388" text-anchor="middle" fill="#ffffff" font-size="11" opacity="0.6">Epoch reward minting (18-month cycles)</text>
+  <text x="300" y="406" text-anchor="middle" fill="#ffffff" font-size="9" opacity="0.4">Validator rewards for uptime + data quality</text>
+
+  <rect x="80" y="435" width="440" height="55" rx="4" fill="#40f080" fill-opacity="0.06" stroke="#40f080" stroke-opacity="0.2"/>
+  <text x="300" y="458" text-anchor="middle" fill="#ffffff" font-size="11" opacity="0.6">Community pool replenishment</text>
+  <text x="300" y="476" text-anchor="middle" fill="#ffffff" font-size="9" opacity="0.4">5% of mint goes to ecosystem grants</text>
+
+  <rect x="80" y="510" width="440" height="70" rx="4" fill="#40f080" fill-opacity="0.1" stroke="#40f080" stroke-opacity="0.4"/>
+  <text x="300" y="535" text-anchor="middle" fill="#40f080" font-size="12" font-weight="bold">MINT RATE DECAYS</text>
+  <text x="300" y="555" text-anchor="middle" fill="#ffffff" font-size="10" opacity="0.5">Logarithmic reduction: fast growth early,</text>
+  <text x="300" y="572" text-anchor="middle" fill="#ffffff" font-size="10" opacity="0.5">approaching zero new mint at 10B devices</text>
+
+  <!-- Right: BURN side -->
+  <rect x="650" y="130" width="500" height="520" rx="8" fill="#ff6080" fill-opacity="0.03" stroke="#ff6080" stroke-opacity="0.3" stroke-width="1.5"/>
+  <text x="900" y="165" text-anchor="middle" fill="#ff6080" font-size="20" font-weight="bold" filter="url(#glow)">BURN ↓</text>
+  <text x="900" y="185" text-anchor="middle" fill="#ff6080" font-size="11" opacity="0.6">Tokens removed from supply</text>
+
+  <rect x="680" y="210" width="440" height="70" rx="4" fill="#ff6080" fill-opacity="0.08" stroke="#ff6080" stroke-opacity="0.3"/>
+  <text x="900" y="238" text-anchor="middle" fill="#ff6080" font-size="13" font-weight="bold">DEVICE RETIREMENT</text>
+  <text x="900" y="260" text-anchor="middle" fill="#ffffff" font-size="10" opacity="0.5">Device goes offline permanently → staked tokens burned after grace period</text>
+
+  <rect x="680" y="295" width="440" height="55" rx="4" fill="#ff6080" fill-opacity="0.06" stroke="#ff6080" stroke-opacity="0.2"/>
+  <text x="900" y="318" text-anchor="middle" fill="#ffffff" font-size="11" opacity="0.6">30-day grace period before burn execution</text>
+  <text x="900" y="336" text-anchor="middle" fill="#ffffff" font-size="9" opacity="0.4">Allows recovery from temporary outages</text>
+
+  <rect x="680" y="365" width="440" height="55" rx="4" fill="#ff6080" fill-opacity="0.08" stroke="#ff6080" stroke-opacity="0.3"/>
+  <text x="900" y="388" text-anchor="middle" fill="#ffffff" font-size="11" opacity="0.6">Transaction fee burns (micro-burns)</text>
+  <text x="900" y="406" text-anchor="middle" fill="#ffffff" font-size="9" opacity="0.4">Small portion of every on-chain tx permanently destroyed</text>
+
+  <rect x="680" y="435" width="440" height="55" rx="4" fill="#ff6080" fill-opacity="0.06" stroke="#ff6080" stroke-opacity="0.2"/>
+  <text x="900" y="458" text-anchor="middle" fill="#ffffff" font-size="11" opacity="0.6">Slashing penalties (bad behaviour)</text>
+  <text x="900" y="476" text-anchor="middle" fill="#ffffff" font-size="9" opacity="0.4">Fraudulent data submission → stake slashed + burned</text>
+
+  <rect x="680" y="510" width="440" height="70" rx="4" fill="#ff6080" fill-opacity="0.1" stroke="#ff6080" stroke-opacity="0.4"/>
+  <text x="900" y="535" text-anchor="middle" fill="#ff6080" font-size="12" font-weight="bold">BURN PROVIDES DEFLATION</text>
+  <text x="900" y="555" text-anchor="middle" fill="#ffffff" font-size="10" opacity="0.5">As network matures, burn rate approaches mint rate,</text>
+  <text x="900" y="572" text-anchor="middle" fill="#ffffff" font-size="10" opacity="0.5">creating price stability via natural equilibrium</text>
+
+  <!-- Center: Equilibrium -->
+  <rect x="475" y="340" width="250" height="100" rx="8" fill="#f0c040" fill-opacity="0.1" stroke="#f0c040" stroke-opacity="0.5" stroke-width="2"/>
+  <text x="600" y="375" text-anchor="middle" fill="#f0c040" font-size="16" font-weight="bold" filter="url(#glow)">EQUILIBRIUM</text>
+  <text x="600" y="398" text-anchor="middle" fill="#ffffff" font-size="10" opacity="0.5">Mint rate ≈ Burn rate</text>
+  <text x="600" y="415" text-anchor="middle" fill="#ffffff" font-size="10" opacity="0.5">at network maturity</text>
+  <text x="600" y="432" text-anchor="middle" fill="#f0c040" font-size="10">= Stable supply + rising value</text>
+
+  <!-- Bottom insight -->
+  <rect x="100" y="690" width="1000" height="65" rx="4" fill="#ffffff" fill-opacity="0.03" stroke="#f0c040" stroke-opacity="0.3" stroke-width="1"/>
+  <text x="600" y="712" text-anchor="middle" fill="#f0c040" font-size="12" font-weight="bold">SUPPLY TIED TO REAL INFRASTRUCTURE, NOT ARBITRARY EMISSION</text>
+  <text x="600" y="732" text-anchor="middle" fill="#ffffff" font-size="11" opacity="0.6">Every token represents a real device doing real work. No phantom supply. No inflation without corresponding utility.</text>
+  <text x="600" y="748" text-anchor="middle" fill="#ffffff" font-size="11" opacity="0.6">This is what makes $KREDS fundamentally different from speculative tokens.</text>
+  <text x="1170" y="780" text-anchor="end" fill="#ffffff" font-size="10" opacity="0.3">Fig. 22</text>
+</svg>

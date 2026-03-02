@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 650" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0a0a14"/><stop offset="100%" stop-color="#06060c"/></linearGradient>
+  </defs>
+  <rect width="1100" height="650" fill="url(#bg)"/>
+
+  <text x="550" y="42" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="700" letter-spacing="2">CONSENT TIER ARCHITECTURE</text>
+  <text x="550" y="64" text-anchor="middle" fill="#00f0ff" font-size="11" letter-spacing="4" opacity="0.7">DATA COLLECTION &amp; COMPENSATION ESCALATION — CHAPTER 16</text>
+  <line x1="300" y1="76" x2="800" y2="76" stroke="#00f0ff" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Tier 0 -->
+  <rect x="60" y="100" width="230" height="400" rx="4" fill="#40f080" fill-opacity="0.04" stroke="#40f080" stroke-width="0.8"/>
+  <rect x="60" y="100" width="230" height="36" rx="4" fill="#40f080" fill-opacity="0.12"/>
+  <text x="175" y="123" text-anchor="middle" fill="#40f080" font-size="14" font-weight="700">TIER 0</text>
+  <text x="175" y="155" text-anchor="middle" fill="#40f080" font-size="11" font-weight="600">ZERO COLLECTION</text>
+  
+  <text x="80" y="185" fill="#a0a8b8" font-size="9" font-weight="600">DATA SHARED</text>
+  <text x="80" y="205" fill="#ffffff" font-size="10">None</text>
+  <text x="80" y="222" fill="#ffffff" font-size="10">Fully anonymous play</text>
+  
+  <line x1="80" y1="240" x2="270" y2="240" stroke="#40f080" stroke-width="0.2" opacity="0.3"/>
+  <text x="80" y="260" fill="#a0a8b8" font-size="9" font-weight="600">COMPENSATION</text>
+  <text x="80" y="280" fill="#ffffff" font-size="10">Base game access</text>
+  <text x="80" y="297" fill="#ffffff" font-size="10">No ads shown</text>
+  <text x="80" y="314" fill="#ffffff" font-size="10">No $KREDS earning</text>
+  
+  <line x1="80" y1="332" x2="270" y2="332" stroke="#40f080" stroke-width="0.2" opacity="0.3"/>
+  <text x="80" y="352" fill="#a0a8b8" font-size="9" font-weight="600">FEATURES</text>
+  <text x="80" y="372" fill="#ffffff" font-size="10">Full gameplay</text>
+  <text x="80" y="389" fill="#ffffff" font-size="10">Local memory only</text>
+  <text x="80" y="406" fill="#ffffff" font-size="10">No cloud sync</text>
+  
+  <rect x="90" y="440" width="170" height="22" rx="11" fill="#40f080" fill-opacity="0.1" stroke="#40f080" stroke-width="0.4"/>
+  <text x="175" y="455" text-anchor="middle" fill="#40f080" font-size="9" font-weight="600">PRIVACY: MAXIMUM</text>
+
+  <!-- Tier 1 -->
+  <rect x="310" y="100" width="230" height="400" rx="4" fill="#00f0ff" fill-opacity="0.04" stroke="#00f0ff" stroke-width="0.8"/>
+  <rect x="310" y="100" width="230" height="36" rx="4" fill="#00f0ff" fill-opacity="0.12"/>
+  <text x="425" y="123" text-anchor="middle" fill="#00f0ff" font-size="14" font-weight="700">TIER 1</text>
+  <text x="425" y="155" text-anchor="middle" fill="#00f0ff" font-size="11" font-weight="600">ANONYMOUS CATEGORY</text>
+  
+  <text x="330" y="185" fill="#a0a8b8" font-size="9" font-weight="600">DATA SHARED</text>
+  <text x="330" y="205" fill="#ffffff" font-size="10">Broad interest categories</text>
+  <text x="330" y="222" fill="#ffffff" font-size="10">No PII, no identity</text>
+  
+  <line x1="330" y1="240" x2="520" y2="240" stroke="#00f0ff" stroke-width="0.2" opacity="0.3"/>
+  <text x="330" y="260" fill="#a0a8b8" font-size="9" font-weight="600">COMPENSATION</text>
+  <text x="330" y="280" fill="#ffffff" font-size="10">A.R.E. consent ads</text>
+  <text x="330" y="297" fill="#ffffff" font-size="10">60% ad revenue share</text>
+  <text x="330" y="314" fill="#ffffff" font-size="10">Base $KREDS earning</text>
+  
+  <line x1="330" y1="332" x2="520" y2="332" stroke="#00f0ff" stroke-width="0.2" opacity="0.3"/>
+  <text x="330" y="352" fill="#a0a8b8" font-size="9" font-weight="600">FEATURES</text>
+  <text x="330" y="372" fill="#ffffff" font-size="10">+ Cloud memory sync</text>
+  <text x="330" y="389" fill="#ffffff" font-size="10">+ Proper Gander content</text>
+  <text x="330" y="406" fill="#ffffff" font-size="10">+ Marketplace access</text>
+  
+  <rect x="340" y="440" width="170" height="22" rx="11" fill="#00f0ff" fill-opacity="0.1" stroke="#00f0ff" stroke-width="0.4"/>
+  <text x="425" y="455" text-anchor="middle" fill="#00f0ff" font-size="9" font-weight="600">PRIVACY: HIGH</text>
+
+  <!-- Tier 2 -->
+  <rect x="560" y="100" width="230" height="400" rx="4" fill="#f0c040" fill-opacity="0.04" stroke="#f0c040" stroke-width="0.8"/>
+  <rect x="560" y="100" width="230" height="36" rx="4" fill="#f0c040" fill-opacity="0.12"/>
+  <text x="675" y="123" text-anchor="middle" fill="#f0c040" font-size="14" font-weight="700">TIER 2</text>
+  <text x="675" y="155" text-anchor="middle" fill="#f0c040" font-size="11" font-weight="600">PROFILE SHARING</text>
+  
+  <text x="580" y="185" fill="#a0a8b8" font-size="9" font-weight="600">DATA SHARED</text>
+  <text x="580" y="205" fill="#ffffff" font-size="10">Psychometric profile</text>
+  <text x="580" y="222" fill="#ffffff" font-size="10">Play patterns + preferences</text>
+  
+  <line x1="580" y1="240" x2="770" y2="240" stroke="#f0c040" stroke-width="0.2" opacity="0.3"/>
+  <text x="580" y="260" fill="#a0a8b8" font-size="9" font-weight="600">COMPENSATION</text>
+  <text x="580" y="280" fill="#ffffff" font-size="10">Enhanced ad matching</text>
+  <text x="580" y="297" fill="#ffffff" font-size="10">Higher eCPM = more revenue</text>
+  <text x="580" y="314" fill="#ffffff" font-size="10">Boosted $KREDS multiplier</text>
+  
+  <line x1="580" y1="332" x2="770" y2="332" stroke="#f0c040" stroke-width="0.2" opacity="0.3"/>
+  <text x="580" y="352" fill="#a0a8b8" font-size="9" font-weight="600">FEATURES</text>
+  <text x="580" y="372" fill="#ffffff" font-size="10">+ AI-personalised content</text>
+  <text x="580" y="389" fill="#ffffff" font-size="10">+ Better NPC matching</text>
+  <text x="580" y="406" fill="#ffffff" font-size="10">+ Priority gen queue</text>
+  
+  <rect x="590" y="440" width="170" height="22" rx="11" fill="#f0c040" fill-opacity="0.1" stroke="#f0c040" stroke-width="0.4"/>
+  <text x="675" y="455" text-anchor="middle" fill="#f0c040" font-size="9" font-weight="600">PRIVACY: MODERATE</text>
+
+  <!-- Tier 3 -->
+  <rect x="810" y="100" width="230" height="400" rx="4" fill="#ff6080" fill-opacity="0.04" stroke="#ff6080" stroke-width="0.8"/>
+  <rect x="810" y="100" width="230" height="36" rx="4" fill="#ff6080" fill-opacity="0.12"/>
+  <text x="925" y="123" text-anchor="middle" fill="#ff6080" font-size="14" font-weight="700">TIER 3</text>
+  <text x="925" y="155" text-anchor="middle" fill="#ff6080" font-size="11" font-weight="600">FULL PARTICIPATION</text>
+  
+  <text x="830" y="185" fill="#a0a8b8" font-size="9" font-weight="600">DATA SHARED</text>
+  <text x="830" y="205" fill="#ffffff" font-size="10">All Tier 2 + spatial data</text>
+  <text x="830" y="222" fill="#ffffff" font-size="10">WiFi DensePose opt-in</text>
+  
+  <line x1="830" y1="240" x2="1020" y2="240" stroke="#ff6080" stroke-width="0.2" opacity="0.3"/>
+  <text x="830" y="260" fill="#a0a8b8" font-size="9" font-weight="600">COMPENSATION</text>
+  <text x="830" y="280" fill="#ffffff" font-size="10">Maximum ad revenue share</text>
+  <text x="830" y="297" fill="#ffffff" font-size="10">B2B data licensing revenue</text>
+  <text x="830" y="314" fill="#ffffff" font-size="10">Maximum $KREDS multiplier</text>
+  
+  <line x1="830" y1="332" x2="1020" y2="332" stroke="#ff6080" stroke-width="0.2" opacity="0.3"/>
+  <text x="830" y="352" fill="#a0a8b8" font-size="9" font-weight="600">FEATURES</text>
+  <text x="830" y="372" fill="#ffffff" font-size="10">+ Layer U participation</text>
+  <text x="830" y="389" fill="#ffffff" font-size="10">+ DAO voting rights</text>
+  <text x="830" y="406" fill="#ffffff" font-size="10">+ Validator rewards</text>
+  
+  <rect x="840" y="440" width="170" height="22" rx="11" fill="#ff6080" fill-opacity="0.1" stroke="#ff6080" stroke-width="0.4"/>
+  <text x="925" y="455" text-anchor="middle" fill="#ff6080" font-size="9" font-weight="600">PRIVACY: COMPENSATED</text>
+
+  <!-- Escalation arrow -->
+  <line x1="100" y1="520" x2="1000" y2="520" stroke="#ffffff" stroke-width="1" opacity="0.15"/>
+  <text x="200" y="545" text-anchor="middle" fill="#a0a8b8" font-size="9">← Less data</text>
+  <text x="550" y="545" text-anchor="middle" fill="#ffffff" font-size="10" font-weight="600">MORE DATA → MORE COMPENSATION → MORE FEATURES</text>
+  <text x="900" y="545" text-anchor="middle" fill="#a0a8b8" font-size="9">More data →</text>
+
+  <!-- GDPR callout -->
+  <rect x="100" y="570" width="900" height="40" rx="4" fill="#40f080" fill-opacity="0.03" stroke="#40f080" stroke-width="0.4"/>
+  <text x="550" y="595" text-anchor="middle" fill="#40f080" font-size="11" font-weight="600">GDPR COMPLIANT: Every tier is opt-in. Downgrade anytime. Right to erasure at all tiers. No data hostage.</text>
+
+  <text x="1070" y="640" text-anchor="end" fill="#ffffff" font-size="9" opacity="0.2">Fig. 33</text>
+</svg>

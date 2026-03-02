@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0a0a14"/><stop offset="100%" stop-color="#06060c"/></linearGradient>
+  </defs>
+  <rect width="1000" height="700" fill="url(#bg)"/>
+
+  <text x="500" y="42" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="700" letter-spacing="2">UBI ACCUMULATION MODEL</text>
+  <text x="500" y="64" text-anchor="middle" fill="#40f080" font-size="11" letter-spacing="4" opacity="0.7">PER-PARTICIPANT INCOME AT SCALE — LINEAR WITH ECOSYSTEM VALUE — CHAPTER 13</text>
+  <line x1="200" y1="78" x2="800" y2="78" stroke="#40f080" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Three scale columns -->
+  <!-- Scale 1: 1M devices -->
+  <rect x="60" y="120" width="260" height="420" rx="8" fill="#00f0ff" fill-opacity="0.05" stroke="#00f0ff" stroke-width="1"/>
+  <rect x="60" y="120" width="260" height="46" rx="8" fill="#00f0ff" fill-opacity="0.12"/>
+  <rect x="60" y="158" width="260" height="8" rx="0" fill="#00f0ff" fill-opacity="0.12"/>
+  <text x="190" y="140" text-anchor="middle" fill="#00f0ff" font-size="18" font-weight="700">1M DEVICES</text>
+  <text x="190" y="156" text-anchor="middle" fill="#00f0ff" font-size="9" opacity="0.7">10 Layer U DAOs · 5 cities</text>
+
+  <!-- Income bars for 1M -->
+  <text x="80" y="196" fill="#a0a8b8" font-size="10">A.R.E. Attention</text>
+  <rect x="200" y="184" width="60" height="16" rx="3" fill="#40f080" fill-opacity="0.4"/>
+  <text x="268" y="196" fill="#40f080" font-size="10">$120</text>
+
+  <text x="80" y="224" fill="#a0a8b8" font-size="10">Hardware Uptime</text>
+  <rect x="200" y="212" width="45" height="16" rx="3" fill="#f0c040" fill-opacity="0.4"/>
+  <text x="253" y="224" fill="#f0c040" font-size="10">$90</text>
+
+  <text x="80" y="252" fill="#a0a8b8" font-size="10">Data Consent</text>
+  <rect x="200" y="240" width="35" height="16" rx="3" fill="#ff6080" fill-opacity="0.4"/>
+  <text x="243" y="252" fill="#ff6080" font-size="10">$60</text>
+
+  <text x="80" y="280" fill="#a0a8b8" font-size="10">SIGOPS Tasks</text>
+  <rect x="200" y="268" width="25" height="16" rx="3" fill="#c080ff" fill-opacity="0.4"/>
+  <text x="233" y="280" fill="#c080ff" font-size="10">$40</text>
+
+  <text x="80" y="308" fill="#a0a8b8" font-size="10">Validation</text>
+  <rect x="200" y="296" width="20" height="16" rx="3" fill="#ffffff" fill-opacity="0.2"/>
+  <text x="228" y="308" fill="#d0d4dc" font-size="10">$30</text>
+
+  <line x1="80" y1="330" x2="300" y2="330" stroke="#00f0ff" stroke-width="0.5" opacity="0.3"/>
+  <text x="190" y="356" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="700">~$340</text>
+  <text x="190" y="374" text-anchor="middle" fill="#00f0ff" font-size="10">annual per participant</text>
+  <text x="190" y="394" text-anchor="middle" fill="#a0a8b8" font-size="9">Income supplement</text>
+  <text x="190" y="410" text-anchor="middle" fill="#a0a8b8" font-size="9">Not a living wage — yet</text>
+
+  <!-- Earning type indicators -->
+  <rect x="80" y="430" width="200" height="36" rx="4" fill="#00f0ff" fill-opacity="0.06" stroke="#00f0ff" stroke-width="0.3"/>
+  <text x="180" y="450" text-anchor="middle" fill="#00f0ff" font-size="9" font-weight="600">~$28/month aggregate</text>
+  <text x="180" y="462" text-anchor="middle" fill="#a0a8b8" font-size="8">Meaningful in emerging markets</text>
+
+  <!-- Scale 2: 10M devices -->
+  <rect x="370" y="120" width="260" height="420" rx="8" fill="#f0c040" fill-opacity="0.05" stroke="#f0c040" stroke-width="1"/>
+  <rect x="370" y="120" width="260" height="46" rx="8" fill="#f0c040" fill-opacity="0.12"/>
+  <rect x="370" y="158" width="260" height="8" rx="0" fill="#f0c040" fill-opacity="0.12"/>
+  <text x="500" y="140" text-anchor="middle" fill="#f0c040" font-size="18" font-weight="700">10M DEVICES</text>
+  <text x="500" y="156" text-anchor="middle" fill="#f0c040" font-size="9" opacity="0.7">50 Layer U DAOs · 20 cities</text>
+
+  <text x="390" y="196" fill="#a0a8b8" font-size="10">A.R.E. Attention</text>
+  <rect x="510" y="184" width="80" height="16" rx="3" fill="#40f080" fill-opacity="0.4"/>
+  <text x="598" y="196" fill="#40f080" font-size="10">$450</text>
+
+  <text x="390" y="224" fill="#a0a8b8" font-size="10">Hardware Uptime</text>
+  <rect x="510" y="212" width="60" height="16" rx="3" fill="#f0c040" fill-opacity="0.4"/>
+  <text x="578" y="224" fill="#f0c040" font-size="10">$320</text>
+
+  <text x="390" y="252" fill="#a0a8b8" font-size="10">Data Consent</text>
+  <rect x="510" y="240" width="50" height="16" rx="3" fill="#ff6080" fill-opacity="0.4"/>
+  <text x="568" y="252" fill="#ff6080" font-size="10">$200</text>
+
+  <text x="390" y="280" fill="#a0a8b8" font-size="10">SIGOPS Tasks</text>
+  <rect x="510" y="268" width="35" height="16" rx="3" fill="#c080ff" fill-opacity="0.4"/>
+  <text x="553" y="280" fill="#c080ff" font-size="10">$150</text>
+
+  <text x="390" y="308" fill="#a0a8b8" font-size="10">Validation</text>
+  <rect x="510" y="296" width="30" height="16" rx="3" fill="#ffffff" fill-opacity="0.2"/>
+  <text x="548" y="308" fill="#d0d4dc" font-size="10">$100</text>
+
+  <line x1="390" y1="330" x2="610" y2="330" stroke="#f0c040" stroke-width="0.5" opacity="0.3"/>
+  <text x="500" y="356" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="700">~$1,220</text>
+  <text x="500" y="374" text-anchor="middle" fill="#f0c040" font-size="10">annual per participant</text>
+  <text x="500" y="394" text-anchor="middle" fill="#a0a8b8" font-size="9">Significant income supplement</text>
+  <text x="500" y="410" text-anchor="middle" fill="#a0a8b8" font-size="9">Approaching meaningful globally</text>
+
+  <rect x="390" y="430" width="200" height="36" rx="4" fill="#f0c040" fill-opacity="0.06" stroke="#f0c040" stroke-width="0.3"/>
+  <text x="490" y="450" text-anchor="middle" fill="#f0c040" font-size="9" font-weight="600">~$102/month aggregate</text>
+  <text x="490" y="462" text-anchor="middle" fill="#a0a8b8" font-size="8">Life-changing in many economies</text>
+
+  <!-- Scale 3: 100M devices -->
+  <rect x="680" y="120" width="260" height="420" rx="8" fill="#40f080" fill-opacity="0.05" stroke="#40f080" stroke-width="1"/>
+  <rect x="680" y="120" width="260" height="46" rx="8" fill="#40f080" fill-opacity="0.12"/>
+  <rect x="680" y="158" width="260" height="8" rx="0" fill="#40f080" fill-opacity="0.12"/>
+  <text x="810" y="140" text-anchor="middle" fill="#40f080" font-size="18" font-weight="700">100M DEVICES</text>
+  <text x="810" y="156" text-anchor="middle" fill="#40f080" font-size="9" opacity="0.7">500+ DAOs · 100+ cities</text>
+
+  <text x="700" y="196" fill="#a0a8b8" font-size="10">A.R.E. Attention</text>
+  <rect x="820" y="184" width="100" height="16" rx="3" fill="#40f080" fill-opacity="0.4"/>
+  <text x="928" y="196" fill="#40f080" font-size="10">$1,800</text>
+
+  <text x="700" y="224" fill="#a0a8b8" font-size="10">Hardware Uptime</text>
+  <rect x="820" y="212" width="80" height="16" rx="3" fill="#f0c040" fill-opacity="0.4"/>
+  <text x="908" y="224" fill="#f0c040" font-size="10">$1,200</text>
+
+  <text x="700" y="252" fill="#a0a8b8" font-size="10">Data Consent</text>
+  <rect x="820" y="240" width="60" height="16" rx="3" fill="#ff6080" fill-opacity="0.4"/>
+  <text x="888" y="252" fill="#ff6080" font-size="10">$800</text>
+
+  <text x="700" y="280" fill="#a0a8b8" font-size="10">SIGOPS Tasks</text>
+  <rect x="820" y="268" width="50" height="16" rx="3" fill="#c080ff" fill-opacity="0.4"/>
+  <text x="878" y="280" fill="#c080ff" font-size="10">$600</text>
+
+  <text x="700" y="308" fill="#a0a8b8" font-size="10">Validation</text>
+  <rect x="820" y="296" width="40" height="16" rx="3" fill="#ffffff" fill-opacity="0.2"/>
+  <text x="868" y="308" fill="#d0d4dc" font-size="10">$400</text>
+
+  <line x1="700" y1="330" x2="920" y2="330" stroke="#40f080" stroke-width="0.5" opacity="0.3"/>
+  <text x="810" y="356" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="700">~$4,800</text>
+  <text x="810" y="374" text-anchor="middle" fill="#40f080" font-size="10">annual per participant</text>
+  <text x="810" y="394" text-anchor="middle" fill="#a0a8b8" font-size="9">Self-reinforcing flywheel</text>
+  <text x="810" y="410" text-anchor="middle" fill="#a0a8b8" font-size="9">Genuine income pathway</text>
+
+  <rect x="700" y="430" width="200" height="36" rx="4" fill="#40f080" fill-opacity="0.06" stroke="#40f080" stroke-width="0.3"/>
+  <text x="800" y="450" text-anchor="middle" fill="#40f080" font-size="9" font-weight="600">~$400/month aggregate</text>
+  <text x="800" y="462" text-anchor="middle" fill="#a0a8b8" font-size="8">Transformative income globally</text>
+
+  <!-- Bottom note -->
+  <rect x="120" y="565" width="760" height="60" rx="6" fill="#ffffff" fill-opacity="0.03" stroke="#ffffff" stroke-width="0.5" opacity="0.2"/>
+  <text x="500" y="586" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="600" opacity="0.8">NOT UTOPIAN SPECULATION — ENGINEERING SPECIFICATION</text>
+  <text x="500" y="604" text-anchor="middle" fill="#a0a8b8" font-size="9">Redistribution is linear with ecosystem value. More participants → more activity → more redistribution.</text>
+  <text x="500" y="618" text-anchor="middle" fill="#a0a8b8" font-size="9">Figures are modelled estimates. Actual outcomes depend on adoption, market conditions, and execution.</text>
+
+  <text x="500" y="690" text-anchor="middle" fill="#4a4e5c" font-size="9" letter-spacing="1">STRANDS WHITEPAPER v6 — APPENDIX H — FIG. 29</text>
+</svg>

@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0a0a14"/><stop offset="100%" stop-color="#06060c"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1000" height="700" fill="url(#bg)"/>
+
+  <text x="500" y="42" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="700" letter-spacing="2">A.R.E. CONSENT &amp; DELIVERY FLOW</text>
+  <text x="500" y="64" text-anchor="middle" fill="#40f080" font-size="11" letter-spacing="4" opacity="0.7">SIX-STAGE PIPELINE — PRIVACY-PRESERVING — 60/40 REVENUE SPLIT — CHAPTER 8</text>
+  <line x1="200" y1="78" x2="800" y2="78" stroke="#40f080" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Stage 1: Consent -->
+  <rect x="40" y="110" width="140" height="250" rx="8" fill="#c080ff" fill-opacity="0.06" stroke="#c080ff" stroke-width="1.2"/>
+  <rect x="40" y="110" width="140" height="32" rx="8" fill="#c080ff" fill-opacity="0.15"/>
+  <text x="110" y="132" text-anchor="middle" fill="#c080ff" font-size="12" font-weight="700">① CONSENT</text>
+  <text x="110" y="162" text-anchor="middle" fill="#d0d4dc" font-size="9">Post-onboarding</text>
+  <text x="110" y="176" text-anchor="middle" fill="#d0d4dc" font-size="9">consent modal</text>
+  <line x1="56" y1="190" x2="164" y2="190" stroke="#c080ff" stroke-width="0.3" opacity="0.3"/>
+  <text x="110" y="210" text-anchor="middle" fill="#a0a8b8" font-size="8">• Plain language</text>
+  <text x="110" y="224" text-anchor="middle" fill="#a0a8b8" font-size="8">• Shows what/how/pay</text>
+  <text x="110" y="238" text-anchor="middle" fill="#a0a8b8" font-size="8">• Versioned + hashed</text>
+  <text x="110" y="252" text-anchor="middle" fill="#a0a8b8" font-size="8">• Revocable instantly</text>
+  <text x="110" y="266" text-anchor="middle" fill="#a0a8b8" font-size="8">• No penalties</text>
+  <line x1="56" y1="280" x2="164" y2="280" stroke="#c080ff" stroke-width="0.3" opacity="0.3"/>
+  <text x="110" y="300" text-anchor="middle" fill="#c080ff" font-size="9" font-weight="600">Stored in</text>
+  <text x="110" y="314" text-anchor="middle" fill="#c080ff" font-size="9" font-weight="600">Data Vault</text>
+  <text x="110" y="340" text-anchor="middle" fill="#ff6080" font-size="8" font-weight="600">No consent =</text>
+  <text x="110" y="352" text-anchor="middle" fill="#ff6080" font-size="8" font-weight="600">No A.R.E. (no penalty)</text>
+
+  <!-- Arrow -->
+  <line x1="185" y1="235" x2="203" y2="235" stroke="#ffffff" stroke-width="1" opacity="0.3"/>
+  <polygon points="201,232 208,235 201,238" fill="#ffffff" opacity="0.3"/>
+
+  <!-- Stage 2: Context Assembly -->
+  <rect x="210" y="110" width="140" height="250" rx="8" fill="#00f0ff" fill-opacity="0.06" stroke="#00f0ff" stroke-width="1.2"/>
+  <rect x="210" y="110" width="140" height="32" rx="8" fill="#00f0ff" fill-opacity="0.15"/>
+  <text x="280" y="132" text-anchor="middle" fill="#00f0ff" font-size="12" font-weight="700">② CONTEXT</text>
+  <text x="280" y="162" text-anchor="middle" fill="#d0d4dc" font-size="9">Local assembly</text>
+  <text x="280" y="176" text-anchor="middle" fill="#d0d4dc" font-size="9">(on-device)</text>
+  <line x1="226" y1="190" x2="334" y2="190" stroke="#00f0ff" stroke-width="0.3" opacity="0.3"/>
+  <text x="280" y="210" text-anchor="middle" fill="#a0a8b8" font-size="8">• Time of day</text>
+  <text x="280" y="224" text-anchor="middle" fill="#a0a8b8" font-size="8">• Content context</text>
+  <text x="280" y="238" text-anchor="middle" fill="#a0a8b8" font-size="8">• Gameplay state</text>
+  <text x="280" y="252" text-anchor="middle" fill="#a0a8b8" font-size="8">• Broad interest cat.</text>
+  <text x="280" y="266" text-anchor="middle" fill="#a0a8b8" font-size="8">• Location (coarse)</text>
+  <line x1="226" y1="280" x2="334" y2="280" stroke="#00f0ff" stroke-width="0.3" opacity="0.3"/>
+  <text x="280" y="300" text-anchor="middle" fill="#00f0ff" font-size="9" font-weight="600">NO personal data</text>
+  <text x="280" y="316" text-anchor="middle" fill="#00f0ff" font-size="9" font-weight="600">leaves device</text>
+  <text x="280" y="340" text-anchor="middle" fill="#00f0ff" font-size="8">Assembled locally →</text>
+  <text x="280" y="352" text-anchor="middle" fill="#00f0ff" font-size="8">transmitted anonymously</text>
+
+  <line x1="355" y1="235" x2="373" y2="235" stroke="#ffffff" stroke-width="1" opacity="0.3"/>
+  <polygon points="371,232 378,235 371,238" fill="#ffffff" opacity="0.3"/>
+
+  <!-- Stage 3: Anonymous Vector -->
+  <rect x="380" y="110" width="140" height="250" rx="8" fill="#f0c040" fill-opacity="0.06" stroke="#f0c040" stroke-width="1.2"/>
+  <rect x="380" y="110" width="140" height="32" rx="8" fill="#f0c040" fill-opacity="0.15"/>
+  <text x="450" y="132" text-anchor="middle" fill="#f0c040" font-size="12" font-weight="700">③ VECTOR</text>
+  <text x="450" y="162" text-anchor="middle" fill="#d0d4dc" font-size="9">Anonymous category</text>
+  <text x="450" y="176" text-anchor="middle" fill="#d0d4dc" font-size="9">transmission</text>
+  <line x1="396" y1="190" x2="504" y2="190" stroke="#f0c040" stroke-width="0.3" opacity="0.3"/>
+  <text x="450" y="210" text-anchor="middle" fill="#a0a8b8" font-size="8">• No user identity</text>
+  <text x="450" y="224" text-anchor="middle" fill="#a0a8b8" font-size="8">• No device fingerprint</text>
+  <text x="450" y="238" text-anchor="middle" fill="#a0a8b8" font-size="8">• Category only</text>
+  <text x="450" y="252" text-anchor="middle" fill="#a0a8b8" font-size="8">• One-way hash</text>
+  <line x1="396" y1="266" x2="504" y2="266" stroke="#f0c040" stroke-width="0.3" opacity="0.3"/>
+  <text x="450" y="288" text-anchor="middle" fill="#f0c040" font-size="9" font-weight="600">Targeting relevance</text>
+  <text x="450" y="304" text-anchor="middle" fill="#f0c040" font-size="9" font-weight="600">WITHOUT identity</text>
+  <text x="450" y="330" text-anchor="middle" fill="#a0a8b8" font-size="8">Ad network receives</text>
+  <text x="450" y="344" text-anchor="middle" fill="#a0a8b8" font-size="8">vector, cannot link</text>
+  <text x="450" y="356" text-anchor="middle" fill="#a0a8b8" font-size="8">to any individual</text>
+
+  <line x1="525" y1="235" x2="543" y2="235" stroke="#ffffff" stroke-width="1" opacity="0.3"/>
+  <polygon points="541,232 548,235 541,238" fill="#ffffff" opacity="0.3"/>
+
+  <!-- Stage 4: Ad Matching -->
+  <rect x="550" y="110" width="140" height="250" rx="8" fill="#ff6080" fill-opacity="0.06" stroke="#ff6080" stroke-width="1.2"/>
+  <rect x="550" y="110" width="140" height="32" rx="8" fill="#ff6080" fill-opacity="0.15"/>
+  <text x="620" y="132" text-anchor="middle" fill="#ff6080" font-size="12" font-weight="700">④ MATCHING</text>
+  <text x="620" y="162" text-anchor="middle" fill="#d0d4dc" font-size="9">Server-side creative</text>
+  <text x="620" y="176" text-anchor="middle" fill="#d0d4dc" font-size="9">selection</text>
+  <line x1="566" y1="190" x2="674" y2="190" stroke="#ff6080" stroke-width="0.3" opacity="0.3"/>
+  <text x="620" y="210" text-anchor="middle" fill="#a0a8b8" font-size="8">• Category → inventory</text>
+  <text x="620" y="224" text-anchor="middle" fill="#a0a8b8" font-size="8">• eCPM optimization</text>
+  <text x="620" y="238" text-anchor="middle" fill="#a0a8b8" font-size="8">• Frequency capping</text>
+  <text x="620" y="252" text-anchor="middle" fill="#a0a8b8" font-size="8">• Advertiser targeting</text>
+  <line x1="566" y1="266" x2="674" y2="266" stroke="#ff6080" stroke-width="0.3" opacity="0.3"/>
+  <text x="620" y="288" text-anchor="middle" fill="#ff6080" font-size="9" font-weight="600">Best creative for</text>
+  <text x="620" y="304" text-anchor="middle" fill="#ff6080" font-size="9" font-weight="600">anonymous category</text>
+
+  <line x1="695" y1="235" x2="713" y2="235" stroke="#ffffff" stroke-width="1" opacity="0.3"/>
+  <polygon points="711,232 718,235 711,238" fill="#ffffff" opacity="0.3"/>
+
+  <!-- Stage 5: Delivery -->
+  <rect x="720" y="110" width="120" height="250" rx="8" fill="#40f080" fill-opacity="0.06" stroke="#40f080" stroke-width="1.2"/>
+  <rect x="720" y="110" width="120" height="32" rx="8" fill="#40f080" fill-opacity="0.15"/>
+  <text x="780" y="132" text-anchor="middle" fill="#40f080" font-size="12" font-weight="700">⑤ DELIVER</text>
+  <text x="780" y="162" text-anchor="middle" fill="#d0d4dc" font-size="9">Diegetic display</text>
+  <line x1="736" y1="176" x2="824" y2="176" stroke="#40f080" stroke-width="0.3" opacity="0.3"/>
+  <text x="780" y="196" text-anchor="middle" fill="#a0a8b8" font-size="8">In-game:</text>
+  <text x="780" y="210" text-anchor="middle" fill="#40f080" font-size="8">Proper Gander</text>
+  <text x="780" y="224" text-anchor="middle" fill="#a0a8b8" font-size="8">broadcast frame</text>
+  <text x="780" y="248" text-anchor="middle" fill="#a0a8b8" font-size="8">Browser:</text>
+  <text x="780" y="262" text-anchor="middle" fill="#40f080" font-size="8">A.R.E. panel</text>
+  <text x="780" y="276" text-anchor="middle" fill="#a0a8b8" font-size="8">"Signal available"</text>
+  <line x1="736" y1="292" x2="824" y2="292" stroke="#40f080" stroke-width="0.3" opacity="0.3"/>
+  <text x="780" y="312" text-anchor="middle" fill="#40f080" font-size="8" font-weight="600">Must complete</text>
+  <text x="780" y="326" text-anchor="middle" fill="#40f080" font-size="8" font-weight="600">to earn (95%+ rate)</text>
+
+  <line x1="845" y1="235" x2="863" y2="235" stroke="#ffffff" stroke-width="1" opacity="0.3"/>
+  <polygon points="861,232 868,235 861,238" fill="#ffffff" opacity="0.3"/>
+
+  <!-- Stage 6: Revenue Split -->
+  <rect x="870" y="110" width="100" height="250" rx="8" fill="#40f080" fill-opacity="0.1" stroke="#40f080" stroke-width="1.5" filter="url(#glow)"/>
+  <rect x="870" y="110" width="100" height="32" rx="8" fill="#40f080" fill-opacity="0.2"/>
+  <text x="920" y="132" text-anchor="middle" fill="#40f080" font-size="12" font-weight="700">⑥ SPLIT</text>
+
+  <!-- 60/40 visual -->
+  <rect x="882" y="158" width="76" height="100" rx="4" fill="none" stroke="#40f080" stroke-width="0.5"/>
+  <rect x="882" y="158" width="76" height="60" rx="4" fill="#40f080" fill-opacity="0.2"/>
+  <text x="920" y="192" text-anchor="middle" fill="#40f080" font-size="16" font-weight="700">60%</text>
+  <text x="920" y="206" text-anchor="middle" fill="#40f080" font-size="8">PLAYER</text>
+  <rect x="882" y="218" width="76" height="40" rx="4" fill="#f0c040" fill-opacity="0.15"/>
+  <text x="920" y="240" text-anchor="middle" fill="#f0c040" font-size="14" font-weight="700">40%</text>
+  <text x="920" y="252" text-anchor="middle" fill="#f0c040" font-size="8">PLATFORM</text>
+
+  <text x="920" y="284" text-anchor="middle" fill="#d0d4dc" font-size="8">Daily USDT</text>
+  <text x="920" y="298" text-anchor="middle" fill="#d0d4dc" font-size="8">settlement</text>
+  <text x="920" y="318" text-anchor="middle" fill="#40f080" font-size="8" font-weight="600">Phase 4:</text>
+  <text x="920" y="330" text-anchor="middle" fill="#40f080" font-size="8" font-weight="600">$KREDS option</text>
+
+  <!-- Privacy architecture box -->
+  <rect x="40" y="390" width="920" height="100" rx="8" fill="#ffffff" fill-opacity="0.03" stroke="#ffffff" stroke-width="0.5" opacity="0.2"/>
+  <text x="500" y="412" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="700" opacity="0.8">FOUR-WAY SEPARATION OF KNOWLEDGE</text>
+  <text x="500" y="428" text-anchor="middle" fill="#a0a8b8" font-size="9">Architecture, not policy. No combination of any two parties can reconstruct the complete picture.</text>
+
+  <!-- Four parties -->
+  <rect x="60" y="442" width="200" height="36" rx="4" fill="#c080ff" fill-opacity="0.06" stroke="#c080ff" stroke-width="0.4"/>
+  <text x="160" y="458" text-anchor="middle" fill="#c080ff" font-size="9" font-weight="600">DEVICE</text>
+  <text x="160" y="470" text-anchor="middle" fill="#a0a8b8" font-size="8">Knows: personal context + consent</text>
+
+  <rect x="280" y="442" width="200" height="36" rx="4" fill="#00f0ff" fill-opacity="0.06" stroke="#00f0ff" stroke-width="0.4"/>
+  <text x="380" y="458" text-anchor="middle" fill="#00f0ff" font-size="9" font-weight="600">PLATFORM</text>
+  <text x="380" y="470" text-anchor="middle" fill="#a0a8b8" font-size="8">Knows: aggregate revenue + delivery</text>
+
+  <rect x="500" y="442" width="200" height="36" rx="4" fill="#f0c040" fill-opacity="0.06" stroke="#f0c040" stroke-width="0.4"/>
+  <text x="600" y="458" text-anchor="middle" fill="#f0c040" font-size="9" font-weight="600">AD NETWORK</text>
+  <text x="600" y="470" text-anchor="middle" fill="#a0a8b8" font-size="8">Knows: anon vectors + inventory</text>
+
+  <rect x="720" y="442" width="220" height="36" rx="4" fill="#ff6080" fill-opacity="0.06" stroke="#ff6080" stroke-width="0.4"/>
+  <text x="830" y="458" text-anchor="middle" fill="#ff6080" font-size="9" font-weight="600">ADVERTISER</text>
+  <text x="830" y="470" text-anchor="middle" fill="#a0a8b8" font-size="8">Knows: category performance only</text>
+
+  <!-- Samsung contrast box -->
+  <rect x="120" y="520" width="760" height="80" rx="8" fill="#ff6080" fill-opacity="0.04" stroke="#ff6080" stroke-width="0.5"/>
+  <text x="500" y="542" text-anchor="middle" fill="#ff6080" font-size="11" font-weight="700">ETHICAL INVERSION OF EXTRACTION</text>
+  <text x="260" y="564" text-anchor="middle" fill="#ff6080" font-size="9">❌ EXTRACTION MODEL</text>
+  <text x="260" y="580" text-anchor="middle" fill="#a0a8b8" font-size="8">Covert data harvesting → no consent</text>
+  <text x="260" y="592" text-anchor="middle" fill="#a0a8b8" font-size="8">→ revenue to shareholders</text>
+  <text x="500" y="572" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="700" opacity="0.4">VS</text>
+  <text x="740" y="564" text-anchor="middle" fill="#40f080" font-size="9">✓ A.R.E. MODEL</text>
+  <text x="740" y="580" text-anchor="middle" fill="#a0a8b8" font-size="8">Explicit consent → transparent exchange</text>
+  <text x="740" y="592" text-anchor="middle" fill="#a0a8b8" font-size="8">→ 60% revenue to participant</text>
+
+  <!-- Monetisation stat -->
+  <rect x="250" y="615" width="500" height="36" rx="4" fill="#40f080" fill-opacity="0.06" stroke="#40f080" stroke-width="0.3"/>
+  <text x="500" y="632" text-anchor="middle" fill="#40f080" font-size="10" font-weight="600">A.R.E. MONETISES 100% OF CONSENTING PLAYERS — NOT JUST THE 3.5% WHO PAY</text>
+  <text x="500" y="646" text-anchor="middle" fill="#a0a8b8" font-size="8">Projected Revenue Layer 3 — largest recurring revenue stream at scale</text>
+
+  <text x="500" y="690" text-anchor="middle" fill="#4a4e5c" font-size="9" letter-spacing="1">STRANDS WHITEPAPER v6 — APPENDIX H — FIG. 39</text>
+</svg>
