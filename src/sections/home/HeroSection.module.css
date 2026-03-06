@@ -134,17 +134,49 @@
   animation: typeIn 1s ease 1.5s both;
 }
 
+/* ─── Grid layout ─── */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  max-width: var(--max-content);
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  z-index: var(--z-content);
+}
+
+.particlePane {
+  position: relative;
+  width: 100%;
+  min-height: 400px;
+  aspect-ratio: 1;
+}
+
 /* ─── Responsive ─── */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .particlePane {
+    order: -1;
+    max-height: 350px;
+    aspect-ratio: auto;
+  }
+}
+
 @media (max-width: 768px) {
   .hero {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 100px var(--space-page-x) 60px;
-  position: relative;
-  overflow: hidden;
-}
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px var(--space-page-x) 60px;
+    position: relative;
+    overflow: hidden;
+  }
 
   .headline {
     font-size: 32px;
@@ -159,35 +191,6 @@
   .orbPink {
     width: 250px;
     height: 250px;
-  }
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  align-items: center;
-  max-width: var(--max-content);
-  width: 100%;
-  margin: 0 auto;
-  position: relative;
-  z-index: var(--z-content);
-}
-
-.particlePane {
-  width: 100%;
-  height: 100%;
-  min-height: 400px;
-}
-
-@media (max-width: 1024px) {
-  .grid {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-  .particlePane {
-    order: -1;
-    max-height: 350px;
   }
 }
 
