@@ -57,12 +57,12 @@ export default function WhitepaperPage() {
   let lastPart = '';
 
   return (
-    <div className={`${styles.layout} page-enter`}>
+    <div className={`${styles.pageWrap} page-enter`}>
 
       {/* ─── Sidebar overlay (mobile) ─── */}
       {sidebarOpen && (
         <div
-          className={styles.overlay}
+          className={`${styles.sidebarOverlay} ${styles.sidebarOverlayVisible}`}
           onClick={() => setSidebarOpen(false)}
         />
       )}
@@ -83,20 +83,20 @@ export default function WhitepaperPage() {
           <div className={styles.sidebarMeta}>17 Chapters · ~60,000 words</div>
         </div>
 
-        <nav className={styles.sidebarNav}>
+        <nav>
           {chapters.map((ch) => {
             const showPart = ch.part && ch.part !== lastPart;
             if (showPart) lastPart = ch.part;
             return (
               <div key={ch.id}>
                 {showPart && (
-                  <div className={styles.group}>{ch.part}</div>
+                  <div className={styles.sidebarPart}>{ch.part}</div>
                 )}
                 <button
-                  className={`${styles.item} ${activeId === ch.id ? styles.itemActive : ''}`}
+                  className={`${styles.sidebarLink} ${activeId === ch.id ? styles.sidebarLinkActive : ''}`}
                   onClick={() => scrollToChapter(ch.id)}
                 >
-                  <span className={styles.num}>{ch.id}</span>
+                  <span className={styles.sidebarNum}>{ch.id}</span>
                   {ch.title}
                 </button>
               </div>
@@ -104,8 +104,8 @@ export default function WhitepaperPage() {
           })}
         </nav>
 
-        <div className={styles.progressWrap}>
-          <div className={styles.progressLabel}>READING PROGRESS</div>
+        <div className={styles.sidebarProgress}>
+          <div className={styles.sidebarProgressLabel}>READING PROGRESS</div>
           <div className={styles.progressTrack}>
             <div
               className={styles.progressFill}
@@ -116,11 +116,11 @@ export default function WhitepaperPage() {
       </aside>
 
       {/* ─── Main content ─── */}
-      <div className={styles.content} ref={contentRef}>
+      <div className={styles.mainContent} ref={contentRef}>
 
         {/* Cover */}
         <div className={styles.cover}>
-          <span className={styles.badge}>// TECHNICAL WHITEPAPER v6.0</span>
+          <span className={styles.coverBadge}>// TECHNICAL WHITEPAPER v6.0</span>
           <h1 className={styles.coverTitle}>
             STRANDS<br />
             <span className={styles.coverAccent}>The Ecosystem</span>
@@ -131,10 +131,10 @@ export default function WhitepaperPage() {
             STRANDS game, technology stack, and economic architecture.
           </p>
           <div className={styles.coverMeta}>
-            <span><span className={styles.dot}>◈</span> PT Meta Fin Tek</span>
-            <span><span className={styles.dot}>◈</span> Metafintek.xyz</span>
-            <span><span className={styles.dot}>◈</span> March 2026</span>
-            <span><span className={styles.dot}>◈</span> ~60,000 words</span>
+            <span className={styles.coverMetaItem}><span className={styles.dot}>◈</span> PT Meta Fin Tek</span>
+            <span className={styles.coverMetaItem}><span className={styles.dot}>◈</span> Metafintek.xyz</span>
+            <span className={styles.coverMetaItem}><span className={styles.dot}>◈</span> March 2026</span>
+            <span className={styles.coverMetaItem}><span className={styles.dot}>◈</span> ~60,000 words</span>
           </div>
         </div>
 
@@ -143,10 +143,10 @@ export default function WhitepaperPage() {
           <section
             key={ch.id}
             id={`ch-${ch.id}`}
-            className={styles.chapter}
+            className={styles.chapterSection}
           >
             <div
-              className={styles.chapterBody}
+              className={styles.chapterContent}
               dangerouslySetInnerHTML={{ __html: ch.html }}
             />
           </section>
@@ -163,7 +163,7 @@ export default function WhitepaperPage() {
       {/* Back to top */}
       {showTop && (
         <button
-          className={styles.backToTop}
+          className={`${styles.backToTop} ${styles.backToTopVisible}`}
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           aria-label="Back to top"
         >
