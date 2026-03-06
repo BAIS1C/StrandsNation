@@ -1,17 +1,17 @@
-/* ══════════════════════════════════════════════════
-   STRANDS WHITEPAPER — page.module.css
+/* ==================================================
+   STRANDS WHITEPAPER - page.module.css
    Route: /whitepaper
    Matches StrandsNation.xyz design system (tokens.css)
-   ══════════════════════════════════════════════════ */
+   ================================================== */
 
-/* ── LAYOUT ─────────────────────────────────────── */
+/* -- LAYOUT --------------------------------------- */
 .pageWrap {
   display: flex;
   min-height: 100vh;
   padding-top: var(--space-nav-h, 56px);
 }
 
-/* ── SIDEBAR ────────────────────────────────────── */
+/* -- SIDEBAR -------------------------------------- */
 .sidebar {
   position: sticky;
   top: var(--space-nav-h, 56px);
@@ -136,7 +136,7 @@
   transition: width 0.3s ease;
 }
 
-/* ── MOBILE SIDEBAR ─────────────────────────────── */
+/* -- MOBILE SIDEBAR ------------------------------- */
 .sidebarOverlay {
   display: none;
   position: fixed;
@@ -176,16 +176,15 @@
   border-color: var(--c-accent, #00C2FF);
 }
 
-/* ── MAIN CONTENT ───────────────────────────────── */
-..mainContent {
+/* -- MAIN CONTENT --------------------------------- */
+.mainContent {
   flex: 1;
   min-width: 0;
   max-width: 860px;
   padding: 40px 56px 100px;
 }
 
-
-/* ── COVER / HERO ───────────────────────────────── */
+/* -- COVER / HERO --------------------------------- */
 .cover {
   padding: 60px 0 40px;
   border-bottom: 1px solid var(--c-border, rgba(255,255,255,0.06));
@@ -252,7 +251,7 @@
   color: var(--c-accent, #00C2FF);
 }
 
-/* ── CHAPTER SECTIONS ───────────────────────────── */
+/* -- CHAPTER SECTIONS ----------------------------- */
 .chapterSection {
   padding-bottom: 40px;
   margin-bottom: 40px;
@@ -263,7 +262,7 @@
   border-bottom: none;
 }
 
-/* ── CHAPTER CONTENT TYPOGRAPHY ─────────────────── */
+/* -- CHAPTER CONTENT TYPOGRAPHY ------------------- */
 .chapterContent h1 {
   font-family: var(--font-display, 'Orbitron', monospace);
   font-size: 24px;
@@ -452,7 +451,7 @@
   margin: 32px 0;
 }
 
-/* ── DIAGRAMS & FIGURES ─────────────────────────── */
+/* -- DIAGRAMS & FIGURES --------------------------- */
 .chapterContent figure {
   margin: 32px 0;
   padding: 24px;
@@ -478,7 +477,7 @@
   text-transform: uppercase;
 }
 
-/* ── BACK TO TOP ────────────────────────────────── */
+/* -- BACK TO TOP ---------------------------------- */
 .backToTop {
   position: fixed;
   bottom: 20px;
@@ -516,7 +515,7 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* ── FOOTER ─────────────────────────────────────── */
+/* -- FOOTER --------------------------------------- */
 .footer {
   margin-top: 60px;
   padding: 40px 0;
@@ -532,30 +531,9 @@
   letter-spacing: 1px;
 }
 
-.footerLinks {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 16px;
-}
-
-.footerLinks a {
-  font-family: var(--font-display, 'Orbitron', monospace);
-  font-size: 11px;
-  font-weight: 500;
-  color: var(--c-sub, #999);
-  text-decoration: none;
-  letter-spacing: 1px;
-  transition: color 0.2s ease;
-}
-
-.footerLinks a:hover {
-  color: var(--c-accent, #00C2FF);
-}
-
-/* ══════════════════════════════════════════════════
-   RESPONSIVE — TABLET (<900px)
-   ══════════════════════════════════════════════════ */
+/* ==================================================
+   RESPONSIVE - TABLET (<900px)
+   ================================================== */
 @media (max-width: 900px) {
   .sidebar {
     position: fixed;
@@ -585,9 +563,9 @@
   }
 }
 
-/* ══════════════════════════════════════════════════
-   RESPONSIVE — MOBILE (<768px)
-   ══════════════════════════════════════════════════ */
+/* ==================================================
+   RESPONSIVE - MOBILE (<768px)
+   ================================================== */
 @media (max-width: 768px) {
   .mainContent {
     padding: 20px 16px 80px;
@@ -646,9 +624,9 @@
   }
 }
 
-/* ══════════════════════════════════════════════════
-   RESPONSIVE — SMALL MOBILE (<480px)
-   ══════════════════════════════════════════════════ */
+/* ==================================================
+   RESPONSIVE - SMALL MOBILE (<480px)
+   ================================================== */
 @media (max-width: 480px) {
   .coverTitle {
     font-size: 20px;
@@ -676,9 +654,9 @@
   }
 }
 
-/* ══════════════════════════════════════════════════
+/* ==================================================
    PRINT STYLES
-   ══════════════════════════════════════════════════ */
+   ================================================== */
 @media print {
   .sidebar,
   .mobileToggle,
