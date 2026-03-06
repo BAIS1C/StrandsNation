@@ -688,11 +688,6 @@
     padding: 20px !important;
   }
 
-  :global(body) {
-    background: #fff;
-    color: #000;
-  }
-
   .chapterContent p,
   .chapterContent li {
     color: #333;

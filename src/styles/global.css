@@ -141,3 +141,11 @@ button {
 .stagger > *:nth-child(6) { animation-delay: 0.4s; }
 .stagger > *:nth-child(7) { animation-delay: 0.48s; }
 .stagger > *:nth-child(8) { animation-delay: 0.56s; }
+
+/* ── PRINT ─────────────────────────────────────── */
+@media print {
+  body {
+    background: #fff;
+    color: #000;
+  }
+}
