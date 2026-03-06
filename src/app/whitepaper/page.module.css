@@ -67,6 +67,8 @@
   display: flex;
   align-items: baseline;
   gap: 10px;
+  width: 100%;
+  text-align: left;
   padding: 9px 20px;
   font-family: var(--font-body, 'Rajdhani', sans-serif);
   font-size: 12px;
@@ -175,13 +177,13 @@
 }
 
 /* ── MAIN CONTENT ───────────────────────────────── */
-.mainContent {
+..mainContent {
   flex: 1;
   min-width: 0;
   max-width: 860px;
-  margin: 0 auto;
   padding: 40px 56px 100px;
 }
+
 
 /* ── COVER / HERO ───────────────────────────────── */
 .cover {
