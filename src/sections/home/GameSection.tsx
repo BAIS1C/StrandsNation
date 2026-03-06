@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import SectionWrapper from '@/sections/shared/SectionWrapper';
 import SectionLabel from '@/components/SectionLabel/SectionLabel';
 import Card from '@/components/Card/Card';
@@ -32,11 +32,19 @@ const conceptArt = [
 
 export default function GameSection() {
   const trackRef = useRef<HTMLDivElement>(null);
+  const [preview, setPreview] = useState<{ src: string; label: string; x: number; y: number } | null>(null);
 
   const scroll = (dir: number) => {
     if (!trackRef.current) return;
     trackRef.current.scrollBy({ left: dir * 300, behavior: 'smooth' });
   };
+
+  const handleMouseEnter = (art: { src: string; label: string }, e: React.MouseEvent) => {
+    const rect = (e.currentTarget as HTMLElement).getBoundingClientRect();
+    setPreview({ src: art.src, label: art.label, x: rect.left + rect.width / 2, y: rect.top });
+  };
+
+  const handleMouseLeave = () => setPreview(null);
 
   return (
     <SectionWrapper bordered>
@@ -103,7 +111,12 @@ export default function GameSection() {
         <button className={styles.sliderBtn} data-dir="left" onClick={() => scroll(-1)} aria-label="Scroll left">‹</button>
         <div className={styles.conceptTrack} ref={trackRef}>
           {conceptArt.map((art) => (
-            <div key={art.label} className={styles.conceptCard}>
+            <div
+              key={art.label}
+              className={styles.conceptCard}
+              onMouseEnter={(e) => handleMouseEnter(art, e)}
+              onMouseLeave={handleMouseLeave}
+            >
               <img src={art.src} alt={art.label} className={styles.conceptImg} loading="lazy" />
               <span className={styles.conceptLabel}>{art.label}</span>
             </div>
@@ -111,6 +124,17 @@ export default function GameSection() {
         </div>
         <button className={styles.sliderBtn} data-dir="right" onClick={() => scroll(1)} aria-label="Scroll right">›</button>
       </div>
+
+      {/* Hover preview */}
+      {preview && (
+        <div
+          className={styles.previewFloat}
+          style={{ left: preview.x, top: preview.y }}
+        >
+          <img src={preview.src} alt={preview.label} className={styles.previewImg} />
+          <span className={styles.previewLabel}>{preview.label}</span>
+        </div>
+      )}
 
       {/* 5. Three feature cards */}
       <div className={styles.gridThree}>
