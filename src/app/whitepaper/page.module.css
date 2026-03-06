@@ -688,7 +688,7 @@
     padding: 20px !important;
   }
 
-  body {
+  :global(body) {
     background: #fff;
     color: #000;
   }
