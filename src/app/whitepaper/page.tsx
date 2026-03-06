@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef, useCallback } from 'react';
-import { chapters } from '@/data/whitepaper-chapters';
+import { whitepaperChapters as chapters } from '@/data/whitepaper-chapters';
 import styles from './page.module.css';
 
 /* ═══════════════════════════════════════════════════
