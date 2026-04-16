@@ -177,7 +177,7 @@ export default function S3ComingSoon() {
               </div>
               <p className={styles.productCopy}>
                 A full AI music video workspace. Kanban-style scene and character
-                management, multi-LLM story direction, ComfyUI-integrated image and
+                management, multi-LLM story direction, Integrated AI image and
                 video generation, stem-synced edits, agentic assembly. Upscale any
                 S<sup>3</sup> video to 4K. Unlimited renders.
               </p>
