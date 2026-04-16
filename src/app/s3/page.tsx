@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import styles from './page.module.css';
 
-const TARGET = new Date('2027-03-01T00:00:00+08:00').getTime();
+const TARGET = new Date('2026-04-24T00:00:00+08:00').getTime(); // 7 days from 17 Apr 2026
 
 function getTimeLeft() {
   const now = Date.now();
@@ -183,23 +183,6 @@ export default function S3ComingSoon() {
               </p>
             </div>
 
-            {/* ── B2B BUNDLE ── */}
-            <div className={`${styles.product} ${styles.productPro}`}>
-              <div className={styles.proBadge}>BEST VALUE</div>
-              <div className={styles.productHead}>
-                <span className={styles.productId}>ALL-IN-ONE</span>
-                <span className={styles.productName}>S<sup>3</sup> STUDIO PRO</span>
-                <span className={styles.productPrice}>$25<span className={styles.priceUnit}>/mo</span></span>
-              </div>
-              <p className={styles.productCopy}>
-                Every S<sup>3</sup> product. Every feature. One subscription.
-                GENER8, GENER8 PRO, VID PRO, and DAW PRO (when it ships) all
-                included. Built for studios, labels, content teams, and serious
-                creators who need the complete toolkit. No add-ons. No upsells.
-                Everything, unlimited, for a flat $25.
-              </p>
-            </div>
-
             <div className={`${styles.product} ${styles.productSoon}`}>
               <div className={styles.productHead}>
                 <span className={styles.productId}>COMING SOON</span>
@@ -208,7 +191,24 @@ export default function S3ComingSoon() {
               </div>
               <p className={styles.productCopy}>
                 A generative DAW built for producers, not prompt-jockeys. Shipping when
-                it&apos;s ready, not before. Included in Studio Pro from day one.
+                it&apos;s ready, not before.
+              </p>
+            </div>
+
+            {/* ── B2B BUNDLE ── */}
+            <div className={`${styles.product} ${styles.productSoon} ${styles.productPro}`}>
+              <div className={styles.proBadge}>COMING SOON</div>
+              <div className={styles.productHead}>
+                <span className={styles.productId}>ALL-IN-ONE</span>
+                <span className={styles.productName}>S<sup>3</sup> STUDIO PRO</span>
+                <span className={styles.productPrice}>$20<span className={styles.priceUnit}>/mo</span></span>
+              </div>
+              <p className={styles.productCopy}>
+                Every S<sup>3</sup> product. Every feature. One subscription.
+                GENER8, GENER8 PRO, VID PRO, and DAW PRO all included.
+                Built for studios, labels, content teams, and serious creators
+                who need the complete toolkit. No add-ons. No upsells.
+                Everything, unlimited, for a flat $20.
               </p>
             </div>
           </div>
@@ -282,7 +282,7 @@ export default function S3ComingSoon() {
           <p className={styles.statusLine}>
             <span className={styles.label}>PRICING</span>
             <span className={styles.dot}> ............. </span>
-            <span className={styles.val}>$5 / $8 / $10 / $25 PER MONTH</span>
+            <span className={styles.val}>$5 / $8 / $10 / $20 PER MONTH</span>
           </p>
           <p className={styles.statusLine}>
             <span className={styles.label}>LICENCE</span>
