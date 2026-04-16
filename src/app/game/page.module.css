@@ -1,403 +1,318 @@
-/* ═══════════════════════════════════════════
-   GAME SYNC — CSS Module
-   Uses site design tokens from tokens.css
-   ═══════════════════════════════════════════ */
+/* ==================================================
+   GAME — Coming Soon (CRT Terminal + LED Countdown)
+   Route: /game
+   ================================================== */
 
-/* ═══ BOOT ═══ */
-.bootScreen {
-  position: fixed; inset: 0;
-  background: var(--c-bg);
-  display: flex; flex-direction: column;
-  align-items: center; justify-content: center;
-  z-index: 9999;
-  padding-top: var(--space-nav-h);
-}
-.bootText {
-  font: 400 13px var(--font-display);
-  color: var(--c-dim);
-  text-align: left; line-height: 1.8;
-  max-width: 600px; padding: 20px;
-}
-.bootLine {
-  opacity: 0;
-  animation: bootLineIn 0.3s ease forwards;
-}
-@keyframes bootLineIn {
-  from { opacity: 0; transform: translateX(-5px); }
-  to { opacity: 1; transform: translateX(0); }
-}
-.cursor {
-  display: inline-block;
-  width: 8px; height: 16px;
-  background: var(--c-accent);
-  animation: blink 0.6s infinite;
-  margin-left: 4px; vertical-align: middle;
-}
-@keyframes blink { 0%,50%{opacity:1} 51%,100%{opacity:0} }
-
-/* ═══ DESKTOP ═══ */
-.desktop {
-  width: 100vw;
-  height: calc(100vh - var(--space-nav-h));
-  margin-top: var(--space-nav-h);
-  display: flex; flex-direction: column;
-  background: var(--c-bg);
+.screen {
   position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #050508;
   overflow: hidden;
 }
 
-.workspace {
-  flex: 1; position: relative; overflow: hidden;
-}
-.workspace::before {
-  content: ''; position: absolute; inset: 0;
-  background-image:
-    radial-gradient(circle at 50% 50%, rgba(0,194,255,0.02) 0%, transparent 70%),
-    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-  background-size: 100% 100%, 40px 40px, 40px 40px;
-  pointer-events: none;
-}
-
-/* ═══ ICONS ═══ */
-.icons {
-  position: absolute; top: 24px; left: 24px;
-  display: flex; flex-direction: column; gap: 16px;
-  z-index: 2;
-}
-.icon {
-  display: flex; flex-direction: column;
-  align-items: center; gap: 6px;
-  cursor: pointer; width: 72px; padding: 8px;
-  border-radius: 8px; transition: background 0.2s;
-  background: none; border: none;
-}
-.icon:hover { background: rgba(255,255,255,0.03); }
-.iconGlyph {
-  width: 44px; height: 44px;
-  border: 1px solid var(--c-border);
-  border-radius: 10px;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 20px; background: var(--c-surface);
-  transition: all 0.2s; position: relative;
-}
-.icon:hover .iconGlyph {
-  border-color: var(--c-accent);
-  box-shadow: 0 0 16px rgba(0,194,255,0.2);
-}
-.iconLabel {
-  font: 500 10px var(--font-display);
-  color: var(--c-sub); text-align: center;
-  letter-spacing: 0.5px;
-}
-.iconNotify .iconGlyph::after {
-  content: ''; position: absolute;
-  top: -3px; right: -3px;
-  width: 10px; height: 10px;
-  background: var(--c-pink);
-  border-radius: 50%;
-  animation: pulseGlow 1.5s infinite;
-}
-
-/* ═══ WINDOWS ═══ */
-.window {
+/* ─── Scanlines ─── */
+.scanlines {
   position: absolute;
-  background: rgba(13,14,17,0.98);
-  border: 1px solid var(--c-border);
-  border-radius: 12px; overflow: hidden;
-  display: flex; flex-direction: column;
-  box-shadow: 0 8px 40px rgba(0,0,0,0.5);
-  animation: windowOpen 0.3s var(--ease-out);
-  z-index: 10;
-}
-.window[data-window="chat"] { top: 20px; left: 100px; width: min(540px, calc(100vw - 30px)); height: min(480px, calc(100vh - var(--space-nav-h) - 80px)); }
-.window[data-window="doc"] { top: 60px; right: 24px; width: min(400px, calc(100vw - 30px)); height: min(340px, calc(100vh - var(--space-nav-h) - 140px)); }
-.window[data-window="puzzle"] { top: 20px; left: 80px; width: min(600px, calc(100vw - 20px)); height: min(420px, calc(100vh - var(--space-nav-h) - 80px)); z-index: 20; }
-.window[data-window="pattern"] { top: 20px; left: 80px; width: min(580px, calc(100vw - 20px)); height: min(480px, calc(100vh - var(--space-nav-h) - 80px)); z-index: 20; }
-
-@keyframes windowOpen {
-  from { opacity: 0; transform: scale(0.95) translateY(10px); }
-  to { opacity: 1; transform: scale(1) translateY(0); }
-}
-
-.windowHeader {
-  height: 36px; background: rgba(26,27,31,0.95);
-  border-bottom: 1px solid var(--c-border);
-  display: flex; align-items: center;
-  padding: 0 12px; gap: 8px; flex-shrink: 0;
-}
-.windowDots { display: flex; gap: 5px; }
-.dotClose, .dotMin, .dotMax {
-  width: 10px; height: 10px; border-radius: 50%; cursor: pointer; display: block;
-}
-.dotClose { background: var(--c-red); }
-.dotMin { background: var(--c-yellow); }
-.dotMax { background: var(--c-green); }
-.windowTitle {
-  font: 400 11px var(--font-display);
-  color: var(--c-dim); flex: 1; text-align: center;
-  letter-spacing: 0.5px;
-}
-
-/* ═══ CHAT ═══ */
-.chatBar {
-  padding: 8px 16px;
-  border-bottom: 1px solid var(--c-border);
-  font: 400 11px var(--font-display);
-  color: var(--c-dim);
-  display: flex; align-items: center; gap: 8px;
-  background: rgba(0,194,255,0.02);
-  letter-spacing: 0.5px;
-}
-.channel { color: var(--c-accent); }
-.members { margin-left: auto; }
-
-.chatMessages {
-  flex: 1; overflow-y: auto; padding: 16px;
-  display: flex; flex-direction: column; gap: 12px;
-}
-
-.chatMsg {
-  display: flex; gap: 10px;
-  animation: msgIn 0.4s ease both;
-}
-.msgFading { opacity: 0.15; transition: opacity 0.5s; }
-
-@keyframes msgIn {
-  from { opacity: 0; transform: translateY(8px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.avatar {
-  width: 30px; height: 30px; border-radius: 8px;
-  background: var(--c-surface);
-  border: 1px solid var(--c-border);
-  display: flex; align-items: center; justify-content: center;
-  font: 500 10px var(--font-display);
-  color: var(--c-dim); flex-shrink: 0;
-}
-.msgContent { flex: 1; }
-.msgAuthor {
-  font: 600 12px var(--font-body);
-  margin-bottom: 2px;
-}
-.msgText {
-  font: 400 13px var(--font-body);
-  line-height: 1.6; color: var(--c-sub);
-}
-.msgText em { color: var(--c-text); font-style: italic; }
-
-/* Choices */
-.choices {
-  display: flex; gap: 10px; margin-top: 14px; flex-wrap: wrap;
-}
-.choiceBtn {
-  padding: 11px 16px;
-  border: 1px solid var(--c-border);
-  border-radius: 8px;
-  background: var(--c-surface);
-  color: var(--c-text);
-  font: 500 12px var(--font-display);
-  letter-spacing: 0.3px;
-  cursor: pointer; transition: all 0.2s;
-  flex: 1; min-width: 140px; text-align: center;
-  line-height: 1.4;
-}
-.choiceBtn:hover {
-  border-color: var(--c-accent);
-  box-shadow: 0 0 16px rgba(0,194,255,0.2);
-  color: var(--c-accent);
-}
-.choiceBtnAlt:hover {
-  border-color: var(--c-pink);
-  box-shadow: 0 0 16px rgba(240,0,184,0.2);
-  color: var(--c-pink);
-}
-.choiceChosen { opacity: 0.25; pointer-events: none; }
-.choiceSelected {
-  border-color: var(--c-accent);
-  background: rgba(0,194,255,0.06);
-  color: var(--c-accent);
-}
-
-/* ═══ DOC VIEWER ═══ */
-.docBody {
-  font: 400 11px var(--font-display);
-  line-height: 1.8; color: var(--c-sub);
-  padding: 16px; overflow-y: auto; flex: 1;
-  letter-spacing: 0.3px;
-}
-.docHeader {
-  color: var(--c-dim);
-  border-bottom: 1px solid var(--c-border);
-  padding-bottom: 8px; margin-bottom: 12px;
-}
-.emphasis { color: var(--c-yellow); }
-.errorText { color: var(--c-red); }
-.corrupted { color: var(--c-red); text-decoration: line-through; opacity: 0.5; }
-.redacted {
-  background: var(--c-pink); color: var(--c-pink);
-  padding: 0 6px; border-radius: 2px;
-  cursor: pointer; transition: 0.3s;
-  font-size: 10px;
-}
-.redacted:hover { color: var(--c-bg); }
-
-/* ═══ CODE PUZZLE ═══ */
-.codeEditor {
-  flex: 1; overflow-y: auto; padding: 20px;
-  font: 400 12px var(--font-display);
-  line-height: 1.8; background: rgba(5,5,6,0.8);
-  letter-spacing: 0.3px;
-}
-.codeLine { display: flex; align-items: flex-start; gap: 10px; min-height: 28px; }
-.codeComment { color: var(--c-dim); font-style: italic; }
-.codePrompt { color: var(--c-accent); font-weight: 700; width: 16px; flex-shrink: 0; }
-.scrambledText {
-  color: var(--c-green); font-size: 16px;
-  letter-spacing: 3px; user-select: all;
-}
-.codeInput {
-  display: inline-block; min-width: 260px;
-  padding: 4px 10px;
-  border: 1px solid var(--c-border); border-radius: 4px;
-  background: rgba(0,194,255,0.03);
-  color: var(--c-accent);
-  font: 400 12px var(--font-display);
-  outline: none; caret-color: var(--c-accent);
-  transition: all 0.2s; letter-spacing: 0.5px;
-}
-.codeInput:focus { border-color: var(--c-accent); box-shadow: 0 0 12px rgba(0,194,255,0.2); }
-.codeInputCorrect { border-color: var(--c-green) !important; color: var(--c-green) !important; background: rgba(34,197,94,0.06); }
-.codeInputWrong { border-color: var(--c-red) !important; color: var(--c-red) !important; animation: shake 0.3s; }
-@keyframes shake { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-4px)} 75%{transform:translateX(4px)} }
-
-.codeProgress {
-  padding: 10px 16px;
-  border-top: 1px solid var(--c-border);
-  display: flex; align-items: center; gap: 12px;
-  font: 400 11px var(--font-display);
-  color: var(--c-dim); letter-spacing: 0.5px;
-}
-.progressBar { flex: 1; height: 3px; background: rgba(255,255,255,0.06); border-radius: 2px; overflow: hidden; }
-.progressFill { height: 100%; background: var(--c-accent); border-radius: 2px; transition: width 0.4s ease; }
-
-/* ═══ PATTERN MATCH ═══ */
-.patternGame {
-  flex: 1; display: flex; flex-direction: column;
-  align-items: center; justify-content: center;
-  gap: 20px; padding: 24px;
-}
-.patternInfo {
-  font: 400 12px var(--font-display);
-  color: var(--c-dim); text-align: center;
-  letter-spacing: 0.5px; line-height: 1.6;
-}
-.patternScore { color: var(--c-accent); font-size: 14px; }
-.patternGrid {
-  display: grid;
-  grid-template-columns: repeat(4, 50px);
-  gap: 6px;
-}
-.patternCell {
-  width: 50px; height: 50px; border-radius: 8px;
-  border: 1px solid var(--c-border);
-  background: var(--c-surface);
-  cursor: pointer; transition: all 0.15s;
-  display: flex; align-items: center; justify-content: center;
-  font: 400 18px var(--font-body);
-  color: transparent; user-select: none;
-}
-.patternCell:hover { border-color: var(--c-accent); }
-.patternRevealed {
-  color: var(--c-text) !important;
-  border-color: var(--c-accent);
-  background: rgba(0,194,255,0.06);
-}
-.patternMatched {
-  color: var(--c-green) !important;
-  border-color: var(--c-green);
-  background: rgba(34,197,94,0.06);
+  inset: 0;
   pointer-events: none;
+  z-index: 2;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0px,
+    transparent 2px,
+    rgba(0, 0, 0, 0.15) 2px,
+    rgba(0, 0, 0, 0.15) 4px
+  );
 }
 
-/* ═══ TASKBAR ═══ */
-.taskbar {
-  height: 40px;
-  background: rgba(10,11,13,0.95);
-  border-top: 1px solid var(--c-border);
-  display: flex; align-items: center;
-  padding: 0 16px; gap: 4px;
-  backdrop-filter: blur(10px); flex-shrink: 0;
-}
-.taskbarItem {
-  height: 30px; padding: 0 12px; border-radius: 6px;
-  display: flex; align-items: center; gap: 6px;
-  font: 500 11px var(--font-display);
-  color: var(--c-dim); cursor: pointer;
-  transition: all 0.2s;
-  border: 1px solid transparent;
-  background: none; letter-spacing: 0.5px;
-}
-.taskbarItem:hover { background: var(--c-surface); color: var(--c-sub); }
-.taskbarActive { background: var(--c-surface); border-color: var(--c-border); color: var(--c-accent); }
-.taskbarClock {
-  margin-left: auto;
-  font: 400 11px var(--font-display);
-  color: var(--c-dim); letter-spacing: 0.5px;
+/* ─── CRT Vignette ─── */
+.vignette {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 3;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 50%,
+    rgba(0, 0, 0, 0.65) 100%
+  );
 }
 
-/* ═══ GLITCH / TOAST ═══ */
-.glitchOverlay {
-  position: fixed; inset: 0;
-  pointer-events: none; z-index: 9998;
-  animation: glitchAnim 0.12s linear 3;
-}
-@keyframes glitchAnim {
-  0%{background:transparent}
-  25%{background:rgba(240,0,184,0.04);transform:translateX(-2px)}
-  50%{background:rgba(0,194,255,0.03);transform:translateX(1px) skewX(-0.3deg)}
-  75%{background:transparent;transform:none}
-  100%{background:rgba(240,0,184,0.02);transform:translateX(1px)}
-}
-
-.toast {
-  position: fixed; top: calc(var(--space-nav-h) + 12px); right: 20px;
-  background: rgba(26,27,31,0.95);
-  border: 1px solid var(--c-pink);
-  border-radius: 10px; padding: 14px 18px;
-  font: 400 12px var(--font-display);
-  color: var(--c-text);
-  box-shadow: 0 0 20px rgba(240,0,184,0.2), 0 8px 30px rgba(0,0,0,0.4);
-  z-index: 1000;
-  animation: toastIn 0.4s ease;
-  max-width: 300px; letter-spacing: 0.3px;
-}
-@keyframes toastIn {
-  from { opacity: 0; transform: translateX(20px); }
-  to { opacity: 1; transform: translateX(0); }
-}
-.toastLabel {
-  font-size: 10px; color: var(--c-pink);
-  text-transform: uppercase; letter-spacing: 2px;
-  margin-bottom: 4px;
+/* ─── Terminal Content (CENTRED) ─── */
+.terminal {
+  position: relative;
+  z-index: 4;
+  padding: 48px;
+  max-width: 760px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
-/* ═══ RESPONSIVE ═══ */
-@media (max-width: 768px) {
-  .window[data-window="chat"],
-  .window[data-window="puzzle"],
-  .window[data-window="pattern"] {
-    top: 4px; left: 4px;
-    width: calc(100vw - 8px);
-    height: calc(100vh - var(--space-nav-h) - 60px);
+.systemLine {
+  font: 400 13px/1.6 var(--font-display, 'Orbitron', monospace);
+  color: var(--c-accent, #00C2FF);
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+  opacity: 0.7;
+}
+
+.prompt {
+  color: var(--c-accent, #00C2FF);
+  margin-right: 4px;
+}
+
+/* ─── Title ─── */
+.title {
+  font: 700 clamp(42px, 8vw, 72px)/1 var(--font-display, 'Orbitron', monospace);
+  color: var(--c-accent, #00C2FF);
+  letter-spacing: 8px;
+  margin: 0 0 16px;
+  text-shadow:
+    0 0 20px rgba(0, 194, 255, 0.4),
+    0 0 60px rgba(0, 194, 255, 0.15);
+  animation: flicker 4s infinite;
+}
+
+.quarter {
+  font: 600 clamp(20px, 4vw, 32px)/1.2 var(--font-display, 'Orbitron', monospace);
+  color: var(--c-text, #E8E8E8);
+  letter-spacing: 6px;
+  margin: 0 0 44px;
+  opacity: 0.85;
+}
+
+/* ═══════════════════════════════════════════════════
+   LED COUNTDOWN PANEL
+   Physical bomb-timer / industrial LED aesthetic
+   ═══════════════════════════════════════════════════ */
+
+.countdownFrame {
+  position: relative;
+  margin-bottom: 44px;
+  width: 100%;
+  max-width: 620px;
+
+  /* Outer housing */
+  background: #1A1A1A;
+  border: 2px solid #333;
+  border-radius: 8px;
+  padding: 16px 20px 20px;
+
+  /* Industrial shadow — feels like a physical object */
+  box-shadow:
+    0 2px 0 #444,
+    0 4px 8px rgba(0, 0, 0, 0.6),
+    0 12px 32px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.countdownHeader {
+  font: 600 10px/1 var(--font-body, 'Rajdhani', monospace);
+  letter-spacing: 3px;
+  color: #FF1A1A;
+  text-align: center;
+  margin-bottom: 14px;
+  opacity: 0.7;
+}
+
+.countdownInner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0;
+
+  /* Recessed display area */
+  background: #0A0404;
+  border: 1px solid #222;
+  border-radius: 4px;
+  padding: 16px 20px 14px;
+  box-shadow:
+    inset 0 2px 6px rgba(0, 0, 0, 0.8),
+    inset 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.countdownUnit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 8px;
+}
+
+.countdownLabel {
+  font: 600 8px/1 var(--font-body, 'Rajdhani', monospace);
+  letter-spacing: 2.5px;
+  color: #FF1A1A;
+  opacity: 0.35;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+/* The digit panel holds the ghost + real digits stacked */
+.digitPanel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Ghost "8"s — simulates unlit LED segments */
+.digitGhost {
+  font-family: var(--font-display, 'Orbitron', monospace);
+  font-weight: 700;
+  font-size: clamp(36px, 6vw, 52px);
+  line-height: 1;
+  letter-spacing: 4px;
+  color: #1A0808;
+  user-select: none;
+  -webkit-font-smoothing: none;
+}
+
+/* Active digits — bright red LED */
+.countdownDigit {
+  position: absolute;
+  font-family: var(--font-display, 'Orbitron', monospace);
+  font-weight: 700;
+  font-size: clamp(36px, 6vw, 52px);
+  line-height: 1;
+  letter-spacing: 4px;
+  color: #FF1A1A;
+  text-shadow:
+    0 0 6px rgba(255, 26, 26, 0.8),
+    0 0 18px rgba(255, 26, 26, 0.4),
+    0 0 40px rgba(255, 26, 26, 0.15);
+  -webkit-font-smoothing: none;
+}
+
+/* Colon separators */
+.countdownSep {
+  font-family: var(--font-display, 'Orbitron', monospace);
+  font-weight: 700;
+  font-size: clamp(28px, 5vw, 42px);
+  line-height: 1;
+  color: #FF1A1A;
+  text-shadow: 0 0 6px rgba(255, 26, 26, 0.8);
+  padding: 0 2px;
+  animation: sepBlink 1s step-end infinite;
+  margin-top: 18px; /* align with digits, below labels */
+}
+
+@keyframes sepBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.15; }
+}
+
+/* ─── Screw Holes (industrial detail) ─── */
+.screw {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #555, #222);
+  border: 1px solid #111;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.screwTL { top: 8px; left: 8px; }
+.screwTR { top: 8px; right: 8px; }
+.screwBL { bottom: 8px; left: 8px; }
+.screwBR { bottom: 8px; right: 8px; }
+
+/* ─── Status Block ─── */
+.statusBlock {
+  border-top: 1px solid rgba(0, 194, 255, 0.15);
+  padding-top: 24px;
+  margin-bottom: 40px;
+  width: 100%;
+  max-width: 420px;
+}
+
+.statusLine {
+  font: 400 11px/2.2 var(--font-body, 'Rajdhani', monospace);
+  color: var(--c-sub, #999);
+  letter-spacing: 1.5px;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.label {
+  color: var(--c-dim, #555);
+}
+
+.dot {
+  color: rgba(0, 194, 255, 0.15);
+  flex: 1;
+  overflow: hidden;
+}
+
+.val {
+  color: var(--c-text, #E8E8E8);
+}
+
+/* ─── Cursor ─── */
+.cursor {
+  font: 400 13px/1.6 var(--font-display, 'Orbitron', monospace);
+  color: var(--c-accent, #00C2FF);
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+/* ─── CRT Flicker ─── */
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  92% { opacity: 1; }
+  93% { opacity: 0.8; }
+  94% { opacity: 1; }
+  96% { opacity: 0.9; }
+  97% { opacity: 1; }
+}
+
+/* ─── Mobile ─── */
+@media (max-width: 600px) {
+  .terminal {
+    padding: 32px 16px;
   }
-  .window[data-window="doc"] {
-    top: 4px; left: 4px;
-    width: calc(100vw - 8px);
-    height: calc(100vh - var(--space-nav-h) - 60px);
+
+  .title {
+    letter-spacing: 4px;
   }
-  .icons { top: 8px; left: 8px; }
-  .patternGrid { grid-template-columns: repeat(4, 44px); gap: 4px; }
-  .patternCell { width: 44px; height: 44px; font-size: 16px; }
+
+  .quarter {
+    letter-spacing: 3px;
+    margin-bottom: 32px;
+  }
+
+  .countdownFrame {
+    margin-bottom: 32px;
+    padding: 12px 12px 16px;
+  }
+
+  .countdownInner {
+    padding: 12px 8px 10px;
+  }
+
+  .countdownUnit {
+    padding: 0 4px;
+  }
+
+  .countdownSep {
+    padding: 0 1px;
+  }
+
+  .statusBlock {
+    max-width: 100%;
+  }
+
+  .statusLine {
+    font-size: 10px;
+  }
 }

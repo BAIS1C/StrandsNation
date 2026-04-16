@@ -9,27 +9,28 @@ export default function SigopsSection() {
       <SectionLabel
         num="08 // SIGOPS"
         title="Signal Operations"
-        subtitle="Real development tasks disguised as resistance missions. Build the world you play in."
+        subtitle="Real development contributions, diegetically delivered as missions within your personalised game narrative."
       />
       <Card variant="cyan">
         <div className={styles.cardTitleMd} data-variant="cyan">How SIGOPS Works</div>
         <p className={styles.body}>
-          Write dialogue? &ldquo;Lore Weaver&rdquo; op. Fix a bug? &ldquo;Code Scavenger.&rdquo;
-          Design an asset? &ldquo;Asset Architect.&rdquo; Every validated contribution enhances the
-          actual game.
+          SIGOPS are real development tasks woven into the fabric of your game experience. Design
+          environments. Forge equipment. Compose audio. Prototype mechanics. Create new armour hybrids and
+          weapon classes through the Weaver path. Every validated contribution earns reputation, $KREDS
+          allocation weight, and shapes the world for every player.
         </p>
       </Card>
       <div className={styles.gridTwo}>
         <Card variant="cyan">
-          <Mini variant="green" title="Code Scavenger" body="System optimisation, patches, improvements." />
+          <Mini variant="purple" title="Asset Architect" body="Environments, equipment, audio, and visual assets. The building blocks of MetaXity1." />
           <div className={styles.miniSpacer}>
-            <Mini variant="cyan" title="Lore Weaver" body="Dialogue, narrative, historical reconstruction." />
+            <Mini variant="yellow" title="System Designer" body="Mechanics, balance, prototyping. Shaping how the world plays." />
           </div>
         </Card>
         <Card variant="pink">
-          <Mini variant="purple" title="Asset Architect" body="Environment, equipment, audio." />
+          <Mini variant="cyan" title="Weaver Forge" body="New armour hybrids, new weapon classes, new Trait Shard configurations. Creative R&D delivered as gameplay." />
           <div className={styles.miniSpacer}>
-            <Mini variant="yellow" title="System Designer" body="Mechanics, balance, prototyping." />
+            <Mini variant="green" title="Field Tester" body="Live playtesting, balance validation, stress testing in production environments." />
           </div>
         </Card>
       </div>

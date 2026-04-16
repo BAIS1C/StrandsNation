@@ -16,11 +16,31 @@ export default function NetworkPage() {
 
         <Card variant="purple">
           <span className={styles.label} data-variant="purple">COMMUNITY</span>
-          <div className={styles.cardTitleLg} data-variant="purple">SIGOPS</div>
+          <div className={styles.cardTitleLg} data-variant="purple">Join the Resistance</div>
           <p className={styles.body}>
-            The community architects Strands. Validated contributions earn reputation and shape
-            the game&rsquo;s direction. This is what Ready Player YOU actually means.
+            The community architects Strands. Strategy, lore, feedback, early access, and direct
+            input into the world you will play in. This is what Ready Player YOU actually means.
           </p>
+          <a
+            href="https://t.me/+WZTkHqJjUOI3YjQ1"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: 'inline-block',
+              marginTop: '12px',
+              padding: '8px 20px',
+              border: '1px solid var(--c-accent)',
+              color: 'var(--c-accent)',
+              fontFamily: 'var(--font-display)',
+              fontSize: '0.75rem',
+              letterSpacing: '0.08em',
+              textDecoration: 'none',
+              textTransform: 'uppercase' as const,
+              clipPath: 'var(--clip-button-sm)',
+            }}
+          >
+            Join Telegram
+          </a>
         </Card>
 
         <Card variant="pink">
@@ -50,9 +70,8 @@ export default function NetworkPage() {
           <span className={styles.label} data-variant="yellow">BLOCKCHAIN</span>
           <div className={styles.cardTitleLg} data-variant="yellow">Strands Chain</div>
           <p className={styles.body}>
-            We use the power of decentralised ledgers to keep the game running smoothly. You
-            don&rsquo;t need a wallet or keys or anything technical — just your phone. Your
-            in-app wallet keeps your things yours. Ownership without friction. Infrastructure
+            We use the power of decentralised ledgers to keep the game running smoothly. No wallet, no keys, no complexity.
+            Just your phone. Your in-app wallet keeps your things yours. Ownership without friction. Infrastructure
             you never see.
           </p>
         </Card>

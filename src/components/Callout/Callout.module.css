@@ -23,6 +23,17 @@
   line-height: 1.7;
 }
 
+/* ─── Link wrapper ─── */
+.calloutLink {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.calloutLink:hover .callout {
+  filter: brightness(1.15);
+}
+
 /* ─── Variants ─── */
 .callout[data-variant='cyan']   { --callout-color: var(--c-accent); --callout-bg: var(--a-accent-bg); }
 .callout[data-variant='pink']   { --callout-color: var(--c-pink);   --callout-bg: var(--a-pink-bg); }

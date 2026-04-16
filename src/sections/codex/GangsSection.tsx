@@ -21,7 +21,7 @@ export default function GangsSection() {
       <Callout
         variant="red"
         label="ANTI-LONE WOLF"
-        text="Limited personal storage forces reliance on gang facilities. This isn't a design limitation — it's a political mechanic. Where you store your gear says who you trust."
+        text="Limited personal storage forces reliance on gang facilities. Limited inventory isn't a bug; it's a political mechanic. Where you store your gear says who you trust."
       />
     </div>
   );

@@ -9,18 +9,8 @@ export const playlist = [
     "artist": "SpacemanTheDJ"
   },
   {
-    "src": "/audio/soundtrack/Dash Dot.mp3",
-    "title": "Dot dot dot! (National Lumpinis Squeak Mix)",
-    "artist": "SpacemanTheDJ"
-  },
-  {
     "src": "/audio/soundtrack/Hack the Lie.mp3",
     "title": "Hack the Lie (NIN Compoop mix)",
-    "artist": "SpacemanTheDJ"
-  },
-  {
-    "src": "/audio/soundtrack/Nation.mp3",
-    "title": "Dot dot dot! (Looks Eastern Euro I like MIx)",
     "artist": "SpacemanTheDJ"
   },
   {
@@ -56,16 +46,6 @@ export const playlist = [
   {
     "src": "/audio/soundtrack/StrandsnationXYZ (Synthwave Morse Mix).mp3",
     "title": "Yeah! (Ron Hubbard was a Badass Mix)",
-    "artist": "SpacemanTheDJ"
-  },
-  {
-    "src": "/audio/soundtrack/Together (Remix).mp3",
-    "title": "Together (Prog Remix)",
-    "artist": "SpacemanTheDJ"
-  },
-  {
-    "src": "/audio/soundtrack/Wakawakawaka Phonky.mp3",
-    "title": "Wakawakawaka Phonky",
     "artist": "SpacemanTheDJ"
   },
   {

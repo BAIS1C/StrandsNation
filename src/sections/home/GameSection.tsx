@@ -1,6 +1,7 @@
 'use client';
 
-import { useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
 import SectionWrapper from '@/sections/shared/SectionWrapper';
 import SectionLabel from '@/components/SectionLabel/SectionLabel';
 import Card from '@/components/Card/Card';
@@ -8,45 +9,140 @@ import Tag from '@/components/Tag/Tag';
 import Callout from '@/components/Callout/Callout';
 import styles from './GameSection.module.css';
 
-const conceptArt = [
-  { src: '/images/concept/concept-atrium.jpg', label: 'THE ATRIUM' },
-  { src: '/images/concept/concept-atrium-2.jpg', label: 'ATRIUM UPPER' },
-  { src: '/images/concept/concept-hub.jpg', label: 'SIGOPS HUB' },
-  { src: '/images/concept/concept-corridor.jpg', label: 'LOWER CORRIDORS' },
-  { src: '/images/concept/concept-shaft.jpg', label: 'VERTICAL SHAFTS' },
-  { src: '/images/concept/concept-loadingbay.jpg', label: 'LOADING BAY' },
-  { src: '/images/concept/concept-market.jpg', label: 'TRADE DISTRICT' },
-  { src: '/images/concept/concept-scav-market.jpg', label: 'SCAV MARKET' },
-  { src: '/images/concept/concept-bike.jpg', label: 'TRANSIT LEVEL' },
-  { src: '/images/concept/concept-characters.jpg', label: 'BASE-LEVEL MECHANIC' },
-  { src: '/images/concept/concept-character-f.jpg', label: 'AUGMENTED WORKER' },
-  { src: '/images/concept/concept-blank.jpg', label: 'BLANK CHASSIS' },
-  { src: '/images/concept/concept-warrior.jpg', label: 'COMBAT BLANK' },
-  { src: '/images/concept/concept-enforcer.jpg', label: 'SOVCORP ENFORCER' },
-  { src: '/images/concept/concept-police.jpg', label: 'SOVCORP POLICE' },
-  { src: '/images/concept/concept-nomad.jpg', label: 'BADLANDS NOMAD' },
-  { src: '/images/concept/concept-male-refugee.jpg', label: 'DARK FLOURLIT LANDS' },
-  { src: '/images/concept/concept-droid.jpg', label: 'SECURITY DRONE' },
-  { src: '/images/concept/concept-octobot.jpg', label: 'OCTOPUS DRONE' },
+interface ConceptImage {
+  src: string;
+  label: string;
+}
+
+interface CardData {
+  variant: 'cyan' | 'pink' | 'purple' | 'yellow' | 'green';
+  title: string;
+  titleSize: 'lg' | 'sm';
+  body: string;
+  tags?: { label: string; variant?: 'cyan' | 'pink' | 'yellow' }[];
+}
+
+const cardContent: CardData[] = [
+  {
+    variant: 'cyan',
+    title: 'Your World. Your Rules. Your Playstyle.',
+    titleSize: 'lg',
+    body: 'Strands is tailored to you. Constant assessment of your playstyle refines and matches every NPC interaction, every dialogue branch, every Mait, every companion behaviour to you. The narrative is generated around who you are and how you play.',
+    tags: [
+      { label: 'Persistent Memory' },
+      { label: 'Generative Narrative', variant: 'pink' },
+      { label: 'Adaptive NPCs', variant: 'yellow' },
+    ],
+  },
+  {
+    variant: 'pink',
+    title: 'Skin the World\u2122',
+    titleSize: 'lg',
+    body: 'Create your own skins, environments, music, and aesthetic layers using AI powered generation tools. For you, or for others, if you trade them on the in-game exchange via SIGOPS or from your Desktop OS hub. Your vision doesn\u2019t stay in your inventory. It becomes part of MetaXity1.',
+  },
+  {
+    variant: 'purple',
+    title: 'Dual Economy',
+    titleSize: 'sm',
+    body: 'Three primitives: Energy, Process Power, Storage. Priced by two competing systems. SOVComp for compliance. GridScrip for resistance. Your Cover Identity forces you into both.',
+  },
+  {
+    variant: 'yellow',
+    title: 'Pyramid Extraction',
+    titleSize: 'sm',
+    body: 'Ascend MetaXity1\u2019s continental archology. Risk increases with altitude; so do rewards. Corporate security sweeps, faction warfare, elevator lockdowns, and dynamic events.',
+  },
+  {
+    variant: 'green',
+    title: 'Built By Players',
+    titleSize: 'sm',
+    body: 'SIGOPS missions are real development tasks, diegetically delivered as part of your personalised game narrative. Design assets. Create new armour hybrids. Forge new weapon classes through the Weaver path. Earn reputation. The fourth wall dissolves completely.',
+  },
 ];
 
 export default function GameSection() {
   const trackRef = useRef<HTMLDivElement>(null);
+  const videoRef = useRef<HTMLDivElement>(null);
+  const [conceptArt, setConceptArt] = useState<ConceptImage[]>([]);
   const [preview, setPreview] = useState<{ src: string; label: string; x: number; y: number } | null>(null);
+  const [lightbox, setLightbox] = useState<ConceptImage | null>(null);
+  const [videoTilt, setVideoTilt] = useState({ rx: 0, ry: 0 });
+  const [cardLightbox, setCardLightbox] = useState<CardData | null>(null);
+  const [thumbTilt, setThumbTilt] = useState<{ key: string; rx: number; ry: number } | null>(null);
 
+  /* ── Video 3D tilt ── */
+  const handleVideoMove = useCallback((e: React.MouseEvent) => {
+    if (!videoRef.current) return;
+    const rect = videoRef.current.getBoundingClientRect();
+    setVideoTilt({
+      rx: -((e.clientY - rect.top) / rect.height - 0.5) * 6,
+      ry: ((e.clientX - rect.left) / rect.width - 0.5) * 6,
+    });
+  }, []);
+  const handleVideoLeave = useCallback(() => setVideoTilt({ rx: 0, ry: 0 }), []);
+
+  /* ── Concept thumbnail 3D tilt ── */
+  const handleThumbMove = useCallback((key: string, e: React.MouseEvent) => {
+    const rect = (e.currentTarget as HTMLElement).getBoundingClientRect();
+    setThumbTilt({
+      key,
+      rx: -((e.clientY - rect.top) / rect.height - 0.5) * 10,
+      ry: ((e.clientX - rect.left) / rect.width - 0.5) * 10,
+    });
+  }, []);
+  const handleThumbLeave = useCallback(() => setThumbTilt(null), []);
+
+  /* ── Fetch images from API (auto-populates from /public/images/concept/) ── */
+  useEffect(() => {
+    fetch('/api/concept-art')
+      .then((r) => r.json())
+      .then((imgs: ConceptImage[]) => {
+        if (Array.isArray(imgs) && imgs.length > 0) setConceptArt(imgs);
+      })
+      .catch(() => {
+        /* Silently fall back — gallery just stays empty */
+      });
+  }, []);
+
+  /* ── Keyboard: Escape closes lightbox, arrows navigate ── */
+  const navigateLightbox = useCallback(
+    (dir: 1 | -1) => {
+      if (!lightbox || conceptArt.length === 0) return;
+      const idx = conceptArt.findIndex((a) => a.src === lightbox.src);
+      const next = (idx + dir + conceptArt.length) % conceptArt.length;
+      setLightbox(conceptArt[next]);
+    },
+    [lightbox, conceptArt],
+  );
+
+  useEffect(() => {
+    if (!lightbox && !cardLightbox) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') { setLightbox(null); setCardLightbox(null); }
+      if (lightbox && e.key === 'ArrowRight') navigateLightbox(1);
+      if (lightbox && e.key === 'ArrowLeft') navigateLightbox(-1);
+    };
+    window.addEventListener('keydown', onKey);
+    return () => {
+      window.removeEventListener('keydown', onKey);
+    };
+  }, [lightbox, cardLightbox, navigateLightbox]);
+
+  /* ── Scroll track ── */
   const scroll = (dir: number) => {
     if (!trackRef.current) return;
     trackRef.current.scrollBy({ left: dir * 300, behavior: 'smooth' });
   };
 
-  const handleMouseEnter = (art: { src: string; label: string }, e: React.MouseEvent) => {
+  /* ── Hover preview ── */
+  const handleMouseEnter = (art: ConceptImage, e: React.MouseEvent) => {
     const rect = (e.currentTarget as HTMLElement).getBoundingClientRect();
     setPreview({ src: art.src, label: art.label, x: rect.left + rect.width / 2, y: rect.top });
   };
-
   const handleMouseLeave = () => setPreview(null);
 
   return (
+    <>
     <SectionWrapper bordered>
       {/* 1. Section header */}
       <SectionLabel
@@ -57,9 +153,17 @@ export default function GameSection() {
 
       {/* 2. Classified video banner */}
       <div className={styles.classifiedHeader}>
-        <span className={styles.classifiedLabel}>// CLASSIFIED — ORBITAL SURVEILLANCE</span>
+        <span className={styles.classifiedLabel}>// CLASSIFIED: ORBITAL SURVEILLANCE</span>
       </div>
-      <div className={styles.videoBanner}>
+      <div
+        ref={videoRef}
+        className={styles.videoBanner}
+        style={{
+          transform: `perspective(900px) rotateX(${videoTilt.rx}deg) rotateY(${videoTilt.ry}deg)`,
+        }}
+        onMouseMove={handleVideoMove}
+        onMouseLeave={handleVideoLeave}
+      >
         <video
           className={styles.video}
           autoPlay
@@ -71,62 +175,64 @@ export default function GameSection() {
           <source src="/video/metaxity1.mp4" type="video/mp4" />
         </video>
         <div className={styles.videoOverlay}>
-          <span className={styles.videoCaption}>MetaXity1 — Year 555</span>
+          <span className={styles.videoCaption}>MetaXity1: Year 555</span>
         </div>
       </div>
 
       {/* 3. Two main pitch cards */}
       <div className={styles.gridTwoOne}>
-        <Card variant="cyan">
-          <div className={styles.cardTitle} data-variant="cyan">
-            Your World. Your Rules. Your Playstyle.
+        {cardContent.slice(0, 2).map((card, i) => (
+          <div key={i} className={styles.cardClickable} onClick={() => setCardLightbox(card)}>
+            <Card variant={card.variant}>
+              <div className={card.titleSize === 'lg' ? styles.cardTitle : styles.cardTitleSm} data-variant={card.variant}>
+                {card.title}
+              </div>
+              <p className={card.titleSize === 'lg' ? styles.body : styles.bodySm}>{card.body}</p>
+              {card.tags && (
+                <div className={styles.tags}>
+                  {card.tags.map((t) => (
+                    <Tag key={t.label} variant={t.variant}>{t.label}</Tag>
+                  ))}
+                </div>
+              )}
+            </Card>
           </div>
-          <p className={styles.body}>
-            Strands is tailored to you. Personality-driven profiling shapes every NPC interaction, every dialogue
-            branch, every companion behaviour. Your AI Mait evolves based on your decisions. The narrative
-            isn&rsquo;t scripted — it&rsquo;s generated around who you actually are. No two playthroughs can
-            be the same, because no two players think the same way.
-          </p>
-          <div className={styles.tags}>
-            <Tag>Persistent Memory</Tag>
-            <Tag variant="pink">Generative Narrative</Tag>
-            <Tag variant="yellow">AI Companions</Tag>
-          </div>
-        </Card>
-
-        <Card variant="pink">
-          <div className={styles.cardTitle} data-variant="pink">
-            Skin the World™
-          </div>
-          <p className={styles.body}>
-            Generate your own skins, characters, environments, and aesthetic layers using AI creation
-            tools — then see them live in the shared MMO world. Your vision doesn&rsquo;t stay in your
-            inventory. It becomes part of MetaXity1 for everyone.
-          </p>
-        </Card>
+        ))}
       </div>
 
-      {/* 4. Concept art slider */}
-      <div className={styles.conceptSlider}>
-        <button className={styles.sliderBtn} data-dir="left" onClick={() => scroll(-1)} aria-label="Scroll left">‹</button>
-        <div className={styles.conceptTrack} ref={trackRef}>
-          {conceptArt.map((art) => (
-            <div
-              key={art.label}
-              className={styles.conceptCard}
-              onMouseEnter={(e) => handleMouseEnter(art, e)}
-              onMouseLeave={handleMouseLeave}
-            >
-              <img src={art.src} alt={art.label} className={styles.conceptImg} loading="lazy" />
-              <span className={styles.conceptLabel}>{art.label}</span>
-            </div>
-          ))}
+      {/* 4. Concept art slider — auto-populated from /public/images/concept/ */}
+      {conceptArt.length > 0 && (
+        <div className={styles.conceptSlider}>
+          <button className={styles.sliderBtn} data-dir="left" onClick={() => scroll(-1)} aria-label="Scroll left">‹</button>
+          <div className={styles.conceptTrack} ref={trackRef}>
+            {conceptArt.map((art) => {
+              const isTilted = thumbTilt?.key === art.src;
+              return (
+                <div
+                  key={art.src}
+                  className={styles.conceptCard}
+                  style={{
+                    transform: isTilted
+                      ? `perspective(600px) rotateX(${thumbTilt!.rx}deg) rotateY(${thumbTilt!.ry}deg) scale(1.03)`
+                      : 'perspective(600px) rotateX(0deg) rotateY(0deg) scale(1)',
+                  }}
+                  onClick={() => { setPreview(null); setLightbox(art); }}
+                  onMouseEnter={(e) => handleMouseEnter(art, e)}
+                  onMouseMove={(e) => handleThumbMove(art.src, e)}
+                  onMouseLeave={() => { handleMouseLeave(); handleThumbLeave(); }}
+                >
+                  <img src={art.src} alt={art.label} className={styles.conceptImg} loading="lazy" />
+                  <span className={styles.conceptLabel}>{art.label}</span>
+                </div>
+              );
+            })}
+          </div>
+          <button className={styles.sliderBtn} data-dir="right" onClick={() => scroll(1)} aria-label="Scroll right">›</button>
         </div>
-        <button className={styles.sliderBtn} data-dir="right" onClick={() => scroll(1)} aria-label="Scroll right">›</button>
-      </div>
+      )}
 
-      {/* Hover preview */}
-      {preview && (
+      {/* Hover preview (desktop only) */}
+      {preview && !lightbox && (
         <div
           className={styles.previewFloat}
           style={{ left: preview.x, top: preview.y }}
@@ -138,39 +244,84 @@ export default function GameSection() {
 
       {/* 5. Three feature cards */}
       <div className={styles.gridThree}>
-        <Card variant="purple">
-          <div className={styles.cardTitleSm} data-variant="purple">Dual Economy</div>
-          <p className={styles.bodySm}>
-            Three primitives — Energy, Process Power, Storage — priced by two competing systems.
-            Corporate credits for compliance. Underground tokens for resistance. Your Cover Identity
-            forces you into both.
-          </p>
-        </Card>
-
-        <Card variant="yellow">
-          <div className={styles.cardTitleSm} data-variant="yellow">Pyramid Extraction</div>
-          <p className={styles.bodySm}>
-            Ascend MetaXity1&rsquo;s continental archology. Risk increases with altitude — so do
-            rewards. Corporate security sweeps, faction warfare, elevator lockdowns, and dynamic events.
-          </p>
-        </Card>
-
-        <Card variant="green">
-          <div className={styles.cardTitleSm} data-variant="green">Built By Players</div>
-          <p className={styles.bodySm}>
-            SIGOPS missions are real development tasks disguised as resistance operations. Write
-            dialogue. Design assets. Fix code. Earn reputation. The fourth wall isn&rsquo;t broken —
-            it&rsquo;s dissolved.
-          </p>
-        </Card>
+        {cardContent.slice(2, 5).map((card, i) => (
+          <div key={i} className={styles.cardClickable} onClick={() => setCardLightbox(card)}>
+            <Card variant={card.variant}>
+              <div className={styles.cardTitleSm} data-variant={card.variant}>{card.title}</div>
+              <p className={styles.bodySm}>{card.body}</p>
+            </Card>
+          </div>
+        ))}
       </div>
 
-      {/* 6. Callout */}
+      {/* 6. Play CTA + Codex callout */}
+      <Callout
+        variant="pink"
+        label="ENTER METAXITY1"
+        text="The game client is coming soon. Create your signal, choose your paths, and shape the civilisation."
+        href="/game"
+      />
       <Callout
         variant="cyan"
         label="EXPLORE THE FULL WORLD"
-        text="MetaXity1, the factions, the skill systems, the seasonal narrative arcs — it's all documented in the Codex."
+        text="MetaXity1, the factions, the skill systems, the seasonal narrative arcs: all documented in the Codex."
       />
     </SectionWrapper>
+
+    {/* ── Image lightbox — portalled to document.body ── */}
+    {lightbox && typeof document !== 'undefined' && createPortal(
+      <div className={styles.lightboxOverlay} onClick={() => setLightbox(null)}>
+        <div className={styles.lightboxContent} onClick={(e) => e.stopPropagation()}>
+          <img
+            src={lightbox.src}
+            alt={lightbox.label}
+            className={styles.lightboxImg}
+          />
+          <div className={styles.lightboxCaption}>{lightbox.label}</div>
+          <button className={styles.lightboxClose} onClick={() => setLightbox(null)} aria-label="Close">×</button>
+          <button
+            className={styles.lightboxNav}
+            data-dir="left"
+            onClick={() => navigateLightbox(-1)}
+            aria-label="Previous image"
+          >
+            ‹
+          </button>
+          <button
+            className={styles.lightboxNav}
+            data-dir="right"
+            onClick={() => navigateLightbox(1)}
+            aria-label="Next image"
+          >
+            ›
+          </button>
+        </div>
+      </div>,
+      document.body,
+    )}
+
+    {/* ── Card pop-out lightbox — portalled to document.body ── */}
+    {cardLightbox && typeof document !== 'undefined' && createPortal(
+      <div className={styles.lightboxOverlay} onClick={() => setCardLightbox(null)}>
+        <div className={styles.cardLightboxContent} onClick={(e) => e.stopPropagation()}>
+          <div className={styles.cardLightboxInner} data-variant={cardLightbox.variant}>
+            <div className={styles.cardLbTitle} data-variant={cardLightbox.variant}>
+              {cardLightbox.title}
+            </div>
+            <p className={styles.cardLbBody}>{cardLightbox.body}</p>
+            {cardLightbox.tags && (
+              <div className={styles.tags}>
+                {cardLightbox.tags.map((t) => (
+                  <Tag key={t.label} variant={t.variant}>{t.label}</Tag>
+                ))}
+              </div>
+            )}
+          </div>
+          <button className={styles.lightboxClose} onClick={() => setCardLightbox(null)} aria-label="Close">×</button>
+        </div>
+      </div>,
+      document.body,
+    )}
+    </>
   );
 }

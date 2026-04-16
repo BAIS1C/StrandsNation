@@ -15,17 +15,16 @@ export default function ManifestoPage() {
         <Card variant="cyan">
           <span className={styles.docLabel} data-variant="cyan">MANIFESTO</span>
           <div className={styles.cardTitle} data-variant="cyan">
-            Strands Manifesto — by Somo Kasane
+            Strands Manifesto: by Somo Kasane
           </div>
           <p className={styles.prose}>
             A declaration of intent. Why Strands exists, what it stands against, and what it proposes
-            to build in place of systems designed to extract, surveil, and stratify. Not ideology —
-            architecture. Not protest — prototype.
+            to build in place of systems designed to extract, surveil, and stratify. Architecture, not ideology. Prototype, not protest.
           </p>
           <p className={styles.prose}>
             The manifesto lays out the philosophical foundations: post-capitalist coordination,
             decentralised governance, cooperative economics, and the belief that games are the most
-            powerful simulation engines ever built — and therefore the most powerful tools for
+            powerful simulation engines ever built. Therefore, they are the most powerful tools for
             modelling alternatives.
           </p>
           <a
@@ -52,7 +51,7 @@ export default function ManifestoPage() {
           </p>
           <p className={styles.prose}>
             If the manifesto is the why, the whitepaper is the how. Every mechanism, every
-            incentive loop, every infrastructure decision — documented, reasoned, and open for
+            incentive loop, every infrastructure decision; documented, reasoned, and open for
             scrutiny.
           </p>
           <Link
@@ -73,8 +72,8 @@ export default function ManifestoPage() {
                 Architects: Building the Exit from Techno-Feudalism
               </div>
               <p className={styles.prose}>
-                A post-political framework for systems transition. Not a manifesto — a manual.
-                Written for builders, not spectators. The philosophical backbone of everything
+                A post-political framework for systems transition. A manual for builders, not a manifesto for spectators.
+                The philosophical backbone of everything
                 you&rsquo;ll experience in Strands.
               </p>
               <div className={styles.bigQuote}>
@@ -109,13 +108,12 @@ export default function ManifestoPage() {
           <div className={styles.cardTitle} data-variant="cyan">Core Principles</div>
           <p className={styles.prose}>
             The systems we live under are not inevitable. They are designed. And what is designed
-            can be redesigned — not through revolution, but through building better alternatives
-            that make the old systems irrelevant.
+            can be redesigned through building better alternatives that make the old systems irrelevant, not through revolution.
           </p>
           <p className={styles.prose}>
             Strands is a prototype for cooperative systems. The economy models post-scarcity
             resource allocation. The governance models decentralised decision-making. The community
-            development model proves that people will build what they believe in — if you give them
+            development model proves that people will build what they believe in when you give them
             the tools and get out of the way.
           </p>
         </Card>

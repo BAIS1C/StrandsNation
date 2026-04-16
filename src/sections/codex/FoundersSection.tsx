@@ -9,22 +9,30 @@ export default function CodexFoundersSection() {
   return (
     <div>
       <SectionLabel
-        num="11 // FOUNDERS"
+        num="14 // FOUNDERS"
         title="Founders Pass"
-        subtitle="6,000 unique citizens. Proof you existed before the pyramid opened."
+        subtitle="6,000 unique citizens. Your PFP. Proof you existed before the pyramid opened."
       />
       <Card variant="cyan">
         <div className={styles.cardTitleMd} data-variant="cyan">What Is a Founders Pass?</div>
         <p className={styles.body}>
-          Each pass is a unique AI-generated character portrait. Grants early access, priority
-          SIGOPS, exclusive cosmetics, and governance weight.
+          Your Founders Pass is your PFP: a unique AI-generated citizen portrait proving early adoption
+          and commitment to the Strands ecosystem. It grants early access, priority SIGOPS allocation,
+          exclusive cosmetic lines, and governance weight within the network.
         </p>
       </Card>
-      <TierGrid tiers={foundersTiers} />
+      <Card variant="yellow">
+        <div className={styles.cardTitleMd} data-variant="yellow">Tier Breakdown</div>
+        <p className={styles.body} style={{ marginBottom: 16 }}>
+          Rarity determines access depth, cosmetic exclusivity, and governance influence. Lower supply
+          tiers carry higher weight across all three dimensions.
+        </p>
+        <TierGrid tiers={foundersTiers} />
+      </Card>
       <Callout
         variant="pink"
-        label="SOVEREIGN TIER — COMING SOON"
-        text="Your face. Your citizen. You don't just play as a character — you become one."
+        label="PERSONALISATION PASS: COMING"
+        text="Your face. Your citizen. The Personalisation Pass uses an AI pipeline to generate a unique animated 1-of-1 with your likeness. You become the character in your own game PFP."
       />
     </div>
   );

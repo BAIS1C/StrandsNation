@@ -1,19 +1,9 @@
-'use client';
+import { redirect } from 'next/navigation';
 
-import { useState, useCallback } from 'react';
-import AuthGate from '@/components/AuthGate/AuthGate';
-import GameDesktop from '@/components/GameDesktop/GameDesktop';
-
-export default function MiniAppPage() {
-  const [ready, setReady] = useState(false);
-
-  const handleReady = useCallback(() => {
-    setReady(true);
-  }, []);
-
-  if (!ready) {
-    return <AuthGate onReady={handleReady} />;
-  }
-
-  return <GameDesktop />;
+/**
+ * /app → redirect to the game client.
+ * The TG Mini App now lives at game.strandsnation.xyz.
+ */
+export default function AppRedirect() {
+  redirect('https://game.strandsnation.xyz');
 }

@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
-import type { ReactNode } from 'react';
+import { Suspense, type ReactNode } from 'react';
 import Nav from '@/components/Nav/Nav';
-import MusicPlayer from '@/components/MusicPlayer/MusicPlayer';
 import CursorGlow from '@/components/CursorGlow/CursorGlow';
 import Scanlines from '@/components/Scanlines/Scanlines';
 import CircuitBg from '@/components/CircuitBg/CircuitBg';
@@ -11,7 +10,7 @@ import '@/styles/tokens.css';
 import '@/styles/global.css';
 
 export const metadata: Metadata = {
-  title: 'StrandsNation — Ready Player You',
+  title: 'StrandsNation: Ready Player You',
   description: 'A post-capitalist MMORPG where the world remembers your choices, NPCs adapt to how you think, and the community builds the civilisation they play in.',
   icons: {
     icon: [
@@ -21,7 +20,7 @@ export const metadata: Metadata = {
     apple: '/apple-touch-icon.png',
   },
   openGraph: {
-    title: 'StrandsNation — Ready Player You',
+    title: 'StrandsNation: Ready Player You',
     description: 'A post-capitalist MMORPG. Your world. Your rules. Your playstyle.',
     siteName: 'StrandsNation',
     type: 'website',
@@ -29,7 +28,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'StrandsNation — Ready Player You',
+    title: 'StrandsNation: Ready Player You',
     description: 'A post-capitalist MMORPG. Your world. Your rules. Your playstyle.',
   },
 };
@@ -43,11 +42,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <CircuitBg />
           <CursorGlow />
         </SiteChrome>
-        <Nav />
+        <Suspense fallback={null}>
+          <Nav />
+        </Suspense>
         <MainWrapper>{children}</MainWrapper>
-        <SiteChrome>
-          <MusicPlayer />
-        </SiteChrome>
       </body>
     </html>
   );

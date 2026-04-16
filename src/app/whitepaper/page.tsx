@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef, useCallback } from 'react';
-import { whitepaperChapters as chapters } from '@/data/whitepaper-chapters';
+import { whitepaperChapters as chapters } from '@/data/whitepaper';
 import styles from './page.module.css';
 
 /* ═══════════════════════════════════════════════════
@@ -80,7 +80,7 @@ export default function WhitepaperPage() {
       <aside className={`${styles.sidebar} ${sidebarOpen ? styles.sidebarOpen : ''}`}>
         <div className={styles.sidebarHeader}>
           <div className={styles.sidebarTitle}>Whitepaper v6.0</div>
-          <div className={styles.sidebarMeta}>17 Chapters · ~60,000 words</div>
+          <div className={styles.sidebarMeta}>12 Chapters · V6.0</div>
         </div>
 
         <nav>
@@ -126,16 +126,22 @@ export default function WhitepaperPage() {
             <span className={styles.coverAccent}>The Ecosystem</span>
           </h1>
           <p className={styles.coverSub}>
-            A Decentralised Bulwark Against Techno-Feudalism — and the Path
-            to Equitable Income. The complete technical specification for the
-            STRANDS game, technology stack, and economic architecture.
+            A Decentralised Bulwark Against Techno-Feudalism. The path to equitable income.
+            The complete technical specification for the STRANDS game, technology stack, and economic architecture.
           </p>
           <div className={styles.coverMeta}>
             <span className={styles.coverMetaItem}><span className={styles.dot}>◈</span> PT Meta Fin Tek</span>
             <span className={styles.coverMetaItem}><span className={styles.dot}>◈</span> Metafintek.xyz</span>
             <span className={styles.coverMetaItem}><span className={styles.dot}>◈</span> March 2026</span>
-            <span className={styles.coverMetaItem}><span className={styles.dot}>◈</span> ~60,000 words</span>
+            <span className={styles.coverMetaItem}><span className={styles.dot}>◈</span> 12 Chapters</span>
           </div>
+          <a
+            href="/strands-whitepaper-v6.pdf"
+            download="Strands_Whitepaper_V6.pdf"
+            className={styles.downloadBtn}
+          >
+            ↓ Download PDF
+          </a>
         </div>
 
         {/* Chapters */}

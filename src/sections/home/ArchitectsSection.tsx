@@ -15,7 +15,7 @@ export default function ArchitectsSection() {
             <a href={bookUrl} target="_blank" rel="noopener noreferrer">
               <img
                 src="/images/architects-cover.png"
-                alt="Architects: Building the Exit from Techno-Feudalism — Book Cover"
+                alt="Architects: Building the Exit from Techno-Feudalism; Book Cover"
                 className={styles.cover}
                 width={180}
                 height={270}
@@ -28,8 +28,8 @@ export default function ArchitectsSection() {
           <div className={styles.text}>
             <div className={styles.cardTitle}>Building the Exit from Techno-Feudalism</div>
             <p className={styles.body}>
-              A post-political framework for systems transition. Not a manifesto — a manual. Written for builders,
-              not spectators. The philosophical backbone of everything you&rsquo;ll experience in Strands.
+              A post-political framework for systems transition. A manual for builders, not a manifesto for spectators.
+              The philosophical backbone of everything you&rsquo;ll experience in Strands.
             </p>
             <div className={styles.quote}>
               We are not Left. We are not Right.<br />

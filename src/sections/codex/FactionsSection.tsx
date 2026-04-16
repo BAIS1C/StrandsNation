@@ -21,7 +21,7 @@ export default function FactionsSection() {
       <Callout
         variant="purple"
         label="ECHOES & STRANDS"
-        text="Players who explore Layer U are called Strands. Those who discover deeper connections to AO's consciousness fragments are called Echoes — digital ghosts carrying signals from a dead god."
+        text="Players who explore Layer U are called Strands. Those who discover deeper connections to AO's consciousness fragments are called Echoes: digital ghosts carrying signals from a dead god."
       />
     </div>
   );

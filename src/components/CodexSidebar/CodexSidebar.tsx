@@ -7,11 +7,17 @@ interface CodexSidebarProps {
   sections: CodexNavItem[];
   activeId: CodexSectionId;
   onSelect: (id: CodexSectionId) => void;
+  embed?: boolean;
 }
 
-export default function CodexSidebar({ sections, activeId, onSelect }: CodexSidebarProps) {
+export default function CodexSidebar({ sections, activeId, onSelect, embed }: CodexSidebarProps) {
+  /* In embed mode, override sticky top & height so sidebar fills iframe edge-to-edge */
+  const embedStyle: React.CSSProperties | undefined = embed
+    ? { top: 0, height: '100vh' }
+    : undefined;
+
   return (
-    <aside className={styles.sidebar}>
+    <aside className={styles.sidebar} style={embedStyle}>
       {sections.map((section) => (
         <div key={section.id}>
           {section.group && (

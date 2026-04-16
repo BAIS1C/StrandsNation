@@ -16,7 +16,7 @@ export default function Timeline({ entries }: TimelineProps) {
             data-variant={entry.colorKey}
           />
           <span className={styles.year} data-variant={entry.colorKey}>
-            {entry.year}{entry.subtitle ? ` — ${entry.subtitle}` : ''}
+            {entry.year}{entry.subtitle ? `: ${entry.subtitle}` : ''}
           </span>
           <div className={styles.title}>{entry.title}</div>
           <p className={styles.description}>{entry.description}</p>

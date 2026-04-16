@@ -72,7 +72,8 @@ const LOGO_RAW: [number, number][] = [
   [-0.2687,-0.2009],[-0.2688,-0.2187],[-0.2687,-0.2365],[-0.2686,-0.2543],[-0.2591,-0.2657],
 ];
 
-const BANNER_COLORS = ['#00C2FF','#F000B8','#F9E100','#8b5cf6','#22c55e'];
+// Exact Strands logo gradient: cyan → blue → purple → violet → magenta
+const BANNER_COLORS = ['#13F8FD','#29CEFD','#44ADFB','#628BF9','#8E6BFC','#B550FF','#DA34F2','#EA32FD'];
 const CYCLE = 4000;
 
 interface PhaseRange { start: number; end: number }
@@ -207,7 +208,9 @@ export default function ParticleHero() {
             const coord2 = LOGO_RAW[i % LOGO_RAW.length];
             tx[i] = cx + coord2[0] * 0.85 * d;
             ty[i] = cy + coord2[1] * 0.85 * d;
-            const ci = Math.floor((coord2[0] + 0.5) * BANNER_COLORS.length) % BANNER_COLORS.length;
+            // Map x-position across full gradient (logo x spans ~-0.33 to +0.33)
+            const norm = Math.max(0, Math.min(1, (coord2[0] + 0.35) / 0.7));
+            const ci = Math.min(BANNER_COLORS.length - 1, Math.floor(norm * BANNER_COLORS.length));
             const hex = BANNER_COLORS[ci];
             tr[i] = parseInt(hex.slice(1, 3), 16);
             tg[i] = parseInt(hex.slice(3, 5), 16);

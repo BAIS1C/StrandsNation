@@ -9,7 +9,7 @@ export default function EconomySection() {
       <SectionLabel
         num="05 // ECONOMY"
         title="The Three Primitives"
-        subtitle="In Year 555, compute isn't just power — it's control. The economy runs on three primitives, priced by two competing systems."
+        subtitle="In Year 555, compute is control. The economy runs on three primitives, priced by two competing systems."
       />
       <Card variant="cyan">
         <div className={styles.cardTitleMd} data-variant="cyan">Energy / Process Power / Storage</div>
@@ -31,8 +31,8 @@ export default function EconomySection() {
           <div className={styles.vsLineBottom} />
         </div>
         <Card variant="pink">
-          <div className={styles.cardTitleMd} data-variant="pink">Underground Tokens</div>
-          <p className={styles.body}>Decentralised. Earned through contribution, not compliance. Usage builds underground reputation while avoiding corporate surveillance.</p>
+          <div className={styles.cardTitleMd} data-variant="pink">GridScrip</div>
+          <p className={styles.body}>The resistance currency. Decentralised. Earned through SIGOPS, salvage, and intelligence trading. Every transaction stays outside corporate oversight.</p>
         </Card>
       </div>
     </div>

@@ -11,7 +11,10 @@ export type CodexSectionId =
   | 'skills'
   | 'maits'
   | 'sigops'
+  | 'everywear'
+  | 'layeru'
   | 'gameplay'
+  | 'seasons'
   | 'crafting'
   | 'founders';
 

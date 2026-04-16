@@ -10,9 +10,9 @@
   border-bottom: 1px solid rgba(0, 194, 255, 0.1);
   padding: 0 var(--space-page-x);
   height: var(--space-nav-h);
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  justify-content: space-between;
 }
 
 /* ─── Logo ─── */
@@ -21,6 +21,7 @@
   align-items: center;
   gap: 10px;
   text-decoration: none;
+  flex-shrink: 0;
 }
 
 .logoIcon {
@@ -37,6 +38,21 @@
 
 .logoAccent {
   color: var(--c-accent);
+}
+
+/* ─── Player Slot ─── */
+.playerSlot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+}
+
+/* ─── Right Slot (links + mobile toggle) ─── */
+.rightSlot {
+  display: flex;
+  align-items: center;
+  justify-self: end;
 }
 
 /* ─── Links ─── */
@@ -113,6 +129,10 @@
 
 /* ─── Mobile Responsive ─── */
 @media (max-width: 768px) {
+  .nav {
+    grid-template-columns: auto 1fr auto;
+  }
+
   .mobileToggle {
     display: flex;
     align-items: center;

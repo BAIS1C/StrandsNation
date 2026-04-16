@@ -20,6 +20,12 @@
   clip-path: var(--clip-card);
   margin-bottom: var(--space-grid-gap);
   background: var(--c-bg);
+  transition: transform 0.15s ease-out, box-shadow 0.3s;
+  will-change: transform;
+}
+
+.videoBanner:hover {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 0 16px rgba(0, 194, 255, 0.06);
 }
 
 .video {
@@ -84,11 +90,14 @@
   border-radius: 4px;
   scroll-snap-align: start;
   border: 1px solid rgba(255, 255, 255, 0.06);
-  cursor: grab;
+  cursor: pointer;
+  transition: transform 0.15s ease-out, border-color 0.3s, box-shadow 0.3s;
+  will-change: transform;
 }
 
-.conceptCard:active {
-  cursor: grabbing;
+.conceptCard:hover {
+  border-color: rgba(0, 194, 255, 0.2);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), 0 0 12px rgba(0, 194, 255, 0.06);
 }
 
 .conceptImg {
@@ -291,5 +300,221 @@
 
   .gridThree {
     grid-template-columns: 1fr;
+  }
+}
+
+/* ─── Lightbox Modal ─── */
+.lightboxOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(2, 3, 5, 0.88);
+  backdrop-filter: blur(12px);
+  animation: lbFadeIn 0.2s ease-out both;
+  cursor: pointer;
+}
+
+.lightboxContent {
+  position: relative;
+  max-width: 50vw;
+  max-height: 55vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: default;
+}
+
+.lightboxImg {
+  display: block;
+  max-width: 50vw;
+  max-height: 48vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 194, 255, 0.15);
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 194, 255, 0.06);
+  animation: lbImgIn 0.25s ease-out both;
+}
+
+.lightboxCaption {
+  margin-top: 12px;
+  font: 600 10px var(--font-display);
+  letter-spacing: 3px;
+  color: var(--c-accent);
+  text-transform: uppercase;
+  text-align: center;
+  opacity: 0.8;
+}
+
+.lightboxClose {
+  position: absolute;
+  top: -40px;
+  right: -8px;
+  width: 32px;
+  height: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  background: rgba(10, 11, 13, 0.8);
+  color: var(--c-text);
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+  backdrop-filter: blur(8px);
+}
+
+.lightboxClose:hover {
+  background: rgba(255, 60, 60, 0.2);
+  border-color: var(--c-red);
+  color: var(--c-red);
+}
+
+.lightboxNav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(10, 11, 13, 0.7);
+  color: var(--c-text);
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+  backdrop-filter: blur(8px);
+}
+
+.lightboxNav:hover {
+  background: rgba(0, 194, 255, 0.15);
+  border-color: var(--c-accent);
+  color: var(--c-accent);
+}
+
+.lightboxNav[data-dir='left'] {
+  left: -56px;
+}
+
+.lightboxNav[data-dir='right'] {
+  right: -56px;
+}
+
+@keyframes lbFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes lbImgIn {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ─── Card Clickable Wrapper ─── */
+.cardClickable {
+  cursor: pointer;
+}
+
+/* ─── Card Pop-out Lightbox ─── */
+.cardLightboxContent {
+  position: relative;
+  max-width: 560px;
+  width: 90vw;
+  cursor: default;
+  animation: lbImgIn 0.25s ease-out both;
+}
+
+.cardLightboxInner {
+  padding: 36px 32px;
+  background: var(--c-surface);
+  border: 1px solid rgba(0, 194, 255, 0.15);
+  border-radius: 6px;
+  box-shadow: 0 16px 64px rgba(0, 0, 0, 0.6), 0 0 24px rgba(0, 194, 255, 0.08);
+}
+
+.cardLightboxInner[data-variant='cyan']   { border-color: rgba(0, 194, 255, 0.2); box-shadow: 0 16px 64px rgba(0, 0, 0, 0.6), 0 0 24px rgba(0, 194, 255, 0.1); }
+.cardLightboxInner[data-variant='pink']   { border-color: rgba(255, 60, 170, 0.2); box-shadow: 0 16px 64px rgba(0, 0, 0, 0.6), 0 0 24px rgba(255, 60, 170, 0.1); }
+.cardLightboxInner[data-variant='purple'] { border-color: rgba(139, 92, 246, 0.2); box-shadow: 0 16px 64px rgba(0, 0, 0, 0.6), 0 0 24px rgba(139, 92, 246, 0.1); }
+.cardLightboxInner[data-variant='yellow'] { border-color: rgba(249, 225, 0, 0.2); box-shadow: 0 16px 64px rgba(0, 0, 0, 0.6), 0 0 24px rgba(249, 225, 0, 0.1); }
+.cardLightboxInner[data-variant='green']  { border-color: rgba(34, 197, 94, 0.2); box-shadow: 0 16px 64px rgba(0, 0, 0, 0.6), 0 0 24px rgba(34, 197, 94, 0.1); }
+
+.cardLbTitle {
+  font: 800 22px var(--font-display);
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+}
+
+.cardLbTitle[data-variant='cyan']   { color: var(--c-accent); }
+.cardLbTitle[data-variant='pink']   { color: var(--c-pink); }
+.cardLbTitle[data-variant='purple'] { color: var(--c-purple); }
+.cardLbTitle[data-variant='yellow'] { color: var(--c-yellow); }
+.cardLbTitle[data-variant='green']  { color: var(--c-green); }
+
+.cardLbBody {
+  color: var(--c-sub);
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+@media (max-width: 768px) {
+  .cardLightboxContent {
+    max-width: 92vw;
+  }
+
+  .cardLightboxInner {
+    padding: 24px 20px;
+  }
+
+  .cardLbTitle {
+    font-size: 18px;
+  }
+
+  .cardLbBody {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .lightboxContent {
+    max-width: 85vw;
+    max-height: 55vh;
+  }
+
+  .lightboxImg {
+    max-width: 85vw;
+    max-height: 48vh;
+  }
+
+  .lightboxNav[data-dir='left'] {
+    left: -4px;
+    top: auto;
+    bottom: -48px;
+    transform: none;
+  }
+
+  .lightboxNav[data-dir='right'] {
+    right: -4px;
+    top: auto;
+    bottom: -48px;
+    transform: none;
+  }
+
+  .lightboxClose {
+    top: -36px;
+    right: 0;
   }
 }

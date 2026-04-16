@@ -22,6 +22,7 @@
 .label[data-variant='pink']   { color: var(--c-pink); }
 .label[data-variant='yellow'] { color: var(--c-yellow); }
 .label[data-variant='purple'] { color: var(--c-purple); }
+.label[data-variant='green']  { color: var(--c-green); }
 
 .cardTitle {
   font: 800 18px var(--font-display);
@@ -33,6 +34,7 @@
 .cardTitle[data-variant='cyan']   { color: var(--c-accent); }
 .cardTitle[data-variant='pink']   { color: var(--c-pink); }
 .cardTitle[data-variant='purple'] { color: var(--c-purple); }
+.cardTitle[data-variant='green']  { color: var(--c-green); }
 
 .cardTitleSm {
   font: 800 16px var(--font-display);
@@ -42,6 +44,7 @@
 }
 
 .cardTitleSm[data-variant='yellow'] { color: var(--c-yellow); }
+.cardTitleSm[data-variant='pink']   { color: var(--c-pink); }
 
 .body {
   color: var(--c-sub);
@@ -60,6 +63,10 @@
   flex-wrap: wrap;
   gap: 8px;
   margin-top: 16px;
+}
+
+.gridFull {
+  margin-top: var(--space-grid-gap);
 }
 
 @media (max-width: 768px) {

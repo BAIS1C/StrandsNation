@@ -25,7 +25,7 @@ export default function HeroSection() {
           </div>
           <h1 className={styles.headline}>READY PLAYER YOU</h1>
           <p className={styles.subhead}>
-            A world that doesn&rsquo;t just get played by you &mdash; it gets built by you.
+            A world that doesn&rsquo;t just get played by you. It gets built by you.
           </p>
           <div className={styles.ctas}>
             <a href={socials.telegram.url} target="_blank" rel="noopener noreferrer" className={styles.ctaPrimary}>

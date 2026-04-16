@@ -29,6 +29,8 @@ export function useAudioPlayer() {
 
   const [volume, setVolume] = useState(0.7);
   const [muted, setMuted] = useState(false);
+  const [shuffle, setShuffle] = useState(false);
+  const playedHistory = useRef<number[]>([]);
 
   const track = tracks[trackIdx];
 
@@ -47,12 +49,25 @@ export function useAudioPlayer() {
 
   const skip = useCallback((dir: 1 | -1) => {
     setTrackIdx(prev => {
+      if (shuffle && dir === 1) {
+        // Pick a random track that isn't the current one
+        const pool = tracks.length > 1
+          ? Array.from({ length: tracks.length }, (_, i) => i).filter(i => i !== prev)
+          : [0];
+        const pick = pool[Math.floor(Math.random() * pool.length)];
+        playedHistory.current.push(prev);
+        return pick;
+      }
+      if (shuffle && dir === -1 && playedHistory.current.length > 0) {
+        // Go back through shuffle history
+        return playedHistory.current.pop()!;
+      }
       const next = prev + dir;
       if (next < 0) return tracks.length - 1;
       if (next >= tracks.length) return 0;
       return next;
     });
-  }, [tracks.length]);
+  }, [tracks.length, shuffle]);
 
   const selectTrack = useCallback((idx: number) => {
     setTrackIdx(idx);
@@ -112,6 +127,10 @@ export function useAudioPlayer() {
   const toggleExpanded = useCallback(() => setExpanded(v => !v), []);
   const closeExpanded = useCallback(() => setExpanded(false), []);
 
+  const toggleShuffle = useCallback(() => {
+    setShuffle(s => !s);
+    playedHistory.current = [];
+  }, []);
   const toggleMute = useCallback(() => setMuted(m => !m), []);
   const setVolumePct = useCallback((pct: number) => {
     const v = Math.max(0, Math.min(1, pct));
@@ -143,5 +162,8 @@ export function useAudioPlayer() {
     muted: muted,
     toggleMute,
     setVolumePct,
+
+    shuffle,
+    toggleShuffle,
   };
 }

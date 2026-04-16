@@ -1,27 +1,34 @@
 'use client';
 
-import { usePathname } from 'next/navigation';
+import { usePathname, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { useState } from 'react';
+import MusicPlayer from '@/components/MusicPlayer/MusicPlayer';
 import styles from './Nav.module.css';
 
 const bookUrl = 'https://www.amazon.com/dp/B0GFXPP9Y6';
 
 const navLinks = [
-  { href: '/', label: 'HOME' },
-  { href: '/codex', label: 'CODEX' },
-  { href: '/game', label: 'GAME' },
-  { href: '/network', label: 'NETWORK' },
-  { href: '/manifesto', label: 'MANIFESTO' },
-  { href: '/whitepaper', label: 'WHITEPAPER' },
+  { href: '/', label: 'HOME', external: false },
+  { href: '/codex', label: 'CODEX', external: false },
+  { href: '/s3', label: 'S\u00B3', external: false },
+  { href: '/game', label: 'PLAY', external: false },
+  { href: '/network', label: 'NETWORK', external: false },
+  { href: '/manifesto', label: 'MANIFESTO', external: false },
+  { href: '/whitepaper', label: 'WHITEPAPER', external: false },
 ] as const;
 
 export default function Nav() {
   const pathname = usePathname();
+  const searchParams = useSearchParams();
   const [mobileOpen, setMobileOpen] = useState(false);
+
+  /* Hide nav entirely when embedded in an iframe (demoOS etc.) */
+  if (searchParams?.get('embed') === 'true') return null;
 
   return (
     <nav className={styles.nav}>
+      {/* Column 1: Logo */}
       <Link href="/" className={styles.logo}>
         <img
           src="/strands-logo-color.svg"
@@ -35,35 +42,54 @@ export default function Nav() {
         </span>
       </Link>
 
-      {/* Mobile toggle */}
-      <button
-        className={styles.mobileToggle}
-        onClick={() => setMobileOpen(!mobileOpen)}
-        aria-label="Toggle navigation"
-      >
-        <span className={`${styles.hamburger} ${mobileOpen ? styles.hamburgerOpen : ''}`} />
-      </button>
+      {/* Column 2: Player (centred) */}
+      <div className={styles.playerSlot}>
+        <MusicPlayer />
+      </div>
 
-      {/* Links */}
-      <div className={`${styles.links} ${mobileOpen ? styles.linksOpen : ''}`}>
-        {navLinks.map((link) => (
-          <Link
-            key={link.href}
-            href={link.href}
-            className={`${styles.link} ${pathname === link.href ? styles.linkActive : ''}`}
-            onClick={() => setMobileOpen(false)}
-          >
-            {link.label}
-          </Link>
-        ))}
-        <a
-          href={bookUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.link}
+      {/* Column 3: Links + mobile toggle */}
+      <div className={styles.rightSlot}>
+        <button
+          className={styles.mobileToggle}
+          onClick={() => setMobileOpen(!mobileOpen)}
+          aria-label="Toggle navigation"
         >
-          BOOK
-        </a>
+          <span className={`${styles.hamburger} ${mobileOpen ? styles.hamburgerOpen : ''}`} />
+        </button>
+
+        <div className={`${styles.links} ${mobileOpen ? styles.linksOpen : ''}`}>
+          {navLinks.map((link) =>
+            link.external ? (
+              <a
+                key={link.href}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.link}
+                onClick={() => setMobileOpen(false)}
+              >
+                {link.label}
+              </a>
+            ) : (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`${styles.link} ${pathname === link.href ? styles.linkActive : ''}`}
+                onClick={() => setMobileOpen(false)}
+              >
+                {link.label}
+              </Link>
+            )
+          )}
+          <a
+            href={bookUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.link}
+          >
+            BOOK
+          </a>
+        </div>
       </div>
     </nav>
   );
