@@ -77,27 +77,19 @@ const PRODUCTS = [
     pro: false,
   },
   {
-    id: 'VID PRO',
-    name: <>S<sup>3</sup> VID PRO</>,
+    id: 'AI DIRECTOR',
+    name: <>S<sup>3</sup> AI DIRECTOR</>,
     price: '$10',
-    copy: <>A full AI music video workspace. Kanban-style scene and character management, multi-LLM story direction, integrated AI image and video generation, stem-synced edits, agentic assembly. Upscale any S<sup>3</sup> video to 4K. Unlimited renders.</>,
+    copy: <>AI-orchestrated music video production. Beat-synced shot planning, multi-LLM story direction, SOTA video generation models via API, stem-synced edits, agentic assembly. From prompt to finished music video. Upscale any S<sup>3</sup> video to 4K. Unlimited renders.</>,
     soon: false,
     pro: false,
   },
   {
-    id: 'COMING SOON',
-    name: <>S<sup>3</sup> DAW PRO</>,
-    price: 'TBA',
-    copy: "A generative DAW built for producers, not prompt-jockeys. Shipping when it's ready, not before.",
-    soon: true,
-    pro: false,
-  },
-  {
     id: 'ALL-IN-ONE',
-    name: <>S<sup>3</sup> STUDIO PRO</>,
+    name: <>S<sup>3</sup> CREATOR PRO</>,
     price: '$20',
-    copy: <>Every S<sup>3</sup> product. Every feature. One subscription. GENER8, GENER8 PRO, VID PRO, and DAW PRO all included. Built for studios, labels, content teams, and serious creators who need the complete toolkit. No add-ons. No upsells. Everything, unlimited, for a flat $20.</>,
-    soon: true,
+    copy: <>Every S<sup>3</sup> product. Every feature. One subscription. GENER8, GENER8 PRO, and AI DIRECTOR all included. Built for studios, labels, content teams, and serious creators who need the complete toolkit. No add-ons. No upsells. Everything, unlimited, for a flat $20.</>,
+    soon: false,
     pro: true,
   },
 ];
@@ -349,11 +341,10 @@ export default function S3ComingSoon() {
           {[
             ['STATUS', 'GENER8 IN DEVELOPMENT'],
             ['INFERENCE', 'LOCAL GPU'],
-            ['MODULES', 'GENER8 / PRO / VID PRO / STUDIO PRO'],
+            ['MODULES', 'GENER8 / PRO / AI DIRECTOR / CREATOR PRO'],
             ['PRICING', '$5 / $8 / $10 / $20 PER MONTH'],
             ['LICENCE', 'INCLUDED IN SUBSCRIPTION'],
             ['GENERATIONS', 'UNLIMITED, ALL TIERS'],
-            ['DAW PRO', 'ROADMAPPED'],
           ].map(([label, val]) => (
             <p key={label} className={styles.statusLine}>
               <span className={styles.label}>{label}</span>
