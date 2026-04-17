@@ -129,13 +129,13 @@ function PricingCarousel() {
             key={i}
             className={`${styles.carouselSlide} ${p.soon ? styles.productSoon : ''} ${p.pro ? styles.productPro : ''}`}
           >
-            {p.pro && <div className={styles.proBadge}>COMING SOON</div>}
-            <div className={styles.productHead}>
-              <span className={styles.productId}>{p.id}</span>
-              <span className={styles.productName}>{p.name}</span>
-              <span className={styles.productPrice}>{p.price}{!p.soon || p.pro ? <span className={styles.priceUnit}>/mo</span> : null}</span>
+            {p.pro && <div className={styles.proBadge}>ALL-IN-ONE</div>}
+            <div className={styles.slideHead}>
+              <span className={styles.slideId}>{p.id}</span>
+              <span className={styles.slideName}>{p.name}</span>
+              <span className={styles.slidePrice}>{p.price}<span className={styles.priceUnit}>/mo</span></span>
             </div>
-            <p className={styles.productCopy}>{p.copy}</p>
+            <p className={styles.slideCopy}>{p.copy}</p>
           </div>
         ))}
       </div>
@@ -265,7 +265,7 @@ export default function S3ComingSoon() {
                 <p key={i} className={styles.thesisPara}>{p}</p>
               ))}
               <p className={`${styles.thesisPara} ${styles.thesisHighlight}`}>
-                Three products. One ecosystem. One flat monthly fee. Your GPU. Your studio. Your catalogue. Your rights.
+                Four tiers. One ecosystem. One flat monthly fee. Your GPU. Your studio. Your catalogue. Your rights.
               </p>
             </Accordion>
           </div>
@@ -276,7 +276,7 @@ export default function S3ComingSoon() {
               <p key={i} className={styles.thesisPara}>{p}</p>
             ))}
             <p className={`${styles.thesisPara} ${styles.thesisHighlight}`}>
-              Three products. One ecosystem. One flat monthly fee. Your GPU. Your studio. Your catalogue. Your rights.
+              Four tiers. One ecosystem. One flat monthly fee. Your GPU. Your studio. Your catalogue. Your rights.
             </p>
           </div>
         )}
@@ -291,7 +291,7 @@ export default function S3ComingSoon() {
             <div className={styles.productList}>
               {PRODUCTS.map((p, i) => (
                 <div key={i} className={`${styles.product} ${p.soon ? styles.productSoon : ''} ${p.pro ? styles.productPro : ''}`}>
-                  {p.pro && <div className={styles.proBadge}>COMING SOON</div>}
+                  {p.pro && <div className={styles.proBadge}>ALL-IN-ONE</div>}
                   <div className={styles.productHead}>
                     <span className={styles.productId}>{p.id}</span>
                     <span className={styles.productName}>{p.name}</span>
@@ -305,7 +305,7 @@ export default function S3ComingSoon() {
         </div>
 
         <p className={styles.promoLine}>
-          First 5,000 users: first month free on any tier. Annual subscribers: one additional month free.
+          First hour free, no sign-in. First 5,000 subscribers get their second month free. Annual subs: one extra month.
         </p>
 
         {/* LED Countdown */}
