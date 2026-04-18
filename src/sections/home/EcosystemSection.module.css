@@ -12,7 +12,7 @@
 }
 
 .label {
-  font: 700 10px var(--font-display);
+  font: 700 10px var(--font-mono);
   letter-spacing: 3px;
   display: block;
   text-transform: uppercase;
@@ -25,10 +25,11 @@
 .label[data-variant='green']  { color: var(--c-green); }
 
 .cardTitle {
-  font: 800 18px var(--font-display);
-  letter-spacing: 1px;
+  font: 700 20px var(--font-display);
+  letter-spacing: 0.5px;
   margin-top: 8px;
   margin-bottom: 10px;
+  line-height: 1.2;
 }
 
 .cardTitle[data-variant='cyan']   { color: var(--c-accent); }
@@ -37,10 +38,11 @@
 .cardTitle[data-variant='green']  { color: var(--c-green); }
 
 .cardTitleSm {
-  font: 800 16px var(--font-display);
-  letter-spacing: 1px;
+  font: 700 17px var(--font-display);
+  letter-spacing: 0.5px;
   margin-top: 8px;
   margin-bottom: 8px;
+  line-height: 1.2;
 }
 
 .cardTitleSm[data-variant='yellow'] { color: var(--c-yellow); }

@@ -31,7 +31,7 @@
 }
 
 .logoText {
-  font: 700 13px var(--font-display);
+  font: 700 13px var(--font-mono);
   letter-spacing: 3px;
   color: var(--c-text);
 }
@@ -63,7 +63,7 @@
 }
 
 .link {
-  font: 600 11px var(--font-body);
+  font: 600 11px var(--font-mono);
   letter-spacing: 2px;
   color: var(--c-sub);
   text-decoration: none;

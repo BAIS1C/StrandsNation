@@ -16,7 +16,7 @@
 }
 
 .word {
-  font: 700 12px var(--font-display);
+  font: 700 12px var(--font-mono);
   letter-spacing: 4px;
 }
 

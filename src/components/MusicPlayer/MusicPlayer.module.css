@@ -5,9 +5,10 @@
   gap: 6px;
   height: 32px;
   padding: 0 8px;
-  border: 1px solid rgba(0, 194, 255, 0.08);
-  border-radius: 4px;
-  background: rgba(0, 194, 255, 0.03);
+  /* Skin-aware border + visible bg so the button-sm cut reads at 32px height */
+  border: 1px solid color-mix(in oklab, var(--c-accent) 20%, transparent);
+  clip-path: var(--clip-button-sm);
+  background: color-mix(in oklab, var(--c-accent) 8%, var(--c-surface));
   flex-shrink: 1;
   min-width: 0;
   max-width: 360px;
@@ -75,7 +76,7 @@
 .marquee {
   display: inline-block;
   white-space: nowrap;
-  font: 500 9px var(--font-display);
+  font: 500 9px var(--font-mono);
   letter-spacing: 1.5px;
   color: var(--c-sub);
   text-transform: uppercase;
@@ -143,7 +144,7 @@
 
 /* ─── Time ─── */
 .time {
-  font: 400 8px var(--font-display);
+  font: 400 8px var(--font-mono);
   color: var(--c-dim);
   letter-spacing: 1px;
   white-space: nowrap;
@@ -161,7 +162,6 @@
   background: rgba(10, 11, 13, 0.97);
   backdrop-filter: blur(20px);
   border: 1px solid rgba(0, 194, 255, 0.15);
-  border-radius: 0 0 4px 4px;
   z-index: 1001;
   display: flex;
   flex-direction: column;
@@ -183,7 +183,7 @@
 }
 
 .trackListTitle {
-  font: 700 11px var(--font-display);
+  font: 700 11px var(--font-mono);
   letter-spacing: 3px;
   color: var(--c-accent);
 }
@@ -226,7 +226,7 @@
 }
 
 .trackNum {
-  font: 400 10px var(--font-display);
+  font: 400 10px var(--font-mono);
   color: var(--c-dim);
   width: 20px;
   flex-shrink: 0;
@@ -242,7 +242,7 @@
 }
 
 .trackDur {
-  font: 400 10px var(--font-display);
+  font: 400 10px var(--font-mono);
   color: var(--c-dim);
   flex-shrink: 0;
 }

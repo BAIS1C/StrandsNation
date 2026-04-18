@@ -41,7 +41,7 @@
 
 /* ─── Staggered entry ─── */
 .eyebrow {
-  font: 500 12px var(--font-display);
+  font: 500 12px var(--font-mono);
   letter-spacing: 6px;
   color: var(--c-accent);
   opacity: 0.6;
@@ -97,7 +97,7 @@
 
 .ctaPrimary {
   padding: 12px 28px;
-  font: 700 12px var(--font-display);
+  font: 700 12px var(--font-mono);
   letter-spacing: 2px;
   text-decoration: none;
   clip-path: var(--clip-button);
@@ -112,7 +112,7 @@
 
 .ctaSecondary {
   padding: 12px 28px;
-  font: 700 12px var(--font-display);
+  font: 700 12px var(--font-mono);
   letter-spacing: 2px;
   text-decoration: none;
   clip-path: var(--clip-button);
@@ -126,7 +126,7 @@
 }
 
 .scrollHint {
-  font: 500 10px var(--font-display);
+  font: 500 10px var(--font-mono);
   letter-spacing: 4px;
   color: var(--c-dim);
   opacity: 0.5;

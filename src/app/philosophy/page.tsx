@@ -5,11 +5,26 @@ import Card from '@/components/Card/Card';
 import { bookUrl } from '@/data/socials';
 import styles from './page.module.css';
 
-export default function ManifestoPage() {
+export default function PhilosophyPage() {
   return (
     <div className="page-enter" style={{ paddingTop: 'var(--space-nav-h)' }}>
       <SectionWrapper narrow>
-        <SectionLabel num="THE PHILOSOPHY" title="Manifesto" />
+        <SectionLabel num="THE CORE" title="Philosophy" />
+
+        {/* ─── Core Principles (moved to top per Sean, 2026-04-18) ─── */}
+        <Card variant="glass">
+          <div className={styles.cardTitle} data-variant="cyan">Core Principles</div>
+          <p className={styles.prose}>
+            The systems we live under are not inevitable. They are designed. And what is designed
+            can be redesigned through building better alternatives that make the old systems irrelevant, not through revolution.
+          </p>
+          <p className={styles.prose}>
+            Strands is a prototype for cooperative systems. The economy models post-scarcity
+            resource allocation. The governance models decentralised decision-making. The community
+            development model proves that people will build what they believe in when you give them
+            the tools and get out of the way.
+          </p>
+        </Card>
 
         {/* ─── Strands Manifesto ─── */}
         <Card variant="cyan">
@@ -103,20 +118,6 @@ export default function ManifestoPage() {
           </div>
         </Card>
 
-        {/* ─── Core Principles ─── */}
-        <Card variant="glass">
-          <div className={styles.cardTitle} data-variant="cyan">Core Principles</div>
-          <p className={styles.prose}>
-            The systems we live under are not inevitable. They are designed. And what is designed
-            can be redesigned through building better alternatives that make the old systems irrelevant, not through revolution.
-          </p>
-          <p className={styles.prose}>
-            Strands is a prototype for cooperative systems. The economy models post-scarcity
-            resource allocation. The governance models decentralised decision-making. The community
-            development model proves that people will build what they believe in when you give them
-            the tools and get out of the way.
-          </p>
-        </Card>
       </SectionWrapper>
     </div>
   );

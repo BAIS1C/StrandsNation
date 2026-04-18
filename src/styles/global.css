@@ -3,7 +3,15 @@
    Reset, keyframes, scrollbar, base typography
    ═══════════════════════════════════════════════════ */
 
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+/* EWDS — EveryWear Design System v1.0. Imports must come first (CSS requires
+   @import at the top). fonts.css loads Google Fonts (Orbitron, Rajdhani,
+   JetBrains Mono, IBM Plex Mono/Sans), tokens.css defines all --ew-* vars
+   across classic/refined/terminal skins + dark/light modes, components.css
+   ships the .ew-* primitive library. Legacy --c-* calls still resolve via
+   the alias block in tokens.css during migration. */
+@import './everywear/fonts.css';
+@import './everywear/tokens.css';
+@import './everywear/components.css';
 
 /* ─── RESET ─── */
 *,
@@ -24,6 +32,7 @@ body {
   background: var(--c-bg);
   color: var(--c-text);
   font-family: var(--font-body);
+  font-weight: var(--fw-body);
   min-height: 100vh;
   line-height: 1.6;
   overflow-x: hidden;
@@ -32,6 +41,32 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+/* ─── MONO ROLE: labels, meta, code, counters ───
+   Signals "system-emitted" content. All-caps + wide tracking. */
+code,
+kbd,
+samp,
+[data-role="mono"] {
+  font-family: var(--font-mono);
+  font-weight: 500;
+}
+
+code,
+kbd,
+samp {
+  font-size: 0.92em;
+}
+
+.label,
+.meta,
+.eyebrow,
+.badge {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
 }
 
 img {

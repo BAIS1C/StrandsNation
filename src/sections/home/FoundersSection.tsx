@@ -1,8 +1,6 @@
 import SectionWrapper from '@/sections/shared/SectionWrapper';
 import SectionLabel from '@/components/SectionLabel/SectionLabel';
-import TierGrid from '@/components/TierGrid/TierGrid';
 import Callout from '@/components/Callout/Callout';
-import { foundersTiers } from '@/data/tiers';
 
 export default function FoundersSection() {
   return (
@@ -12,7 +10,7 @@ export default function FoundersSection() {
         title="Founders Pass"
         subtitle="6,000 unique AI-generated citizen portraits. A membership card for the people who build, not a speculative asset. Your identity in MetaXity1. Proof you existed before the pyramid opened."
       />
-      <TierGrid tiers={foundersTiers} />
+      {/* Gallery collapsed 2026-04-18 SGT — portraits to be replaced. Restore by re-importing TierGrid and foundersTiers, then <TierGrid tiers={foundersTiers} /> */}
       <Callout
         variant="pink"
         label="SOVEREIGN TIER: COMING SOON"

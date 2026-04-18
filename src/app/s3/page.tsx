@@ -58,89 +58,177 @@ function Accordion({ title, children, defaultOpen = false }: {
   );
 }
 
-/* ── Pricing Carousel ── */
-const PRODUCTS = [
+/* ── Pricing tiers (s3studio-web parity: 3-card grid + full-width all-in-one) ── */
+const TIERS = [
   {
     id: 'GENER8 BASE',
     name: <>S<sup>3</sup> GENER8</>,
+    tagline: 'Generate, cover, remix',
     price: '$5',
-    copy: 'Unlimited music generation. Text-to-music, covers, restyling, full creative control. Bundled with Base Video (540p visualisers, instant preview). Top-40 grade output. Uncensored. Commercially yours.',
-    soon: false,
-    pro: false,
+    features: [
+      'Unlimited generations',
+      'Text-to-music, covers, restyling',
+      'Full creative control',
+      'Apply Style Patches',
+      'Base Video (540p visualisers)',
+      'FLAC lossless output',
+      'Commercially yours',
+    ],
   },
   {
     id: 'GENER8 PRO',
     name: <>S<sup>3</sup> GENER8 PRO</>,
+    tagline: 'Style Forge + HD video sharing',
     price: '$8',
-    copy: 'Everything in Base, plus the Style Forge for training your own LoRA style patches. Full resolution video suite up to 1080p with one-click sharing to Instagram, TikTok, Facebook, YouTube Shorts. Unlimited training runs, unlimited patches, unlimited exports.',
-    soon: false,
-    pro: false,
+    features: [
+      'Everything in Base',
+      'StyleForge: train your own LoRA patches',
+      'Full resolution video up to 1080p',
+      '1-click share: IG, TikTok, FB, Shorts',
+      'Correct aspect ratios per platform',
+      'Unlimited training runs & exports',
+    ],
   },
   {
     id: 'AI DIRECTOR',
     name: <>S<sup>3</sup> AI DIRECTOR</>,
+    tagline: 'AI-orchestrated music video production',
     price: '$10',
-    copy: <>AI-orchestrated music video production. Beat-synced shot planning, multi-LLM story direction, SOTA video generation models via API, stem-synced edits, agentic assembly. From prompt to finished music video. Upscale any S<sup>3</sup> video to 4K. Unlimited renders.</>,
-    soon: false,
-    pro: false,
-  },
-  {
-    id: 'ALL-IN-ONE',
-    name: <>S<sup>3</sup> CREATOR PRO</>,
-    price: '$20',
-    copy: <>Every S<sup>3</sup> product. Every feature. One subscription. GENER8, GENER8 PRO, and AI DIRECTOR all included. Built for studios, labels, content teams, and serious creators who need the complete toolkit. No add-ons. No upsells. Everything, unlimited, for a flat $20.</>,
-    soon: false,
-    pro: true,
+    features: [
+      'Unlimited renders',
+      'Beat-synced AI shot planning',
+      'Multi-LLM story direction',
+      'SOTA video generation via API',
+      'Stem-synced edits, agentic assembly',
+      <>Upscale any S<sup>3</sup> video to 4K</>,
+    ],
   },
 ];
 
+const ALL_IN_ONE = {
+  label: 'ALL-IN-ONE',
+  name: <>S<sup>3</sup> CREATOR PRO</>,
+  price: '$20',
+  copy: <>Every S<sup>3</sup> product. Every feature. One subscription. GENER8, GENER8 PRO, and AI DIRECTOR all included. Built for studios, labels, content teams, and serious creators who need the complete toolkit. No add-ons. No upsells. Everything, unlimited, for a flat $20.</>,
+};
+
+/* Desktop: 3-card grid + full-width all-in-one banner (s3studio-web parity) */
+function PricingGrid() {
+  return (
+    <>
+      <div className={styles.tierGrid}>
+        {TIERS.map((t, i) => (
+          <div key={i} className={styles.tierCard}>
+            <div className={styles.tierLabel}>{t.id}</div>
+            <div className={styles.tierName}>{t.name}</div>
+            <div className={styles.tierTagline}>{t.tagline}</div>
+            <div className={styles.tierPrice}>
+              {t.price}<span className={styles.priceUnit}>/mo</span>
+            </div>
+            <div className={styles.tierSub}>Subscription only. Cancel anytime.</div>
+            <ul className={styles.tierFeatures}>
+              {t.features.map((f, j) => (
+                <li key={j} className={styles.tierFeature}>
+                  <span className={styles.check}>&#10003;</span>
+                  <span>{f}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+
+      <div className={styles.allInOne}>
+        <div className={styles.allInOneBadge}>{ALL_IN_ONE.label}</div>
+        <div className={styles.allInOneHead}>
+          <span className={styles.allInOneName}>{ALL_IN_ONE.name}</span>
+          <span className={styles.allInOnePrice}>
+            {ALL_IN_ONE.price}<span className={styles.priceUnit}>/mo</span>
+          </span>
+        </div>
+        <p className={styles.allInOneCopy}>{ALL_IN_ONE.copy}</p>
+      </div>
+    </>
+  );
+}
+
+/* Mobile: swipeable carousel of the same tier cards + all-in-one as the 4th slide */
 function PricingCarousel() {
   const [idx, setIdx] = useState(0);
-  const trackRef = useRef<HTMLDivElement>(null);
+  const [paused, setPaused] = useState(false);
   const startX = useRef(0);
   const dragging = useRef(false);
 
-  function goTo(i: number) {
-    setIdx(Math.max(0, Math.min(i, PRODUCTS.length - 1)));
-  }
+  const slides = [...TIERS.map(t => ({ kind: 'tier' as const, data: t })), { kind: 'aio' as const, data: ALL_IN_ONE }];
+  const N = slides.length;
+
+  function goTo(i: number) { setIdx(((i % N) + N) % N); }
+
+  useEffect(() => {
+    if (paused) return;
+    const id = setInterval(() => setIdx(prev => (prev + 1) % N), 6000);
+    return () => clearInterval(id);
+  }, [paused, N]);
 
   function onTouchStart(e: React.TouchEvent) {
     startX.current = e.touches[0].clientX;
     dragging.current = true;
+    setPaused(true);
   }
   function onTouchEnd(e: React.TouchEvent) {
     if (!dragging.current) return;
     dragging.current = false;
     const dx = e.changedTouches[0].clientX - startX.current;
     if (Math.abs(dx) > 40) goTo(idx + (dx < 0 ? 1 : -1));
+    setTimeout(() => setPaused(false), 8000);
   }
 
   return (
-    <div className={styles.carousel}>
+    <div
+      className={styles.carousel}
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+    >
       <div
         className={styles.carouselTrack}
-        ref={trackRef}
         onTouchStart={onTouchStart}
         onTouchEnd={onTouchEnd}
         style={{ transform: `translateX(-${idx * 100}%)` }}
       >
-        {PRODUCTS.map((p, i) => (
-          <div
-            key={i}
-            className={`${styles.carouselSlide} ${p.soon ? styles.productSoon : ''} ${p.pro ? styles.productPro : ''}`}
-          >
-            {p.pro && <div className={styles.proBadge}>ALL-IN-ONE</div>}
-            <div className={styles.slideHead}>
-              <span className={styles.slideId}>{p.id}</span>
-              <span className={styles.slideName}>{p.name}</span>
-              <span className={styles.slidePrice}>{p.price}<span className={styles.priceUnit}>/mo</span></span>
+        {slides.map((s, i) =>
+          s.kind === 'tier' ? (
+            <div key={i} className={styles.carouselSlide}>
+              <div className={styles.tierLabel}>{s.data.id}</div>
+              <div className={styles.tierName}>{s.data.name}</div>
+              <div className={styles.tierTagline}>{s.data.tagline}</div>
+              <div className={styles.tierPrice}>
+                {s.data.price}<span className={styles.priceUnit}>/mo</span>
+              </div>
+              <div className={styles.tierSub}>Subscription only. Cancel anytime.</div>
+              <ul className={styles.tierFeatures}>
+                {s.data.features.map((f, j) => (
+                  <li key={j} className={styles.tierFeature}>
+                    <span className={styles.check}>&#10003;</span>
+                    <span>{f}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
-            <p className={styles.slideCopy}>{p.copy}</p>
-          </div>
-        ))}
+          ) : (
+            <div key={i} className={`${styles.carouselSlide} ${styles.carouselSlidePro}`}>
+              <div className={styles.allInOneBadge}>{s.data.label}</div>
+              <div className={styles.tierName}>{s.data.name}</div>
+              <div className={styles.tierPrice}>
+                {s.data.price}<span className={styles.priceUnit}>/mo</span>
+              </div>
+              <div className={styles.tierSub}>Everything, unlimited. Flat fee.</div>
+              <p className={styles.allInOneCopy}>{s.data.copy}</p>
+            </div>
+          )
+        )}
       </div>
       <div className={styles.carouselDots}>
-        {PRODUCTS.map((_, i) => (
+        {slides.map((_, i) => (
           <button
             key={i}
             className={`${styles.dot} ${i === idx ? styles.dotActive : ''}`}
@@ -150,9 +238,9 @@ function PricingCarousel() {
         ))}
       </div>
       <div className={styles.carouselNav}>
-        <button onClick={() => goTo(idx - 1)} disabled={idx === 0} className={styles.carouselBtn}>&larr;</button>
-        <span className={styles.carouselCount}>{idx + 1} / {PRODUCTS.length}</span>
-        <button onClick={() => goTo(idx + 1)} disabled={idx === PRODUCTS.length - 1} className={styles.carouselBtn}>&rarr;</button>
+        <button onClick={() => goTo(idx - 1)} className={styles.carouselBtn} aria-label="Previous">&larr;</button>
+        <span className={styles.carouselCount}>{idx + 1} / {N}</span>
+        <button onClick={() => goTo(idx + 1)} className={styles.carouselBtn} aria-label="Next">&rarr;</button>
       </div>
     </div>
   );
@@ -281,33 +369,6 @@ export default function S3ComingSoon() {
           </div>
         )}
 
-        {/* ── PRICING ── */}
-        <div className={styles.pricingSection}>
-          <h2 className={styles.sectionHeading}>Simple pricing. No licence fees. No surprises.</h2>
-
-          {isMobile ? (
-            <PricingCarousel />
-          ) : (
-            <div className={styles.productList}>
-              {PRODUCTS.map((p, i) => (
-                <div key={i} className={`${styles.product} ${p.soon ? styles.productSoon : ''} ${p.pro ? styles.productPro : ''}`}>
-                  {p.pro && <div className={styles.proBadge}>ALL-IN-ONE</div>}
-                  <div className={styles.productHead}>
-                    <span className={styles.productId}>{p.id}</span>
-                    <span className={styles.productName}>{p.name}</span>
-                    <span className={styles.productPrice}>{p.price}{!p.soon || p.pro ? <span className={styles.priceUnit}>/mo</span> : null}</span>
-                  </div>
-                  <p className={styles.productCopy}>{p.copy}</p>
-                </div>
-              ))}
-            </div>
-          )}
-        </div>
-
-        <p className={styles.promoLine}>
-          First hour free, no sign-in. First 5,000 subscribers get their second month free. Annual subs: one extra month.
-        </p>
-
         {/* LED Countdown */}
         <div className={styles.countdownFrame}>
           <div className={styles.countdownHeader}>ESTIMATED TIME TO LAUNCH</div>
@@ -353,6 +414,19 @@ export default function S3ComingSoon() {
             </p>
           ))}
         </div>
+
+        {/* ── PRICING ── desktop: 3-card grid + all-in-one banner. mobile: carousel ── */}
+        <div className={styles.pricingSection}>
+          <h2 className={styles.sectionHeading}>Simple pricing. No licence fees. No surprises.</h2>
+          <p className={styles.pricingSub}>
+            No licence fees. No surprises. Just a flat monthly subscription.
+          </p>
+          {isMobile ? <PricingCarousel /> : <PricingGrid />}
+        </div>
+
+        <p className={styles.promoLine}>
+          First hour free, no sign-in. First 5,000 subscribers get their second month free. Annual subs: one extra month.
+        </p>
 
         <p className={styles.cursor}>
           <span className={styles.prompt}>&gt;</span>{' '}

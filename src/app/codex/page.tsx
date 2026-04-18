@@ -13,7 +13,6 @@ import EconomySection from '@/sections/codex/EconomySection';
 import SkillsSection from '@/sections/codex/SkillsSection';
 import MaitsSection from '@/sections/codex/MaitsSection';
 import SigopsSection from '@/sections/codex/SigopsSection';
-import EveryWearSection from '@/sections/codex/EveryWearSection';
 import LayerUSection from '@/sections/codex/LayerUSection';
 import GameplaySection from '@/sections/codex/GameplaySection';
 import SeasonsSection from '@/sections/codex/SeasonsSection';
@@ -30,7 +29,6 @@ const sectionMap: Record<CodexSectionId, React.ComponentType> = {
   skills: SkillsSection,
   maits: MaitsSection,
   sigops: SigopsSection,
-  everywear: EveryWearSection,
   layeru: LayerUSection,
   gameplay: GameplaySection,
   seasons: SeasonsSection,

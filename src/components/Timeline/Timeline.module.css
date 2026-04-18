@@ -54,7 +54,7 @@
 .year {
   --year-color: var(--c-accent);
 
-  font: 700 11px var(--font-body);
+  font: 700 11px var(--font-mono);
   letter-spacing: 2px;
   color: var(--year-color);
 }
@@ -67,10 +67,11 @@
 .year[data-variant='green']  { --year-color: var(--c-green); }
 
 .title {
-  font: 900 16px var(--font-display);
-  letter-spacing: 1px;
+  font: 700 17px var(--font-display);
+  letter-spacing: 0.5px;
   color: var(--c-text);
   margin-top: 4px;
+  line-height: 1.2;
 }
 
 .description {

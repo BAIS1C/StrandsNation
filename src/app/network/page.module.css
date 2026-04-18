@@ -1,5 +1,5 @@
 .label {
-  font: 700 10px var(--font-display);
+  font: 700 10px var(--font-mono);
   letter-spacing: 3px;
   display: block;
   text-transform: uppercase;

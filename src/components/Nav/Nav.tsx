@@ -6,16 +6,14 @@ import { useState } from 'react';
 import MusicPlayer from '@/components/MusicPlayer/MusicPlayer';
 import styles from './Nav.module.css';
 
-const bookUrl = 'https://www.amazon.com/dp/B0GFXPP9Y6';
-
 const navLinks = [
   { href: '/', label: 'HOME', external: false },
   { href: '/codex', label: 'CODEX', external: false },
+  { href: '/everywear', label: 'EVERYWEAR', external: false },
   { href: '/s3', label: 'S\u00B3', external: false },
   { href: '/game', label: 'PLAY', external: false },
   { href: '/network', label: 'NETWORK', external: false },
-  { href: '/manifesto', label: 'MANIFESTO', external: false },
-  { href: '/whitepaper', label: 'WHITEPAPER', external: false },
+  { href: '/philosophy', label: 'PHILOSOPHY', external: false },
 ] as const;
 
 export default function Nav() {
@@ -81,14 +79,6 @@ export default function Nav() {
               </Link>
             )
           )}
-          <a
-            href={bookUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.link}
-          >
-            BOOK
-          </a>
         </div>
       </div>
     </nav>

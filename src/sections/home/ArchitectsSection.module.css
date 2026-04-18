@@ -28,10 +28,11 @@
 }
 
 .cardTitle {
-  font: 800 18px var(--font-display);
-  letter-spacing: 1px;
+  font: 700 20px var(--font-display);
+  letter-spacing: 0.5px;
   color: var(--c-yellow);
   margin-bottom: 12px;
+  line-height: 1.2;
 }
 
 .body {
@@ -58,7 +59,7 @@
 .bookLink {
   display: inline-block;
   padding: 8px 20px;
-  font: 700 11px var(--font-display);
+  font: 700 11px var(--font-mono);
   letter-spacing: 2px;
   border: 1px solid var(--c-yellow);
   color: var(--c-yellow);

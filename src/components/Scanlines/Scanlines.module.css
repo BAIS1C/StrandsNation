@@ -4,35 +4,38 @@
   pointer-events: none;
   z-index: var(--z-overlay);
   mix-blend-mode: screen;
+  /* Base line density halved (0.02 → 0.012) and ceiling opacity capped
+     at 0.6 via the keyframes. Lines still present; CRT texture, not noise. */
   background: repeating-linear-gradient(
     0deg,
     transparent,
     transparent 2px,
-    rgba(0, 194, 255, 0.02) 2px,
-    rgba(0, 194, 255, 0.02) 4px
+    rgba(0, 194, 255, 0.012) 2px,
+    rgba(0, 194, 255, 0.012) 4px
   );
-  animation: flicker 3s infinite;
+  opacity: 0.55;
+  animation: flicker 5s infinite;
+}
+
+/* Terminal skin: scanlines drop to near-invisible — industrial tool
+   aesthetic doesn't want CRT noise. */
+body[data-skin="terminal"] .scanlines {
+  opacity: 0.15;
+}
+
+/* Refined skin: calmer — two-thirds the classic baseline. */
+body[data-skin="refined"] .scanlines {
+  opacity: 0.35;
 }
 
 @keyframes flicker {
-  0% { opacity: 1; }
-  4% { opacity: 0.35; }
-  5% { opacity: 1; }
-  14% { opacity: 0.7; }
-  15% { opacity: 1; }
-  15.5% { opacity: 0.25; }
-  16% { opacity: 1; }
-  35% { opacity: 0.85; }
-  36% { opacity: 1; }
-  48% { opacity: 0.45; }
-  49% { opacity: 0.9; }
-  50% { opacity: 1; }
-  68% { opacity: 1; }
-  69% { opacity: 0.3; }
-  70% { opacity: 0.8; }
-  70.5% { opacity: 1; }
-  85% { opacity: 0.55; }
-  86% { opacity: 1; }
-  95% { opacity: 0.7; }
-  96% { opacity: 1; }
+  0%   { opacity: 0.55; }
+  25%  { opacity: 0.50; }
+  50%  { opacity: 0.55; }
+  52%  { opacity: 0.42; }
+  54%  { opacity: 0.55; }
+  75%  { opacity: 0.52; }
+  77%  { opacity: 0.45; }
+  79%  { opacity: 0.55; }
+  100% { opacity: 0.55; }
 }

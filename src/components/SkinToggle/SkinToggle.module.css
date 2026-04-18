@@ -1,0 +1,37 @@
+/* SkinToggle — layout-only. Chip styling lives on .ew-skin-toggle
+   in everywear/components.css so it stays skin-reactive. */
+
+.wrap {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 60;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  pointer-events: auto;
+}
+
+.hint {
+  font-family: var(--ew-font-mono, var(--font-mono));
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ew-primary, var(--c-accent));
+  opacity: 0.8;
+  padding: 4px 8px;
+  border: 1px solid var(--ew-primary, var(--c-accent));
+  background: rgba(0, 0, 0, 0.4);
+  animation: sk-blink 0.8s steps(2, end) infinite;
+}
+
+@keyframes sk-blink {
+  50% { opacity: 0.35; }
+}
+
+@media (max-width: 640px) {
+  .wrap {
+    right: 8px;
+    bottom: 8px;
+  }
+}

@@ -9,7 +9,6 @@ export const codexNav: CodexNavItem[] = [
   { id: 'skills',    icon: '△', label: 'Operator Paths' },
   { id: 'maits',     icon: '⬡', label: 'My Maits' },
   { id: 'sigops',    icon: '⊞', label: 'SIGOPS' },
-  { id: 'everywear', icon: '◎', label: 'EveryWear' },
   { id: 'layeru',    icon: '◉', label: 'Layer U' },
   { id: 'gameplay',  icon: '▷', label: 'Core Loop',        group: 'GAMEPLAY' },
   { id: 'seasons',   icon: '⟐', label: 'Seasons' },

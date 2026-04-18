@@ -6,6 +6,7 @@ import Scanlines from '@/components/Scanlines/Scanlines';
 import CircuitBg from '@/components/CircuitBg/CircuitBg';
 import SiteChrome from '@/components/SiteChrome/SiteChrome';
 import MainWrapper from '@/components/MainWrapper/MainWrapper';
+import SkinToggle from '@/components/SkinToggle/SkinToggle';
 import '@/styles/tokens.css';
 import '@/styles/global.css';
 
@@ -33,10 +34,24 @@ export const metadata: Metadata = {
   },
 };
 
+/* EWDS boot script — runs before first paint to swap body dataset attrs
+   from localStorage, avoiding a flash of the default skin on reload. */
+const ewdsBoot = `
+try {
+  var s = localStorage.getItem('ew-skin');
+  var m = localStorage.getItem('ew-mode');
+  if (s) document.body.dataset.skin = s;
+  if (m) document.body.dataset.mode = m;
+} catch (e) {}
+`;
+
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: ewdsBoot }} />
+      </head>
+      <body className="ew" data-skin="classic" data-mode="dark">
         <SiteChrome>
           <Scanlines />
           <CircuitBg />
@@ -46,6 +61,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <Nav />
         </Suspense>
         <MainWrapper>{children}</MainWrapper>
+        <SkinToggle />
       </body>
     </html>
   );

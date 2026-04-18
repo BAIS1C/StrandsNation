@@ -1,0 +1,270 @@
+/* ═══════════════════════════════════════════════════
+   /everywear — product landing page
+   Mirrors SectionWrapper + Card language from home.
+   Countdown borrows S³'s LED housing.
+   ═══════════════════════════════════════════════════ */
+
+/* ─── Hero ─── */
+.hero {
+  text-align: center;
+  padding: 28px 0 16px;
+}
+
+.tm {
+  font: 700 11px var(--font-mono);
+  letter-spacing: 6px;
+  color: var(--c-accent);
+  opacity: 0.7;
+  margin-bottom: 18px;
+}
+
+.title {
+  font: 900 clamp(34px, 5.2vw, 58px)/1.05 var(--font-display);
+  letter-spacing: 1.5px;
+  color: var(--c-text);
+  margin: 0 0 14px;
+  text-transform: uppercase;
+}
+
+.titleAccent {
+  background: linear-gradient(90deg, var(--c-accent), var(--c-purple) 55%, var(--c-pink));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.tagline {
+  font: 700 clamp(14px, 1.8vw, 18px) var(--font-mono);
+  letter-spacing: 3px;
+  color: var(--c-accent);
+  text-transform: uppercase;
+  margin: 0 0 18px;
+}
+
+.subtitle {
+  font: 400 clamp(14px, 1.6vw, 16px)/1.7 var(--font-body);
+  color: var(--c-sub);
+  letter-spacing: 0.3px;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+/* ─── Card title + body utilities ─── */
+.cardTitleMd {
+  font: 700 18px var(--font-display);
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.cardTitleMd[data-variant='cyan']   { color: var(--c-accent); }
+.cardTitleMd[data-variant='pink']   { color: var(--c-pink); }
+.cardTitleMd[data-variant='yellow'] { color: var(--c-yellow); }
+.cardTitleMd[data-variant='purple'] { color: var(--c-purple); }
+.cardTitleMd[data-variant='red']    { color: var(--c-red); }
+
+.body {
+  color: var(--c-sub);
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 12px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+/* ─── Hub grid ─── */
+.hubGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-grid-gap);
+}
+
+.productBadge {
+  display: inline-block;
+  font: 700 9px var(--font-mono);
+  letter-spacing: 2.5px;
+  padding: 3px 8px;
+  margin-bottom: 12px;
+  border: 1px solid currentColor;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+.productBadge[data-variant='cyan']   { color: var(--c-accent); }
+.productBadge[data-variant='pink']   { color: var(--c-pink); }
+.productBadge[data-variant='yellow'] { color: var(--c-yellow); }
+.productBadge[data-variant='purple'] { color: var(--c-purple); }
+.productBadge[data-variant='red']    { color: var(--c-red); }
+
+.productName {
+  font: 800 20px var(--font-display);
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  line-height: 1.1;
+}
+
+.productName[data-variant='cyan']   { color: var(--c-accent); }
+.productName[data-variant='pink']   { color: var(--c-pink); }
+.productName[data-variant='yellow'] { color: var(--c-yellow); }
+.productName[data-variant='purple'] { color: var(--c-purple); }
+.productName[data-variant='red']    { color: var(--c-red); }
+
+.productCopy {
+  font: 400 13px/1.7 var(--font-body);
+  color: var(--c-sub);
+  letter-spacing: 0.2px;
+  margin: 0;
+}
+
+/* ─── Phases grid ─── */
+.phasesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-grid-gap);
+}
+
+/* ─── Countdown housing (S³ parity) ─── */
+.countdownWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.countdownFrame {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  background: #1A1A1A;
+  border: 1px solid #333;
+  clip-path: polygon(
+    0 0,
+    calc(100% - 14px) 0,
+    100% 14px,
+    100% 100%,
+    14px 100%,
+    0 calc(100% - 14px)
+  );
+  padding: 14px 18px 18px;
+  box-shadow:
+    0 1px 0 #444,
+    0 2px 6px rgba(0, 0, 0, 0.55),
+    0 10px 28px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.countdownHeader {
+  font: 600 9px/1 var(--font-mono);
+  letter-spacing: 3px;
+  color: var(--c-accent);
+  text-align: center;
+  margin-bottom: 12px;
+  opacity: 0.7;
+}
+
+.countdownInner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0;
+  background: #04080C;
+  border: 1px solid #1a1d26;
+  clip-path: polygon(
+    0 0,
+    calc(100% - 10px) 0,
+    100% 10px,
+    100% 100%,
+    10px 100%,
+    0 calc(100% - 10px)
+  );
+  padding: 14px 14px;
+  box-shadow:
+    inset 0 1px 4px rgba(0, 0, 0, 0.8),
+    inset 0 0 16px rgba(0, 0, 0, 0.5);
+}
+
+.countdownUnit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.countdownLabel {
+  font: 600 8px/1 var(--font-mono);
+  letter-spacing: 2.5px;
+  color: var(--c-accent);
+  opacity: 0.45;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.digitPanel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.digitGhost {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(22px, 3.4vw, 32px);
+  line-height: 1;
+  letter-spacing: 2px;
+  color: #081A28;
+  user-select: none;
+}
+
+.countdownDigit {
+  position: absolute;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(22px, 3.4vw, 32px);
+  line-height: 1;
+  letter-spacing: 2px;
+  color: var(--c-accent);
+  text-shadow:
+    0 0 6px rgba(0, 194, 255, 0.65),
+    0 0 14px rgba(0, 194, 255, 0.35);
+}
+
+.countdownSep {
+  font: 700 clamp(22px, 3.4vw, 32px) var(--font-display);
+  color: var(--c-accent);
+  opacity: 0.4;
+  align-self: center;
+  padding-top: 10px;
+}
+
+.countdownCaption {
+  font: 500 11px var(--font-mono);
+  letter-spacing: 2px;
+  color: var(--c-sub);
+  text-align: center;
+  opacity: 0.75;
+  margin: 0;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 960px) {
+  .hubGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .hubGrid,
+  .phasesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .countdownUnit {
+    padding: 0 6px;
+  }
+}

@@ -1,13 +1,19 @@
 .mini {
   --mini-color: var(--c-accent);
   padding: 14px 16px;
-  border-radius: 2px;
-  background: rgba(0, 0, 0, 0.3);
+  clip-path: var(--clip-card);
+  /* Surface-lighter-than-page so cut corners read. Black-on-near-black
+     made the bevel invisible. 10% color tint over var(--c-surface) gives
+     a perceptible edge across all skins. */
+  background:
+    linear-gradient(color-mix(in oklab, var(--mini-color) 10%, transparent),
+                    color-mix(in oklab, var(--mini-color) 10%, transparent)),
+    var(--c-surface);
   border-left: 2px solid var(--mini-color);
 }
 
 .title {
-  font: 700 12px var(--font-display);
+  font: 700 12px var(--font-mono);
   letter-spacing: 1px;
   margin-bottom: 4px;
   color: var(--mini-color);

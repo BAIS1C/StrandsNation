@@ -1,0 +1,498 @@
+/* ═══════════════════════════════════════════════════
+   EWDS · COMPONENTS  v1.0.0
+   Shared primitives across StrandsNation, Strands Demo OS, S3 Studio.
+   Class prefix: .ew-*
+   Scope: must live under a .ew ancestor (usually <body className="ew">)
+   ═══════════════════════════════════════════════════ */
+
+/* ── EYEBROW / META / LABEL (mono role) ─── */
+.ew-eyebrow,
+.ew-meta,
+.ew-label {
+  font-family: var(--ew-font-mono);
+  font-weight: 500;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ew-text-faint);
+}
+.ew-meta { letter-spacing: 0.14em; font-size: 11px; }
+.ew-lead {
+  font-family: var(--ew-font-body);
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--ew-text-muted);
+}
+.ew-small {
+  font-family: var(--ew-font-body);
+  font-size: 12px;
+  color: var(--ew-text-faint);
+}
+
+/* ── BUTTON ─────────────────────────────── */
+.ew-btn {
+  font-family: var(--ew-font-body);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 12px 22px;
+  background: var(--ew-surface-raised);
+  color: var(--ew-text);
+  border: 1px solid var(--ew-border-strong);
+  cursor: pointer;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  clip-path: var(--ew-clip-button);
+  transition: background var(--ew-t-fast) var(--ew-ease), border-color var(--ew-t-fast) var(--ew-ease), color var(--ew-t-fast) var(--ew-ease), transform var(--ew-t-fast) var(--ew-ease-servo);
+}
+body[data-skin="terminal"] .ew-btn,
+.ew[data-skin="terminal"] .ew-btn {
+  clip-path: none;
+  border-width: 2px;
+  border-radius: 0;
+}
+.ew-btn:hover { background: var(--ew-surface-overlay); border-color: var(--ew-primary); color: var(--ew-primary); }
+.ew-btn:active { transform: translateY(1px); }
+.ew-btn[disabled] { opacity: 0.4; cursor: not-allowed; }
+
+.ew-btn--primary {
+  background: var(--ew-primary);
+  color: var(--ew-primary-fg);
+  border-color: var(--ew-primary);
+  box-shadow: var(--ew-shadow-glow);
+}
+.ew-btn--primary:hover { background: var(--ew-primary-hover); border-color: var(--ew-primary-hover); color: var(--ew-primary-fg); }
+.ew-btn--primary:active { background: var(--ew-primary-press); }
+
+.ew-btn--ghost {
+  background: transparent;
+  border-color: var(--ew-border);
+}
+.ew-btn--danger {
+  background: transparent;
+  border-color: var(--ew-danger);
+  color: var(--ew-danger);
+}
+.ew-btn--danger:hover { background: var(--ew-danger); color: var(--ew-text-inverse); border-color: var(--ew-danger); }
+
+.ew-btn--sm { padding: 8px 14px; font-size: 11px; }
+.ew-btn--lg { padding: 16px 28px; font-size: 14px; }
+
+/* ── BADGE ──────────────────────────────── */
+.ew-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--ew-font-mono);
+  font-weight: 600;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border: 1px solid var(--ew-border-strong);
+  color: var(--ew-text-muted);
+  background: var(--ew-surface);
+  line-height: 1;
+}
+body[data-skin="terminal"] .ew-badge { border-width: 2px; }
+.ew-badge--success { color: var(--ew-success); border-color: var(--ew-success); }
+.ew-badge--warm { color: var(--ew-warm); border-color: var(--ew-warm); }
+.ew-badge--danger { color: var(--ew-danger); border-color: var(--ew-danger); }
+.ew-badge--neutral { color: var(--ew-text-faint); }
+.ew-badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  display: inline-block;
+}
+
+/* ── CHIP ───────────────────────────────── */
+.ew-chip {
+  font-family: var(--ew-font-body);
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 6px 12px;
+  border: 1px solid var(--ew-border-strong);
+  color: var(--ew-text-muted);
+  background: transparent;
+  cursor: pointer;
+  line-height: 1;
+  transition: all var(--ew-t-fast) var(--ew-ease);
+}
+.ew-chip:hover { border-color: var(--ew-primary); color: var(--ew-primary); }
+.ew-chip--on,
+.ew-chip.active {
+  border-color: var(--ew-primary);
+  color: var(--ew-primary);
+  background: var(--ew-primary-soft);
+}
+
+/* ── CARD ───────────────────────────────── */
+.ew-card {
+  background: var(--ew-surface);
+  border: 1px solid var(--ew-border);
+  padding: 28px;
+  color: var(--ew-text);
+  clip-path: var(--ew-clip-card);
+  position: relative;
+}
+body[data-skin="terminal"] .ew-card { clip-path: none; border-width: 2px; }
+.ew-card--sunken {
+  background: var(--ew-surface-sunken);
+  border-color: var(--ew-border);
+}
+.ew-card-title {
+  font-family: var(--ew-font-display);
+  font-weight: var(--ew-fw-display);
+  font-size: 20px;
+  letter-spacing: 0.04em;
+  color: var(--ew-text);
+  margin-bottom: 8px;
+}
+.ew-card-body {
+  font-family: var(--ew-font-body);
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--ew-text-muted);
+}
+
+/* ── INPUT / SELECT / TEXTAREA ──────────── */
+.ew-field { display: flex; flex-direction: column; gap: 6px; }
+.ew-field-label {
+  font-family: var(--ew-font-mono);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ew-text-faint);
+}
+.ew-field-help {
+  font-family: var(--ew-font-body);
+  font-size: 12px;
+  color: var(--ew-text-faint);
+}
+.ew-field-error {
+  font-family: var(--ew-font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--ew-danger);
+}
+.ew-input,
+.ew-select,
+.ew-textarea {
+  font-family: var(--ew-font-body);
+  font-size: 14px;
+  padding: 10px 12px;
+  background: var(--ew-surface-sunken);
+  color: var(--ew-text);
+  border: 1px solid var(--ew-border);
+  border-radius: var(--ew-radius);
+  outline: none;
+  transition: border-color var(--ew-t-fast) var(--ew-ease);
+}
+.ew-input:focus,
+.ew-select:focus,
+.ew-textarea:focus { border-color: var(--ew-primary); }
+.ew-input[aria-invalid="true"] { border-color: var(--ew-danger); }
+.ew-textarea { min-height: 96px; resize: vertical; }
+
+.ew-inline-field {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--ew-font-body);
+  font-size: 13px;
+  color: var(--ew-text-muted);
+  cursor: pointer;
+}
+.ew-check,
+.ew-radio,
+.ew-switch { accent-color: var(--ew-primary); }
+
+/* ── PROGRESS ───────────────────────────── */
+.ew-progress {
+  height: 6px;
+  background: var(--ew-surface-sunken);
+  border: 1px solid var(--ew-border);
+  border-radius: var(--ew-radius-xs);
+  overflow: hidden;
+}
+.ew-progress-bar {
+  height: 100%;
+  background: var(--ew-primary);
+  transition: width var(--ew-t-slow) var(--ew-ease);
+}
+.ew-progress--indeterminate .ew-progress-bar {
+  width: 40%;
+  animation: ew-indeterminate 1.4s linear infinite;
+}
+@keyframes ew-indeterminate {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(350%); }
+}
+
+/* ── WINDOW CHROME (OS primitives) ──────── */
+.ew-titlebar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background: var(--ew-chrome-bg);
+  border-bottom: 1px solid var(--ew-chrome-border);
+  font-family: var(--ew-font-mono);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ew-text-muted);
+}
+.ew-titlebar-title { flex: 1; }
+.ew-traffic { display: flex; gap: 6px; }
+.ew-traffic-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--ew-border-strong);
+}
+.ew-traffic-dot:first-child { background: var(--ew-danger); }
+.ew-traffic-dot:nth-child(2) { background: var(--ew-warning); }
+.ew-traffic-dot:last-child { background: var(--ew-success); }
+.ew-window-body { padding: 14px; background: var(--ew-surface); }
+.ew-window-statusbar {
+  display: flex;
+  gap: 8px;
+  padding: 6px 14px;
+  border-top: 1px solid var(--ew-chrome-border);
+  background: var(--ew-chrome-bg);
+  font-family: var(--ew-font-mono);
+  font-size: 10px;
+  color: var(--ew-text-faint);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* ── TASKBAR ────────────────────────────── */
+.ew-taskbar {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  background: var(--ew-chrome-bg);
+  border-top: 1px solid var(--ew-chrome-border);
+  font-family: var(--ew-font-mono);
+  font-size: 11px;
+  color: var(--ew-text-muted);
+}
+.ew-taskbar-start { padding: 4px 10px; color: var(--ew-primary); font-weight: 600; }
+.ew-taskbar-divider { width: 1px; height: 20px; background: var(--ew-chrome-border); margin: 0 6px; }
+.ew-taskitem {
+  padding: 4px 10px;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+.ew-taskitem:hover { background: var(--ew-surface); }
+.ew-taskitem--active { background: var(--ew-surface); border-color: var(--ew-border); color: var(--ew-text); }
+.ew-taskbar-spacer { flex: 1; }
+.ew-tray { display: flex; gap: 10px; align-items: center; }
+.ew-tray-item { display: inline-flex; align-items: center; gap: 5px; padding: 4px 8px; font-size: 10px; letter-spacing: 0.12em; }
+.ew-tray-clock { font-weight: 600; color: var(--ew-text); }
+
+/* ── LIST / SIDEBAR ─────────────────────── */
+.ew-list {
+  list-style: none;
+  padding: 6px 0;
+  margin: 0;
+  font-family: var(--ew-font-body);
+}
+.ew-list-section-label {
+  font-family: var(--ew-font-mono);
+  font-size: 9px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--ew-text-faint);
+  padding: 10px 14px 6px;
+}
+.ew-list-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 14px;
+  font-size: 13px;
+  color: var(--ew-text-muted);
+  cursor: pointer;
+  border-left: 2px solid transparent;
+  transition: background var(--ew-t-fast) var(--ew-ease);
+}
+.ew-list-item:hover { background: var(--ew-surface); color: var(--ew-text); }
+.ew-list-item--active {
+  background: var(--ew-primary-soft);
+  color: var(--ew-primary);
+  border-left-color: var(--ew-primary);
+}
+.ew-list-item-meta {
+  margin-left: auto;
+  font-family: var(--ew-font-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  color: var(--ew-text-faint);
+}
+.ew-list-divider {
+  height: 1px;
+  background: var(--ew-border);
+  margin: 6px 14px;
+}
+
+/* ── TABS ───────────────────────────────── */
+.ew-tabs {
+  display: flex;
+  gap: 4px;
+  border-bottom: 1px solid var(--ew-border);
+}
+.ew-tab {
+  font-family: var(--ew-font-body);
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  padding: 10px 16px;
+  background: transparent;
+  color: var(--ew-text-muted);
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  margin-bottom: -1px;
+}
+.ew-tab:hover { color: var(--ew-text); }
+.ew-tab--active { color: var(--ew-primary); border-bottom-color: var(--ew-primary); }
+
+/* ── TABLE ──────────────────────────────── */
+.ew-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--ew-font-body);
+  font-size: 13px;
+}
+.ew-table thead th {
+  font-family: var(--ew-font-mono);
+  font-weight: 600;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-align: left;
+  padding: 10px 12px;
+  color: var(--ew-text-faint);
+  border-bottom: 1px solid var(--ew-border-strong);
+}
+.ew-table tbody td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--ew-border);
+  color: var(--ew-text-muted);
+}
+.ew-table tbody tr:hover td { background: var(--ew-surface); color: var(--ew-text); }
+.ew-table .num { text-align: right; font-family: var(--ew-font-mono); }
+
+/* ── DIALOG ─────────────────────────────── */
+.ew-scrim {
+  position: fixed;
+  inset: 0;
+  z-index: var(--ew-z-overlay);
+  display: grid;
+  place-items: center;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+.ew-dialog {
+  width: min(480px, 92vw);
+  background: var(--ew-surface-overlay);
+  border: 1px solid var(--ew-border-strong);
+  box-shadow: var(--ew-shadow-float);
+  clip-path: var(--ew-clip-card);
+}
+body[data-skin="terminal"] .ew-dialog { clip-path: none; border-width: 2px; }
+.ew-dialog-head { padding: 20px 24px 12px; }
+.ew-dialog-title {
+  font-family: var(--ew-font-display);
+  font-weight: var(--ew-fw-display);
+  font-size: 20px;
+  letter-spacing: 0.04em;
+  color: var(--ew-text);
+}
+.ew-dialog-body { padding: 0 24px 20px; font-family: var(--ew-font-body); font-size: 14px; line-height: 1.65; color: var(--ew-text-muted); }
+.ew-dialog-foot { display: flex; gap: 10px; justify-content: flex-end; padding: 16px 24px; border-top: 1px solid var(--ew-border); }
+
+/* ── SKIN TOGGLE COMPONENT ──────────────── */
+.ew-skin-toggle {
+  display: inline-flex;
+  gap: 2px;
+  padding: 3px;
+  background: var(--ew-surface);
+  border: 1px solid var(--ew-border);
+  font-family: var(--ew-font-mono);
+}
+body[data-skin="terminal"] .ew-skin-toggle { border-width: 2px; }
+.ew-skin-toggle button {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 6px 10px;
+  background: transparent;
+  color: var(--ew-text-muted);
+  border: none;
+  cursor: pointer;
+  transition: all var(--ew-t-fast) var(--ew-ease);
+}
+.ew-skin-toggle button:hover { color: var(--ew-text); }
+.ew-skin-toggle button[data-active="true"] {
+  background: var(--ew-primary);
+  color: var(--ew-primary-fg);
+}
+
+/* ── CODE / KBD ─────────────────────────── */
+code,
+kbd,
+samp,
+.ew code,
+.ew kbd,
+.ew samp {
+  font-family: var(--ew-font-mono);
+  font-weight: 500;
+  font-size: 0.92em;
+}
+.ew kbd {
+  display: inline-block;
+  padding: 1px 6px;
+  background: var(--ew-surface-raised);
+  border: 1px solid var(--ew-border-strong);
+  border-radius: var(--ew-radius-xs);
+  font-size: 0.82em;
+  color: var(--ew-text);
+}
+
+/* ── SKIN-TRANSITION SMOOTHING ──────────── */
+/* Smooth color changes only; type/bevel swap instant (no layout thrash). */
+body.ew,
+.ew {
+  transition:
+    background-color var(--ew-t-med) var(--ew-ease-servo),
+    color var(--ew-t-med) var(--ew-ease-servo);
+}
+.ew-card,
+.ew-btn,
+.ew-badge,
+.ew-chip,
+.ew-titlebar,
+.ew-taskbar,
+.ew-list-item,
+.ew-dialog,
+.ew-skin-toggle {
+  transition:
+    background-color var(--ew-t-med) var(--ew-ease-servo),
+    border-color var(--ew-t-med) var(--ew-ease-servo),
+    color var(--ew-t-med) var(--ew-ease-servo);
+}

@@ -5,7 +5,7 @@
 }
 
 .text {
-  font: 400 10px var(--font-display);
+  font: 400 10px var(--font-mono);
   letter-spacing: 3px;
   color: var(--c-dim);
   opacity: 0.5;

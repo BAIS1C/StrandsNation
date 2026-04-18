@@ -4,7 +4,7 @@
 }
 
 .classifiedLabel {
-  font: 500 10px var(--font-display);
+  font: 500 10px var(--font-mono);
   letter-spacing: 4px;
   color: var(--c-red);
   text-transform: uppercase;
@@ -53,7 +53,7 @@
 }
 
 .videoCaption {
-  font: 700 16px var(--font-display);
+  font: 700 16px var(--font-mono);
   letter-spacing: 2px;
   color: var(--c-text);
 }
@@ -83,11 +83,19 @@
 }
 
 .conceptCard {
-  flex: 0 0 300px;
-  height: 200px;
+  flex: 0 0 380px;
+  height: 250px;
   position: relative;
   overflow: hidden;
-  border-radius: 4px;
+  /* TL+BR directional cut — EWDS card spec */
+  clip-path: var(--clip-card, polygon(
+    12px 0,
+    100% 0,
+    100% calc(100% - 12px),
+    calc(100% - 12px) 100%,
+    0 100%,
+    0 12px
+  ));
   scroll-snap-align: start;
   border: 1px solid rgba(255, 255, 255, 0.06);
   cursor: pointer;
@@ -119,7 +127,7 @@
   position: absolute;
   bottom: 10px;
   left: 12px;
-  font: 600 9px var(--font-display);
+  font: 600 9px var(--font-mono);
   letter-spacing: 3px;
   color: var(--c-text);
   opacity: 0.7;
@@ -165,8 +173,8 @@
 
 @media (max-width: 768px) {
   .conceptCard {
-    flex: 0 0 240px;
-    height: 160px;
+    flex: 0 0 300px;
+    height: 200px;
   }
   .sliderBtn {
     display: none;
@@ -178,8 +186,8 @@
 
 @media (max-width: 480px) {
   .conceptCard {
-    flex: 0 0 200px;
-    height: 130px;
+    flex: 0 0 240px;
+    height: 160px;
   }
 }
 
@@ -191,7 +199,15 @@
   pointer-events: none;
   max-width: 320px;
   max-height: 240px;
-  border-radius: 6px;
+  /* TL+BR directional cut — EWDS card spec */
+  clip-path: var(--clip-card, polygon(
+    12px 0,
+    100% 0,
+    100% calc(100% - 12px),
+    calc(100% - 12px) 100%,
+    0 100%,
+    0 12px
+  ));
   overflow: hidden;
   border: 1px solid rgba(0, 194, 255, 0.25);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.7), 0 0 12px rgba(0, 194, 255, 0.1);
@@ -211,7 +227,7 @@
 .previewLabel {
   display: block;
   padding: 4px 8px;
-  font: 600 8px var(--font-display);
+  font: 600 8px var(--font-mono);
   letter-spacing: 2px;
   color: var(--c-accent);
   text-transform: uppercase;
@@ -251,9 +267,10 @@
 }
 
 .cardTitle {
-  font: 800 18px var(--font-display);
-  letter-spacing: 1px;
+  font: 700 20px var(--font-display);
+  letter-spacing: 0.5px;
   margin-bottom: 12px;
+  line-height: 1.2;
 }
 
 .cardTitle[data-variant='cyan']   { color: var(--c-accent); }
@@ -263,9 +280,10 @@
 .cardTitle[data-variant='green']  { color: var(--c-green); }
 
 .cardTitleSm {
-  font: 800 16px var(--font-display);
-  letter-spacing: 1px;
+  font: 700 17px var(--font-display);
+  letter-spacing: 0.5px;
   margin-bottom: 10px;
+  line-height: 1.2;
 }
 
 .cardTitleSm[data-variant='cyan']   { color: var(--c-accent); }
@@ -334,7 +352,7 @@
   width: auto;
   height: auto;
   object-fit: contain;
-  border-radius: 4px;
+  clip-path: var(--clip-card);
   border: 1px solid rgba(0, 194, 255, 0.15);
   box-shadow: 0 12px 48px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 194, 255, 0.06);
   animation: lbImgIn 0.25s ease-out both;
@@ -342,7 +360,7 @@
 
 .lightboxCaption {
   margin-top: 12px;
-  font: 600 10px var(--font-display);
+  font: 600 10px var(--font-mono);
   letter-spacing: 3px;
   color: var(--c-accent);
   text-transform: uppercase;
@@ -427,6 +445,13 @@
 /* ─── Card Clickable Wrapper ─── */
 .cardClickable {
   cursor: pointer;
+  /* Fill grid cell so all tombstones in a row stretch to the tallest */
+  height: 100%;
+  display: flex;
+}
+
+.cardClickable > * {
+  width: 100%;
 }
 
 /* ─── Card Pop-out Lightbox ─── */
@@ -442,7 +467,15 @@
   padding: 36px 32px;
   background: var(--c-surface);
   border: 1px solid rgba(0, 194, 255, 0.15);
-  border-radius: 6px;
+  /* TL+BR directional cut — EWDS card spec */
+  clip-path: var(--clip-card, polygon(
+    16px 0,
+    100% 0,
+    100% calc(100% - 16px),
+    calc(100% - 16px) 100%,
+    0 100%,
+    0 16px
+  ));
   box-shadow: 0 16px 64px rgba(0, 0, 0, 0.6), 0 0 24px rgba(0, 194, 255, 0.08);
 }
 

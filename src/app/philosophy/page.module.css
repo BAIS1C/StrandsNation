@@ -1,5 +1,5 @@
 .docLabel {
-  font: 700 10px var(--font-display);
+  font: 700 10px var(--font-mono);
   letter-spacing: 3px;
   display: block;
   text-transform: uppercase;
@@ -36,7 +36,7 @@
 .docLink {
   display: inline-block;
   padding: 10px 24px;
-  font: 700 12px var(--font-display);
+  font: 700 12px var(--font-mono);
   letter-spacing: 2px;
   text-decoration: none;
   clip-path: var(--clip-button-sm);
@@ -89,7 +89,7 @@
 
 .coverImg {
   width: 100%;
-  border-radius: 4px;
+  clip-path: var(--clip-card);
   border: 1px solid rgba(249, 225, 0, 0.2);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
 }

@@ -3,7 +3,7 @@
 }
 
 .num {
-  font: 400 11px var(--font-display);
+  font: 400 11px var(--font-mono);
   color: var(--c-accent);
   letter-spacing: 3px;
   opacity: 0.5;

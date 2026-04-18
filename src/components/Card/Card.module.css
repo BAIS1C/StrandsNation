@@ -1,20 +1,72 @@
 .card {
   --card-color: var(--c-accent);
   --card-hover-bg: var(--a-accent-hover);
+  /* Per design doc (02-System-v2): role tokens for working UI are slightly
+     desaturated vs display anchors. Frame = muted accent at ~55% mixed with
+     a dark neutral so the border reads as a precision edge, not candy. */
+  --card-frame: color-mix(in oklab, var(--card-color) 55%, #1a1d26);
+  /* Inner fill: opaque dark surface (matches --card #161922 from design doc) */
+  --card-fill: #14161e;
 
   position: relative;
-  overflow: hidden;
+  /* No overflow:hidden — it would clip ::before's visible frame */
   padding: var(--space-card-pad);
-  background: var(--c-surface);
-  border: 1px solid var(--c-border);
-  clip-path: var(--clip-card);
+  /* OUTER = desaturated frame band (visible TR+BL bevel) */
+  background: var(--card-frame);
+  /* Hardcoded polygon so token cascade can't fail us. 16px TR+BL canonical cuts. */
+  clip-path: polygon(
+    0 0,
+    calc(100% - 16px) 0,
+    100% 16px,
+    100% 100%,
+    16px 100%,
+    0 calc(100% - 16px)
+  );
   transition:
     transform var(--t-fast) ease-out,
-    background var(--t-med),
-    border-color var(--t-med),
+    filter var(--t-med),
     box-shadow var(--t-med);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  margin-bottom: 20px;
+  /* Equal-height inside CSS Grid rows: fill the cell + let content flow */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* Breathing room when Cards are stacked vertically outside a grid.
+     Grid layouts apply their own gap via --space-grid-gap and visually
+     dominate, so margin-bottom here just adds cushion for solo stacks. */
+  margin-bottom: var(--space-grid-gap);
+}
+
+/* In grid contexts the grid's gap already separates cells; neutralize margin
+   so stacking math isn't double-counted. */
+:where(.gridTwo, .gridThree, .gridFour, [class*='grid']) > .card,
+:where(.gridTwo, .gridThree, .gridFour, [class*='grid']) .card {
+  margin-bottom: 0;
+}
+
+/* INNER FILL — inset 3px, smaller polygon so the outer accent band shows as a
+   visible 3px frame on straight edges and ~2.1px on the TR+BL diagonals. */
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 3px;
+  clip-path: polygon(
+    0 0,
+    calc(100% - 13px) 0,
+    100% 13px,
+    100% 100%,
+    13px 100%,
+    0 calc(100% - 13px)
+  );
+  background: var(--card-fill);
+  z-index: 0;
+  pointer-events: none;
+  transition: background var(--t-med);
+}
+
+.card > * {
+  position: relative;
+  z-index: 1;
 }
 
 .card.compact {
@@ -24,22 +76,33 @@
 }
 
 .card.hovered {
-  background: var(--card-hover-bg);
-  border-color: var(--card-color);
+  filter: brightness(1.08);
   box-shadow:
     0 8px 32px rgba(0, 0, 0, 0.3),
-    0 0 20px color-mix(in srgb, var(--card-color) 8%, transparent);
+    0 0 20px color-mix(in srgb, var(--card-color) 12%, transparent);
 }
 
-/* ─── Inner border trace ─── */
+.card.hovered::before {
+  background: color-mix(in oklab, var(--card-color) 10%, var(--c-surface));
+}
+
+/* ─── Inner border trace (kept as subtle detail, now inset further) ─── */
 .innerBorder {
   position: absolute;
-  inset: 5px;
+  inset: 8px;
   border: 1px solid var(--card-color);
-  opacity: 0.1;
+  opacity: 0.12;
   transition: opacity var(--t-med);
   pointer-events: none;
-  clip-path: var(--clip-card-inner);
+  clip-path: polygon(
+    0 0,
+    calc(100% - 10px) 0,
+    100% 10px,
+    100% 100%,
+    10px 100%,
+    0 calc(100% - 10px)
+  );
+  z-index: 0;
 }
 
 .card.hovered .innerBorder {
@@ -49,70 +112,75 @@
 /* ─── Line accents ─── */
 .accentTop {
   position: absolute;
-  top: 0;
-  right: 12px;
+  top: 3px;
+  right: 18px;
   width: 1px;
-  height: 20px;
+  height: 18px;
   background: var(--card-color);
-  opacity: 0.15;
+  opacity: 0.2;
   transition: opacity var(--t-med);
+  z-index: 1;
 }
 
 .accentBottom {
   position: absolute;
-  bottom: 0;
-  left: 12px;
-  width: 20px;
+  bottom: 3px;
+  left: 18px;
+  width: 18px;
   height: 1px;
   background: var(--card-color);
-  opacity: 0.15;
+  opacity: 0.2;
   transition: opacity var(--t-med);
+  z-index: 1;
 }
 
 .card.hovered .accentTop,
 .card.hovered .accentBottom {
-  opacity: 0.4;
+  opacity: 0.5;
 }
 
 /* ─── Corner brackets ─── */
 .cornerBR {
   position: absolute;
-  bottom: 10px;
-  right: 0;
-  width: 12px;
-  height: 12px;
+  bottom: 13px;
+  right: 6px;
+  width: 10px;
+  height: 10px;
   border-right: 1px solid var(--card-color);
   border-bottom: 1px solid var(--card-color);
-  opacity: 0.1;
+  opacity: 0.18;
   transition: opacity var(--t-med);
+  z-index: 1;
 }
 
 .cornerTL {
   position: absolute;
-  top: 10px;
-  left: 0;
-  width: 12px;
-  height: 12px;
+  top: 13px;
+  left: 6px;
+  width: 10px;
+  height: 10px;
   border-left: 1px solid var(--card-color);
   border-top: 1px solid var(--card-color);
-  opacity: 0.1;
+  opacity: 0.18;
   transition: opacity var(--t-med);
+  z-index: 1;
 }
 
 .card.hovered .cornerBR,
 .card.hovered .cornerTL {
-  opacity: 0.3;
+  opacity: 0.4;
 }
 
 /* ─── Content ─── */
 .content {
   position: relative;
   z-index: 1;
+  flex: 1;
 }
 
 /* ─── Responsive ─── */
 @media (max-width: 768px) {
   .card {
-    margin-bottom: 16px;
+    /* no margin override needed — grid gap handles separation */
   }
 }

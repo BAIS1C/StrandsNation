@@ -43,7 +43,6 @@ All stale "$8 one-time licence" references purged from:
 - Lemon Squeezy: global MoR (cards, PayPal, international)
 - Xendit: SEA local rails (QRIS, PromptPay, DuitNow, bank transfer)
 - Fortumo: carrier billing (Telkomsel, Indosat, XL, Tri; charge to phone bill, no card needed)
-- Telegram Stars: in-app currency for Telegram Mini App funnel (0% first-tx fee, withdraw via Fragment)
 - Auth: phone number + OTP via Supabase Auth
 
 ## s-gener8 Desktop App UX (18 Apr)

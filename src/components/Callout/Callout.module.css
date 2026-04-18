@@ -1,16 +1,56 @@
 .callout {
   --callout-color: var(--c-accent);
-  --callout-bg: var(--a-accent-bg);
+  /* Surface tint for the inner fill */
+  --callout-bg: color-mix(in oklab, var(--callout-color) 18%, var(--c-surface));
 
+  position: relative;
   padding: 16px 20px;
-  border-radius: 2px;
+  /* OUTER clip = the callout-color shape (becomes the visible border/bevel) */
+  clip-path: polygon(
+    0 0,
+    calc(100% - 16px) 0,
+    100% 16px,
+    100% 100%,
+    16px 100%,
+    0 calc(100% - 16px)
+  );
   margin-top: 16px;
-  border-left: 3px solid var(--callout-color);
+  /* Outer background = accent color. Inner fill (::before) covers everything
+     except a 2px frame, so the accent shows as a border that traces every
+     edge of the clipped shape — including the TR and BL diagonal bevels.
+     No border-left anymore — the uniform 2px accent frame replaces it. */
+  background: var(--callout-color);
+}
+
+/* INNER FILL — inset 2px, clipped to a slightly smaller polygon so the outer
+   accent-color band is visible all the way around, including the diagonals. */
+.callout::before {
+  content: '';
+  position: absolute;
+  /* Inset 3px on all sides. Straight edges show 3px accent band; the TR and
+     BL diagonals show ~2.1px accent band (3 / sqrt(2)). Unambiguous even if
+     someone's cache is stale. */
+  inset: 3px;
+  clip-path: polygon(
+    0 0,
+    calc(100% - 13px) 0,
+    100% 13px,
+    100% 100%,
+    13px 100%,
+    0 calc(100% - 13px)
+  );
   background: var(--callout-bg);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.callout > * {
+  position: relative;
+  z-index: 1;
 }
 
 .label {
-  font: 700 11px var(--font-display);
+  font: 700 11px var(--font-mono);
   letter-spacing: 1px;
   margin-bottom: 6px;
   color: var(--callout-color);
@@ -35,8 +75,9 @@
 }
 
 /* ─── Variants ─── */
-.callout[data-variant='cyan']   { --callout-color: var(--c-accent); --callout-bg: var(--a-accent-bg); }
-.callout[data-variant='pink']   { --callout-color: var(--c-pink);   --callout-bg: var(--a-pink-bg); }
-.callout[data-variant='yellow'] { --callout-color: var(--c-yellow); --callout-bg: var(--a-yellow-bg); }
-.callout[data-variant='purple'] { --callout-color: var(--c-purple); --callout-bg: var(--a-purple-bg); }
-.callout[data-variant='red']    { --callout-color: var(--c-red);    --callout-bg: var(--a-red-bg); }
+/* Variants override --callout-color; --callout-bg derives from it via color-mix. */
+.callout[data-variant='cyan']   { --callout-color: var(--c-accent); }
+.callout[data-variant='pink']   { --callout-color: var(--c-pink); }
+.callout[data-variant='yellow'] { --callout-color: var(--c-yellow); }
+.callout[data-variant='purple'] { --callout-color: var(--c-purple); }
+.callout[data-variant='red']    { --callout-color: var(--c-red); }

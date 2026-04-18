@@ -1,7 +1,7 @@
 .grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 12px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
 }
 
 .link {
@@ -17,15 +17,26 @@
 
 .label {
   --social-color: var(--c-accent);
-  font: 700 11px var(--font-display);
+  font: 700 11px var(--font-mono);
   letter-spacing: 3px;
   color: var(--social-color);
+}
+
+.handle {
+  display: block;
+  margin-top: 6px;
+  font: 400 10px var(--font-mono);
+  letter-spacing: 1.2px;
+  color: var(--c-sub);
+  opacity: 0.75;
 }
 
 .icon[data-variant='cyan'],   .label[data-variant='cyan']   { --social-color: var(--c-accent); }
 .icon[data-variant='pink'],   .label[data-variant='pink']   { --social-color: var(--c-pink); }
 .icon[data-variant='red'],    .label[data-variant='red']    { --social-color: var(--c-red); }
 .icon[data-variant='purple'], .label[data-variant='purple'] { --social-color: var(--c-purple); }
+.icon[data-variant='yellow'], .label[data-variant='yellow'] { --social-color: var(--c-yellow); }
+.icon[data-variant='green'],  .label[data-variant='green']  { --social-color: var(--c-green); }
 
 @media (max-width: 768px) {
   .grid {

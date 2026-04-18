@@ -55,7 +55,7 @@
 }
 
 .systemLine {
-  font: 400 13px/1.6 var(--font-display, 'Orbitron', monospace);
+  font: 400 13px/1.6 var(--font-mono);
   color: var(--c-accent, #00C2FF);
   letter-spacing: 2px;
   margin-bottom: 40px;
@@ -101,7 +101,15 @@
   /* Outer housing */
   background: #1A1A1A;
   border: 2px solid #333;
-  border-radius: 8px;
+  /* TL+BR directional cut — EWDS card spec */
+  clip-path: var(--clip-card, polygon(
+    12px 0,
+    100% 0,
+    100% calc(100% - 12px),
+    calc(100% - 12px) 100%,
+    0 100%,
+    0 12px
+  ));
   padding: 16px 20px 20px;
 
   /* Industrial shadow — feels like a physical object */
@@ -113,7 +121,7 @@
 }
 
 .countdownHeader {
-  font: 600 10px/1 var(--font-body, 'Rajdhani', monospace);
+  font: 600 10px/1 var(--font-mono);
   letter-spacing: 3px;
   color: #FF1A1A;
   text-align: center;
@@ -130,7 +138,7 @@
   /* Recessed display area */
   background: #0A0404;
   border: 1px solid #222;
-  border-radius: 4px;
+  clip-path: var(--clip-card);
   padding: 16px 20px 14px;
   box-shadow:
     inset 0 2px 6px rgba(0, 0, 0, 0.8),
@@ -145,7 +153,7 @@
 }
 
 .countdownLabel {
-  font: 600 8px/1 var(--font-body, 'Rajdhani', monospace);
+  font: 600 8px/1 var(--font-mono);
   letter-spacing: 2.5px;
   color: #FF1A1A;
   opacity: 0.35;
@@ -233,7 +241,7 @@
 }
 
 .statusLine {
-  font: 400 11px/2.2 var(--font-body, 'Rajdhani', monospace);
+  font: 400 11px/2.2 var(--font-mono);
   color: var(--c-sub, #999);
   letter-spacing: 1.5px;
   margin: 0;
@@ -260,7 +268,7 @@
 
 /* ─── Cursor ─── */
 .cursor {
-  font: 400 13px/1.6 var(--font-display, 'Orbitron', monospace);
+  font: 400 13px/1.6 var(--font-mono);
   color: var(--c-accent, #00C2FF);
   letter-spacing: 2px;
   margin: 0;

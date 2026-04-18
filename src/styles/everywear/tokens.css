@@ -1,0 +1,373 @@
+/* ═══════════════════════════════════════════════════
+   EWDS · TOKENS  v1.0.0
+   EveryWear Design System — shared across StrandsNation,
+   Strands Demo OS, S3 Studio. Do not edit per-repo.
+   Edit the master at everywear-ds/ and re-sync.
+   ═══════════════════════════════════════════════════ */
+
+/* ── ROOT: universal tokens (not skin-dependent) ───── */
+:root {
+  /* Fonts */
+  --ew-font-display: 'Orbitron', system-ui, sans-serif;
+  --ew-font-body: 'Rajdhani', system-ui, sans-serif;
+  --ew-font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* Font weights */
+  --ew-fw-body: 400;
+  --ew-fw-body-strong: 500;
+  --ew-fw-display: 700;
+  --ew-fw-display-heavy: 900;
+
+  /* Spacing scale */
+  --ew-space-0: 0;
+  --ew-space-1: 4px;
+  --ew-space-2: 8px;
+  --ew-space-3: 12px;
+  --ew-space-4: 16px;
+  --ew-space-5: 20px;
+  --ew-space-6: 24px;
+  --ew-space-7: 32px;
+  --ew-space-8: 40px;
+  --ew-space-9: 56px;
+  --ew-space-10: 80px;
+
+  /* Radii (used by skins that support rounded corners) */
+  --ew-radius-xs: 2px;
+  --ew-radius: 4px;
+  --ew-radius-md: 6px;
+  --ew-radius-lg: 10px;
+  --ew-radius-xl: 16px;
+
+  /* Bevel scale (for clip-path corner cuts) */
+  --ew-bevel-xs: 6px;
+  --ew-bevel-sm: 8px;
+  --ew-bevel-md: 12px;
+  --ew-bevel-lg: 16px;
+  --ew-bevel-xl: 24px;
+
+  /* Motion */
+  --ew-ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --ew-ease-servo: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ew-t-fast: 120ms;
+  --ew-t-med: 180ms;
+  --ew-t-slow: 320ms;
+
+  /* Z-index */
+  --ew-z-bg: -1;
+  --ew-z-content: 1;
+  --ew-z-chrome: 100;
+  --ew-z-nav: 1000;
+  --ew-z-overlay: 9000;
+  --ew-z-toast: 9500;
+
+  /* Chroma multiplier — per-skin override lets us dial saturation */
+  --ew-chroma-mult: 1;
+
+  /* Primary-hue decomposed for live rotation (OKLCH) */
+  --ew-primary-h: 215;
+  --ew-primary-l: 0.72;
+  --ew-primary-c: 0.12;
+
+  /* Corner cuts — TR+BL directional cut (NE-SW grain).
+     Cut by default on all backing boxes/tombstones per Sean 2026-04-18.
+     TL and BR stay square. Opt-out by setting clip-path: none per-component. */
+  --ew-corner-tl: 0;
+  --ew-corner-tr: var(--ew-bevel-md);
+  --ew-corner-br: 0;
+  --ew-corner-bl: var(--ew-bevel-md);
+
+  /* Clip-path: card */
+  --ew-clip-card: polygon(
+    var(--ew-corner-tl) 0,
+    calc(100% - var(--ew-corner-tr)) 0,
+    100% var(--ew-corner-tr),
+    100% calc(100% - var(--ew-corner-br)),
+    calc(100% - var(--ew-corner-br)) 100%,
+    var(--ew-corner-bl) 100%,
+    0 calc(100% - var(--ew-corner-bl)),
+    0 var(--ew-corner-tl)
+  );
+  --ew-clip-button: polygon(
+    0 0,
+    calc(100% - 10px) 0,
+    100% 10px,
+    100% 100%,
+    10px 100%,
+    0 calc(100% - 10px)
+  );
+  --ew-clip-button-sm: polygon(
+    0 0,
+    calc(100% - 8px) 0,
+    100% 8px,
+    100% 100%,
+    8px 100%,
+    0 calc(100% - 8px)
+  );
+}
+
+/* ═══════════════════════════════════════════════════
+   SKIN: CLASSIC  (default — cyberpunk glass, current brand)
+   ═══════════════════════════════════════════════════ */
+body[data-skin="classic"],
+.ew[data-skin="classic"] {
+  /* Fonts */
+  --ew-font-display: 'Orbitron', system-ui, sans-serif;
+  --ew-font-body: 'Rajdhani', system-ui, sans-serif;
+  --ew-font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  /* Chroma */
+  --ew-chroma-mult: 1.25;
+
+  /* CLASSIC: TR+BL cut, bevel-lg (16px), NE-SW grain per Sean 2026-04-18 */
+  --ew-corner-tl: 0;
+  --ew-corner-tr: var(--ew-bevel-lg);
+  --ew-corner-br: 0;
+  --ew-corner-bl: var(--ew-bevel-lg);
+}
+body[data-skin="classic"][data-mode="dark"],
+.ew[data-skin="classic"][data-mode="dark"] {
+  /* Surfaces */
+  --ew-bg: #0A0B0D;
+  --ew-sunken: #05060A;
+  --ew-surface: rgba(20, 21, 28, 0.85);
+  --ew-surface-raised: rgba(31, 35, 48, 0.9);
+  --ew-surface-overlay: rgba(37, 42, 56, 0.95);
+  --ew-surface-sunken: rgba(5, 6, 10, 0.6);
+  --ew-chrome-bg: rgba(8, 9, 12, 0.9);
+  --ew-chrome-border: rgba(255, 255, 255, 0.08);
+
+  /* Borders */
+  --ew-border: rgba(255, 255, 255, 0.06);
+  --ew-border-strong: rgba(255, 255, 255, 0.14);
+
+  /* Ink */
+  --ew-text: #E2E8F0;
+  --ew-text-muted: #A0AEC0;
+  --ew-text-faint: #6B7280;
+  --ew-text-inverse: #03121A;
+
+  /* Primary — cyan */
+  --ew-primary: #00C2FF;
+  --ew-primary-hover: #33D0FF;
+  --ew-primary-press: #00A0D8;
+  --ew-primary-soft: rgba(0, 194, 255, 0.08);
+  --ew-primary-fg: #03121A;
+
+  /* Expressive (magenta — never a CTA, only for statement moments) */
+  --ew-expressive: #F000B8;
+
+  /* Premium (purple — tier signal) */
+  --ew-premium: #8B5CF6;
+
+  /* Reserved warm (amber — human/local/community ONLY) */
+  --ew-warm: #F9B960;
+  --ew-warm-soft: rgba(249, 185, 96, 0.1);
+
+  /* Status */
+  --ew-success: #22C55E;
+  --ew-warning: #F9E100;
+  --ew-danger: #FF4444;
+
+  /* Shadows (glow-budget: one per hierarchy) */
+  --ew-shadow-glow: 0 0 18px color-mix(in oklab, var(--ew-primary) 50%, transparent);
+  --ew-shadow-float: 0 10px 30px rgba(0, 0, 0, 0.5);
+  --ew-shadow-inset: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+
+  color-scheme: dark;
+}
+
+/* ═══════════════════════════════════════════════════
+   SKIN: REFINED  (calmer cyan, lower chroma, long-session)
+   ═══════════════════════════════════════════════════ */
+body[data-skin="refined"],
+.ew[data-skin="refined"] {
+  /* REFINED display = Chakra Petch: geometric tech with softer terminals.
+     Classic shouts (Orbitron), Terminal clicks (IBM Plex Mono);
+     refined speaks. Per design doc 06 Option C. */
+  --ew-font-display: 'Chakra Petch', system-ui, sans-serif;
+  --ew-font-body: 'Rajdhani', system-ui, sans-serif;
+  --ew-font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  /* REFINED: pushed calmer — lower chroma, steel-blue-leaning hue */
+  --ew-chroma-mult: 0.7;
+
+  /* REFINED: TR+BL cut, md bevel (one step tighter than classic) */
+  --ew-corner-tl: 0;
+  --ew-corner-tr: var(--ew-bevel-md);
+  --ew-corner-br: 0;
+  --ew-corner-bl: var(--ew-bevel-md);
+}
+body[data-skin="refined"][data-mode="dark"],
+.ew[data-skin="refined"][data-mode="dark"] {
+  --ew-bg: #0B0C0F;
+  --ew-sunken: #05060A;
+  --ew-surface: #161922;
+  --ew-surface-raised: #1F2330;
+  --ew-surface-overlay: #252A38;
+  --ew-surface-sunken: #0E1016;
+  --ew-chrome-bg: #08090C;
+  --ew-chrome-border: #20232B;
+
+  --ew-border: #20232B;
+  --ew-border-strong: #2C3040;
+
+  --ew-text: #E6E8EC;
+  --ew-text-muted: #A7ADB8;
+  --ew-text-faint: #6C727E;
+  --ew-text-inverse: #03121A;
+
+  /* Primary — steel-blue shift (hue 235, deeper than classic's 215)
+     plus aggressive chroma cut. Reads as "calmer, cooler, more muted". */
+  --ew-primary: oklch(0.70 0.07 235);
+  --ew-primary-hover: oklch(0.76 0.08 235);
+  --ew-primary-press: oklch(0.62 0.06 235);
+  --ew-primary-soft: color-mix(in oklab, oklch(0.70 0.07 235) 10%, transparent);
+  --ew-primary-fg: #03121A;
+
+  --ew-expressive: oklch(0.58 0.20 345);
+  --ew-premium: oklch(0.62 0.14 295);
+
+  --ew-warm: oklch(0.76 0.12 70);
+  --ew-warm-soft: color-mix(in oklab, oklch(0.76 0.12 70) 12%, transparent);
+
+  --ew-success: oklch(0.74 0.14 155);
+  --ew-warning: oklch(0.82 0.14 95);
+  --ew-danger: oklch(0.64 0.18 25);
+
+  --ew-shadow-glow: 0 0 14px color-mix(in oklab, var(--ew-primary) 35%, transparent);
+  --ew-shadow-float: 0 8px 24px rgba(0, 0, 0, 0.45);
+  --ew-shadow-inset: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+
+  color-scheme: dark;
+}
+
+/* ═══════════════════════════════════════════════════
+   SKIN: TERMINAL  (industrial studio tool — amber, sharp)
+   ═══════════════════════════════════════════════════ */
+body[data-skin="terminal"],
+.ew[data-skin="terminal"] {
+  --ew-font-display: 'IBM Plex Mono', ui-monospace, monospace;
+  --ew-font-body: 'IBM Plex Sans', system-ui, sans-serif;
+  --ew-font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+
+  --ew-chroma-mult: 1;
+
+  /* No corner cuts — sharp 0 */
+  --ew-corner-tl: 0;
+  --ew-corner-tr: 0;
+  --ew-corner-br: 0;
+  --ew-corner-bl: 0;
+
+  /* Radii collapse to 0 for terminal */
+  --ew-radius-xs: 0;
+  --ew-radius: 0;
+  --ew-radius-md: 0;
+  --ew-radius-lg: 0;
+  --ew-radius-xl: 0;
+}
+body[data-skin="terminal"][data-mode="dark"],
+.ew[data-skin="terminal"][data-mode="dark"] {
+  --ew-bg: #0A0A0B;
+  --ew-sunken: #000000;
+  --ew-surface: #111113;
+  --ew-surface-raised: #18181B;
+  --ew-surface-overlay: #202024;
+  --ew-surface-sunken: #050506;
+  --ew-chrome-bg: #06060A;
+  --ew-chrome-border: #2A2A2E;
+
+  --ew-border: #24242A;
+  --ew-border-strong: #3A3A42;
+
+  --ew-text: #E8E8EC;
+  --ew-text-muted: #A4A4AE;
+  --ew-text-faint: #6A6A74;
+  --ew-text-inverse: #1A1108;
+
+  /* Primary — amber (S3 Studio voice: "this is where you MAKE things") */
+  --ew-primary: oklch(0.78 0.14 70);
+  --ew-primary-hover: oklch(0.82 0.15 70);
+  --ew-primary-press: oklch(0.70 0.13 70);
+  --ew-primary-soft: color-mix(in oklab, oklch(0.78 0.14 70) 14%, transparent);
+  --ew-primary-fg: #1A1108;
+
+  --ew-expressive: oklch(0.58 0.20 345);
+  --ew-premium: oklch(0.62 0.14 295);
+
+  /* In terminal, "warm" = human/peer accent (rose red, not amber — amber is primary) */
+  --ew-warm: oklch(0.68 0.18 20);
+  --ew-warm-soft: color-mix(in oklab, oklch(0.68 0.18 20) 12%, transparent);
+
+  --ew-success: oklch(0.74 0.14 155);
+  --ew-warning: oklch(0.82 0.14 95);
+  --ew-danger: oklch(0.60 0.20 25);
+
+  --ew-shadow-glow: none;
+  --ew-shadow-float: 0 2px 0 rgba(0, 0, 0, 0.9);
+  --ew-shadow-inset: none;
+
+  color-scheme: dark;
+}
+
+/* ═══════════════════════════════════════════════════
+   LIGHT MODE — placeholder (v1.1 ships fully)
+   ═══════════════════════════════════════════════════ */
+body[data-skin="classic"][data-mode="light"],
+body[data-skin="refined"][data-mode="light"],
+body[data-skin="terminal"][data-mode="light"] {
+  /* Minimal light-mode stub so the attribute is valid.
+     Full light-mode tokens arrive in v1.1. */
+  color-scheme: light;
+}
+
+/* ═══════════════════════════════════════════════════
+   LEGACY ALIAS LAYER  (for StrandsNation + Demo OS migration)
+   Existing --c-* call sites keep working during migration.
+   Purge this block in Phase 4.
+   ═══════════════════════════════════════════════════ */
+body[data-skin],
+.ew[data-skin] {
+  --c-accent: var(--ew-primary);
+  --c-pink: var(--ew-expressive);
+  --c-yellow: var(--ew-warm);
+  --c-purple: var(--ew-premium);
+  --c-red: var(--ew-danger);
+  --c-green: var(--ew-success);
+  --c-bg: var(--ew-bg);
+  --c-surface: var(--ew-surface);
+  --c-surface-hover: var(--ew-primary-soft);
+  --c-text: var(--ew-text);
+  --c-sub: var(--ew-text-muted);
+  --c-dim: var(--ew-text-faint);
+  --c-border: var(--ew-border);
+  --c-glass: var(--ew-surface-raised);
+
+  --font-display: var(--ew-font-display);
+  --font-body: var(--ew-font-body);
+  --font-mono: var(--ew-font-mono);
+
+  --fw-body: var(--ew-fw-body);
+  --fw-body-strong: var(--ew-fw-body-strong);
+  --fw-display: var(--ew-fw-display);
+  --fw-display-heavy: var(--ew-fw-display-heavy);
+
+  --clip-card: var(--ew-clip-card);
+  --clip-button: var(--ew-clip-button);
+  --clip-button-sm: var(--ew-clip-button-sm);
+
+  --ease-out: var(--ew-ease);
+  --t-fast: var(--ew-t-fast);
+  --t-med: var(--ew-t-med);
+
+  /* Alpha overlays — now skin-aware via color-mix.
+     Previously hardcoded cyan RGBA in legacy tokens.css; aliasing them
+     here makes all hover/tint surfaces follow --ew-primary when the
+     skin flips. */
+  --a-accent-bg:    color-mix(in oklab, var(--ew-primary) 4%,  transparent);
+  --a-accent-hover: color-mix(in oklab, var(--ew-primary) 8%,  transparent);
+  --a-pink-bg:      color-mix(in oklab, var(--ew-expressive) 4%, transparent);
+  --a-pink-hover:   color-mix(in oklab, var(--ew-expressive) 8%, transparent);
+  --a-yellow-bg:    color-mix(in oklab, var(--ew-warm) 4%,    transparent);
+  --a-purple-bg:    color-mix(in oklab, var(--ew-premium) 4%, transparent);
+  --a-red-bg:       color-mix(in oklab, var(--ew-danger) 4%,  transparent);
+}
