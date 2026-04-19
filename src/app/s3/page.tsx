@@ -58,109 +58,110 @@ function Accordion({ title, children, defaultOpen = false }: {
   );
 }
 
-/* ── Pricing tiers (s3studio-web parity: 3-card grid + full-width all-in-one) ── */
+/* ── Pricing tiers (2026-04-19 rewrite: 3 tiers, Creator Studio is the flagship)
+   All generation runs on the user's GPU. No per-track tax, no token meters.
+   Creator Studio is the founding-lock flagship tier — includes AI Director,
+   StyleForge LoRA training, Apply Style Patches, and DAW (free update
+   2-3 weeks post-launch). Pro keeps HD video + distribution polish but
+   does NOT ship with any style-patch functionality. */
 const TIERS = [
   {
     id: 'GENER8 BASE',
     name: <>S<sup>3</sup> GENER8</>,
-    tagline: 'Generate, cover, remix',
+    tagline: 'Generate, cover, remix — on your machine',
     price: '$5',
+    flagship: false,
     features: [
-      'Unlimited generations',
-      'Text-to-music, covers, restyling',
-      'Full creative control',
-      'Apply Style Patches',
-      'Base Video (540p visualisers)',
+      'Unlimited generation on your GPU',
+      'Text-to-music, cover, reference audio',
+      'Full commercial rights on originals',
+      'Base video visualisers (540p)',
       'FLAC lossless output',
-      'Commercially yours',
+      'Automatic VRAM-aware model selection',
     ],
   },
   {
     id: 'GENER8 PRO',
     name: <>S<sup>3</sup> GENER8 PRO</>,
-    tagline: 'Style Forge + HD video sharing',
-    price: '$8',
+    tagline: 'Full-quality base model + HD video + distribution polish',
+    price: '$12.99',
+    flagship: false,
     features: [
-      'Everything in Base',
-      'StyleForge: train your own LoRA patches',
-      'Full resolution video up to 1080p',
+      'Everything in Gener8',
+      'Full-quality cover & reference (XL Base, VRAM-gated)',
+      '1080p HD video rendering',
       '1-click share: IG, TikTok, FB, Shorts',
       'Correct aspect ratios per platform',
-      'Unlimited training runs & exports',
+      'Custom pixel ratios · 4K upscale',
+      'Watermark removal',
     ],
   },
   {
-    id: 'AI DIRECTOR',
-    name: <>S<sup>3</sup> AI DIRECTOR</>,
-    tagline: 'AI-orchestrated music video production',
-    price: '$10',
+    id: 'CREATOR STUDIO',
+    name: <>S<sup>3</sup> CREATOR STUDIO</>,
+    tagline: 'Full production pipeline — music, video, story',
+    price: '$30',
+    flagship: true,
+    badge: 'FOUNDING · LOCKED',
+    foundingNote: 'Founding subscribers keep $30/mo for life. When DAW ships and pricing moves, your rate stays locked.',
     features: [
-      'Unlimited renders',
-      'Beat-synced AI shot planning',
-      'Multi-LLM story direction',
-      'SOTA video generation via API',
-      'Stem-synced edits, agentic assembly',
-      <>Upscale any S<sup>3</sup> video to 4K</>,
+      'Everything in Gener8 Pro',
+      <>S<sup>3</sup> AI Director — AI-orchestrated video</>,
+      'Multi-LLM story direction & shot planning',
+      'Beat-synced, stem-synced scene assembly',
+      'Apply Style Patches (community library)',
+      'StyleForge: train LoRA patches (local)',
+      'Full DAW — free update in 2-3 weeks',
     ],
   },
 ];
 
-const ALL_IN_ONE = {
-  label: 'ALL-IN-ONE',
-  name: <>S<sup>3</sup> CREATOR PRO</>,
-  price: '$20',
-  copy: <>Every S<sup>3</sup> product. Every feature. One subscription. GENER8, GENER8 PRO, and AI DIRECTOR all included. Built for studios, labels, content teams, and serious creators who need the complete toolkit. No add-ons. No upsells. Everything, unlimited, for a flat $20.</>,
-};
-
-/* Desktop: 3-card grid + full-width all-in-one banner (s3studio-web parity) */
+/* Desktop: 3-card grid. Creator Studio (flagship) gets the founding-lock
+   badge and a hotter cyan frame via .tierCardFlagship. */
 function PricingGrid() {
   return (
-    <>
-      <div className={styles.tierGrid}>
-        {TIERS.map((t, i) => (
-          <div key={i} className={styles.tierCard}>
-            <div className={styles.tierLabel}>{t.id}</div>
-            <div className={styles.tierName}>{t.name}</div>
-            <div className={styles.tierTagline}>{t.tagline}</div>
-            <div className={styles.tierPrice}>
-              {t.price}<span className={styles.priceUnit}>/mo</span>
-            </div>
-            <div className={styles.tierSub}>Subscription only. Cancel anytime.</div>
-            <ul className={styles.tierFeatures}>
-              {t.features.map((f, j) => (
-                <li key={j} className={styles.tierFeature}>
-                  <span className={styles.check}>&#10003;</span>
-                  <span>{f}</span>
-                </li>
-              ))}
-            </ul>
+    <div className={styles.tierGrid}>
+      {TIERS.map((t, i) => (
+        <div
+          key={i}
+          className={`${styles.tierCard} ${t.flagship ? styles.tierCardFlagship : ''}`}
+        >
+          {t.flagship && t.badge && (
+            <div className={styles.foundingBadge}>{t.badge}</div>
+          )}
+          <div className={styles.tierLabel}>{t.id}</div>
+          <div className={styles.tierName}>{t.name}</div>
+          <div className={styles.tierTagline}>{t.tagline}</div>
+          <div className={styles.tierPrice}>
+            {t.price}<span className={styles.priceUnit}>/mo</span>
           </div>
-        ))}
-      </div>
-
-      <div className={styles.allInOne}>
-        <div className={styles.allInOneBadge}>{ALL_IN_ONE.label}</div>
-        <div className={styles.allInOneHead}>
-          <span className={styles.allInOneName}>{ALL_IN_ONE.name}</span>
-          <span className={styles.allInOnePrice}>
-            {ALL_IN_ONE.price}<span className={styles.priceUnit}>/mo</span>
-          </span>
+          <div className={styles.tierSub}>Subscription only. Cancel anytime.</div>
+          <ul className={styles.tierFeatures}>
+            {t.features.map((f, j) => (
+              <li key={j} className={styles.tierFeature}>
+                <span className={styles.check}>&#10003;</span>
+                <span>{f}</span>
+              </li>
+            ))}
+          </ul>
+          {t.flagship && t.foundingNote && (
+            <p className={styles.foundingNote}>{t.foundingNote}</p>
+          )}
         </div>
-        <p className={styles.allInOneCopy}>{ALL_IN_ONE.copy}</p>
-      </div>
-    </>
+      ))}
+    </div>
   );
 }
 
-/* Mobile: swipeable carousel of the same tier cards + all-in-one as the 4th slide */
+/* Mobile: swipeable carousel of the three tier cards. Creator Studio slide
+   gets the flagship treatment (hotter cyan frame + founding-lock badge). */
 function PricingCarousel() {
   const [idx, setIdx] = useState(0);
   const [paused, setPaused] = useState(false);
   const startX = useRef(0);
   const dragging = useRef(false);
 
-  const slides = [...TIERS.map(t => ({ kind: 'tier' as const, data: t })), { kind: 'aio' as const, data: ALL_IN_ONE }];
-  const N = slides.length;
+  const N = TIERS.length;
 
   function goTo(i: number) { setIdx(((i % N) + N) % N); }
 
@@ -195,40 +196,37 @@ function PricingCarousel() {
         onTouchEnd={onTouchEnd}
         style={{ transform: `translateX(-${idx * 100}%)` }}
       >
-        {slides.map((s, i) =>
-          s.kind === 'tier' ? (
-            <div key={i} className={styles.carouselSlide}>
-              <div className={styles.tierLabel}>{s.data.id}</div>
-              <div className={styles.tierName}>{s.data.name}</div>
-              <div className={styles.tierTagline}>{s.data.tagline}</div>
-              <div className={styles.tierPrice}>
-                {s.data.price}<span className={styles.priceUnit}>/mo</span>
-              </div>
-              <div className={styles.tierSub}>Subscription only. Cancel anytime.</div>
-              <ul className={styles.tierFeatures}>
-                {s.data.features.map((f, j) => (
-                  <li key={j} className={styles.tierFeature}>
-                    <span className={styles.check}>&#10003;</span>
-                    <span>{f}</span>
-                  </li>
-                ))}
-              </ul>
+        {TIERS.map((t, i) => (
+          <div
+            key={i}
+            className={`${styles.carouselSlide} ${t.flagship ? styles.carouselSlidePro : ''}`}
+          >
+            {t.flagship && t.badge && (
+              <div className={styles.foundingBadge}>{t.badge}</div>
+            )}
+            <div className={styles.tierLabel}>{t.id}</div>
+            <div className={styles.tierName}>{t.name}</div>
+            <div className={styles.tierTagline}>{t.tagline}</div>
+            <div className={styles.tierPrice}>
+              {t.price}<span className={styles.priceUnit}>/mo</span>
             </div>
-          ) : (
-            <div key={i} className={`${styles.carouselSlide} ${styles.carouselSlidePro}`}>
-              <div className={styles.allInOneBadge}>{s.data.label}</div>
-              <div className={styles.tierName}>{s.data.name}</div>
-              <div className={styles.tierPrice}>
-                {s.data.price}<span className={styles.priceUnit}>/mo</span>
-              </div>
-              <div className={styles.tierSub}>Everything, unlimited. Flat fee.</div>
-              <p className={styles.allInOneCopy}>{s.data.copy}</p>
-            </div>
-          )
-        )}
+            <div className={styles.tierSub}>Subscription only. Cancel anytime.</div>
+            <ul className={styles.tierFeatures}>
+              {t.features.map((f, j) => (
+                <li key={j} className={styles.tierFeature}>
+                  <span className={styles.check}>&#10003;</span>
+                  <span>{f}</span>
+                </li>
+              ))}
+            </ul>
+            {t.flagship && t.foundingNote && (
+              <p className={styles.foundingNote}>{t.foundingNote}</p>
+            )}
+          </div>
+        ))}
       </div>
       <div className={styles.carouselDots}>
-        {slides.map((_, i) => (
+        {TIERS.map((_, i) => (
           <button
             key={i}
             className={`${styles.dot} ${i === idx ? styles.dotActive : ''}`}
@@ -297,8 +295,12 @@ export default function S3ComingSoon() {
 
         <p className={styles.subtitle}>Strands Sound Studio</p>
 
+        <div className={styles.heroBetaPill}>
+          BETA · EARLY ACCESS · Q2 2026
+        </div>
+
         <p className={styles.tagline}>
-          Your GPU. Your studio. Your music. No limits.
+          Your GPU. Your files. Your music.
         </p>
 
         {/* ── HERO VIDEO ── */}
@@ -353,7 +355,7 @@ export default function S3ComingSoon() {
                 <p key={i} className={styles.thesisPara}>{p}</p>
               ))}
               <p className={`${styles.thesisPara} ${styles.thesisHighlight}`}>
-                Four tiers. One ecosystem. One flat monthly fee. Your GPU. Your studio. Your catalogue. Your rights.
+                Three tiers. One ecosystem. Every generation runs on your hardware. Your files, your rights, your catalogue.
               </p>
             </Accordion>
           </div>
@@ -364,7 +366,7 @@ export default function S3ComingSoon() {
               <p key={i} className={styles.thesisPara}>{p}</p>
             ))}
             <p className={`${styles.thesisPara} ${styles.thesisHighlight}`}>
-              Four tiers. One ecosystem. One flat monthly fee. Your GPU. Your studio. Your catalogue. Your rights.
+              Three tiers. One ecosystem. Every generation runs on your hardware. Your files, your rights, your catalogue.
             </p>
           </div>
         )}
@@ -400,10 +402,10 @@ export default function S3ComingSoon() {
         {/* Status block */}
         <div className={styles.statusBlock}>
           {[
-            ['STATUS', 'GENER8 IN DEVELOPMENT'],
-            ['INFERENCE', 'LOCAL GPU'],
-            ['MODULES', 'GENER8 / PRO / AI DIRECTOR / CREATOR PRO'],
-            ['PRICING', '$5 / $8 / $10 / $20 PER MONTH'],
+            ['STATUS', 'BETA · Q2 2026 LAUNCH'],
+            ['INFERENCE', 'LOCAL GPU · NO CLOUD'],
+            ['MODULES', 'GENER8 / GENER8 PRO / CREATOR STUDIO'],
+            ['PRICING', '$5 / $12.99 / $30 PER MONTH'],
             ['LICENCE', 'INCLUDED IN SUBSCRIPTION'],
             ['GENERATIONS', 'UNLIMITED, ALL TIERS'],
           ].map(([label, val]) => (
@@ -425,7 +427,7 @@ export default function S3ComingSoon() {
         </div>
 
         <p className={styles.promoLine}>
-          First hour free, no sign-in. First 5,000 subscribers get their second month free. Annual subs: one extra month.
+          First hour free, no sign-in. First 500 Creator Studio subs lock in $30/mo for life. Annual subs: one extra month.
         </p>
 
         <p className={styles.cursor}>

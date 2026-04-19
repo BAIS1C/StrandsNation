@@ -96,6 +96,31 @@
   max-width: 520px;
 }
 
+/* ── HERO BETA PILL (2026-04-19 rewrite) ────────────────
+   Sits between the subtitle and tagline. Uses the TR+BL
+   canonical cut to match the tier card aesthetic — keeps
+   the oblique corner language consistent. */
+.heroBetaPill {
+  display: inline-block;
+  margin: 0 0 18px;
+  padding: 6px 14px;
+  background: rgba(245, 158, 11, 0.08);
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  clip-path: polygon(
+    0 0,
+    calc(100% - 6px) 0,
+    100% 6px,
+    100% 100%,
+    6px 100%,
+    0 calc(100% - 6px)
+  );
+  font: 700 10px/1 var(--font-mono, ui-monospace, monospace);
+  color: #F5A623;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  text-shadow: 0 0 8px rgba(245, 158, 11, 0.25);
+}
+
 /* ── HERO VIDEO ── */
 .videoHero {
   width: 100%;
@@ -328,6 +353,57 @@
 .tierCard:hover {
   filter: brightness(1.1);
   box-shadow: 0 0 24px rgba(0, 194, 255, 0.1);
+}
+
+/* ── FLAGSHIP TIER (Creator Studio) ──────────────────────
+   Hotter cyan frame + stronger glow. Reuses the same TR+BL
+   cut polygon as .tierCard so the silhouette stays identical
+   to its neighbours — only the frame intensity and glow mark
+   it out. Founding badge sits in the TR corner. */
+.tierCardFlagship {
+  background: color-mix(in oklab, #00C2FF 78%, #1a1d26);
+  box-shadow: 0 0 28px rgba(0, 194, 255, 0.18);
+}
+
+.tierCardFlagship::before {
+  background: #0c1620;
+}
+
+.tierCardFlagship:hover {
+  box-shadow: 0 0 40px rgba(0, 194, 255, 0.28);
+}
+
+.tierCardFlagship .tierName,
+.tierCardFlagship .tierPrice {
+  text-shadow:
+    0 0 14px rgba(0, 194, 255, 0.55),
+    0 0 28px rgba(0, 194, 255, 0.18);
+}
+
+/* Founding-lock badge (replaces the old ALL-IN-ONE badge;
+   same position, cyan-on-ink treatment, tracks tighter) */
+.foundingBadge {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  background: #00C2FF;
+  color: #050508;
+  font: 700 8.5px/1 var(--font-mono, ui-monospace, monospace);
+  letter-spacing: 1.8px;
+  padding: 5px 9px;
+  z-index: 2;
+  box-shadow: 0 0 10px rgba(0, 194, 255, 0.4);
+}
+
+/* Small-print italic note below flagship features.
+   Explains the price-lock promise to founding subscribers. */
+.foundingNote {
+  font: 400 italic 10.5px/1.55 var(--font-body, 'Rajdhani', system-ui, sans-serif);
+  color: var(--c-sub, #8a8a8a);
+  letter-spacing: 0.3px;
+  margin: 14px 0 0;
+  padding-top: 12px;
+  border-top: 1px dashed rgba(0, 194, 255, 0.18);
 }
 
 .tierLabel {
