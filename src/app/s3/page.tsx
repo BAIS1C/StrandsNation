@@ -3,23 +3,6 @@
 import { useEffect, useState, useRef } from 'react';
 import styles from './page.module.css';
 
-const TARGET = new Date('2026-04-24T00:00:00+08:00').getTime();
-
-function getTimeLeft() {
-  const now = Date.now();
-  const diff = Math.max(0, TARGET - now);
-  return {
-    days: Math.floor(diff / (1000 * 60 * 60 * 24)),
-    hours: Math.floor((diff / (1000 * 60 * 60)) % 24),
-    minutes: Math.floor((diff / (1000 * 60)) % 60),
-    seconds: Math.floor((diff / 1000) % 60),
-  };
-}
-
-function pad(n: number) {
-  return String(n).padStart(2, '0');
-}
-
 /* ── Accordion ── */
 function Accordion({ title, children, defaultOpen = false }: {
   title: string;
@@ -261,7 +244,6 @@ const THESIS = [
 
 export default function S3ComingSoon() {
   const [visible, setVisible] = useState(true);
-  const [time, setTime] = useState(getTimeLeft);
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -273,11 +255,6 @@ export default function S3ComingSoon() {
 
   useEffect(() => {
     const id = setInterval(() => setVisible((v) => !v), 530);
-    return () => clearInterval(id);
-  }, []);
-
-  useEffect(() => {
-    const id = setInterval(() => setTime(getTimeLeft()), 1000);
     return () => clearInterval(id);
   }, []);
 
@@ -371,27 +348,43 @@ export default function S3ComingSoon() {
           </div>
         )}
 
-        {/* LED Countdown */}
+        {/* Launch Status (replaces countdown) */}
         <div className={styles.countdownFrame}>
-          <div className={styles.countdownHeader}>ESTIMATED TIME TO LAUNCH</div>
-          <div className={styles.countdownInner}>
-            {[
-              { label: 'DAYS', val: time.days },
-              { label: 'HOURS', val: time.hours },
-              { label: 'MINUTES', val: time.minutes },
-              { label: 'SECONDS', val: time.seconds },
-            ].map((u, i) => (
-              <span key={u.label} style={{ display: 'contents' }}>
-                {i > 0 && <span className={styles.countdownSep}>:</span>}
-                <div className={styles.countdownUnit}>
-                  <span className={styles.countdownLabel}>{u.label}</span>
-                  <div className={styles.digitPanel}>
-                    <span className={styles.digitGhost}>88</span>
-                    <span className={styles.countdownDigit}>{pad(u.val)}</span>
-                  </div>
-                </div>
-              </span>
-            ))}
+          <div className={styles.countdownHeader}>LAUNCH STATUS</div>
+          <div
+            className={styles.countdownInner}
+            style={{
+              flexDirection: 'column',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: 10,
+              padding: '22px 16px',
+            }}
+          >
+            <span
+              style={{
+                fontFamily: 'var(--font-display, inherit)',
+                fontWeight: 700,
+                fontSize: 'clamp(24px, 4vw, 36px)',
+                letterSpacing: 4,
+                color: 'var(--c-accent, #00c2ff)',
+                textShadow:
+                  '0 0 6px rgba(0,194,255,0.65), 0 0 14px rgba(0,194,255,0.35)',
+              }}
+            >
+              COMING SOON
+            </span>
+            <span
+              style={{
+                fontFamily: 'var(--font-mono, monospace)',
+                fontSize: 11,
+                letterSpacing: 2.5,
+                color: 'var(--c-sub, #8a8d92)',
+                opacity: 0.85,
+              }}
+            >
+              PUBLIC BETA &middot; Q2 2026
+            </span>
           </div>
           <div className={`${styles.screw} ${styles.screwTL}`} />
           <div className={`${styles.screw} ${styles.screwTR}`} />

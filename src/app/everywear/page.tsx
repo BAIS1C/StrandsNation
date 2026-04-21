@@ -1,6 +1,5 @@
 'use client';
 
-import { useEffect, useState } from 'react';
 import SectionWrapper from '@/sections/shared/SectionWrapper';
 import SectionLabel from '@/components/SectionLabel/SectionLabel';
 import Card from '@/components/Card/Card';
@@ -9,34 +8,14 @@ import Callout from '@/components/Callout/Callout';
 import Tag from '@/components/Tag/Tag';
 import styles from './page.module.css';
 
-// 280 days from 2026-04-18 SGT = 2027-01-23 SGT
-const TARGET = new Date('2027-01-23T00:00:00+08:00').getTime();
-
-function getTimeLeft() {
-  const now = Date.now();
-  const diff = Math.max(0, TARGET - now);
-  return {
-    days:    Math.floor(diff / (1000 * 60 * 60 * 24)),
-    hours:   Math.floor((diff / (1000 * 60 * 60)) % 24),
-    minutes: Math.floor((diff / (1000 * 60)) % 60),
-    seconds: Math.floor((diff / 1000) % 60),
-  };
-}
-
-function pad(n: number) {
-  return String(n).padStart(2, '0');
-}
-
 const HUB_PRODUCTS = [
-  { id: 'S3',       name: <>S<sup>3</sup> STUDIO</>,   copy: 'Local music generation. Unlimited, uncensored, GPU-native. Stem extraction, covers, remixes.',       variant: 'cyan'   as const, badge: 'LAUNCHING' },
-  { id: 'GENER8',   name: 'GENER8',                     copy: 'Style-patch music generation. Train your own LoRA. Own your tracks outright, no platform tax.',     variant: 'cyan'   as const, badge: 'LAUNCHING' },
-  { id: 'DIRECTOR', name: 'AI DIRECTOR',                copy: 'Beat-synced, multi-LLM orchestrated music video production. Stem-aware, agentic assembly.',        variant: 'cyan'   as const, badge: 'LAUNCHING' },
-  { id: 'VIDPRO',   name: 'VID PRO',                    copy: 'Long-form video. Upscale, edit, rig, and retime — all local, all yours.',                          variant: 'pink'   as const, badge: 'Q2 2027' },
-  { id: 'IMAGEN',   name: 'IMAGEN',                     copy: 'Image generation + editing pipeline. Character-consistent, prompt-chained, studio-grade.',         variant: 'pink'   as const, badge: 'Q2 2027' },
-  { id: 'VIDGEN',   name: 'VIDGEN',                     copy: 'Short-form video generation. LTX-class throughput on consumer hardware.',                         variant: 'pink'   as const, badge: 'Q2 2027' },
-  { id: 'STRANDS',  name: 'STRANDS: THE GAME',          copy: 'The post-capitalist game engine. MetaXity1, Blanks, Block Gangs, SIGOPS, Layer U. All of it.',    variant: 'yellow' as const, badge: 'Q3 2026' },
-  { id: 'MYMORIES', name: 'MYMORIES',                   copy: 'Decentralised Proof of Valuable Memory. Portable, tradeable, sovereign AI memory. The runtime.',   variant: 'purple' as const, badge: 'BUILDING' },
-  { id: 'THIRD',    name: 'THIRD-PARTY APPS',           copy: 'Every developer gets the same rails. Agentic plug-ins, federated apps, distributed services.',     variant: 'purple' as const, badge: 'OPEN SDK' },
+  { id: 'S3',       name: <>S<sup>3</sup> STUDIO</>,   copy: 'Local music generation. Unlimited, uncensored, GPU-native. Three tiers across one desktop app: Gener8 $5, Gener8 Pro $12.99, Creator Studio $30 (founding-locked).', variant: 'cyan'   as const, badge: 'COMING SOON' },
+  { id: 'DIRECTOR', name: 'AI DIRECTOR',                copy: 'Beat-synced, multi-LLM-orchestrated video production. Stem-aware agentic assembly. Long-form video: upscale, edit, rig, retime. Ships with Creator Studio.',    variant: 'cyan'   as const, badge: 'COMING SOON' },
+  { id: 'IMAGEN',   name: 'IMAGEN',                     copy: 'Image generation and editing pipeline. Character-consistent, prompt-chained, studio-grade.',                                                                        variant: 'pink'   as const, badge: 'COMING SOON' },
+  { id: 'VIDGEN',   name: 'VIDGEN',                     copy: 'Short-form video generation. LTX-class throughput on consumer hardware.',                                                                                            variant: 'pink'   as const, badge: 'COMING SOON' },
+  { id: 'STRANDS',  name: 'STRANDS: THE GAME',          copy: 'The post-capitalist game engine. MetaXity1, Blanks, Block Gangs, SIGOPS, Layer U. All of it.',                                                                       variant: 'yellow' as const, badge: 'COMING SOON' },
+  { id: 'MYMORIES', name: 'MYMORIES',                   copy: 'Decentralised Proof of Valuable Memory. Portable, tradeable, sovereign AI memory. The runtime.',                                                                     variant: 'purple' as const, badge: 'COMING SOON' },
+  { id: 'THIRD',    name: 'THIRD-PARTY APPS',           copy: 'Every developer gets the same rails. Agentic plug-ins, federated apps, distributed services.',                                                                       variant: 'purple' as const, badge: 'OPEN SDK' },
 ];
 
 const PHASES = [
@@ -61,13 +40,6 @@ const PHASES = [
 ];
 
 export default function EveryWearPage() {
-  const [time, setTime] = useState(getTimeLeft);
-
-  useEffect(() => {
-    const id = setInterval(() => setTime(getTimeLeft()), 1000);
-    return () => clearInterval(id);
-  }, []);
-
   return (
     <div className="page-enter" style={{ paddingTop: 'var(--space-nav-h)' }}>
       {/* ─── Hero ─── */}
@@ -130,7 +102,7 @@ export default function EveryWearPage() {
         <SectionLabel
           num="02 // THE HUB"
           title="One Shell. Every Tool."
-          subtitle="First-party modules ship with EveryWear. Third parties plug in through an open SDK."
+          subtitle="First-party modules ship with EveryWear. Third parties plug in through an open SDK. All coming soon."
         />
         <div className={styles.hubGrid}>
           {HUB_PRODUCTS.map((p) => (
@@ -143,46 +115,10 @@ export default function EveryWearPage() {
         </div>
       </SectionWrapper>
 
-      {/* ─── Countdown ─── */}
+      {/* ─── Roadmap (phases) ─── */}
       <SectionWrapper bordered>
         <SectionLabel
-          num="03 // TIMELINE"
-          title="Launch Window"
-          subtitle="Estimated time to EveryWear v1.0 release."
-        />
-        <div className={styles.countdownWrap}>
-          <div className={styles.countdownFrame}>
-            <div className={styles.countdownHeader}>ESTIMATED TIME TO LAUNCH</div>
-            <div className={styles.countdownInner}>
-              {[
-                { label: 'DAYS',    val: time.days,    pad: 3 },
-                { label: 'HOURS',   val: time.hours,   pad: 2 },
-                { label: 'MINUTES', val: time.minutes, pad: 2 },
-                { label: 'SECONDS', val: time.seconds, pad: 2 },
-              ].map((u, i) => (
-                <span key={u.label} style={{ display: 'contents' }}>
-                  {i > 0 && <span className={styles.countdownSep}>:</span>}
-                  <div className={styles.countdownUnit}>
-                    <span className={styles.countdownLabel}>{u.label}</span>
-                    <div className={styles.digitPanel}>
-                      <span className={styles.digitGhost}>{'8'.repeat(u.pad)}</span>
-                      <span className={styles.countdownDigit}>
-                        {u.pad === 3 ? String(u.val).padStart(3, '0') : pad(u.val)}
-                      </span>
-                    </div>
-                  </div>
-                </span>
-              ))}
-            </div>
-          </div>
-          <p className={styles.countdownCaption}>280-day target. Q1 2027. Public beta opens first.</p>
-        </div>
-      </SectionWrapper>
-
-      {/* ─── Five phases ─── */}
-      <SectionWrapper bordered>
-        <SectionLabel
-          num="04 // ROADMAP"
+          num="03 // ROADMAP"
           title="The Launch Sequence"
           subtitle="Studio first. Bridge second. Agentic OS third. No vapourware."
         />
@@ -196,17 +132,17 @@ export default function EveryWearPage() {
       {/* ─── XR ─── */}
       <SectionWrapper bordered>
         <SectionLabel
-          num="05 // SPATIAL"
+          num="04 // SPATIAL"
           title="XR Integration"
           subtitle="The pyramid extends beyond your screen."
         />
         <Card variant="yellow">
           <div className={styles.cardTitleMd} data-variant="yellow">Everywhere, Spatially</div>
           <p className={styles.body}>
-            Phase 5 bridges every EveryWear surface into physical space. Volumetric overlays, spatial
-            interaction layers, XR-native interfaces. Your agents do not live in a tab; they follow you
-            into the room. The same memory graph powers a text chat, a music studio, a headset session,
-            and a street-level AR drop. One identity across every modality.
+            The final phase bridges every EveryWear surface into physical space. Volumetric overlays,
+            spatial interaction layers, XR-native interfaces. Your agents do not live in a tab; they
+            follow you into the room. The same memory graph powers a text chat, a music studio, a headset
+            session, and a street-level AR drop. One identity across every modality.
           </p>
           <div className={styles.tags}>
             <Tag variant="yellow">Volumetric</Tag>
@@ -219,7 +155,7 @@ export default function EveryWearPage() {
       {/* ─── Federated framing + Chrome extension teaser ─── */}
       <SectionWrapper bordered>
         <SectionLabel
-          num="06 // ARCHITECTURE"
+          num="05 // ARCHITECTURE"
           title="Federated. Distributed. Yours."
           subtitle="No Google dependencies. No cloud lock-in. Local-first. Agent-native."
         />
@@ -237,7 +173,7 @@ export default function EveryWearPage() {
         <Callout
           variant="cyan"
           label="MYMORIES CHROME EXTENSION"
-          text="The first EveryWear surface is shipping now as a Chrome extension. Install it to start building your persistent memory graph before Phase 2 goes live. Your browsing context, preferences, decisions: indexed, encrypted, sovereign."
+          text="The first EveryWear surface is shipping now as a Chrome extension. Install it to start building your persistent memory graph before the full shell lands. Your browsing context, preferences, decisions: indexed, encrypted, sovereign."
         />
       </SectionWrapper>
     </div>
