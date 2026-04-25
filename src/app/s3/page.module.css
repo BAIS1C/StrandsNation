@@ -57,21 +57,21 @@
 
 .systemLine {
   font: 400 13px/1.6 var(--font-mono, ui-monospace, monospace);
-  color: var(--c-green, #00C2FF);
+  color: var(--ew-primary, #00C2FF);
   letter-spacing: 2px;
   margin-bottom: 40px;
   opacity: 0.7;
 }
 
 .prompt {
-  color: var(--c-green, #00C2FF);
+  color: var(--ew-primary, #00C2FF);
   margin-right: 4px;
 }
 
 /* Title */
 .title {
   font: 700 clamp(52px, 10vw, 88px)/1 var(--font-display, 'Orbitron', monospace);
-  color: var(--c-green, #00C2FF);
+  color: var(--ew-primary, #00C2FF);
   letter-spacing: 8px;
   margin: 0 0 8px;
   text-shadow:
@@ -82,7 +82,7 @@
 
 .subtitle {
   font: 600 clamp(18px, 3.5vw, 28px)/1.2 var(--font-display, 'Orbitron', monospace);
-  color: var(--c-text, #E8E8E8);
+  color: var(--ew-text, #E8E8E8);
   letter-spacing: 4px;
   margin: 0 0 12px;
   opacity: 0.85;
@@ -90,7 +90,7 @@
 
 .tagline {
   font: 400 clamp(13px, 2vw, 16px)/1.6 var(--font-body, 'Rajdhani', monospace);
-  color: var(--c-sub, #999);
+  color: var(--ew-text-muted, #999);
   letter-spacing: 1.5px;
   margin: 0 0 36px;
   max-width: 520px;
@@ -238,7 +238,7 @@
 
 .benefitCopy {
   font: 400 clamp(12px, 1.5vw, 14px)/1.7 var(--font-body, 'Rajdhani', monospace);
-  color: var(--c-sub, #b4b4b4);
+  color: var(--ew-text-muted, #b4b4b4);
   letter-spacing: 0.3px;
   margin: 0;
 }
@@ -265,7 +265,7 @@
 
 .thesisPara {
   font: 400 clamp(13px, 1.7vw, 15px)/1.8 var(--font-body, 'Rajdhani', monospace);
-  color: var(--c-text, #cccccc);
+  color: var(--ew-text, #cccccc);
   letter-spacing: 0.5px;
   margin: 0 0 18px;
 }
@@ -293,7 +293,7 @@
 
 .pricingSub {
   font: 400 clamp(13px, 1.7vw, 15px)/1.5 var(--font-body, 'Rajdhani', system-ui, sans-serif);
-  color: var(--c-sub, #a8a8a8);
+  color: var(--ew-text-muted, #a8a8a8);
   letter-spacing: 0.5px;
   text-align: center;
   margin: -20px 0 36px;
@@ -399,7 +399,7 @@
    Explains the price-lock promise to founding subscribers. */
 .foundingNote {
   font: 400 italic 10.5px/1.55 var(--font-body, 'Rajdhani', system-ui, sans-serif);
-  color: var(--c-sub, #8a8a8a);
+  color: var(--ew-text-muted, #8a8a8a);
   letter-spacing: 0.3px;
   margin: 14px 0 0;
   padding-top: 12px;
@@ -425,7 +425,7 @@
 
 .tierTagline {
   font: 400 clamp(12px, 1.5vw, 14px)/1.4 var(--font-body, 'Rajdhani', system-ui, sans-serif);
-  color: var(--c-sub, #a8a8a8);
+  color: var(--ew-text-muted, #a8a8a8);
   letter-spacing: 0.4px;
   margin-bottom: 22px;
   min-height: 1.4em;
@@ -434,7 +434,7 @@
 .tierPrice {
   font: 700 clamp(38px, 5vw, 52px)/1 var(--font-display, 'Orbitron', monospace);
   letter-spacing: 0.5px;
-  color: var(--c-text, #E8E8E8);
+  color: var(--ew-text, #E8E8E8);
   margin-bottom: 6px;
   text-shadow: 0 0 10px rgba(0, 194, 255, 0.2);
 }
@@ -443,14 +443,14 @@
   font-size: 0.36em;
   opacity: 0.7;
   letter-spacing: 0;
-  color: var(--c-sub, #999);
+  color: var(--ew-text-muted, #999);
   margin-left: 2px;
   font-weight: 500;
 }
 
 .tierSub {
   font: 400 11px/1.4 var(--font-body, 'Rajdhani', monospace);
-  color: var(--c-sub, #888);
+  color: var(--ew-text-muted, #888);
   letter-spacing: 0.4px;
   margin-bottom: 22px;
 }
@@ -469,7 +469,7 @@
   align-items: flex-start;
   gap: 10px;
   font: 400 clamp(12px, 1.4vw, 13px)/1.5 var(--font-body, 'Rajdhani', system-ui, sans-serif);
-  color: var(--c-text, #cfcfcf);
+  color: var(--ew-text, #cfcfcf);
   letter-spacing: 0.2px;
 }
 
@@ -566,7 +566,7 @@
 
 .allInOneCopy {
   font: 400 clamp(13px, 1.5vw, 14px)/1.7 var(--font-body, 'Rajdhani', system-ui, sans-serif);
-  color: var(--c-sub, #b8b8b8);
+  color: var(--ew-text-muted, #b8b8b8);
   letter-spacing: 0.3px;
   margin: 0;
 }
@@ -591,7 +591,7 @@
   margin-bottom: 28px;
   width: 100%;
   max-width: 360px;
-  background: #1A1A1A;
+  background: var(--ew-surface-raised);
   border: 1px solid #333;
   /* TL+BR directional cut — EWDS card spec */
   clip-path: var(--clip-card, polygon(
@@ -624,7 +624,7 @@
   align-items: flex-start;
   justify-content: center;
   gap: 0;
-  background: #04080C;
+  background: var(--ew-sunken);
   border: 1px solid #222;
   clip-path: var(--clip-button-sm);
   padding: 8px 10px 8px;
@@ -662,7 +662,7 @@
   font-size: clamp(20px, 3vw, 28px);
   line-height: 1;
   letter-spacing: 2px;
-  color: #081A28;
+  color: color-mix(in oklab, var(--ew-primary) 8%, var(--ew-sunken));
   user-select: none;
   -webkit-font-smoothing: none;
 }
@@ -674,11 +674,11 @@
   font-size: clamp(20px, 3vw, 28px);
   line-height: 1;
   letter-spacing: 2px;
-  color: #00C2FF;
+  color: var(--ew-primary);
   text-shadow:
-    0 0 4px rgba(0, 194, 255, 0.8),
-    0 0 12px rgba(0, 194, 255, 0.4),
-    0 0 28px rgba(0, 194, 255, 0.15);
+    0 0 4px color-mix(in oklab, var(--ew-primary) 80%, transparent),
+    0 0 12px color-mix(in oklab, var(--ew-primary) 40%, transparent),
+    0 0 28px color-mix(in oklab, var(--ew-primary) 15%, transparent);
   -webkit-font-smoothing: none;
 }
 
@@ -726,7 +726,7 @@
 
 .statusLine {
   font: 400 11px/2.2 var(--font-mono, ui-monospace, monospace);
-  color: var(--c-sub, #999);
+  color: var(--ew-text-muted, #999);
   letter-spacing: 1.5px;
   margin: 0;
   display: flex;
@@ -737,7 +737,7 @@
 }
 
 .label {
-  color: var(--c-dim, #555);
+  color: var(--ew-text-faint, #555);
 }
 
 .statusDot {
@@ -747,13 +747,13 @@
 }
 
 .val {
-  color: var(--c-text, #E8E8E8);
+  color: var(--ew-text, #E8E8E8);
 }
 
 /* Cursor */
 .cursor {
   font: 400 13px/1.6 var(--font-mono, ui-monospace, monospace);
-  color: var(--c-green, #00C2FF);
+  color: var(--ew-primary, #00C2FF);
   letter-spacing: 2px;
   margin: 0;
 }
@@ -863,7 +863,7 @@
 
 .benefitCopyMobile {
   font: 400 12px/1.6 var(--font-body, 'Rajdhani', monospace);
-  color: var(--c-sub, #a8a8a8);
+  color: var(--ew-text-muted, #a8a8a8);
   margin: 0;
   letter-spacing: 0.2px;
 }

@@ -56,21 +56,21 @@
 
 .systemLine {
   font: 400 13px/1.6 var(--font-mono);
-  color: var(--c-accent, #00C2FF);
+  color: var(--ew-primary, #00C2FF);
   letter-spacing: 2px;
   margin-bottom: 40px;
   opacity: 0.7;
 }
 
 .prompt {
-  color: var(--c-accent, #00C2FF);
+  color: var(--ew-primary, #00C2FF);
   margin-right: 4px;
 }
 
 /* ─── Title ─── */
 .title {
   font: 700 clamp(42px, 8vw, 72px)/1 var(--font-display, 'Orbitron', monospace);
-  color: var(--c-accent, #00C2FF);
+  color: var(--ew-primary, #00C2FF);
   letter-spacing: 8px;
   margin: 0 0 16px;
   text-shadow:
@@ -81,7 +81,7 @@
 
 .quarter {
   font: 600 clamp(20px, 4vw, 32px)/1.2 var(--font-display, 'Orbitron', monospace);
-  color: var(--c-text, #E8E8E8);
+  color: var(--ew-text, #E8E8E8);
   letter-spacing: 6px;
   margin: 0 0 44px;
   opacity: 0.85;
@@ -99,7 +99,7 @@
   max-width: 620px;
 
   /* Outer housing */
-  background: #1A1A1A;
+  background: var(--ew-surface-raised);
   border: 2px solid #333;
   /* TL+BR directional cut — EWDS card spec */
   clip-path: var(--clip-card, polygon(
@@ -123,7 +123,7 @@
 .countdownHeader {
   font: 600 10px/1 var(--font-mono);
   letter-spacing: 3px;
-  color: #FF1A1A;
+  color: var(--ew-danger);
   text-align: center;
   margin-bottom: 14px;
   opacity: 0.7;
@@ -136,7 +136,7 @@
   gap: 0;
 
   /* Recessed display area */
-  background: #0A0404;
+  background: var(--ew-sunken);
   border: 1px solid #222;
   clip-path: var(--clip-card);
   padding: 16px 20px 14px;
@@ -155,7 +155,7 @@
 .countdownLabel {
   font: 600 8px/1 var(--font-mono);
   letter-spacing: 2.5px;
-  color: #FF1A1A;
+  color: var(--ew-danger);
   opacity: 0.35;
   margin-bottom: 8px;
   text-transform: uppercase;
@@ -176,7 +176,7 @@
   font-size: clamp(36px, 6vw, 52px);
   line-height: 1;
   letter-spacing: 4px;
-  color: #1A0808;
+  color: color-mix(in oklab, var(--ew-danger) 8%, var(--ew-sunken));
   user-select: none;
   -webkit-font-smoothing: none;
 }
@@ -189,11 +189,11 @@
   font-size: clamp(36px, 6vw, 52px);
   line-height: 1;
   letter-spacing: 4px;
-  color: #FF1A1A;
+  color: var(--ew-danger);
   text-shadow:
-    0 0 6px rgba(255, 26, 26, 0.8),
-    0 0 18px rgba(255, 26, 26, 0.4),
-    0 0 40px rgba(255, 26, 26, 0.15);
+    0 0 6px color-mix(in oklab, var(--ew-danger) 80%, transparent),
+    0 0 18px color-mix(in oklab, var(--ew-danger) 40%, transparent),
+    0 0 40px color-mix(in oklab, var(--ew-danger) 15%, transparent);
   -webkit-font-smoothing: none;
 }
 
@@ -203,8 +203,8 @@
   font-weight: 700;
   font-size: clamp(28px, 5vw, 42px);
   line-height: 1;
-  color: #FF1A1A;
-  text-shadow: 0 0 6px rgba(255, 26, 26, 0.8);
+  color: var(--ew-danger);
+  text-shadow: 0 0 6px color-mix(in oklab, var(--ew-danger) 80%, transparent);
   padding: 0 2px;
   animation: sepBlink 1s step-end infinite;
   margin-top: 18px; /* align with digits, below labels */
@@ -242,7 +242,7 @@
 
 .statusLine {
   font: 400 11px/2.2 var(--font-mono);
-  color: var(--c-sub, #999);
+  color: var(--ew-text-muted, #999);
   letter-spacing: 1.5px;
   margin: 0;
   display: flex;
@@ -253,7 +253,7 @@
 }
 
 .label {
-  color: var(--c-dim, #555);
+  color: var(--ew-text-faint, #555);
 }
 
 .dot {
@@ -263,13 +263,13 @@
 }
 
 .val {
-  color: var(--c-text, #E8E8E8);
+  color: var(--ew-text, #E8E8E8);
 }
 
 /* ─── Cursor ─── */
 .cursor {
   font: 400 13px/1.6 var(--font-mono);
-  color: var(--c-accent, #00C2FF);
+  color: var(--ew-primary, #00C2FF);
   letter-spacing: 2px;
   margin: 0;
 }
