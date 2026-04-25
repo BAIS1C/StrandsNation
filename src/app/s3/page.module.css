@@ -57,26 +57,26 @@
 
 .systemLine {
   font: 400 13px/1.6 var(--font-mono, ui-monospace, monospace);
-  color: var(--ew-primary, #00C2FF);
+  color: var(--ew-primary);
   letter-spacing: 2px;
   margin-bottom: 40px;
   opacity: 0.7;
 }
 
 .prompt {
-  color: var(--ew-primary, #00C2FF);
+  color: var(--ew-primary);
   margin-right: 4px;
 }
 
 /* Title */
 .title {
   font: 700 clamp(52px, 10vw, 88px)/1 var(--font-display, 'Orbitron', monospace);
-  color: var(--ew-primary, #00C2FF);
+  color: var(--ew-primary);
   letter-spacing: 8px;
   margin: 0 0 8px;
   text-shadow:
-    0 0 20px rgba(0, 194, 255, 0.4),
-    0 0 60px rgba(0, 194, 255, 0.15);
+    0 0 20px color-mix(in oklab, var(--ew-primary) 40%, transparent),
+    0 0 60px color-mix(in oklab, var(--ew-primary) 15%, transparent);
   animation: flicker 4s infinite;
 }
 
@@ -133,7 +133,7 @@
   width: 100%;
   padding-bottom: 56.25%; /* 16:9 */
   background: #000;
-  border: 1px solid rgba(0, 194, 255, 0.3);
+  border: 1px solid color-mix(in oklab, var(--ew-primary) 30%, transparent);
   /* TL+BR directional cut — EWDS card spec */
   clip-path: var(--clip-card, polygon(
     12px 0,
@@ -145,7 +145,7 @@
   ));
   overflow: hidden;
   box-shadow:
-    0 0 30px rgba(0, 194, 255, 0.1),
+    0 0 30px color-mix(in oklab, var(--ew-primary) 10%, transparent),
     0 4px 24px rgba(0, 0, 0, 0.6);
 }
 
@@ -160,7 +160,7 @@
 
 .videoCaption {
   font: 500 clamp(10px, 1.3vw, 12px)/1.5 var(--font-mono, ui-monospace, monospace);
-  color: #00C2FF;
+  color: var(--ew-primary);
   letter-spacing: 1.5px;
   text-align: center;
   margin: 12px 0 0;
@@ -180,7 +180,7 @@
 .benefitCard {
   position: relative;
   /* Desaturated cyan frame + dark inner fill (EWDS v1.0 spec). */
-  background: color-mix(in oklab, #00C2FF 55%, #1a1d26);
+  background: color-mix(in oklab, var(--ew-primary) 55%, var(--ew-surface));
   /* TR+BL canonical cut direction */
   clip-path: polygon(
     0 0,
@@ -219,7 +219,7 @@
 
 .benefitCard:hover {
   filter: brightness(1.1);
-  box-shadow: 0 0 20px rgba(0, 194, 255, 0.1);
+  box-shadow: 0 0 20px color-mix(in oklab, var(--ew-primary) 10%, transparent);
 }
 
 .benefitIcon {
@@ -230,10 +230,10 @@
 
 .benefitTitle {
   font: 700 clamp(13px, 1.7vw, 16px)/1.25 var(--font-body, 'Rajdhani', system-ui, sans-serif);
-  color: #00C2FF;
+  color: var(--ew-primary);
   letter-spacing: 1px;
   margin: 0 0 10px;
-  text-shadow: 0 0 8px rgba(0, 194, 255, 0.25);
+  text-shadow: 0 0 8px color-mix(in oklab, var(--ew-primary) 25%, transparent);
 }
 
 .benefitCopy {
@@ -246,11 +246,11 @@
 /* ── SECTION HEADINGS ── */
 .sectionHeading {
   font: 700 clamp(16px, 2.5vw, 22px)/1.2 var(--font-mono, ui-monospace, monospace);
-  color: #00C2FF;
+  color: var(--ew-primary);
   letter-spacing: 2px;
   text-align: center;
   margin: 0 0 32px;
-  text-shadow: 0 0 12px rgba(0, 194, 255, 0.3);
+  text-shadow: 0 0 12px color-mix(in oklab, var(--ew-primary) 30%, transparent);
 }
 
 /* Thesis body copy */
@@ -259,7 +259,7 @@
   max-width: 720px;
   margin: 0 0 64px;
   text-align: left;
-  border-left: 2px solid rgba(0, 194, 255, 0.3);
+  border-left: 2px solid color-mix(in oklab, var(--ew-primary) 30%, transparent);
   padding-left: 24px;
 }
 
@@ -275,7 +275,7 @@
 }
 
 .thesisHighlight {
-  color: #00C2FF;
+  color: var(--ew-primary);
   opacity: 0.9;
   font-weight: 500;
 }
@@ -311,7 +311,7 @@
 .tierCard {
   position: relative;
   /* Desaturated cyan frame + dark inner fill (EWDS v1.0 spec). */
-  background: color-mix(in oklab, #00C2FF 55%, #1a1d26);
+  background: color-mix(in oklab, var(--ew-primary) 55%, var(--ew-surface));
   /* TR+BL canonical cut direction */
   clip-path: polygon(
     0 0,
@@ -352,7 +352,7 @@
 
 .tierCard:hover {
   filter: brightness(1.1);
-  box-shadow: 0 0 24px rgba(0, 194, 255, 0.1);
+  box-shadow: 0 0 24px color-mix(in oklab, var(--ew-primary) 10%, transparent);
 }
 
 /* ── FLAGSHIP TIER (Creator Studio) ──────────────────────
@@ -361,8 +361,8 @@
    to its neighbours — only the frame intensity and glow mark
    it out. Founding badge sits in the TR corner. */
 .tierCardFlagship {
-  background: color-mix(in oklab, #00C2FF 78%, #1a1d26);
-  box-shadow: 0 0 28px rgba(0, 194, 255, 0.18);
+  background: color-mix(in oklab, var(--ew-primary) 78%, var(--ew-surface));
+  box-shadow: 0 0 28px color-mix(in oklab, var(--ew-primary) 18%, transparent);
 }
 
 .tierCardFlagship::before {
@@ -370,14 +370,14 @@
 }
 
 .tierCardFlagship:hover {
-  box-shadow: 0 0 40px rgba(0, 194, 255, 0.28);
+  box-shadow: 0 0 40px color-mix(in oklab, var(--ew-primary) 28%, transparent);
 }
 
 .tierCardFlagship .tierName,
 .tierCardFlagship .tierPrice {
   text-shadow:
-    0 0 14px rgba(0, 194, 255, 0.55),
-    0 0 28px rgba(0, 194, 255, 0.18);
+    0 0 14px color-mix(in oklab, var(--ew-primary) 55%, transparent),
+    0 0 28px color-mix(in oklab, var(--ew-primary) 18%, transparent);
 }
 
 /* Founding-lock badge (replaces the old ALL-IN-ONE badge;
@@ -386,13 +386,13 @@
   position: absolute;
   top: 14px;
   right: 18px;
-  background: #00C2FF;
+  background: var(--ew-primary);
   color: #050508;
   font: 700 8.5px/1 var(--font-mono, ui-monospace, monospace);
   letter-spacing: 1.8px;
   padding: 5px 9px;
   z-index: 2;
-  box-shadow: 0 0 10px rgba(0, 194, 255, 0.4);
+  box-shadow: 0 0 10px color-mix(in oklab, var(--ew-primary) 40%, transparent);
 }
 
 /* Small-print italic note below flagship features.
@@ -403,13 +403,13 @@
   letter-spacing: 0.3px;
   margin: 14px 0 0;
   padding-top: 12px;
-  border-top: 1px dashed rgba(0, 194, 255, 0.18);
+  border-top: 1px dashed color-mix(in oklab, var(--ew-primary) 18%, transparent);
 }
 
 .tierLabel {
   font: 600 10px/1 var(--font-mono, ui-monospace, monospace);
   letter-spacing: 3px;
-  color: #00C2FF;
+  color: var(--ew-primary);
   opacity: 0.55;
   margin-bottom: 14px;
   text-transform: uppercase;
@@ -418,9 +418,9 @@
 .tierName {
   font: 700 clamp(20px, 2.4vw, 26px)/1.1 var(--font-display, 'Orbitron', monospace);
   letter-spacing: 1.5px;
-  color: #00C2FF;
+  color: var(--ew-primary);
   margin-bottom: 6px;
-  text-shadow: 0 0 12px rgba(0, 194, 255, 0.35);
+  text-shadow: 0 0 12px color-mix(in oklab, var(--ew-primary) 35%, transparent);
 }
 
 .tierTagline {
@@ -436,7 +436,7 @@
   letter-spacing: 0.5px;
   color: var(--ew-text, #E8E8E8);
   margin-bottom: 6px;
-  text-shadow: 0 0 10px rgba(0, 194, 255, 0.2);
+  text-shadow: 0 0 10px color-mix(in oklab, var(--ew-primary) 20%, transparent);
 }
 
 .priceUnit {
@@ -474,18 +474,18 @@
 }
 
 .check {
-  color: #00C2FF;
+  color: var(--ew-primary);
   font-size: 0.95em;
   flex-shrink: 0;
   margin-top: 2px;
-  text-shadow: 0 0 6px rgba(0, 194, 255, 0.5);
+  text-shadow: 0 0 6px color-mix(in oklab, var(--ew-primary) 50%, transparent);
 }
 
 /* ─── Full-width ALL-IN-ONE banner ─── */
 .allInOne {
   position: relative;
   /* Slightly hotter cyan frame to mark the flagship "all-in-one" tier */
-  background: color-mix(in oklab, #00C2FF 70%, #1a1d26);
+  background: color-mix(in oklab, var(--ew-primary) 70%, var(--ew-surface));
   /* TR+BL canonical cut direction */
   clip-path: polygon(
     0 0,
@@ -524,14 +524,14 @@
 
 .allInOne:hover {
   filter: brightness(1.1);
-  box-shadow: 0 0 32px rgba(0, 194, 255, 0.18);
+  box-shadow: 0 0 32px color-mix(in oklab, var(--ew-primary) 18%, transparent);
 }
 
 .allInOneBadge {
   position: absolute;
   top: 14px;
   right: 18px;
-  background: #00C2FF;
+  background: var(--ew-primary);
   color: #050508;
   font: 700 9px/1 var(--font-mono, ui-monospace, monospace);
   letter-spacing: 2px;
@@ -546,21 +546,21 @@
   margin-bottom: 14px;
   padding-bottom: 14px;
   padding-right: 110px; /* clear the badge */
-  border-bottom: 1px dashed rgba(0, 194, 255, 0.25);
+  border-bottom: 1px dashed color-mix(in oklab, var(--ew-primary) 25%, transparent);
 }
 
 .allInOneName {
   font: 700 clamp(20px, 2.4vw, 26px)/1.1 var(--font-display, 'Orbitron', monospace);
   letter-spacing: 1.5px;
-  color: #00C2FF;
-  text-shadow: 0 0 12px rgba(0, 194, 255, 0.35);
+  color: var(--ew-primary);
+  text-shadow: 0 0 12px color-mix(in oklab, var(--ew-primary) 35%, transparent);
 }
 
 .allInOnePrice {
   font: 700 clamp(28px, 3.6vw, 40px)/1 var(--font-display, 'Orbitron', monospace);
   letter-spacing: 0.5px;
-  color: #00C2FF;
-  text-shadow: 0 0 14px rgba(0, 194, 255, 0.4);
+  color: var(--ew-primary);
+  text-shadow: 0 0 14px color-mix(in oklab, var(--ew-primary) 40%, transparent);
   margin-left: auto;
 }
 
@@ -574,14 +574,14 @@
 /* Promo line */
 .promoLine {
   font: 500 clamp(10px, 1.3vw, 12px)/1.5 var(--font-mono, ui-monospace, monospace);
-  color: #00C2FF;
+  color: var(--ew-primary);
   letter-spacing: 1px;
   text-align: center;
   margin: 0 0 32px;
   max-width: 560px;
   padding: 10px 16px;
-  border-top: 1px solid rgba(0, 194, 255, 0.15);
-  border-bottom: 1px solid rgba(0, 194, 255, 0.15);
+  border-top: 1px solid color-mix(in oklab, var(--ew-primary) 15%, transparent);
+  border-bottom: 1px solid color-mix(in oklab, var(--ew-primary) 15%, transparent);
   opacity: 0.85;
 }
 
@@ -613,7 +613,7 @@
 .countdownHeader {
   font: 600 8px/1 var(--font-mono, ui-monospace, monospace);
   letter-spacing: 2.5px;
-  color: #00C2FF;
+  color: var(--ew-primary);
   text-align: center;
   margin-bottom: 8px;
   opacity: 0.7;
@@ -643,7 +643,7 @@
 .countdownLabel {
   font: 600 6.5px/1 var(--font-mono, ui-monospace, monospace);
   letter-spacing: 2px;
-  color: #00C2FF;
+  color: var(--ew-primary);
   opacity: 0.35;
   margin-bottom: 5px;
   text-transform: uppercase;
@@ -687,8 +687,8 @@
   font-weight: 700;
   font-size: clamp(16px, 2.5vw, 22px);
   line-height: 1;
-  color: #00C2FF;
-  text-shadow: 0 0 4px rgba(0, 194, 255, 0.8);
+  color: var(--ew-primary);
+  text-shadow: 0 0 4px color-mix(in oklab, var(--ew-primary) 80%, transparent);
   padding: 0 1px;
   animation: sepBlink 1s step-end infinite;
   margin-top: 10px;
@@ -717,7 +717,7 @@
 
 /* Status Block */
 .statusBlock {
-  border-top: 1px solid rgba(0, 194, 255, 0.15);
+  border-top: 1px solid color-mix(in oklab, var(--ew-primary) 15%, transparent);
   padding-top: 24px;
   margin-bottom: 40px;
   width: 100%;
@@ -741,7 +741,7 @@
 }
 
 .statusDot {
-  color: rgba(0, 194, 255, 0.15);
+  color: color-mix(in oklab, var(--ew-primary) 15%, transparent);
   flex: 1;
   overflow: hidden;
 }
@@ -753,7 +753,7 @@
 /* Cursor */
 .cursor {
   font: 400 13px/1.6 var(--font-mono, ui-monospace, monospace);
-  color: var(--ew-primary, #00C2FF);
+  color: var(--ew-primary);
   letter-spacing: 2px;
   margin: 0;
 }
@@ -774,7 +774,7 @@
 
 .accordion {
   width: 100%;
-  border: 1px solid rgba(0, 194, 255, 0.2);
+  border: 1px solid color-mix(in oklab, var(--ew-primary) 20%, transparent);
   /* TL+BR directional cut — EWDS card spec */
   clip-path: var(--clip-card, polygon(
     12px 0,
@@ -796,7 +796,7 @@
   padding: 14px 16px;
   background: rgba(8, 20, 28, 0.5);
   border: none;
-  color: #00C2FF;
+  color: var(--ew-primary);
   font: 700 clamp(12px, 2vw, 14px)/1.2 var(--font-mono, ui-monospace, monospace);
   letter-spacing: 1.5px;
   cursor: pointer;
@@ -805,11 +805,11 @@
 }
 
 .accordionHead:hover {
-  background: rgba(0, 194, 255, 0.08);
+  background: color-mix(in oklab, var(--ew-primary) 8%, transparent);
 }
 
 .accordionOpen {
-  border-bottom: 1px solid rgba(0, 194, 255, 0.15);
+  border-bottom: 1px solid color-mix(in oklab, var(--ew-primary) 15%, transparent);
 }
 
 .accordionChevron {
@@ -856,7 +856,7 @@
 .benefitTitleMobile {
   display: block;
   font: 600 12px/1.3 var(--font-body, 'Rajdhani', system-ui, sans-serif);
-  color: #00C2FF;
+  color: var(--ew-primary);
   letter-spacing: 0.8px;
   margin-bottom: 4px;
 }
@@ -893,7 +893,7 @@
   flex-direction: column;
   position: relative;
   /* Desaturated cyan frame + dark inner fill */
-  background: color-mix(in oklab, #00C2FF 55%, #1a1d26);
+  background: color-mix(in oklab, var(--ew-primary) 55%, var(--ew-surface));
   /* TR+BL canonical cut direction */
   clip-path: polygon(
     0 0,
@@ -931,8 +931,8 @@
 
 /* Pro variant — hotter cyan frame for flagship slide */
 .carouselSlidePro {
-  background: color-mix(in oklab, #00C2FF 70%, #1a1d26);
-  box-shadow: 0 0 24px rgba(0, 194, 255, 0.14);
+  background: color-mix(in oklab, var(--ew-primary) 70%, var(--ew-surface));
+  box-shadow: 0 0 24px color-mix(in oklab, var(--ew-primary) 14%, transparent);
 }
 
 .carouselSlidePro::before {
@@ -950,7 +950,7 @@
   width: 9px;
   height: 9px;
   border-radius: 50%;
-  border: 1px solid rgba(0, 194, 255, 0.4);
+  border: 1px solid color-mix(in oklab, var(--ew-primary) 40%, transparent);
   background: transparent;
   cursor: pointer;
   padding: 0;
@@ -958,13 +958,13 @@
 }
 
 .dot:hover {
-  border-color: rgba(0, 194, 255, 0.65);
+  border-color: color-mix(in oklab, var(--ew-primary) 65%, transparent);
 }
 
 .dotActive {
-  background: #00C2FF;
-  border-color: #00C2FF;
-  box-shadow: 0 0 8px rgba(0, 194, 255, 0.7);
+  background: var(--ew-primary);
+  border-color: var(--ew-primary);
+  box-shadow: 0 0 8px color-mix(in oklab, var(--ew-primary) 70%, transparent);
 }
 
 .carouselNav {
@@ -976,9 +976,9 @@
 }
 
 .carouselBtn {
-  background: rgba(0, 194, 255, 0.1);
-  border: 1px solid rgba(0, 194, 255, 0.25);
-  color: #00C2FF;
+  background: color-mix(in oklab, var(--ew-primary) 10%, transparent);
+  border: 1px solid color-mix(in oklab, var(--ew-primary) 25%, transparent);
+  color: var(--ew-primary);
   width: 36px;
   height: 36px;
   border-radius: 50%;
@@ -991,13 +991,13 @@
 }
 
 .carouselBtn:hover {
-  background: rgba(0, 194, 255, 0.2);
-  border-color: rgba(0, 194, 255, 0.5);
+  background: color-mix(in oklab, var(--ew-primary) 20%, transparent);
+  border-color: color-mix(in oklab, var(--ew-primary) 50%, transparent);
 }
 
 .carouselCount {
   font: 500 11px/1 var(--font-mono, ui-monospace, monospace);
-  color: rgba(0, 194, 255, 0.5);
+  color: color-mix(in oklab, var(--ew-primary) 50%, transparent);
   letter-spacing: 2px;
 }
 

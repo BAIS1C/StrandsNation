@@ -74,8 +74,8 @@
   letter-spacing: 8px;
   margin: 0 0 16px;
   text-shadow:
-    0 0 20px rgba(0, 194, 255, 0.4),
-    0 0 60px rgba(0, 194, 255, 0.15);
+    0 0 20px color-mix(in oklab, var(--ew-primary) 40%, transparent),
+    0 0 60px color-mix(in oklab, var(--ew-primary) 15%, transparent);
   animation: flicker 4s infinite;
 }
 
@@ -233,7 +233,7 @@
 
 /* ─── Status Block ─── */
 .statusBlock {
-  border-top: 1px solid rgba(0, 194, 255, 0.15);
+  border-top: 1px solid color-mix(in oklab, var(--ew-primary) 15%, transparent);
   padding-top: 24px;
   margin-bottom: 40px;
   width: 100%;
@@ -257,7 +257,7 @@
 }
 
 .dot {
-  color: rgba(0, 194, 255, 0.15);
+  color: color-mix(in oklab, var(--ew-primary) 15%, transparent);
   flex: 1;
   overflow: hidden;
 }

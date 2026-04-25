@@ -50,7 +50,7 @@
 }
 
 .docLink[data-variant='cyan']:hover {
-  background: rgba(0, 194, 255, 0.08);
+  background: color-mix(in oklab, var(--ew-primary) 8%, transparent);
 }
 
 .docLink[data-variant='purple'] {

@@ -83,13 +83,13 @@
 
 .sidebarLink:hover {
   color: var(--ew-text, #E8E8E8);
-  background: rgba(0, 194, 255, 0.04);
-  border-left-color: rgba(0, 194, 255, 0.3);
+  background: color-mix(in oklab, var(--ew-primary) 4%, transparent);
+  border-left-color: color-mix(in oklab, var(--ew-primary) 30%, transparent);
 }
 
 .sidebarLinkActive {
   color: var(--ew-primary, #00C2FF) !important;
-  background: rgba(0, 194, 255, 0.06);
+  background: color-mix(in oklab, var(--ew-primary) 6%, transparent);
   border-left-color: var(--ew-primary, #00C2FF) !important;
 }
 
@@ -198,8 +198,8 @@
   font-weight: 600;
   letter-spacing: 3px;
   color: var(--ew-primary, #00C2FF);
-  background: rgba(0, 194, 255, 0.06);
-  border: 1px solid rgba(0, 194, 255, 0.15);
+  background: color-mix(in oklab, var(--ew-primary) 6%, transparent);
+  border: 1px solid color-mix(in oklab, var(--ew-primary) 15%, transparent);
   padding: 6px 14px;
   clip-path: var(--clip-button-sm);
   margin-bottom: 20px;
@@ -361,7 +361,7 @@
 .chapterContent a {
   color: var(--ew-primary, #00C2FF);
   text-decoration: none;
-  border-bottom: 1px solid rgba(0, 194, 255, 0.2);
+  border-bottom: 1px solid color-mix(in oklab, var(--ew-primary) 20%, transparent);
   transition: border-color 0.2s ease;
 }
 
@@ -393,11 +393,11 @@
 .chapterContent code {
   font-family: var(--font-mono, ui-monospace, monospace);
   font-size: 12px;
-  background: rgba(0, 194, 255, 0.06);
+  background: color-mix(in oklab, var(--ew-primary) 6%, transparent);
   color: var(--ew-primary, #00C2FF);
   padding: 2px 7px;
   border-radius: 4px;
-  border: 1px solid rgba(0, 194, 255, 0.1);
+  border: 1px solid color-mix(in oklab, var(--ew-primary) 10%, transparent);
 }
 
 /* Code blocks */
@@ -438,8 +438,8 @@
   text-transform: uppercase;
   text-align: left;
   padding: 10px 14px;
-  border-bottom: 1px solid rgba(0, 194, 255, 0.2);
-  background: rgba(0, 194, 255, 0.04);
+  border-bottom: 1px solid color-mix(in oklab, var(--ew-primary) 20%, transparent);
+  background: color-mix(in oklab, var(--ew-primary) 4%, transparent);
 }
 
 .chapterContent tbody td {
@@ -483,7 +483,7 @@
   padding: 24px;
   /* Raise to surface so the TR+BL cut is visible against page bg */
   background: var(--ew-surface);
-  border: 1px solid rgba(0, 194, 255, 0.18);
+  border: 1px solid color-mix(in oklab, var(--ew-primary) 18%, transparent);
   clip-path: var(--clip-card);
   text-align: center;
 }
