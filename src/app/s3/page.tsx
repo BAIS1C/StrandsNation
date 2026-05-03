@@ -58,7 +58,7 @@ const TIERS = [
       'Unlimited generation on your GPU',
       'Text-to-music, cover, reference audio',
       'Full commercial rights on originals',
-      'Base video visualisers (540p)',
+      'Vid Studio — 540p music videos, beat-sync, custom backgrounds',
       'FLAC lossless output',
       'Automatic VRAM-aware model selection',
     ],
@@ -66,17 +66,15 @@ const TIERS = [
   {
     id: 'GENER8 PRO',
     name: <>S<sup>3</sup> GENER8 PRO</>,
-    tagline: 'Full-quality base model + HD video + distribution polish',
+    tagline: 'Full-quality base model + Vid Studio Pro + distribution polish',
     price: '$12.99',
     flagship: false,
     features: [
       'Everything in Gener8',
       'Full-quality cover & reference (XL Base, VRAM-gated)',
-      '1080p HD video rendering',
-      '1-click share: IG, TikTok, FB, Shorts',
-      'Correct aspect ratios per platform',
+      'Vid Studio Pro — HD export (720p / 1080p), social presets, one-click share, watermark removal',
       'Custom pixel ratios · 4K upscale',
-      'Watermark removal',
+      'Per-platform aspect ratios (TikTok, Reels, Shorts, IG, Pinterest)',
     ],
   },
   {
@@ -223,6 +221,164 @@ function PricingCarousel() {
         <span className={styles.carouselCount}>{idx + 1} / {N}</span>
         <button onClick={() => goTo(idx + 1)} className={styles.carouselBtn} aria-label="Next">&rarr;</button>
       </div>
+    </div>
+  );
+}
+
+/* ── GPU × Tier matrix ──
+   Lifted from strandsnation-s3-pricing-preview.html (the design-source-of-truth
+   preview) so the marketing site answers "will it run on my rig" without
+   shipping the user off to read another page. Inline-styled to avoid bloating
+   page.module.css; CSS vars used so theming stays consistent. */
+const VRAM_ROWS: Array<[string, string, string, string]> = [
+  ['< 6 GB',     'CPU fallback', 'Blocked', 'Blocked'],
+  ['6 – 8 GB',   '✓',            'Limited', 'Blocked'],
+  ['8 – 12 GB',  '✓',            '✓',       'Limited'],
+  ['12 – 16 GB', '✓',            '✓',       '✓'],
+  ['16 GB +',    'Optimal',      'Optimal', 'Optimal'],
+];
+
+const GPU_ROWS: Array<[string, string, string]> = [
+  ['RTX 3060 / 4060',         '8 GB',           'Gener8 · Gener8 Pro'],
+  ['RTX 3060 12GB / 4070',    '12 GB',          'All tiers'],
+  ['RTX 4070 Ti / 4080',      '16 GB',          'All tiers (optimal)'],
+  ['RTX 3090 / 4090 / 5090',  '24 – 32 GB',     'All tiers · hi-fi models'],
+  ['Apple M-series (MLX)',    'unified memory', 'Gener8 · Gener8 Pro *'],
+];
+
+function cellTone(v: string): React.CSSProperties {
+  const ok = v === '✓' || v === 'Optimal';
+  const warn = v === 'Limited' || v === 'CPU fallback';
+  const no = v === 'Blocked';
+  if (ok)   return { color: 'var(--ew-primary)', fontWeight: 700 };
+  if (warn) return { color: '#e0a93a', fontWeight: 600 };
+  if (no)   return { color: 'var(--ew-text-muted, #888)', opacity: 0.65 };
+  return {};
+}
+
+function GpuMatrix() {
+  const headerStyle: React.CSSProperties = {
+    fontFamily: 'var(--font-mono, ui-monospace, monospace)',
+    fontSize: 10,
+    letterSpacing: 2,
+    textTransform: 'uppercase',
+    color: 'var(--ew-text-muted, #999)',
+    margin: '24px 0 12px',
+  };
+  const tableStyle: React.CSSProperties = {
+    width: '100%',
+    borderCollapse: 'collapse',
+    fontFamily: 'var(--font-mono, ui-monospace, monospace)',
+    fontSize: 12,
+    color: 'var(--ew-text, #ddd)',
+  };
+  const thStyle: React.CSSProperties = {
+    textAlign: 'left',
+    padding: '10px 12px',
+    borderBottom: '1px solid color-mix(in oklab, var(--ew-primary) 35%, transparent)',
+    color: 'var(--ew-primary)',
+    fontWeight: 700,
+    letterSpacing: 1,
+  };
+  const tdStyle: React.CSSProperties = {
+    padding: '8px 12px',
+    borderBottom: '1px solid color-mix(in oklab, var(--ew-primary) 12%, transparent)',
+  };
+  const calloutStyle: React.CSSProperties = {
+    margin: '20px 0',
+    padding: '14px 16px',
+    border: '1px solid color-mix(in oklab, var(--ew-primary) 30%, transparent)',
+    background: 'color-mix(in oklab, var(--ew-primary) 6%, transparent)',
+    fontFamily: 'var(--font-body, Rajdhani, monospace)',
+    fontSize: 14,
+    lineHeight: 1.6,
+    color: 'var(--ew-text, #ddd)',
+  };
+
+  return (
+    <div style={{ margin: '40px 0 16px' }}>
+      <h2 style={{
+        fontFamily: 'var(--font-display, Orbitron, monospace)',
+        fontSize: 'clamp(18px, 3vw, 24px)',
+        color: 'var(--ew-primary)',
+        letterSpacing: 2,
+        textTransform: 'uppercase',
+        margin: '0 0 12px',
+      }}>
+        Runs on your GPU
+      </h2>
+      <p style={{
+        fontFamily: 'var(--font-body, Rajdhani, monospace)',
+        fontSize: 14,
+        lineHeight: 1.7,
+        color: 'var(--ew-text-muted, #b4b4b4)',
+        margin: 0,
+      }}>
+        Every S<sup>3</sup> tier runs generation locally. No cloud rendering, no metered credits, no rate limits.
+        When you install, we detect your GPU and automatically select the best quant your VRAM can handle.
+      </p>
+
+      <div style={calloutStyle}>
+        <strong style={{ color: 'var(--ew-primary)', letterSpacing: 1 }}>Don&apos;t sweat the table.</strong>{' '}
+        When you download Gener8 to claim your <strong>1-hour free demo</strong>, we run a 30-second hardware check at install
+        and keep the right models loaded as you work. The demo runs as <strong>Gener8 Pro</strong> so you can see every feature
+        on your own rig before you pick a tier.
+      </div>
+
+      <h4 style={headerStyle}>Tier × VRAM compatibility</h4>
+      <div style={{ overflowX: 'auto' }}>
+        <table style={tableStyle}>
+          <thead>
+            <tr>
+              <th style={thStyle}>Your VRAM</th>
+              <th style={{ ...thStyle, textAlign: 'center' }}>Gener8</th>
+              <th style={{ ...thStyle, textAlign: 'center' }}>Gener8 Pro</th>
+              <th style={{ ...thStyle, textAlign: 'center' }}>Creator Studio</th>
+            </tr>
+          </thead>
+          <tbody>
+            {VRAM_ROWS.map(([vram, g, p, cs]) => (
+              <tr key={vram}>
+                <td style={tdStyle}>{vram}</td>
+                <td style={{ ...tdStyle, textAlign: 'center', ...cellTone(g) }}>{g}</td>
+                <td style={{ ...tdStyle, textAlign: 'center', ...cellTone(p) }}>{p}</td>
+                <td style={{ ...tdStyle, textAlign: 'center', ...cellTone(cs) }}>{cs}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <h4 style={headerStyle}>Example GPUs</h4>
+      <div style={{ overflowX: 'auto' }}>
+        <table style={tableStyle}>
+          <thead>
+            <tr>
+              <th style={thStyle}>GPU</th>
+              <th style={thStyle}>VRAM</th>
+              <th style={thStyle}>Tiers available</th>
+            </tr>
+          </thead>
+          <tbody>
+            {GPU_ROWS.map(([gpu, vram, tiers]) => (
+              <tr key={gpu}>
+                <td style={tdStyle}>{gpu}</td>
+                <td style={tdStyle}>{vram}</td>
+                <td style={tdStyle}>{tiers}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p style={{
+        marginTop: 10,
+        fontFamily: 'var(--font-mono, ui-monospace, monospace)',
+        fontSize: 11,
+        color: 'var(--ew-text-muted, #888)',
+        lineHeight: 1.6,
+      }}>
+        * Apple Silicon support via Metal backend. Creator Studio video generation on M-series requires 32 GB+ unified memory.
+      </p>
     </div>
   );
 }
@@ -418,6 +574,9 @@ export default function S3ComingSoon() {
           </p>
           {isMobile ? <PricingCarousel /> : <PricingGrid />}
         </div>
+
+        {/* ── GPU × TIER MATRIX ── */}
+        <GpuMatrix />
 
         <p className={styles.promoLine}>
           First hour free, no sign-in. First 500 Creator Studio subs lock in $30/mo for life. Annual subs: one extra month.

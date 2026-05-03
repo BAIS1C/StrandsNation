@@ -39,6 +39,35 @@ export default function EcosystemSection() {
             Running on your hardware, under your control. No copyright liability.
             No cloud dependency. No generation limits. Your GPU, your music, your rights.
           </p>
+          {/* Hero video — canonical S³ song clip. Mirrors the embed on
+              s3studio.xyz/Landing.tsx and strandsnation.xyz/s3 so every
+              entry point shows the same proof-of-output (2026-05-03 SGT). */}
+          <div
+            style={{
+              position: 'relative',
+              width: '100%',
+              paddingBottom: '56.25%',
+              marginTop: 16,
+              background: '#000',
+              overflow: 'hidden',
+              borderRadius: 6,
+            }}
+          >
+            <iframe
+              style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%',
+                border: 0,
+              }}
+              src="https://www.youtube.com/embed/QqzB7DN_AAw?si=QKUT7fwQ6SUUZsHI&rel=0&modestbranding=1"
+              title="S³ Strands Sound Studio"
+              allow="autoplay; encrypted-media; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
           <div className={styles.tags}>
             <Tag variant="green">Gener8</Tag>
             <Tag variant="purple">DAW</Tag>
