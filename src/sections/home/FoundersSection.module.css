@@ -1,0 +1,32 @@
+/* ═══════════════════════════════════════════════════
+   FoundersSection — Citizenship credential
+   EWDS: amber callout (human/warm), cyan card (action).
+   ═══════════════════════════════════════════════════ */
+
+.body {
+  font: var(--fw-body) 16px var(--font-body);
+  line-height: 1.75;
+  color: var(--c-text);
+  margin-bottom: 16px;
+  max-width: 720px;
+}
+
+.body:last-child { margin-bottom: 0; }
+
+.bodyEmph {
+  font: var(--fw-body-strong) 18px var(--font-body);
+  line-height: 1.7;
+  color: var(--c-accent);
+  letter-spacing: 0.01em;
+  margin-bottom: 0;
+  max-width: 720px;
+}
+
+@media (max-width: 768px) {
+  .body {
+    font-size: 15px;
+  }
+  .bodyEmph {
+    font-size: 17px;
+  }
+}

@@ -1,5 +1,5 @@
 'use client';
-import { bookUrl, socials } from '@/data/socials';
+import { socials } from '@/data/socials';
 import styles from './HeroSection.module.css';
 import ParticleHero from '@/components/ParticleHero/ParticleHero';
 
@@ -23,16 +23,20 @@ export default function HeroSection() {
             <br /><br />
             Your instinct led you here.
           </div>
-          <h1 className={styles.headline}>READY PLAYER YOU</h1>
+          <h1 className={styles.headline}>STRANDS IS THE EXIT</h1>
           <p className={styles.subhead}>
-            A world that doesn&rsquo;t just get played by you. It gets built by you.
+            Not a protest. Not a manifesto. New architecture for the digital
+            economy, built by the people who will live in it.
           </p>
           <div className={styles.ctas}>
-            <a href={socials.telegram.url} target="_blank" rel="noopener noreferrer" className={styles.ctaPrimary}>
-              JOIN TELEGRAM
+            <a href="#nation" className={styles.ctaPrimary}>
+              BECOME A CITIZEN
             </a>
-            <a href={bookUrl} target="_blank" rel="noopener noreferrer" className={styles.ctaSecondary}>
-              GET THE BOOK
+            <a href="/whitepaper" className={styles.ctaSecondary}>
+              READ THE THESIS
+            </a>
+            <a href={socials.telegram.url} target="_blank" rel="noopener noreferrer" className={styles.ctaTertiary}>
+              JOIN TELEGRAM
             </a>
           </div>
           <div className={styles.scrollHint}>SCROLL TO WAKE UP ↓</div>

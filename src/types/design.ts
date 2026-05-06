@@ -18,10 +18,15 @@ export type SocialId =
   | 'discord'
   | 'x'
   | 'youtube_strands'
-  | 'youtube_basic'
-  | 'studio';
+  | 'youtube_basic';
 
 export type SocialsMap = Record<SocialId, SocialLink>;
 
-export type PartnerId = 'metafintek';
+export type EcosystemId =
+  | 'everywear'
+  | 's3studio';
+
+export type EcosystemMap = Record<EcosystemId, SocialLink>;
+
+export type PartnerId = 'somokasane' | 'metafintek';
 export type PartnersMap = Record<PartnerId, SocialLink>;

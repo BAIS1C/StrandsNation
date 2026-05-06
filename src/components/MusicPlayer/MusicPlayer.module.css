@@ -33,7 +33,7 @@
 
 .btnActive {
   color: var(--c-accent);
-  filter: drop-shadow(0 0 3px rgba(0, 194, 255, 0.3));
+  filter: drop-shadow(0 0 3px oklch(72% 0.15 195 / 0.3));
 }
 
 .playBtn {
@@ -44,14 +44,14 @@
   height: 22px;
   flex-shrink: 0;
   border-radius: 50%;
-  border: 1px solid rgba(0, 194, 255, 0.25);
+  border: 1px solid oklch(72% 0.15 195 / 0.25);
   color: var(--c-accent);
   transition: background 0.15s;
   padding: 0;
 }
 
 .playBtn:hover {
-  background: rgba(0, 194, 255, 0.12);
+  background: oklch(72% 0.15 195 / 0.12);
 }
 
 /* ─── Track Info + Marquee ─── */
@@ -69,8 +69,8 @@
 .marqueeWrap {
   overflow: hidden;
   width: 100%;
-  mask-image: linear-gradient(to right, transparent, black 6px, black calc(100% - 6px), transparent);
-  -webkit-mask-image: linear-gradient(to right, transparent, black 6px, black calc(100% - 6px), transparent);
+  mask-image: linear-gradient(to right, transparent, oklch(0% 0 0) 6px, oklch(0% 0 0) calc(100% - 6px), transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, oklch(0% 0 0) 6px, oklch(0% 0 0) calc(100% - 6px), transparent);
 }
 
 .marquee {
@@ -97,7 +97,7 @@
 .miniProgress {
   width: 100%;
   height: 2px;
-  background: rgba(255, 255, 255, 0.06);
+  background: oklch(96% 0.01 240 / 0.06);
   border-radius: 1px;
   cursor: pointer;
 }
@@ -114,7 +114,7 @@
   width: 44px;
   height: 2px;
   appearance: none;
-  background: rgba(255, 255, 255, 0.08);
+  background: oklch(96% 0.01 240 / 0.08);
   border-radius: 999px;
   outline: none;
   flex-shrink: 0;
@@ -122,7 +122,7 @@
 }
 
 .volumeSlider:hover {
-  background: rgba(0, 194, 255, 0.25);
+  background: oklch(72% 0.15 195 / 0.25);
 }
 
 .volumeSlider::-webkit-slider-thumb {
@@ -131,7 +131,7 @@
   height: 6px;
   border-radius: 50%;
   background: var(--c-accent);
-  border: 1px solid rgba(0, 194, 255, 0.5);
+  border: 1px solid oklch(72% 0.15 195 / 0.5);
 }
 
 .volumeSlider::-moz-range-thumb {
@@ -139,7 +139,7 @@
   height: 6px;
   border-radius: 50%;
   background: var(--c-accent);
-  border: 1px solid rgba(0, 194, 255, 0.5);
+  border: 1px solid oklch(72% 0.15 195 / 0.5);
 }
 
 /* ─── Time ─── */
@@ -159,9 +159,9 @@
   transform: translateX(-50%);
   width: 340px;
   max-height: 420px;
-  background: rgba(10, 11, 13, 0.97);
+  background: oklch(14% 0.015 240 / 0.97);
   backdrop-filter: blur(20px);
-  border: 1px solid rgba(0, 194, 255, 0.15);
+  border: 1px solid oklch(72% 0.15 195 / 0.15);
   z-index: 1001;
   display: flex;
   flex-direction: column;
@@ -179,7 +179,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 12px 16px;
-  border-bottom: 1px solid rgba(0, 194, 255, 0.1);
+  border-bottom: 1px solid oklch(72% 0.15 195 / 0.1);
 }
 
 .trackListTitle {
@@ -214,11 +214,11 @@
 }
 
 .trackItem:hover {
-  background: rgba(0, 194, 255, 0.05);
+  background: oklch(72% 0.15 195 / 0.05);
 }
 
 .trackItemActive {
-  background: rgba(0, 194, 255, 0.1);
+  background: oklch(72% 0.15 195 / 0.1);
 }
 
 .trackItemActive .trackName {

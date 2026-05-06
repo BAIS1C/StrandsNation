@@ -62,55 +62,10 @@ export default function EveryWearPage() {
         </div>
       </SectionWrapper>
 
-      {/* ─── Studio First: hero video ───
-          Distributed across every front-facing marketing surface
-          (2026-05-03 SGT). Reinforces the PHASE 01 "Studio First"
-          narrative below — see the actual product output before the
-          Hub Products grid. Canonical YouTube ID QqzB7DN_AAw. */}
-      <SectionWrapper bordered>
-        <SectionLabel
-          num="00 // STUDIO FIRST"
-          title="See It Run"
-          subtitle="S³ Strands Sound Studio is the first product on the rails. Locally generated, locally rendered, on real consumer hardware."
-        />
-        <div
-          style={{
-            position: 'relative',
-            width: '100%',
-            maxWidth: 960,
-            margin: '0 auto',
-            paddingBottom: 'min(56.25%, 540px)',
-            background: '#000',
-            overflow: 'hidden',
-            borderRadius: 6,
-          }}
-        >
-          <iframe
-            style={{
-              position: 'absolute',
-              top: 0,
-              left: 0,
-              width: '100%',
-              height: '100%',
-              border: 0,
-            }}
-            src="https://www.youtube.com/embed/QqzB7DN_AAw?si=QKUT7fwQ6SUUZsHI&rel=0&modestbranding=1"
-            title="S³ Strands Sound Studio"
-            allow="autoplay; encrypted-media; picture-in-picture"
-            allowFullScreen
-          />
-        </div>
-        <p
-          style={{
-            textAlign: 'center',
-            marginTop: 16,
-            fontSize: 13,
-            opacity: 0.7,
-          }}
-        >
-          Made with S<sup>3</sup>. Locally. Unlimited. Uncensored.
-        </p>
-      </SectionWrapper>
+      {/* Video block removed 2026-05-06 SGT (Sean's call): the EveryWear
+          page does not carry a video. The S³ song embed and the broader
+          replacement video have both been pulled. EveryWear pitches itself
+          on premise, hub, roadmap, and architecture. No video. */}
 
       {/* ─── What is EveryWear? ─── */}
       <SectionWrapper bordered>

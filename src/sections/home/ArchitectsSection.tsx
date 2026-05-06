@@ -7,7 +7,7 @@ import styles from './ArchitectsSection.module.css';
 export default function ArchitectsSection() {
   return (
     <SectionWrapper>
-      <SectionLabel num="01 // THE FRAMEWORK" title="Architects" />
+      <SectionLabel num="04 // THE FRAMEWORK" title="Architects" />
       <Card variant="yellow">
         <div className={styles.inner}>
           {/* Book cover thumbnail */}
@@ -29,7 +29,7 @@ export default function ArchitectsSection() {
             <div className={styles.cardTitle}>Building the Exit from Techno-Feudalism</div>
             <p className={styles.body}>
               A post-political framework for systems transition. A manual for builders, not a manifesto for spectators.
-              The philosophical backbone of everything you&rsquo;ll experience in Strands.
+              The philosophical backbone of everything you&rsquo;ll experience in the Nation.
             </p>
             <div className={styles.quote}>
               We are not Left. We are not Right.<br />

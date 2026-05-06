@@ -1,39 +1,67 @@
 /* ═══════════════════════════════════════════════════
-   DESIGN TOKENS — CSS Custom Properties
+   DESIGN TOKENS — EWDS (Everywear Design System)
+   OKLCH colour system. Classic skin, dark mode.
    Single source of truth for the entire app.
    Components use var(--token) exclusively.
+
+   Canonical reference:
+     claude design/everywear/tokens.css
+     claude design/02-System-v2.html
    ═══════════════════════════════════════════════════ */
 
 :root {
-  /* ─── PALETTE ─── */
-  --c-accent: #00C2FF;
-  --c-pink: #F000B8;
-  --c-yellow: #F9E100;
-  --c-purple: #8b5cf6;
-  --c-red: #FF4444;
-  --c-green: #22c55e;
-  --c-bg: #0A0B0D;
-  --c-surface: rgba(20, 21, 28, 0.85);
-  --c-surface-hover: rgba(0, 194, 255, 0.06);
-  --c-text: #E2E8F0;
-  --c-sub: #A0AEC0;
-  --c-dim: #6b7280;
-  --c-border: rgba(255, 255, 255, 0.06);
-  --c-glass: rgba(255, 255, 255, 0.08);
+  /* ─── SEMANTIC COLOURS (OKLCH) ─── */
+  /* Action: cyan — the only CTA colour */
+  --c-accent:       oklch(72% 0.15 195);
+  --c-accent-hover: oklch(76% 0.17 195);
+  --c-accent-press: oklch(66% 0.14 195);
+  --c-accent-ink:   oklch(14% 0.015 240);
 
-  /* ─── ALPHA OVERLAYS ─── */
-  --a-accent-bg: rgba(0, 194, 255, 0.04);
-  --a-pink-bg: rgba(240, 0, 184, 0.04);
-  --a-yellow-bg: rgba(249, 225, 0, 0.04);
-  --a-purple-bg: rgba(139, 92, 246, 0.04);
-  --a-red-bg: rgba(255, 68, 68, 0.04);
-  --a-accent-hover: rgba(0, 194, 255, 0.06);
-  --a-pink-hover: rgba(240, 0, 184, 0.06);
+  /* Expressive: magenta — hero terminus, NEVER a button */
+  --c-pink:   oklch(58% 0.22 345);
+  /* Premium: purple — tier / paid / premium surfaces */
+  --c-purple: oklch(62% 0.14 295);
+  /* Human: amber — reserved for community/warm moments */
+  --c-yellow: oklch(76% 0.14 75);
+  /* Success */
+  --c-green:  oklch(70% 0.16 155);
+  /* Danger */
+  --c-red:    oklch(64% 0.22 25);
 
-  /* ─── TYPOGRAPHY ─── */
+  /* ─── SURFACES (OKLCH) ─── */
+  --c-bg:           oklch(14% 0.015 240);
+  --c-surface:      oklch(18% 0.018 240);
+  --c-surface-raised: oklch(22% 0.022 240);
+  --c-surface-hover: oklch(72% 0.15 195 / 0.06);
+
+  /* ─── TEXT (OKLCH) ─── */
+  --c-text:   oklch(96% 0.01 240);
+  --c-sub:    oklch(74% 0.015 240);
+  --c-dim:    oklch(56% 0.02 240);
+
+  /* ─── BORDERS (OKLCH) ─── */
+  --c-border:       oklch(28% 0.02 240);
+  --c-border-strong: oklch(40% 0.03 240);
+  --c-border-faint: oklch(22% 0.015 240);
+  --c-glass:        oklch(96% 0 0 / 0.08);
+
+  /* ─── ALPHA OVERLAYS (OKLCH with alpha) ─── */
+  --a-accent-bg:    oklch(72% 0.15 195 / 0.04);
+  --a-accent-hover: oklch(72% 0.15 195 / 0.06);
+  --a-pink-bg:      oklch(58% 0.22 345 / 0.04);
+  --a-pink-hover:   oklch(58% 0.22 345 / 0.06);
+  --a-yellow-bg:    oklch(76% 0.14 75 / 0.04);
+  --a-purple-bg:    oklch(62% 0.14 295 / 0.04);
+  --a-red-bg:       oklch(64% 0.22 25 / 0.04);
+
+  /* ─── GLOW (one per hierarchy level) ─── */
+  --glow-primary: 0 0 0 1px oklch(72% 0.15 195 / 0.4), 0 0 24px oklch(72% 0.15 195 / 0.25);
+  --glow-warm:    0 0 24px oklch(76% 0.14 75 / 0.3);
+
+  /* ─── TYPOGRAPHY (locked: Orbitron / Rajdhani / JetBrains Mono) ─── */
   --font-display: 'Orbitron', system-ui, sans-serif;
   --font-body:    'Rajdhani', system-ui, sans-serif;
-  --font-mono:    'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-mono:    'JetBrains Mono', ui-monospace, monospace;
 
   --fw-body:          400;
   --fw-body-strong:   500;
@@ -49,14 +77,26 @@
   --max-content: 1100px;
   --max-prose: 900px;
 
-  /* ─── CLIP PATHS — TR+BL directional cut (cut by default, NE-SW grain) ─── */
-  --clip-card: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 16px 100%, 0 calc(100% - 16px));
+  /* ─── BEVEL SCALE (TL+BR oblique corner cuts) ───
+     6px  chips/tags
+     8px  buttons
+     12px cards (inner)
+     16px cards (outer) / windows
+     24px hero panels
+  */
+  --clip-chip: polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 6px 100%, 0 calc(100% - 6px));
+  --clip-button: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+  --clip-button-sm: polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 6px 100%, 0 calc(100% - 6px));
   --clip-card-inner: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
-  --clip-button: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
-  --clip-button-sm: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+  --clip-card: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 16px 100%, 0 calc(100% - 16px));
+  --clip-window: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 16px 100%, 0 calc(100% - 16px));
+  --clip-hero: polygon(0 0, calc(100% - 24px) 0, 100% 24px, 100% 100%, 24px 100%, 0 calc(100% - 24px));
+  /* Legacy alias (components referencing --clip-input) */
+  --clip-input: polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 6px 100%, 0 calc(100% - 6px));
 
   /* ─── TRANSITIONS ─── */
-  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-in: cubic-bezier(0.55, 0.06, 0.68, 0.19);
   --t-fast: 0.15s;
   --t-med: 0.3s;
 

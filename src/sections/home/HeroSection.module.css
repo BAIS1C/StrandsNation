@@ -116,13 +116,29 @@
   letter-spacing: 2px;
   text-decoration: none;
   clip-path: var(--clip-button);
-  border: 1px solid var(--c-yellow);
-  color: var(--c-yellow);
+  border: 1px solid var(--c-accent);
+  color: var(--c-accent);
   transition: background 0.2s;
 }
 
 .ctaSecondary:hover {
-  background: rgba(249, 225, 0, 0.08);
+  background: var(--a-accent-hover);
+}
+
+.ctaTertiary {
+  padding: 12px 28px;
+  font: 700 12px var(--font-mono);
+  letter-spacing: 2px;
+  text-decoration: none;
+  clip-path: var(--clip-button);
+  border: 1px solid var(--c-border);
+  color: var(--c-sub);
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.ctaTertiary:hover {
+  color: var(--c-text);
+  border-color: var(--c-sub);
 }
 
 .scrollHint {
@@ -204,7 +220,8 @@
   }
 
   .ctaPrimary,
-  .ctaSecondary {
+  .ctaSecondary,
+  .ctaTertiary {
     text-align: center;
   }
 }

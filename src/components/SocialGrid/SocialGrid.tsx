@@ -1,9 +1,9 @@
-import type { SocialsMap, PartnersMap } from '@/types/design';
+import type { SocialsMap, EcosystemMap, PartnersMap } from '@/types/design';
 import Card from '@/components/Card/Card';
 import styles from './SocialGrid.module.css';
 
 interface SocialGridProps {
-  socials: SocialsMap | PartnersMap;
+  socials: SocialsMap | EcosystemMap | PartnersMap;
 }
 
 export default function SocialGrid({ socials }: SocialGridProps) {

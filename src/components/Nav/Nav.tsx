@@ -8,12 +8,13 @@ import styles from './Nav.module.css';
 
 const navLinks = [
   { href: '/', label: 'HOME', external: false },
-  { href: '/codex', label: 'CODEX', external: false },
+  { href: '/whitepaper', label: 'WHITEPAPER', external: false },
+  { href: '/philosophy', label: 'PHILOSOPHY', external: false },
   { href: '/everywear', label: 'EVERYWEAR', external: false },
   { href: '/s3', label: 'S\u00B3', external: false },
   { href: '/game', label: 'PLAY', external: false },
+  { href: '/codex', label: 'CODEX', external: false },
   { href: '/network', label: 'NETWORK', external: false },
-  { href: '/philosophy', label: 'PHILOSOPHY', external: false },
 ] as const;
 
 export default function Nav() {

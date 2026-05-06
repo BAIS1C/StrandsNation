@@ -1,0 +1,84 @@
+/* ═══════════════════════════════════════════════════
+   SignupSection — email capture
+   Civilian-voice copy. Single field + cyan submit.
+   ═══════════════════════════════════════════════════ */
+
+.form {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  max-width: 540px;
+  margin-top: 8px;
+}
+
+.input {
+  flex: 1 1 280px;
+  padding: 12px 16px;
+  font: 400 15px var(--font-body);
+  color: var(--c-text);
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  clip-path: var(--clip-input, polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 6px 100%, 0 calc(100% - 6px)));
+  outline: none;
+  transition: border-color 0.2s var(--ease-out), background 0.2s var(--ease-out);
+}
+
+.input::placeholder {
+  color: var(--c-dim);
+}
+
+.input:focus {
+  border-color: var(--c-accent);
+  background: var(--a-accent-bg);
+}
+
+.input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.button {
+  padding: 12px 28px;
+  font: 700 12px var(--font-mono);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--c-bg);
+  background: var(--c-accent);
+  border: none;
+  cursor: pointer;
+  clip-path: var(--clip-button);
+  transition: filter 0.2s var(--ease-out);
+}
+
+.button:hover:not(:disabled) {
+  filter: brightness(1.15);
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.feedback {
+  margin-top: 16px;
+  font: 500 13px var(--font-mono);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.feedbackOk {
+  color: var(--c-green);
+}
+
+.feedbackError {
+  color: var(--c-red);
+}
+
+@media (max-width: 480px) {
+  .form {
+    flex-direction: column;
+  }
+  .button {
+    width: 100%;
+  }
+}

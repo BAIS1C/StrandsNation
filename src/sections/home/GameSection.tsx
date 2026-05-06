@@ -146,9 +146,9 @@ export default function GameSection() {
     <SectionWrapper bordered>
       {/* 1. Section header */}
       <SectionLabel
-        num="02 // THE EXPERIENCE"
+        num="03 // THE EXPERIENCE"
         title="Strands: The Game"
-        subtitle="A post-capitalist MMORPG where the world remembers your choices, NPCs adapt to how you think, and the community builds the civilisation they play in. This isn't a game you consume. It's a civilisation you shape."
+        subtitle="The game is the onboarding ritual of the Nation. It teaches sovereign-economy primitives through play, with no chain visible in the player experience. A post-capitalist MMORPG where the world remembers your choices, NPCs adapt to how you think, and the community builds the civilisation they play in."
       />
 
       {/* 2. Classified video banner */}
@@ -177,6 +177,14 @@ export default function GameSection() {
         <div className={styles.videoOverlay}>
           <span className={styles.videoCaption}>MetaXity1: Year 555</span>
         </div>
+      </div>
+
+      {/* In-section transition headline */}
+      <div className={styles.transitionWrap}>
+        <h3 className={styles.transitionHeadline}>READY PLAYER YOU</h3>
+        <p className={styles.transitionSub}>
+          A world that does not just get played by you. It gets built by you.
+        </p>
       </div>
 
       {/* 3. Two main pitch cards */}
@@ -257,14 +265,15 @@ export default function GameSection() {
       {/* 6. Play CTA + Codex callout */}
       <Callout
         variant="pink"
-        label="ENTER METAXITY1"
-        text="The game client is coming soon. Create your signal, choose your paths, and shape the civilisation."
-        href="/game"
+        label="ENTER THE WORLD"
+        text="The game client is in build. Create your signal, choose your paths, and shape the civilisation. Join the waitlist via Telegram."
+        href="https://t.me/+WZTkHqJjUOI3YjQ1"
       />
       <Callout
         variant="cyan"
         label="EXPLORE THE FULL WORLD"
         text="MetaXity1, the factions, the skill systems, the seasonal narrative arcs: all documented in the Codex."
+        href="/codex"
       />
     </SectionWrapper>
 

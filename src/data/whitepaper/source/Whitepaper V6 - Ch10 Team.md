@@ -2,9 +2,9 @@
 
 ## Founding Leadership
 
-### Sean Uddin — Founder, CEO/CTO
+### Sean Uddin — Founder
 
-Sean Uddin is the architect and principal driver of the Strands ecosystem. He serves as Founder CEO/CTO of Somo Kasane, the studio building Strands the Game, and Founder of MetaFinTek, the AI and Web3 consultancy that provides strategic infrastructure across the project's capital, regulatory, and technical layers.
+Sean Uddin is the architect and principal driver of the Strands ecosystem. He serves as Founder of Somo Kasane, the studio building Strands the Game, and Founder of MetaFinTek, the AI and Web3 consultancy that provides strategic infrastructure across the project's capital, regulatory, and technical layers.
 
 Sean's career spans zero-to-one ventures across frontier technology, regulated finance, digital marketing, and real estate, consistently operating at the intersection of systems architecture, capital strategy, and product execution. Prior to Strands, he served as Chief Operations Officer at Fleamint, where he led a capital raise exceeding $12M and managed DeFi and NFT product development. He co-founded PT SoLoR and LuxLombok, real estate and hospitality ventures operating across Southeast Asia, and co-founded QPi, an early-stage venture applying Bitcoin and blockchain to property transactions.
 
@@ -44,24 +44,24 @@ Nexus operates as the project's operational strategist, focused on coordination,
 
 Its role is particularly relevant in the early phases of the Strands roadmap (Chapter 9), where the validation ladder demands tight coordination between game development, economic proof, Layer U activation, and blockchain deployment, each of which must prove before the next activates.
 
-## Advisors
+## Friends of the Project
 
-### Eric Benz — Strategic Advisor
+### Eric Benz
 
 Eric Benz is a veteran technologist, investor, and builder with over a decade in crypto, Web3, fintech, and AI. He was an early investor in Blockchain Capital, co-built BitReserve (now Uphold), one of the first platforms enabling seamless conversion between Bitcoin, fiat, and traditional assets, and served as CEO of Changelly, the world's first crypto swaps exchange.
 
 Currently, Eric serves as CEO of Vaultz Capital PLC (AQUIS Exchange, UK), Venture Banking Partner for DNA.Fund, and founder of Flashy, a Web3 infrastructure venture focused on creator economies and digital identity. He also founded the UK Digital Currency Association, engaging directly with lawmakers on crypto regulation and policy.
 
-His advisory role within Strands draws on deep experience across token architecture, exchange infrastructure, regulatory navigation, venture capital formation, and the intersection of digital identity with creator and consumer economies, all domains that converge within the Strands ecosystem.
+Eric brings deep experience across token architecture, exchange infrastructure, regulatory navigation, venture capital formation, and the intersection of digital identity with creator and consumer economies, all domains that converge within the Strands ecosystem.
 
-### Michael Gord — Strategic Advisor
+### Michael Gord
 
 Michael Gord is a serial entrepreneur, investor, and capital markets architect with five exits, over eighty investments, and more than $400M raised, structured, and deployed across private and public markets. He has backed four seed-stage companies that crossed into unicorn territory, with one reaching decacorn status.
 
 Michael currently leads the Flashy Group and is founder of GDA Capital, a global digital asset investment and capital markets firm that has executed over $70M in private raises, $100M+ in public financings, and $250M+ in structured deals. His broader portfolio includes Ritual OS, Alpaca Network, and Skrybit.
 
-His advisory role within Strands aligns with the ecosystem's core architectural needs: incentive design at scale, token-economic structuring, capital markets navigation, and the cultural layer thinking that underpins how Strands approaches player identity, attention economics, and decentralised value distribution.
+His experience spans incentive design at scale, token-economic structuring, capital markets navigation, and the cultural layer thinking that underpins how Strands approaches player identity, attention economics, and decentralised value distribution.
 
 ## What This Chapter Does Not Cover
 
-This chapter introduces the founding leadership, operational governance, and advisory capacity currently attached to the Strands project. It does not constitute a full organisational chart. Studio team composition, engineering leads, creative direction, and operational hires will be disclosed as the project progresses through its validation phases (Chapter 9). Investor relations and capital structure are addressed separately in the context of fundraising materials, not within this whitepaper.
+This chapter introduces the founding leadership, operational governance, and key relationships currently attached to the Strands project. It does not constitute a full organisational chart. Studio team composition, engineering leads, creative direction, and operational hires will be disclosed as the project progresses through its validation phases (Chapter 9). Investor relations and capital structure are addressed separately in the context of fundraising materials, not within this whitepaper.

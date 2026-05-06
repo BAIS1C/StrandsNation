@@ -13,13 +13,13 @@
   width: 180px;
   height: auto;
   clip-path: var(--clip-card-inner);
-  border: 1px solid rgba(249, 225, 0, 0.2);
+  border: 1px solid oklch(76% 0.14 75 / 0.2);
   transition: transform 0.3s var(--ease-out), box-shadow 0.3s;
 }
 
 .cover:hover {
   transform: translateY(-4px) scale(1.02);
-  box-shadow: 0 8px 32px rgba(249, 225, 0, 0.12);
+  box-shadow: 0 8px 32px oklch(76% 0.14 75 / 0.12);
 }
 
 .text {
@@ -49,7 +49,7 @@
   color: var(--c-text);
   margin-bottom: 20px;
   padding-top: 8px;
-  border-top: 1px solid rgba(249, 225, 0, 0.15);
+  border-top: 1px solid oklch(76% 0.14 75 / 0.15);
 }
 
 .quoteAccent {
@@ -69,7 +69,7 @@
 }
 
 .bookLink:hover {
-  background: rgba(249, 225, 0, 0.08);
+  background: oklch(76% 0.14 75 / 0.08);
 }
 
 /* ─── Responsive: stack on mobile ─── */
