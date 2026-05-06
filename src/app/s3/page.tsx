@@ -436,13 +436,17 @@ export default function S3ComingSoon() {
           Your GPU. Your files. Your music.
         </p>
 
-        {/* ── HERO VIDEO ── */}
+        {/* ── HERO VIDEO ──
+            Swapped 2026-05-06 SGT: was Rock The Boat (QqzB7DN_AAw),
+            now 753ltLz5VLY per Sean. Front-page EcosystemSection S³
+            card retains the original Rock The Boat embed; this page
+            uses the newer signal. */}
         <div className={styles.videoHero}>
           <div className={styles.videoWrapper}>
             <iframe
-              src="https://www.youtube.com/embed/QqzB7DN_AAw?si=QKUT7fwQ6SUUZsHI&rel=0&modestbranding=1"
+              src="https://www.youtube.com/embed/753ltLz5VLY?rel=0&modestbranding=1"
               title="S³ Strands Sound Studio"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allow="autoplay; encrypted-media; picture-in-picture"
               allowFullScreen
             />
           </div>
