@@ -41,58 +41,64 @@ function Accordion({ title, children, defaultOpen = false }: {
   );
 }
 
-/* ── Pricing tiers (2026-04-19 rewrite: 3 tiers, Creator Studio is the flagship)
+/* ── Pricing tiers (2026-05-18 rewrite: hybrid ownership + subscription)
    All generation runs on the user's GPU. No per-track tax, no token meters.
-   Creator Studio is the founding-lock flagship tier — includes AI Director,
-   StyleForge LoRA training, Apply Style Patches, and DAW (free update
-   2-3 weeks post-launch). Pro keeps HD video + distribution polish but
-   does NOT ship with any style-patch functionality. */
+   EveryWear platform is free. 7-day unlimited demo. Gener8 4ever is a
+   one-time $20 purchase for permanent local gen. Pro and Creator Studio
+   are subscriptions that include 4ever functionality; cancel = lose access
+   unless 4ever is also owned. Steam-aligned, ownership-first psychology. */
 const TIERS = [
   {
-    id: 'GENER8 BASE',
-    name: <>S<sup>3</sup> GENER8</>,
-    tagline: 'Generate, cover, remix — on your machine',
-    price: '$5',
+    id: 'GENER8 4EVER',
+    name: <>S<sup>3</sup> GENER8 4EVER</>,
+    tagline: 'Own local AI music generation. Forever.',
+    price: '$20',
+    priceUnit: 'one-time',
     flagship: false,
     features: [
-      'Unlimited generation on your GPU',
+      'Unlimited generation on your GPU — permanently',
       'Text-to-music, cover, reference audio',
       'Full commercial rights on originals',
-      'Vid Studio — 540p music videos, beat-sync, custom backgrounds',
+      'Vid Studio — 540p music videos, beat-sync',
       'FLAC lossless output',
-      'Automatic VRAM-aware model selection',
+      'VRAM-aware model selection',
+      'Yours forever. No subscription required.',
     ],
   },
   {
     id: 'GENER8 PRO',
     name: <>S<sup>3</sup> GENER8 PRO</>,
-    tagline: 'Full-quality base model + Vid Studio Pro + distribution polish',
-    price: '$12.99',
+    tagline: 'Full-quality exports + premium features. Evolves with updates.',
+    price: '$13.37',
+    priceUnit: '/mo',
     flagship: false,
     features: [
-      'Everything in Gener8',
-      'Full-quality cover & reference (XL Base, VRAM-gated)',
-      'Vid Studio Pro — HD export (720p / 1080p), social presets, one-click share, watermark removal',
-      'Custom pixel ratios · 4K upscale',
-      'Per-platform aspect ratios (TikTok, Reels, Shorts, IG, Pinterest)',
+      'Everything in Gener8 4ever (included)',
+      'Watermark removal on all exports',
+      'Full-quality cover & reference (XL Base)',
+      'Vid Studio Pro — HD 1080p, social presets, one-click share',
+      '1magen access + premium style packs',
+      '4K upscale · per-platform aspect ratios',
+      'Future cloud boost credits',
     ],
   },
   {
     id: 'CREATOR STUDIO',
     name: <>S<sup>3</sup> CREATOR STUDIO</>,
-    tagline: 'Full production pipeline — music, video, story',
-    price: '$30',
+    tagline: 'Full AI creative workstation. Music, video, story.',
+    price: '$28.88',
+    priceUnit: '/mo',
     flagship: true,
     badge: 'FOUNDING · LOCKED',
-    foundingNote: 'Founding subscribers keep $30/mo for life. When DAW ships and pricing moves, your rate stays locked.',
+    foundingNote: 'First 500 subscribers lock in $28.88/mo for life. Your rate never moves.',
     features: [
-      'Everything in Gener8 Pro',
-      <>S<sup>3</sup> AI Director — AI-orchestrated video</>,
-      'Multi-LLM story direction & shot planning',
-      'Beat-synced, stem-synced scene assembly',
-      'Apply Style Patches (community library)',
-      'StyleForge: train LoRA patches (local)',
-      'Full DAW — free update in 2-3 weeks',
+      'Everything in Gener8 Pro (included)',
+      <>S<sup>3</sup> AI Director — orchestrated video production</>,
+      '3nvizen — cinematic visual workflows',
+      'Full DAW + Stem Separation (12-stem)',
+      'StyleForge: train your own LoRA patches',
+      'Style Patch marketplace access',
+      'Advanced orchestration + cloud escalation',
     ],
   },
 ];
@@ -114,9 +120,11 @@ function PricingGrid() {
           <div className={styles.tierName}>{t.name}</div>
           <div className={styles.tierTagline}>{t.tagline}</div>
           <div className={styles.tierPrice}>
-            {t.price}<span className={styles.priceUnit}>/mo</span>
+            {t.price}<span className={styles.priceUnit}>{t.priceUnit}</span>
           </div>
-          <div className={styles.tierSub}>Subscription only. Cancel anytime.</div>
+          <div className={styles.tierSub}>
+            {t.priceUnit === 'one-time' ? 'Buy once. Own forever.' : 'Cancel anytime. Includes all lower tiers.'}
+          </div>
           <ul className={styles.tierFeatures}>
             {t.features.map((f, j) => (
               <li key={j} className={styles.tierFeature}>
@@ -189,9 +197,11 @@ function PricingCarousel() {
             <div className={styles.tierName}>{t.name}</div>
             <div className={styles.tierTagline}>{t.tagline}</div>
             <div className={styles.tierPrice}>
-              {t.price}<span className={styles.priceUnit}>/mo</span>
+              {t.price}<span className={styles.priceUnit}>{t.priceUnit}</span>
             </div>
-            <div className={styles.tierSub}>Subscription only. Cancel anytime.</div>
+            <div className={styles.tierSub}>
+              {t.priceUnit === 'one-time' ? 'Buy once. Own forever.' : 'Cancel anytime. Includes all lower tiers.'}
+            </div>
             <ul className={styles.tierFeatures}>
               {t.features.map((f, j) => (
                 <li key={j} className={styles.tierFeature}>
@@ -320,8 +330,8 @@ function GpuMatrix() {
 
       <div style={calloutStyle}>
         <strong style={{ color: 'var(--ew-primary)', letterSpacing: 1 }}>Don&apos;t sweat the table.</strong>{' '}
-        When you download Gener8 to claim your <strong>1-hour free demo</strong>, we run a 30-second hardware check at install
-        and keep the right models loaded as you work. The demo runs as <strong>Gener8 Pro</strong> so you can see every feature
+        When you download Gener8 to claim your <strong>7-day unlimited demo</strong>, we run a 30-second hardware check at install
+        and keep the right models loaded as you work. The demo runs full-featured so you can see everything
         on your own rig before you pick a tier.
       </div>
 
@@ -492,7 +502,7 @@ export default function S3ComingSoon() {
                 <p key={i} className={styles.thesisPara}>{p}</p>
               ))}
               <p className={`${styles.thesisPara} ${styles.thesisHighlight}`}>
-                Three tiers. One ecosystem. Every generation runs on your hardware. Your files, your rights, your catalogue.
+                Own it forever for $20. Or subscribe for the full creative workstation. Every generation runs on your hardware. Your files, your rights, your catalogue.
               </p>
             </Accordion>
           </div>
@@ -503,7 +513,7 @@ export default function S3ComingSoon() {
               <p key={i} className={styles.thesisPara}>{p}</p>
             ))}
             <p className={`${styles.thesisPara} ${styles.thesisHighlight}`}>
-              Three tiers. One ecosystem. Every generation runs on your hardware. Your files, your rights, your catalogue.
+              Own it forever for $20. Or subscribe for the full creative workstation. Every generation runs on your hardware. Your files, your rights, your catalogue.
             </p>
           </div>
         )}
@@ -557,10 +567,10 @@ export default function S3ComingSoon() {
           {[
             ['STATUS', 'BETA · Q2 2026 LAUNCH'],
             ['INFERENCE', 'LOCAL GPU · NO CLOUD'],
-            ['MODULES', 'GENER8 / GENER8 PRO / CREATOR STUDIO'],
-            ['PRICING', '$5 / $12.99 / $30 PER MONTH'],
-            ['LICENCE', 'INCLUDED IN SUBSCRIPTION'],
-            ['GENERATIONS', 'UNLIMITED, ALL TIERS'],
+            ['PLATFORM', 'EVERYWEAR · FREE FOREVER'],
+            ['TIERS', 'GENER8 4EVER / PRO / CREATOR STUDIO'],
+            ['PRICING', '$20 ONE-TIME / $13.37 / $28.88 PER MONTH'],
+            ['GENERATIONS', 'UNLIMITED · ALL TIERS · YOUR HARDWARE'],
           ].map(([label, val]) => (
             <p key={label} className={styles.statusLine}>
               <span className={styles.label}>{label}</span>
@@ -572,9 +582,9 @@ export default function S3ComingSoon() {
 
         {/* ── PRICING ── desktop: 3-card grid + all-in-one banner. mobile: carousel ── */}
         <div className={styles.pricingSection}>
-          <h2 className={styles.sectionHeading}>Simple pricing. No licence fees. No surprises.</h2>
+          <h2 className={styles.sectionHeading}>Own it or subscribe. Your call.</h2>
           <p className={styles.pricingSub}>
-            No licence fees. No surprises. Just a flat monthly subscription.
+            Buy Gener8 4ever for $20 and own local AI music forever. Or subscribe for premium features that evolve with every update. No licence fees. No surprises.
           </p>
           {isMobile ? <PricingCarousel /> : <PricingGrid />}
         </div>
@@ -583,7 +593,7 @@ export default function S3ComingSoon() {
         <GpuMatrix />
 
         <p className={styles.promoLine}>
-          First hour free, no sign-in. First 500 Creator Studio subs lock in $30/mo for life. Annual subs: one extra month.
+          7-day free demo, unlimited generation, no card required. Own Gener8 4ever for $20. First 500 Creator Studio subs lock in $28.88/mo for life.
         </p>
 
         <p className={styles.cursor}>
