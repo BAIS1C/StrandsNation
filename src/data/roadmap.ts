@@ -11,10 +11,11 @@ export const roadmapEntries: TimelineEntry[] = [
   },
   {
     year: 'Q2–Q3 2026',
-    title: 'STAGE 1 VALIDATION: S³ STUDIO PUBLIC',
+    title: 'STAGE 1 VALIDATION: S³ STUDIO BETA PHASE 1 COMPLETE',
     description:
-      'Subscription revenue proves margin. Local inference proves the sovereign-stack thesis at consumer scale. First Founders Pass wave ships with S³.',
+      'Beta Phase 1 shipped and tested. Acting on community feedback. Next beta phase incoming. Subscription revenue model validated. Local inference proves the sovereign-stack thesis at consumer scale.',
     colorKey: 'green',
+    active: true,
   },
   {
     year: 'Q3 2026',

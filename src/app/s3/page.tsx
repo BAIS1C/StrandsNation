@@ -330,9 +330,8 @@ function GpuMatrix() {
 
       <div style={calloutStyle}>
         <strong style={{ color: 'var(--ew-primary)', letterSpacing: 1 }}>Don&apos;t sweat the table.</strong>{' '}
-        When you download Gener8 to claim your <strong>7-day unlimited demo</strong>, we run a 30-second hardware check at install
-        and keep the right models loaded as you work. The demo runs full-featured so you can see everything
-        on your own rig before you pick a tier.
+        When the next beta phase opens, the installer will profile your GPU in 30 seconds
+        and keep the right models loaded as you work. <strong>Join the waitlist</strong> to be first in line.
       </div>
 
       <h4 style={headerStyle}>Tier × VRAM compatibility</h4>
@@ -439,7 +438,7 @@ export default function S3ComingSoon() {
         <p className={styles.subtitle}>Strands Sound Studio</p>
 
         <div className={styles.heroBetaPill}>
-          BETA · EARLY ACCESS · Q2 2026
+          BETA PHASE 1 COMPLETE · NEXT PHASE COMING SOON
         </div>
 
         <p className={styles.tagline}>
@@ -542,7 +541,7 @@ export default function S3ComingSoon() {
                   '0 0 6px rgba(0,194,255,0.65), 0 0 14px rgba(0,194,255,0.35)',
               }}
             >
-              COMING SOON
+              NEXT PHASE SOON
             </span>
             <span
               style={{
@@ -553,7 +552,7 @@ export default function S3ComingSoon() {
                 opacity: 0.85,
               }}
             >
-              PUBLIC BETA &middot; Q2 2026
+              PHASE 1 COMPLETE &middot; ACTING ON FEEDBACK
             </span>
           </div>
           <div className={`${styles.screw} ${styles.screwTL}`} />
@@ -565,7 +564,7 @@ export default function S3ComingSoon() {
         {/* Status block */}
         <div className={styles.statusBlock}>
           {[
-            ['STATUS', 'BETA · Q2 2026 LAUNCH'],
+            ['STATUS', 'PHASE 1 COMPLETE · NEXT PHASE SOON'],
             ['INFERENCE', 'LOCAL GPU · NO CLOUD'],
             ['PLATFORM', 'EVERYWEAR · FREE FOREVER'],
             ['TIERS', 'GENER8 4EVER / PRO / CREATOR STUDIO'],
@@ -593,7 +592,7 @@ export default function S3ComingSoon() {
         <GpuMatrix />
 
         <p className={styles.promoLine}>
-          7-day free demo, unlimited generation, no card required. Own Gener8 4ever for $20. First 500 Creator Studio subs lock in $28.88/mo for life.
+          Beta Phase 1 complete. We're acting on your feedback. Join the waitlist for the next beta phase. First 500 Creator Studio subs lock in $28.88/mo for life.
         </p>
 
         <p className={styles.cursor}>
