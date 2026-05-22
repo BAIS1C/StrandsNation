@@ -7,30 +7,19 @@ import CircuitBg from '@/components/CircuitBg/CircuitBg';
 import SiteChrome from '@/components/SiteChrome/SiteChrome';
 import MainWrapper from '@/components/MainWrapper/MainWrapper';
 import SkinToggle from '@/components/SkinToggle/SkinToggle';
+import { buildMetadata, organizationJsonLd, SITE_URL, videoGameJsonLd, websiteJsonLd } from '@/lib/seo';
 import '@/styles/tokens.css';
 import '@/styles/global.css';
 
 export const metadata: Metadata = {
-  title: 'StrandsNation: Ready Player You',
-  description: 'A post-capitalist MMORPG where the world remembers your choices, NPCs adapt to how you think, and the community builds the civilisation they play in.',
+  metadataBase: new URL(SITE_URL),
+  ...buildMetadata('/'),
   icons: {
     icon: [
       { url: '/icon-32.png', sizes: '32x32', type: 'image/png' },
       { url: '/icon-192.png', sizes: '192x192', type: 'image/png' },
     ],
     apple: '/apple-touch-icon.png',
-  },
-  openGraph: {
-    title: 'StrandsNation: Ready Player You',
-    description: 'A post-capitalist MMORPG. Your world. Your rules. Your playstyle.',
-    siteName: 'StrandsNation',
-    type: 'website',
-    url: 'https://strandsnation.xyz',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'StrandsNation: Ready Player You',
-    description: 'A post-capitalist MMORPG. Your world. Your rules. Your playstyle.',
   },
 };
 
@@ -50,6 +39,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="en">
       <head>
         <script dangerouslySetInnerHTML={{ __html: ewdsBoot }} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify([organizationJsonLd(), websiteJsonLd(), videoGameJsonLd()]),
+          }}
+        />
       </head>
       <body className="ew" data-skin="classic" data-mode="dark">
         <SiteChrome>

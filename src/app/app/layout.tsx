@@ -1,9 +1,7 @@
 import type { Metadata, Viewport } from 'next';
+import { buildMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  title: 'STRANDS // SIGNAL',
-  description: 'Enter the signal',
-};
+export const metadata: Metadata = buildMetadata('/game');
 
 export const viewport: Viewport = {
   width: 'device-width',
