@@ -4,7 +4,7 @@ const chapter: WhitepaperChapter = {
   id: "01",
   title: "Strands: Reasons Why",
   part: "PART I: THE THESIS",
-  html: `<h1>Whitepaper V6 - Chapter 1: Strands -- Reasons Why</h1>
+  html: `<h1>Whitepaper V7 - Chapter 1: Strands: Reasons Why</h1>
 <h2>The Thesis</h2>
 <p>The digital economy is not broken. It is working exactly as designed. It extracts attention, monetises behaviour, centralises ownership, and redistributes none of the value it captures back to the people who generate it. The platforms that dominate Web 2.0 did not accidentally become surveillance engines. They were architected that way. Every scroll, every click, every second of dwell time feeds a system that treats human attention as raw material and returns nothing but algorithmic manipulation.</p>
 <p>This is not a new observation. Entire academic disciplines have formed around it. But observation without action is commentary, and commentary does not build exits.</p>

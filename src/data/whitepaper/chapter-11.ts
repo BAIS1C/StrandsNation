@@ -2,44 +2,129 @@ import type { WhitepaperChapter } from './index';
 
 const chapter: WhitepaperChapter = {
   id: "11",
-  title: "Legal & Regulatory Disclaimer",
-  part: "PART V: APPENDICES",
-  html: `<h1>Whitepaper V6 - Chapter 11: Legal and Regulatory Disclaimer</h1>
-<p><strong>This document is not a prospectus.</strong></p>
-<p>PLEASE READ THIS SECTION CAREFULLY. IF YOU ARE IN ANY DOUBT AS TO THE ACTION YOU SHOULD TAKE, YOU SHOULD CONSULT YOUR LEGAL, FINANCIAL, TAX, OR OTHER PROFESSIONAL ADVISOR(S).</p>
-<p>References in this chapter to &quot;the Project&quot; refer collectively to Somo Kasane, MetaFinTek, the Strands ecosystem, and all associated products, services, tokens, and entities described in this whitepaper.</p>
-<h2>Forward-Looking Statements</h2>
-<p>This whitepaper contains forward-looking statements or information that relate to the Project&#39;s current expectations and views of future events. In some cases, these forward-looking statements can be identified by words or phrases such as &quot;may&quot;, &quot;will&quot;, &quot;expect&quot;, &quot;anticipate&quot;, &quot;aim&quot;, &quot;estimate&quot;, &quot;intend&quot;, &quot;plan&quot;, &quot;seek&quot;, &quot;believe&quot;, &quot;potential&quot;, &quot;continue&quot;, &quot;is/are likely to&quot;, or the negative of these terms, or other similar expressions intended to identify forward-looking statements.</p>
-<p>All forward-looking statements address matters that involve risks and uncertainties. Actual outcomes may differ materially from those described in this whitepaper. The Project may revise its plans, structures, implementation pathways, or operational priorities in response to legal, regulatory, technical, commercial, market, or factual developments. No representation is made that any forward-looking statement will be achieved, and undue reliance should not be placed on any such statement.</p>
-<h2>Phased Activation and Feature Dependency</h2>
-<p>Many features, products, services, tokens, governance mechanisms, settlement models, and infrastructure layers described in this whitepaper are phased, conditional, and dependent on technical readiness, commercial validation, legal feasibility, funding availability, and regulatory treatment. This applies in particular, but not exclusively, to $KREDS, the native Strands chain, governance transfer mechanisms, Layer U SPV expansion, A.R.E. settlement transitions, and future hardware and extended reality layers. Some features may be delayed, modified, restricted by jurisdiction, or may never be launched.</p>
-<p>Nothing in this whitepaper creates any entitlement to future token allocations, governance rights, product access, revenue share, investment rights, feature activation, or returns of any kind unless and until such rights are expressly implemented under separate applicable terms. Descriptions of future functionality are illustrative of intended architecture, not guarantees of delivery.</p>
-<h2>No Professional Advice</h2>
-<p>The information set forth in this whitepaper may not be exhaustive and does not imply any elements of a contractual relationship. While the Project makes every effort to ensure that any material in this whitepaper is accurate and up to date, such material does not constitute legal, financial, business, tax, or other professional advice. The Project does not guarantee, and accepts no legal liability whatsoever arising from or connected to, the accuracy, reliability, currency, or completeness of any material contained in this whitepaper.</p>
-<p>No information in this whitepaper is to be considered as legal, financial, business, or tax advice. You should consult your own legal, financial, tax, or other professional adviser before engaging in any activity in connection with the Strands ecosystem or $KREDS.</p>
-<h2>Token Classification</h2>
-<p>$KREDS is structured for network utility within the Strands ecosystem and is not issued as equity, debt, profit participation, or any other traditional ownership or investment instrument. Its legal treatment may vary by jurisdiction and may evolve over time.</p>
-<p>$KREDS does not confer any equity, shareholder, creditor, or corporate governance rights in Somo Kasane, MetaFinTek, or any associated legal entity. Any protocol-level participation or governance functionality, where implemented, is governed solely by the rules of the relevant network layer and should not be understood as legal rights in any underlying company or SPV.</p>
-<p>This whitepaper does not constitute a prospectus or offer document of any sort and is not intended to constitute an offer of securities or a solicitation for investment in securities in any jurisdiction.</p>
-<h2>No Offer or Solicitation</h2>
-<p>The Project does not provide any opinion or advice to purchase, sell, or otherwise transact with $KREDS or any other token mentioned in this whitepaper. The presentation of this whitepaper shall not form the basis of, or be relied upon in connection with, any contract or purchase decision.</p>
-<p>No person is bound to enter into any contract or other binding legal commitment in relation to $KREDS or any other token, product, or service described in this whitepaper, and no cryptocurrency or other forms of payment are to be accepted on the basis of this whitepaper.</p>
-<p>Potential participants should seek appropriate independent professional advice prior to relying on, or entering any commitment or transaction based on, material published in this whitepaper, which material is purely published for reference purposes alone.</p>
-<h2>Exclusion of Warranties and Limitation of Liability</h2>
-<p>The Project does not guarantee the accuracy of the statements made or conclusions reached in this whitepaper. The Project does not make, and expressly disclaims, all representations and warranties (whether expressed or implied) whatsoever, including but not limited to:</p>
+  title: "Roadmap",
+  part: "PART IV: OPERATIONS",
+  html: `<h1>Whitepaper V7 - Chapter 11: Roadmap</h1>
+<h2>How to Read This Roadmap</h2>
+<p>This roadmap describes the sequence in which the Strands ecosystem is technically built, commercially validated, and progressively decentralised. It is not a marketing calendar. It is a dependency chain. Each phase exists to prove a specific layer of the system. No subsequent phase activates until the prior phase has validated its core assumptions.</p>
+<p>Indicative timeframes are provided as target ranges from technical commencement, not as fixed calendar commitments. Actual progression depends on validation outcomes, funding readiness, and the operational maturity of each preceding layer.</p>
+<p>For a broader view of the Strands project timeline, milestones, and community updates, see <a href="https://strandsnation.xyz">strandsnation.xyz</a>.</p>
+<h2>Phase 1: Proof of Concept</h2>
+<p><strong>What this phase proves:</strong> The core loop exists.</p>
+<p><strong>Target range:</strong> Approximately 4 weeks from technical commencement.</p>
+<p>The POC validates core technical assumptions: that the game loop works, that Telegram Mini App distribution is viable, that the desktop OS shell can host the intended player experience, and that the foundational interaction patterns ; Sync Profiling, Mait interaction, in-game economy ; function as designed.</p>
+<p>This phase does not require monetisation, blockchain integration, or A.R.E. activation. It proves that the game exists as a playable, coherent, and technically viable experience.</p>
+<p><strong>Key deliverables:</strong></p>
 <ul>
-<li>any representations or warranties relating to merchantability, fitness for a particular purpose, description, suitability, or non-infringement;</li>
-<li>that the contents do not infringe any third-party rights.</li>
+<li>Playable game loop within the Telegram Mini App shell</li>
+<li>Desktop OS interface functional and navigable</li>
+<li>Sync Profiling operational beneath the surface</li>
+<li>Core Mait interaction demonstrable</li>
+<li>In-game economy (SOVComp, GridScrip) circulating within test environment</li>
 </ul>
-<p>To the fullest extent permitted by applicable law, Somo Kasane, MetaFinTek, their officers, directors, employees, affiliates, subsidiaries, and relevant third-party service providers shall not be liable for any direct, indirect, incidental, consequential, or other damages or losses which you may suffer or incur in connection with this whitepaper or the reliance on any information provided herein.</p>
-<h2>Jurisdictional Variability</h2>
-<p>The Strands ecosystem operates across multiple jurisdictions. Regulatory treatment of digital assets, token economics, advertising frameworks, compensated attention models, data protection obligations, governance mechanisms, and cooperative or decentralised structures varies significantly between jurisdictions and is subject to ongoing change. The same feature, service, or participation model may be treated differently depending on where it is accessed, who accesses it, and the regulatory regime in force at the time.</p>
-<p>Nothing in this whitepaper should be construed as a representation that $KREDS, Strands the Game, Layer U, or any associated product or service is compliant with the laws of any specific jurisdiction. The availability of particular features, services, settlement methods, or participation models may depend on local law, technical readiness, commercial readiness, and the approvals or capabilities of the relevant operating entity. Participants are responsible for understanding and complying with the laws and regulations applicable to them in their own jurisdictions.</p>
-<h2>Restricted Jurisdictions</h2>
-<p>Access to or participation in any aspect of the Strands ecosystem may be restricted, unavailable, or prohibited in certain jurisdictions, including where sanctions, export controls, licensing rules, or other legal restrictions apply. The Project makes no representation that any product, service, or token described in this whitepaper is available or permissible in all jurisdictions. The Project reserves the right to refuse, restrict, suspend, or terminate access where required by applicable law, sanctions compliance, licensing obligations, or internal risk controls.</p>
-<h2>Ongoing Revision</h2>
-<p>This whitepaper may be updated, amended, supplemented, or superseded from time to time without notice. Neither Somo Kasane, MetaFinTek, nor any associated entity is under any obligation to update this whitepaper or to correct any inaccuracies that may become apparent after publication. The most recent version of this whitepaper will be made available through official Strands channels.</p>
-<p><strong>IF YOU ARE IN ANY DOUBT AS TO THE ACTION YOU SHOULD TAKE, YOU SHOULD CONSULT YOUR LEGAL, FINANCIAL, TAX, OR OTHER PROFESSIONAL ADVISOR(S). THIS WHITEPAPER IS FOR INFORMATION PURPOSES ONLY AND MAY BE SUBJECT TO CHANGE.</strong></p>
+<p><strong>EveryWear at this phase:</strong> Telegram Mini App (Phase 1 of the EveryWear evolution described in Chapter 4).</p>
+<p><strong>Activation gate:</strong> The core loop must exist and function. If it does not, nothing else proceeds.</p>
+<h2>Phase 2: Minimum Viable Product</h2>
+<p><strong>What this phase proves:</strong> The product can acquire and retain real players.</p>
+<p><strong>Target range:</strong> Approximately 13 weeks from technical commencement.</p>
+<p>The MVP extends the POC into a product that can acquire and retain real players. It introduces the first revenue-generating mechanics, stabilises the game client, and proves that the Strands experience can sustain daily active engagement.</p>
+<p><strong>Key deliverables:</strong></p>
+<ul>
+<li>Stable Telegram Mini App with full onboarding flow</li>
+<li>First fiat revenue mechanics live (in-app purchases, starter packs, marketplace activity)</li>
+<li>SOVComp and GridScrip economy operating at scale within the player base</li>
+<li>Trait Shard acquisition, compilation, and marketplace functional</li>
+<li>Player retention and session metrics trackable and reportable</li>
+<li>Early diegetic A.R.E. wrapper operational (Proper Gander framing, compensated attention loop training player behaviour within the game)</li>
+</ul>
+<p><strong>EveryWear at this phase:</strong> Telegram Mini App maturing, with the Chromium fork in development.</p>
+<p><strong>Layer U and A.R.E. at this phase:</strong> Diegetic A.R.E. active in-game. Layer U exists only as in-game narrative (the rebellion layer described in Chapter 5). No real-world spatial deployment yet.</p>
+<p><strong>Activation gate:</strong> The product must acquire and retain real players. If it does not, subsequent phases do not activate.</p>
+<h2>Phase 3: Season 0</h2>
+<p><strong>What this phase proves:</strong> The economy can monetise and generate commercially meaningful behaviour.</p>
+<p><strong>Target range:</strong> 3–6 months post-MVP greenlight, dependent on validation outcomes and funding readiness.</p>
+<p>Season 0 is the first full content season. It proves that the Strands game can sustain a seasonal content cadence ; new narrative arcs, new Trait Shards, new gameplay systems, new economic dynamics ; while maintaining player retention and revenue growth.</p>
+<p><strong>Key deliverables:</strong></p>
+<ul>
+<li>Full seasonal content cycle: narrative, mechanics, economy, and progression</li>
+<li>A.R.E. compensated attention generating measurable advertiser value</li>
+<li>Fiat settlement operational (USDT to TON wallet where applicable)</li>
+<li>Player base metrics sufficient to de-risk subsequent investment decisions</li>
+<li>Community governance seeds planted (feedback loops, player councils, early signalling mechanisms)</li>
+<li>Fainance Ltd. (UK) B2B Mait deployment in parallel, proving the agent framework outside the game</li>
+</ul>
+<p>Season 0 is the proof-of-economy phase. The game must demonstrate that it generates real revenue, retains real players, and produces the behavioural data that de-risks everything downstream.</p>
+<p><strong>EveryWear at this phase:</strong> Telegram Mini App live with players. Chromium fork entering early deployment for advanced users.</p>
+<p><strong>Layer U and A.R.E. at this phase:</strong> Diegetic A.R.E. generating live advertiser data. First real advertiser integrations in-game. Layer U pilot planning begins where data supports it.</p>
+<p><strong>Activation gate:</strong> The economy must monetise and generate commercially meaningful behaviour. If Season 0 does not demonstrate fiat economic viability, no wider scaling, tokenisation, or native infrastructure activation proceeds.</p>
+<h2>Phase 4: Seasonal Validation Cycle (Seasons 1–12)</h2>
+<p><strong>What this phase proves:</strong> The model repeats under live conditions across a sustained content lifecycle.</p>
+<p><strong>Target range:</strong> The first twelve-season validation arc spans approximately 13–20 months from Season 0 launch, accounting for production cadence, player dynamics, bug cycles, and content iteration.</p>
+<p>The number twelve is not decorative. Twelve seasons represent the minimum sustained lifecycle required to prove that the game economy can survive repeated live tuning, that A.R.E. data remains commercially meaningful over time, that retention and monetisation are repeatable rather than one-off, and that the wider system justifies tokenisation.</p>
+<p>Each season introduces new narrative, new mechanics, new economy tuning, and new Trait Shard releases. The cumulative effect is a maturing game economy with a growing, engaged player base and an increasingly validated commercial pipeline.</p>
+<p>During this period:</p>
+<ul>
+<li>The fiat game economy matures through iterative tuning across seasonal cycles</li>
+<li>A.R.E. attention data accumulates across seasons, proving advertiser value at sustained scale</li>
+<li>Layer U pilot deployments begin in target cities where the data and commercial readiness support them</li>
+<li>EveryWear evolves from Telegram Mini App through Chromium fork and toward the WebGL bridge as player base and platform requirements demand</li>
+<li>Mymories and SAL begin accumulating meaningful context as the vault and adaptive layers mature</li>
+<li>The Blank Sync Ledger activates for players who cross the purchase threshold, building the invisible wallet base</li>
+<li>Out-of-game A.R.E. surfaces emerge through the Chromium fork, extending compensated attention beyond game sessions</li>
+</ul>
+<p><strong>EveryWear at this phase:</strong> Telegram Mini App → Chromium fork → early WebGL bridge. The platform evolves in response to player demand and rendering requirements.</p>
+<p><strong>Layer U and A.R.E. at this phase:</strong> In-game diegetic A.R.E. → real advertiser integration → out-of-game A.R.E. through the Chromium fork → Layer U pilot city deployments where data supports them.</p>
+<p>No blockchain deployment occurs during this phase. The entire focus is on proving the fiat economy, maturing the game, and building the behavioural and commercial foundation that justifies everything that follows.</p>
+<p><strong>Activation gate:</strong> The model must prove repeatable under live conditions. If retention, revenue, and A.R.E. value do not sustain across multiple seasons, token deployment does not proceed.</p>
+<h2>Phase 5: $KREDS Jetton Deployment</h2>
+<p><strong>What this phase proves:</strong> Token utility can emerge from proven behaviour rather than fabricate an economy that does not yet exist.</p>
+<p><strong>Target range:</strong> Only after the seasonal validation cycle has demonstrated sustained fiat economy viability. This is a hard gate, not a chronological delay.</p>
+<p>$KREDS does not deploy because enough time has passed. It deploys because the fiat economy has proven retention, revenue, and A.R.E. advertiser value across a full seasonal lifecycle ; and because there is evidence that token utility will formalise an already functioning economy rather than invent one. As described in Chapter 6, $KREDS may first appear inside in-game or game-adjacent economic flows, where users already have continuity through Telegram and TON wallet infrastructure.</p>
+<p><strong>Key deliverables:</strong></p>
+<ul>
+<li>$KREDS Jetton deployed on TON</li>
+<li>Initial circulation within game or game-adjacent economic flows</li>
+<li>Elastic supply mechanics (mint and burn) operational and observable</li>
+<li>Token utility demonstrable through real ecosystem transactions</li>
+<li>Anti-Sybil identity layer (Telegram account continuity) validated at scale</li>
+</ul>
+<p><strong>EveryWear at this phase:</strong> Chromium fork mature. WebGL bridge operational. Bifurcation (Chapter 4, Phase 4) approaching as game fidelity demands separation of engine clients from the persistent runtime shell.</p>
+<p><strong>Layer U and A.R.E. at this phase:</strong> Layer U pilot city SPVs maturing toward operational readiness where Phase 4 data supports them. A.R.E. generating real commercial revenue across in-game and out-of-game surfaces. Advertiser demand beginning to create functional $KREDS acquisition as described in Chapter 6.</p>
+<p><strong>Activation gate:</strong> Token utility must emerge from proven behaviour. If $KREDS does not circulate as a functional economic instrument tied to real ecosystem transactions, native chain activation does not proceed.</p>
+<h2>Phase 6: Native Chain Activation</h2>
+<p><strong>What this phase proves:</strong> Sovereign infrastructure is justified by ecosystem requirements that hosted infrastructure cannot serve.</p>
+<p><strong>Target range:</strong> Only after Jetton circulation has proven utility and the native chain has reached operational readiness.</p>
+<p>The Strands chain activates when the ecosystem requires capabilities that TON infrastructure cannot provide: protocol-level privacy, succinct verification for mobile validation, and sovereign control over consensus and emission logic. As described in Chapter 7, this is an architectural upgrade, not a user migration event.</p>
+<p><strong>Key deliverables:</strong></p>
+<ul>
+<li>Strands chain (Rust-implemented sovereign chain derived from Mina Protocol design principles, especially zk-SNARKs and succinct ledger architecture) operational</li>
+<li>$KREDS bridged from TON to native chain</li>
+<li>Client-ledger model active: devices maintaining local ledgers, chain confirming state transitions</li>
+<li>Validator participation live under identity-constrained participation-based consensus</li>
+<li>On-chain settlement for A.R.E., Layer U leases, Trait Shard provenance, and governance actions</li>
+<li>Governance authority beginning progressive transfer from founding-team stewardship to participant-driven process</li>
+</ul>
+<p><strong>EveryWear at this phase:</strong> Bifurcation complete. Unity and Unreal game clients operating as standalone experiences launching from the persistent EveryWear shell. The shell hosts vault, wallet, agent surface, A.R.E., and validation functions.</p>
+<p><strong>Layer U and A.R.E. at this phase:</strong> Multiple city SPVs operational. A.R.E. settlement transitioning from USDT to $KREDS on the native chain. Spatial lease transactions beginning to settle on chain.</p>
+<p><strong>Activation gate:</strong> Sovereign infrastructure must be justified by ecosystem requirements that hosted infrastructure cannot serve. If hosted infrastructure remains sufficient, chain activation is not forced.</p>
+<h2>Phase 7: Ecosystem Maturation</h2>
+<p><strong>What this phase proves:</strong> The system can scale across cities, devices, and governance layers.</p>
+<p><strong>Target range:</strong> Ongoing, post-chain activation.</p>
+<p>With the native chain live, the ecosystem enters its maturation phase. This is not a single milestone ; it is a continuous process of expanding Layer U into new cities, deepening $KREDS utility, evolving EveryWear through its later phases, and progressively decentralising governance as network readiness allows.</p>
+<p>During this phase:</p>
+<ul>
+<li>Layer U SPVs expand into additional jurisdictions, with DAO-style governance evolving where local regulatory frameworks permit</li>
+<li>EveryWear evolves through its final phases: WebGL bridge maturation, full bifurcation, and convergence toward the agentic OS across XR, desktop, and mobile</li>
+<li>Governance authority progressively transfers to the network as participant-driven execution reaches operational maturity</li>
+<li>Hardware-native sovereign runtimes begin extending the client-ledger model where dedicated devices offer stronger attestation and richer spatial interaction</li>
+<li>WiFi DensePose and hardware-level spatial sensing graduate A.R.E. attention verification beyond interaction-based measurement</li>
+<li>The ecosystem moves toward deeper internal economic circulation as described in Chapter 6</li>
+</ul>
+<p><strong>EveryWear at this phase:</strong> Agentic OS maturity (Chapter 4, Phase 5). EveryWear as a sovereign runtime hosting agents, vault, wallet, validation, and spatial interaction across every device class.</p>
+<p><strong>Layer U and A.R.E. at this phase:</strong> Expanding city network. Full spatial XR attention economy operational. A.R.E. verification graduating to spatial sensing. Volumetric lease pricing and settlement fully on chain.</p>
+<p><strong>Activation gate:</strong> There is no terminal gate. Maturation is continuous. The system scales as each layer earns the right to expand.</p>
+<h2>What This Roadmap Does Not Include</h2>
+<p>This roadmap describes the technical implementation sequence and the validation thresholds that govern progression between phases. It does not include marketing timelines, partnership announcements, fundraising milestones, or team expansion plans. For broader project updates, see <a href="https://strandsnation.xyz">strandsnation.xyz</a>. The underlying game architecture is detailed in Chapter 2. The platform architecture is detailed in Chapters 3–5. The economic and chain architecture is detailed in Chapters 6–8.</p>
 `,
 };
 

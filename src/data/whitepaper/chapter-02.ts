@@ -4,7 +4,7 @@ const chapter: WhitepaperChapter = {
   id: "02",
   title: "Strands the Game",
   part: "PART I: THE THESIS",
-  html: `<h1>Whitepaper V6 - Chapter 2: Strands the Game</h1>
+  html: `<h1>Whitepaper V7 - Chapter 2: Strands the Game</h1>
 <h2>Design Philosophy</h2>
 <p>Strands the Game is not a blockchain game. It is a game that happens to teach blockchain principles. The distinction is structural, not semantic. Blockchain games ask users to understand wallets, tokens, and chain mechanics before they can play. Strands asks users to play, and embeds the logic of decentralised systems into the play itself. By the time the blockchain layer activates, the player already understands consent-based economics, cooperative governance, and sovereign data ownership because they have been practising all three inside a game world that makes those concepts feel like gameplay, not curriculum.</p>
 <p>The game is built on three design commandments:</p>

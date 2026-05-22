@@ -1,0 +1,225 @@
+# Whitepaper V7 - Chapter 7: Layer U and the A.R.E.
+
+## What Layer U Is
+
+Layer U exists in two related forms across time, and the relationship between them is structural rather than coincidental.
+
+In the present-day real world, Layer U is the spatial XR commercial and governance layer of the Strands ecosystem. It is administered through investible Special Purpose Vehicles (SPVs) incorporated per jurisdiction. Its revenue mechanism is the A.R.E. (Attention Redistribution Engine). Its inventory is volumetric XR parcels overlaid on physical urban environments. Its settlement begins in USDT on TON wallets and transitions to $KREDS on the Strands native chain when that chain activates. This is the form of Layer U that Strands is building, validating, and deploying through the Phase A through E sequence described in this whitepaper.
+
+In the in-game narrative set in Year 555, Layer U is the evolved descendant of that same infrastructure: the rebellion's communications, coordination, and parallel economic layer operating beneath SOVcorp control inside MetaXity1. After centuries of capture, adaptation, and decentralisation, the platform layer that began as a consented spatial attention economy has become the substrate through which the underground operates in the cracks of corporate control.
+
+These are not two separate systems sharing a name. They are one system at different stages of historical evolution. The real-world form is the seed. The in-game form is its descendant. When a Strands document discusses Layer U without specifying the form, the default reference is the present-day real-world form. The Year 555 form is invoked explicitly by game-canon documents only.
+
+The mechanism through which Layer U generates and distributes revenue, in both forms, is the A.R.E.
+
+## Why the Validation Ladder Exists
+
+Layer U does not arrive fully formed. It evolves through staged validation. Each stage must prove the next before the next activates. Skipping stages is not permitted, by design.
+
+This is not procedural caution. It is the structural answer to two real risks. First, the operational risk: the volumetric ad economy, the SPV network, and the XR delivery pipeline are each substantial undertakings. Attempting them simultaneously without prior validation produces failure modes that compound. Second, the credibility risk: an investor or partner being asked to back the long-horizon form of Layer U deserves to see that the near-horizon forms have been proven first. Stage-by-stage validation generates the data, the revenue, and the operational confidence that fund each subsequent stage.
+
+The activation conditions are not calendar-based. They are evidence-based. A stage activates when the evidence from the prior stages justifies it, not when a roadmap says so.
+
+## The Seven-Stage Validation Ladder
+
+**Stage 1: Layer U in-game.** Layer U is introduced as a diegetic concept inside Strands the Game. The resistance operates parallel spatial infrastructure (underground networks, signal towers, zone governance) that teaches players the logic of controlled attention economies and decentralised spatial coordination through play. No real-world Layer U infrastructure exists at this stage. The game is the education.
+
+**Stage 2: A.R.E. as diegetic mechanic.** Signal Reclamation and adjacent in-game systems establish consented compensated attention as a narrative mechanic. Proper Gander broadcasts are game content. Compensation is the in-game currency GridScrip. No real advertising is present. The player learns the behavioural pattern (opt in, engage, earn) within the safety of the game's fiction. These are the foundational principles of the A.R.E., internalised through gameplay before the real-world mechanism ever activates.
+
+**Stage 3: Real ad integration inside the game.** Real advertising begins to appear within the game's diegetic frame. Ads are presented as Proper Gander broadcasts or SOVcorp corporate feeds. The player opts in as before, but now the revenue generated is real. The 60/40 split activates. The player's share is credited to their fiat balance (USDT-denominated), accessible through their EveryWear wallet. The diegetic container remains intact: the player is still performing Signal Reclamation. The difference is that the broadcast now carries real commercial content alongside or woven into the narrative frame. This stage validates that pay-to-watch revenue sharing produces meaningful engagement and conversion.
+
+**Stage 4: XR tied to game-related deployment.** Spatial XR advertising and Layer U mechanics extend into controlled, game-adjacent contexts. When the player browses through EveryWear outside of game sessions, the A.R.E. surfaces attention opportunities with a lighter diegetic frame. XR-linked content begins to appear in contexts still closely tied to the Strands ecosystem and user base. This proves that volumetric XR delivery works outside pure game fiction but before full urban rollout. The Diary Module described in Chapter 6 and the early holographic event integrations with Founders Pass holder communities sit here.
+
+**Stage 5: Main chain launch.** Once sufficient validation exists across the game economy, A.R.E. engagement, and initial spatial deployment, the Strands chain activates. Settlement and governance can begin to transition into the native network economy. $KREDS becomes available as a settlement currency alongside fiat. This is the threshold where the internalised Strands economy becomes structurally meaningful. Layer U SPV operations can begin to integrate on-chain governance and settlement mechanisms.
+
+**Stage 6: XR pilot cities.** The first real-world Layer U SPV deployments activate in selected pilot cities. Kuala Lumpur first, followed by Bangkok, Jakarta, and Singapore. City-level SPV infrastructure, local operational frameworks, and volumetric lease markets go live. Attention measurement graduates from interaction-based metrics to spatial sensing through RF environment fingerprinting (as described later in this chapter) and, at hardware maturity, eye-tracking through XR devices. The advertising becomes spatially contextual: tied to physical locations, personalised per consenting user, and measured with higher fidelity than any legacy out-of-home medium. This stage proves the model works in live urban conditions with real advertisers, real leases, and real revenue distribution.
+
+**Stage 7: XR global.** Wider geographic rollout after city-level validation. Layer U expands as a global spatial economy infrastructure, with new SPVs incorporating in each jurisdiction as the network grows. The volumetric leasing model, the A.R.E. consent pipeline, and the SPV governance framework scale across markets, each new city building on the operational and commercial proof generated by its predecessors.
+
+The seven stages do not promise dates. They promise sequence. Stage N cannot activate until Stage N-1 has demonstrated its activation conditions.
+
+## The A.R.E. as Revenue Mechanism
+
+The Attention Redistribution Engine is the economic mechanism that converts user attention into measurable compensated value. It inverts the extractive advertising model. Rather than harvesting attention silently and selling it to advertisers while returning nothing to the user, the A.R.E. makes the value exchange explicit: users opt in, their attention is measured transparently, and they receive a direct share of the revenue their attention generates.
+
+The split is 60/40. Sixty percent of A.R.E. revenue goes to the user. Forty percent goes to the Strands ecosystem (covering platform operations, infrastructure, and investor returns through the Layer U SPV network).
+
+Before the native chain is active, A.R.E. revenue share settles in USDT to the player's TON wallet following advertiser reconciliation and SPV settlement cycles, most likely monthly or quarterly in arrears. Earnings can accrue continuously in the interface, but payout follows real revenue settlement rather than artificial instant distribution. Once the Strands chain and full network economy are active per Chapter 9, settlement transitions into $KREDS paid to the player's network wallet, reflecting the internalisation of value within the Strands ecosystem.
+
+This is the structural answer to "what does Strands do that other ad-tech players do not." It is not consent-managed surveillance advertising. It is not a participation reward dressed over the same underlying surveillance machinery. It is a structurally different value flow, with structural privacy preservation as described later in this chapter.
+
+## The A.R.E. Six-Stage Pipeline
+
+The A.R.E. operates through a six-stage interaction pipeline that governs each attention event from consent to payment.
+
+**Consent.** Explicit, informed, revocable. Stored in the player's Mymories vault with timestamp and version hash. Never activated before onboarding completes. The player chooses to participate. They can withdraw at any time.
+
+**Context Assembly.** Happens locally within EveryWear using the Mymories data substrate. An anonymous category vector is transmitted to the ad-matching layer. No personally identifiable information leaves the device. The advertiser sees a category request from an anonymous node, not a person.
+
+**Diegetic Delivery.** In-game, ads carry the full Proper Gander aesthetic. Out-of-game, the frame is lighter but the structural wrapper remains. The delivery is never a raw interruptive pop-up. It is always contextualised within the Strands visual and narrative language.
+
+**Attention Measurement.** Phase 1 (game): interaction-based measurement, dwell time, completion, engagement signals. Phase 2 (platform): RF environment fingerprinting for spatial presence (described later in this chapter; the earlier V6 framing as WiFi DensePose remains a research direction but is not the practical near-term deployment path). Phase 3 (hardware): XR eye-tracking for verified gaze-based attention.
+
+**Revenue Calculation.** eCPM model. The player's 60% share is calculated per impression based on verified attention metrics. Higher-fidelity measurement enables higher eCPM pricing, which directly increases the player's earnings.
+
+**Payment.** In the pre-chain phase, revenue share settles in USDT to the player's TON wallet following revenue reconciliation and SPV settlement. In the mature network phase, settlement transitions into $KREDS paid to the player's Strands wallet as part of the native network economy.
+
+This pipeline is not optional infrastructure. It is the mechanism through which every A.R.E. interaction flows. No stage can be skipped. No data leaves the device without consent. No payment is withheld beyond the relevant reconciliation and settlement cycle.
+
+The first four stages of the pipeline happen entirely on the user's device. Stages five and six involve settlement records reaching the chain. The user's Mymories content, the camera frames, the segmentation outputs, the RF fingerprint, all stay device-local across the entire pipeline. Only an anonymous opaque category vector ever crosses the network, and only as part of stage two.
+
+## Consented Data Licensing
+
+Alongside rewarded attention, the A.R.E. supports a second revenue stream: consented data licensing.
+
+With explicit player permission, anonymised interaction-pattern data (browsing behaviour, content preferences, engagement timing, app usage patterns) can be licensed to third parties for research, advertising optimisation, and AI training. This is explicit, revocable, consent-based data licensing under player-controlled scope. The data is anonymised and aggregated. The consent is tiered: the player chooses exactly what scope of data they are willing to share. A transparent dashboard shows what is collected, what it earned, and how it was used. Withdrawal is one click, at any time.
+
+The market advantage is structural. GDPR-style consent architecture from day one, even in regions that do not yet require it. Brands pay premium for consented data because it is legally defensible, higher quality, and future-proof against regulatory tightening. In a market where most behavioural data is extracted without informed consent, transparently consented data is a competitive asset.
+
+The player receives compensation for any data they choose to share. The A.R.E.'s design principle applies uniformly: if value is generated from the player's participation, the player receives their share.
+
+## The EveryWear Applet Stack as Layer U Creator Pipeline
+
+The applet stack described in Chapter 4 is the production pipeline that fills Layer U inventory. This relationship is load-bearing and is explicit in V7 in a way it was implicit in V6.
+
+Each applet in the EveryWear stack produces an output object that maps onto a class of Layer U inventory:
+
+1magen produces static and 2.5D visual assets that contribute to the skin-the-world dNFT packs described later in this chapter. Every image authored in 1magen has two monetisation surfaces: standalone use by its creator, and Layer U publication as inventory contribution.
+
+Gener8 produces music tracks and event audio scoring. Every track authored in Gener8 has two monetisation surfaces: personal use under the creator's Gener8 tier, and event audio inventory for holographic events scheduled in Layer U parcels.
+
+Vid Studio produces video visualizer composition and montage. Spatial video inventory for Layer U parcels is authored here.
+
+3nvizen produces holographic video content. The volumetric video that fills holographic event parcels comes out of LTX 2.3 inference inside this applet.
+
+Character Studio produces Mait avatars and aesthetic shards. The visual personalities that inhabit Layer U experiences are authored here.
+
+Kasai supports composition and brokering. The agent that helps a creator decide what to publish where, at what tier, with what economic terms, runs through Kasai.
+
+The transition from "applet user" to "Layer U creator" does not require the user to learn new tools or change their workflow. The applets do not change. The outputs do not change. The user opts in to publishing existing output into Layer U inventory. The applet that previously delivered standalone value to the user now delivers a second value stream by routing the output into the spatial economy.
+
+This is the structural answer to questions about what Strands is doing right now and how it leads to Layer U. The applet stack shipping today is the visible proof that the creator pipeline for Layer U content exists and is being used. Layer U is not building parallel content; Layer U will consume content already being authored.
+
+## The XR Delivery Pipeline
+
+The technical pipeline through which Layer U content reaches users in XR has several components that did not appear in V6. This section adds them.
+
+**The reference device target.** Strands targets open-platform XR glasses for Layer U content delivery. The reference target for the 2026-2028 deployment horizon is the XREAL family (XREAL Air 2 Ultra, XREAL One, XREAL Light). These devices have several properties that match the architectural requirements: open SDK access (NRSDK / NebulaSDK) that allows third-party applications to read the camera stream, the inertial measurement unit, and to drive the display directly; tethered architecture that connects to a host phone or compute puck via USB-C; 6-degree-of-freedom tracking with stereo cameras and standard SLAM. Brilliant Labs Frame and Even Realities G1 sit alongside as additional open-platform candidates.
+
+Meta-locked platforms (the Ray-Ban Meta family in particular) are architecturally incompatible with Layer U delivery and are not in the reference set. The reason is structural rather than commercial. Ray-Ban Meta does not expose camera frames to third-party applications. Camera frames flow through Meta's own pipeline, are processed by Meta's models, and reach third parties only through Meta-mediated APIs. This contradicts the Layer U data-sovereignty boundary that requires camera frames to never leave the user's device. Building Layer U delivery on a Meta-locked platform would force Strands to either exfiltrate user camera frames through Meta (defeating the privacy thesis) or to abandon the camera-reading pipeline (defeating the negative-space mapping discipline described next).
+
+**The negative-space mapping discipline.** Layer U holographic content does not paste over reality. It inhabits reality, respecting what is physically present in the user's view. This is the discipline that separates Layer U content from generic AR overlays.
+
+The pipeline runs on the user's paired phone, with the glasses serving as sensor and display only. The camera frame from the glasses is captured at the user's NPU, processed by SAM 2 Tiny for semantic segmentation (sky, building, floor, person, vehicle, sign, vegetation, water), and processed by DepthAnything Small for monocular depth estimation. The combined output is a 3D scene graph: every visible region labelled with what kind of thing it is and how far away it is.
+
+The placement engine treats only certain semantic labels as candidate surfaces for holographic content: sky regions above the horizon line, building facades validated as permitted for AR overlay, floor zones below a configured height threshold, vegetation regions vetted as safe for visual augmentation. Real people, real signage, real vehicles in motion are protected zones. Holographic content never paints over them.
+
+Occlusion respects depth. A hologram placed beyond a real wall is hidden behind that wall. A hologram placed in front of a column is visible in front of the column. The 3D scene graph drives occlusion calculations at frame time so that the placed content sits in the depth-correct relationship with the real environment.
+
+The result is XR content that the user perceives as inhabiting the space. Hidden where it should hide. Visible where it should be visible. Respecting friends, signage, and physical objects rather than steamrolling them. This is the threshold for non-shitty XR, and it is the threshold that distinguishes Layer U from generic AR overlay products.
+
+**The RF positioning layer.** GPS-only positioning works outdoors at metre-level accuracy but degrades indoors and in GPS-jammed environments. Layer U positioning combines GPS with RF environment fingerprinting: the phone passively observes WiFi access points (RSSI and BSSID), Bluetooth Low Energy devices, Ultra-WideBand peers where available, and cellular cell identifiers. The combination produces a stable spatial fingerprint suitable for sub-room positioning indoors without requiring specialised hardware. Combined with the 6DoF IMU from the glasses, the positioning is consistent enough for placed holographic content to remain anchored across attendees viewing the same event from different angles.
+
+**The compute distribution.** The full pipeline runs at usable framerates on flagship phones (iPhone 15 Pro and later, Pixel 9 Pro and later, Snapdragon 8 Gen 3 and later) for event-duration sessions of 30 to 90 minutes. Midrange phones do not have the NPU capacity to run SAM 2 plus DepthAnything plus placement at acceptable framerates. The glasses themselves do not run inference; they are sensor and display only. Cloud is only the matching layer that responds to the anonymous category vector emitted in stage 2 of the A.R.E. pipeline, never receiving frames or scene graphs.
+
+**The Layer U content categories that fit this delivery model.** Large-scale scheduled holographic events are the flagship inventory class for visual A.R.E. delivery. A virtual concert overlay in a plaza, a brand reveal in front of a landmark, a sports event AR layer in a stadium. Each scheduled event has natural session bounds (the user wears glasses for the event duration), explicit consent (the user shows up because they want the experience), measurable attention (verified gaze and dwell), and clean economics (sponsor pays inventory rate, attendees earn A.R.E. share, Strands SPV takes operational share). Event-centric inventory is the right initial class because the compute envelope of the user's phone aligns with the session envelope of the event.
+
+The seven-stage validation ladder treats event-class inventory as the Stage 4 deliverable: XR tied to game-related deployment. Stage 6 (pilot cities) expands this to ambient persistent inventory in physical urban environments. Stage 7 (global) scales it across geographies.
+
+## Layer U Spatial Economy
+
+The A.R.E. is the revenue mechanism. Layer U is the spatial infrastructure through which that mechanism operates at urban scale.
+
+Layer U administers volumetric XR real estate: three-dimensional digital space overlaid on physical urban environments. Cities are divided into volumetric parcels measured in cubic metres. Each parcel can be leased for advertising, branding, interactive engagement, virtual retail, or spatial content. Advertisers pay per verified impression, not per static slot, enabling micro-segmented campaigns that combine programmatic precision with real-world spatial presence.
+
+This is a fundamentally new asset class. It is not speculative metaverse land. It is commercial use of physical airspace for digitally overlaid content, priced against real foot traffic, real engagement data, and real advertiser demand.
+
+The skin-the-world dNFT packs are the second inventory class alongside scheduled events. These are location-anchored visual overlays that creators author (in 1magen and 3nvizen primarily) and that users can purchase or unlock through the A.R.E. participation. A creator authors a skin pack for a specific landmark; sponsors and brands can place inventory inside the skin geometry; users opt in to seeing the skin in their XR view. The dNFT contract records ownership and creator royalty terms.
+
+The Layer U primitive API exposed to first-party SON and to third-party developers consists of six calls described in Chapter 6: `post_listing`, `query_nearby`, `open_escrow`, `verify_presence`, `publish_brief`, `subscribe_to_hotspot`. These primitives are what makes Layer U a platform for third-party developers rather than a single Strands product. The discipline described in Chapter 5 is what makes the primitives reliable enough for third-party use.
+
+## The SPV Network
+
+Layer U operates through a network of investible SPVs (Special Purpose Vehicles structured as locally incorporated companies in each jurisdiction they serve).
+
+Each SPV administers the Layer U operations within its geographic territory: leasing volumetric space to advertisers, managing the A.R.E. revenue pipeline, distributing funds between users (60% attention revenue), investors (returns from lease revenue and appreciation), and the Strands platform (operational share). The SPV structure ensures that each entity complies with its local regulatory, corporate, and tax framework while operating within the shared Strands economic architecture.
+
+The deployment sequence for the first SPVs: Kuala Lumpur first, then Bangkok, Jakarta, Singapore. Subsequent expansion follows the same SPV model in each new jurisdiction, with local incorporation and local compliance review before activation.
+
+The SPV model makes Layer U investible through conventional fiat instruments. Investors can participate in a specific city's Layer U deployment through its local SPV, receiving returns generated by volumetric lease revenue and A.R.E. attention economics within that territory. This bridges the gap between the Strands ecosystem's longer-term blockchain ambitions and the immediate need for fiat-denominated, legally structured investment vehicles that institutional and private investors can engage with today.
+
+In later ecosystem maturity, when the $KREDS chain layer activates per Chapter 9, Layer U SPVs may integrate on-chain governance and settlement mechanisms. But that transition occurs only after the fiat model has proven viable. The SPV structure is not a temporary workaround. It is the correct legal and commercial architecture for deploying spatial economic infrastructure across diverse jurisdictions.
+
+The V5 framing of Layer U as City DAOs (with yield-bearing DAO tokens distributing lease revenue) is formally deprecated and replaced by the SPV framing for two reasons. First, the securities exposure of yield-bearing token instruments in major jurisdictions is significant and not worth the architectural fight when the SPV structure achieves the same investor-participation outcome through conventional legal vehicles. Second, the per-jurisdiction SPV is the correct compliance shape for the actual deployment, whereas a unified DAO token would have required cross-jurisdiction regulatory harmonisation that does not exist in the markets Strands is entering.
+
+## Operator and User Surfaces
+
+Layer U has no UI of its own. Two first-party surfaces expose it: SON for operators, EveryWear for users. Both are described in detail in their own chapters of this whitepaper.
+
+SON (Chapter 6) is the operator console through which inventory is authored. Operators draw volumetric parcels on the Cesium globe in SON, configure A.R.E. terms, set sponsor allowlists, schedule events, publish to Layer U's volumetric parcel registry. SON also visualises Layer U state for operators: which parcels are active, what their settlement aggregates look like, where the Founders Pass population is concentrated, what events are scheduled across the global network.
+
+EveryWear (Chapter 4) is the user runtime through which Layer U is consumed. Users opt into the A.R.E. through their EveryWear runtime, experience inventory delivered into their device (and paired glasses where present), and receive payment into their EveryWear wallet.
+
+Third-party developers can build alternative surfaces against the Layer U primitive API. Alternative operator consoles, alternative user runtimes, vertical apps that consume Layer U primitives without resembling SON or EveryWear. The primitive API is the public contract; SON and EveryWear are Strands' first-party implementations against that contract, but not the only possible implementations.
+
+This separation matters for the platform thesis. Layer U is a substrate. Surfaces are products. Strands ships its own surfaces and welcomes other surfaces. The substrate's quality is what determines the platform's value; the first-party surfaces are how that quality is demonstrated initially.
+
+## The Game as Proof of Concept
+
+Stages 1 and 2 of the validation ladder are not placeholders. They generate the operational data that de-risks every subsequent stage. Every in-game mechanic that touches attention, spatial governance, or economic distribution maps to a real-world Layer U operation:
+
+| In-Game Mechanic | Layer U Equivalent |
+|---|---|
+| Signal Reclamation (Proper Gander broadcasts) | A.R.E. consented rewarded attention |
+| Billboard hijacking (SIGOPS) | XR ad placement in physical locations |
+| Signal Tower capture | XR node deployment |
+| Zone governance voting | Local Layer U policy and revenue governance |
+| Volumetric content placement | Spatial advertising in cubic-metre parcels |
+| Attention measurement (dwell time, interaction depth) | Consent-based engagement tracking for ad pricing |
+
+The game generates six categories of data that directly de-risk Layer U deployment: attention economics (what users will watch, for how long, at what completion rate), consent-tier adoption (what proportion of users opt in at each consent level), volumetric interaction patterns (how users engage with spatial content), governance behaviour (how communities make collective economic decisions), dual-economy circulation (how value flows between parallel economic systems), and creator-economy dynamics (how user-generated content affects engagement and monetisation).
+
+All of this data is consent-gated, anonymised, and aggregated. None of it leaves the game without player permission. But its existence means that by the time the first Layer U SPV launches in Kuala Lumpur, the team is not guessing at user behaviour. The game has already generated the data to price attention, structure leases, and forecast returns.
+
+## Volumetric Pricing and Lease Dynamics
+
+Layer U parcels are leased in 10m³ base units. Initial pricing establishes floor liquidity, conservatively benchmarked against traditional out-of-home advertising costs in each city at a fraction of the price. A startup leasing a 50m³ XR pop-up near a prime transit node pays orders of magnitude less than a traditional billboard tenant in the same location, while gaining interactive 3D engagement, real-time content updates, and per-impression analytics that legacy out-of-home media cannot match.
+
+After the initial lease period, parcels enter open renewal pricing informed by historic engagement, verified impressions, and predictive footfall models. Demand naturally concentrates around high-traffic locations, creating a self-sustaining pricing dynamic where the most valuable spatial real estate appreciates through demonstrated commercial utility rather than speculation.
+
+Because delivery is client-side and synchronised to the user, the same XR placement can present radically different creative variants to different opted-in viewers. A single billboard is no longer a single message. It becomes a context-aware delivery surface calibrated to the user's synchronisation profile, preferences, and consented data signals. This allows much higher relevance than legacy advertising while remaining governed by explicit consent, user-controlled data architecture, and privacy-preserving safeguards.
+
+The V5 framing of explicit pixel-revenue arithmetic (cubic-metre pricing tables, SGD billboard comparisons, dutch-auction VRGDA mechanics) was deprecated in V6 in favour of the structural framing above, and that deprecation continues in V7. Specific pricing tables belong in the per-city SPV deployment plans rather than in the canonical whitepaper, because pricing must reflect local conditions in each jurisdiction at deployment time.
+
+## The Data Sovereignty Boundary
+
+Every layer of the Layer U system respects a hard boundary between data that lives on the user's device and data that leaves the device. This boundary is not policy. It is architecture.
+
+The data classes that never leave the device under any circumstance: Mymories vault contents, camera frames, SAM segmentation outputs, DepthAnything depth maps, RF environment fingerprints, local model files, inference artefacts.
+
+The data classes that leave only in anonymised opaque form: the A.R.E. category vector emitted to the matching layer. The matching layer receives a request from an anonymous participant and returns inventory candidates. There is no session identity maintained at the matching layer, no IP correlation, no return path to the user that bypasses the user's own consent.
+
+The data classes that leave with explicit per-event consent: A.R.E. impression proofs. These are zero-knowledge attestations that an impression occurred, the user was the recipient, and the revenue calculation is valid. The proof does not reveal what the impression was, who the user is in personal-identity terms, or what the user did before or after the impression. The chain sees that something settled; the chain does not see what.
+
+This boundary is what makes the A.R.E. structurally privacy-preserving rather than policy-preserving. Surveillance across the boundary is mechanically impossible, not just prohibited. Any third party that wanted to use Layer U data for surveillance would find that the data they would need to surveil has not crossed any network. It lives on the user's device, encrypted, behind the user's keys.
+
+Chapter 5 details the operational discipline that implements this boundary at the code level. Chapter 9 details the chain architecture that anchors impression proofs without exposing impression content.
+
+## What This Chapter Does Not Cover
+
+This chapter describes Layer U as the spatial XR commercial and governance layer of the Strands ecosystem, and the A.R.E. as its revenue mechanism.
+
+The user-facing runtime through which users opt in to Layer U inventory and receive A.R.E. settlement is detailed in Chapter 4 (EveryWear).
+
+The operational discipline through which Layer U is built and maintained, including the module budget contract and the context-protocol enforcement layer, is detailed in Chapter 5 (Context-Aware Tooling and Modularisation).
+
+The operator console through which Layer U inventory is authored and Layer U state is monitored is detailed in Chapter 6 (Project SON).
+
+The token economics that flow through Layer U settlement, including $KREDS minting, burning, staking, distribution, and utility, are detailed in Chapter 8 ($KREDS Tokenomics).
+
+The chain infrastructure that anchors Layer U settlement proofs, including the Mina-derived Rust implementation and zk-SNARK succinct ledger, is detailed in Chapter 9 (Strands Blockchain).
+
+The governance framework through which Layer U SPVs make protocol decisions across jurisdictions is detailed in Chapter 10 (Governance, Privacy, Compliance).
+
+The in-game form of Layer U as the resistance broadcast layer in MetaXity1 Year 555 is detailed in Chapter 2 (Strands the Game).
+

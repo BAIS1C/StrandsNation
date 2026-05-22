@@ -2,129 +2,43 @@ import type { WhitepaperChapter } from './index';
 
 const chapter: WhitepaperChapter = {
   id: "09",
-  title: "Roadmap",
-  part: "PART IV: OPERATIONS",
-  html: `<h1>Whitepaper V6 - Chapter 9: Roadmap</h1>
-<h2>How to Read This Roadmap</h2>
-<p>This roadmap describes the sequence in which the Strands ecosystem is technically built, commercially validated, and progressively decentralised. It is not a marketing calendar. It is a dependency chain. Each phase exists to prove a specific layer of the system. No subsequent phase activates until the prior phase has validated its core assumptions.</p>
-<p>Indicative timeframes are provided as target ranges from technical commencement, not as fixed calendar commitments. Actual progression depends on validation outcomes, funding readiness, and the operational maturity of each preceding layer.</p>
-<p>For a broader view of the Strands project timeline, milestones, and community updates, see <a href="https://strandsnation.xyz">strandsnation.xyz</a>.</p>
-<h2>Phase 1: Proof of Concept</h2>
-<p><strong>What this phase proves:</strong> The core loop exists.</p>
-<p><strong>Target range:</strong> Approximately 4 weeks from technical commencement.</p>
-<p>The POC validates core technical assumptions: that the game loop works, that Telegram Mini App distribution is viable, that the desktop OS shell can host the intended player experience, and that the foundational interaction patterns ; Sync Profiling, Mait interaction, in-game economy ; function as designed.</p>
-<p>This phase does not require monetisation, blockchain integration, or A.R.E. activation. It proves that the game exists as a playable, coherent, and technically viable experience.</p>
-<p><strong>Key deliverables:</strong></p>
-<ul>
-<li>Playable game loop within the Telegram Mini App shell</li>
-<li>Desktop OS interface functional and navigable</li>
-<li>Sync Profiling operational beneath the surface</li>
-<li>Core Mait interaction demonstrable</li>
-<li>In-game economy (SOVComp, GridScrip) circulating within test environment</li>
-</ul>
-<p><strong>EveryWear at this phase:</strong> Telegram Mini App (Phase 1 of the EveryWear evolution described in Chapter 4).</p>
-<p><strong>Activation gate:</strong> The core loop must exist and function. If it does not, nothing else proceeds.</p>
-<h2>Phase 2: Minimum Viable Product</h2>
-<p><strong>What this phase proves:</strong> The product can acquire and retain real players.</p>
-<p><strong>Target range:</strong> Approximately 13 weeks from technical commencement.</p>
-<p>The MVP extends the POC into a product that can acquire and retain real players. It introduces the first revenue-generating mechanics, stabilises the game client, and proves that the Strands experience can sustain daily active engagement.</p>
-<p><strong>Key deliverables:</strong></p>
-<ul>
-<li>Stable Telegram Mini App with full onboarding flow</li>
-<li>First fiat revenue mechanics live (in-app purchases, starter packs, marketplace activity)</li>
-<li>SOVComp and GridScrip economy operating at scale within the player base</li>
-<li>Trait Shard acquisition, compilation, and marketplace functional</li>
-<li>Player retention and session metrics trackable and reportable</li>
-<li>Early diegetic A.R.E. wrapper operational (Proper Gander framing, compensated attention loop training player behaviour within the game)</li>
-</ul>
-<p><strong>EveryWear at this phase:</strong> Telegram Mini App maturing, with the Chromium fork in development.</p>
-<p><strong>Layer U and A.R.E. at this phase:</strong> Diegetic A.R.E. active in-game. Layer U exists only as in-game narrative (the rebellion layer described in Chapter 5). No real-world spatial deployment yet.</p>
-<p><strong>Activation gate:</strong> The product must acquire and retain real players. If it does not, subsequent phases do not activate.</p>
-<h2>Phase 3: Season 0</h2>
-<p><strong>What this phase proves:</strong> The economy can monetise and generate commercially meaningful behaviour.</p>
-<p><strong>Target range:</strong> 3–6 months post-MVP greenlight, dependent on validation outcomes and funding readiness.</p>
-<p>Season 0 is the first full content season. It proves that the Strands game can sustain a seasonal content cadence ; new narrative arcs, new Trait Shards, new gameplay systems, new economic dynamics ; while maintaining player retention and revenue growth.</p>
-<p><strong>Key deliverables:</strong></p>
-<ul>
-<li>Full seasonal content cycle: narrative, mechanics, economy, and progression</li>
-<li>A.R.E. compensated attention generating measurable advertiser value</li>
-<li>Fiat settlement operational (USDT to TON wallet where applicable)</li>
-<li>Player base metrics sufficient to de-risk subsequent investment decisions</li>
-<li>Community governance seeds planted (feedback loops, player councils, early signalling mechanisms)</li>
-<li>Fainance Ltd. (UK) B2B Mait deployment in parallel, proving the agent framework outside the game</li>
-</ul>
-<p>Season 0 is the proof-of-economy phase. The game must demonstrate that it generates real revenue, retains real players, and produces the behavioural data that de-risks everything downstream.</p>
-<p><strong>EveryWear at this phase:</strong> Telegram Mini App live with players. Chromium fork entering early deployment for advanced users.</p>
-<p><strong>Layer U and A.R.E. at this phase:</strong> Diegetic A.R.E. generating live advertiser data. First real advertiser integrations in-game. Layer U pilot planning begins where data supports it.</p>
-<p><strong>Activation gate:</strong> The economy must monetise and generate commercially meaningful behaviour. If Season 0 does not demonstrate fiat economic viability, no wider scaling, tokenisation, or native infrastructure activation proceeds.</p>
-<h2>Phase 4: Seasonal Validation Cycle (Seasons 1–12)</h2>
-<p><strong>What this phase proves:</strong> The model repeats under live conditions across a sustained content lifecycle.</p>
-<p><strong>Target range:</strong> The first twelve-season validation arc spans approximately 13–20 months from Season 0 launch, accounting for production cadence, player dynamics, bug cycles, and content iteration.</p>
-<p>The number twelve is not decorative. Twelve seasons represent the minimum sustained lifecycle required to prove that the game economy can survive repeated live tuning, that A.R.E. data remains commercially meaningful over time, that retention and monetisation are repeatable rather than one-off, and that the wider system justifies tokenisation.</p>
-<p>Each season introduces new narrative, new mechanics, new economy tuning, and new Trait Shard releases. The cumulative effect is a maturing game economy with a growing, engaged player base and an increasingly validated commercial pipeline.</p>
-<p>During this period:</p>
-<ul>
-<li>The fiat game economy matures through iterative tuning across seasonal cycles</li>
-<li>A.R.E. attention data accumulates across seasons, proving advertiser value at sustained scale</li>
-<li>Layer U pilot deployments begin in target cities where the data and commercial readiness support them</li>
-<li>EveryWear evolves from Telegram Mini App through Chromium fork and toward the WebGL bridge as player base and platform requirements demand</li>
-<li>Mymories and SAL begin accumulating meaningful context as the vault and adaptive layers mature</li>
-<li>The Blank Sync Ledger activates for players who cross the purchase threshold, building the invisible wallet base</li>
-<li>Out-of-game A.R.E. surfaces emerge through the Chromium fork, extending compensated attention beyond game sessions</li>
-</ul>
-<p><strong>EveryWear at this phase:</strong> Telegram Mini App → Chromium fork → early WebGL bridge. The platform evolves in response to player demand and rendering requirements.</p>
-<p><strong>Layer U and A.R.E. at this phase:</strong> In-game diegetic A.R.E. → real advertiser integration → out-of-game A.R.E. through the Chromium fork → Layer U pilot city deployments where data supports them.</p>
-<p>No blockchain deployment occurs during this phase. The entire focus is on proving the fiat economy, maturing the game, and building the behavioural and commercial foundation that justifies everything that follows.</p>
-<p><strong>Activation gate:</strong> The model must prove repeatable under live conditions. If retention, revenue, and A.R.E. value do not sustain across multiple seasons, token deployment does not proceed.</p>
-<h2>Phase 5: $KREDS Jetton Deployment</h2>
-<p><strong>What this phase proves:</strong> Token utility can emerge from proven behaviour rather than fabricate an economy that does not yet exist.</p>
-<p><strong>Target range:</strong> Only after the seasonal validation cycle has demonstrated sustained fiat economy viability. This is a hard gate, not a chronological delay.</p>
-<p>$KREDS does not deploy because enough time has passed. It deploys because the fiat economy has proven retention, revenue, and A.R.E. advertiser value across a full seasonal lifecycle ; and because there is evidence that token utility will formalise an already functioning economy rather than invent one. As described in Chapter 6, $KREDS may first appear inside in-game or game-adjacent economic flows, where users already have continuity through Telegram and TON wallet infrastructure.</p>
-<p><strong>Key deliverables:</strong></p>
-<ul>
-<li>$KREDS Jetton deployed on TON</li>
-<li>Initial circulation within game or game-adjacent economic flows</li>
-<li>Elastic supply mechanics (mint and burn) operational and observable</li>
-<li>Token utility demonstrable through real ecosystem transactions</li>
-<li>Anti-Sybil identity layer (Telegram account continuity) validated at scale</li>
-</ul>
-<p><strong>EveryWear at this phase:</strong> Chromium fork mature. WebGL bridge operational. Bifurcation (Chapter 4, Phase 4) approaching as game fidelity demands separation of engine clients from the persistent runtime shell.</p>
-<p><strong>Layer U and A.R.E. at this phase:</strong> Layer U pilot city SPVs maturing toward operational readiness where Phase 4 data supports them. A.R.E. generating real commercial revenue across in-game and out-of-game surfaces. Advertiser demand beginning to create functional $KREDS acquisition as described in Chapter 6.</p>
-<p><strong>Activation gate:</strong> Token utility must emerge from proven behaviour. If $KREDS does not circulate as a functional economic instrument tied to real ecosystem transactions, native chain activation does not proceed.</p>
-<h2>Phase 6: Native Chain Activation</h2>
-<p><strong>What this phase proves:</strong> Sovereign infrastructure is justified by ecosystem requirements that hosted infrastructure cannot serve.</p>
-<p><strong>Target range:</strong> Only after Jetton circulation has proven utility and the native chain has reached operational readiness.</p>
-<p>The Strands chain activates when the ecosystem requires capabilities that TON infrastructure cannot provide: protocol-level privacy, succinct verification for mobile validation, and sovereign control over consensus and emission logic. As described in Chapter 7, this is an architectural upgrade, not a user migration event.</p>
-<p><strong>Key deliverables:</strong></p>
-<ul>
-<li>Strands chain (Rust-implemented sovereign chain derived from Mina Protocol design principles, especially zk-SNARKs and succinct ledger architecture) operational</li>
-<li>$KREDS bridged from TON to native chain</li>
-<li>Client-ledger model active: devices maintaining local ledgers, chain confirming state transitions</li>
-<li>Validator participation live under identity-constrained participation-based consensus</li>
-<li>On-chain settlement for A.R.E., Layer U leases, Trait Shard provenance, and governance actions</li>
-<li>Governance authority beginning progressive transfer from founding-team stewardship to participant-driven process</li>
-</ul>
-<p><strong>EveryWear at this phase:</strong> Bifurcation complete. Unity and Unreal game clients operating as standalone experiences launching from the persistent EveryWear shell. The shell hosts vault, wallet, agent surface, A.R.E., and validation functions.</p>
-<p><strong>Layer U and A.R.E. at this phase:</strong> Multiple city SPVs operational. A.R.E. settlement transitioning from USDT to $KREDS on the native chain. Spatial lease transactions beginning to settle on chain.</p>
-<p><strong>Activation gate:</strong> Sovereign infrastructure must be justified by ecosystem requirements that hosted infrastructure cannot serve. If hosted infrastructure remains sufficient, chain activation is not forced.</p>
-<h2>Phase 7: Ecosystem Maturation</h2>
-<p><strong>What this phase proves:</strong> The system can scale across cities, devices, and governance layers.</p>
-<p><strong>Target range:</strong> Ongoing, post-chain activation.</p>
-<p>With the native chain live, the ecosystem enters its maturation phase. This is not a single milestone ; it is a continuous process of expanding Layer U into new cities, deepening $KREDS utility, evolving EveryWear through its later phases, and progressively decentralising governance as network readiness allows.</p>
-<p>During this phase:</p>
-<ul>
-<li>Layer U SPVs expand into additional jurisdictions, with DAO-style governance evolving where local regulatory frameworks permit</li>
-<li>EveryWear evolves through its final phases: WebGL bridge maturation, full bifurcation, and convergence toward the agentic OS across XR, desktop, and mobile</li>
-<li>Governance authority progressively transfers to the network as participant-driven execution reaches operational maturity</li>
-<li>Hardware-native sovereign runtimes begin extending the client-ledger model where dedicated devices offer stronger attestation and richer spatial interaction</li>
-<li>WiFi DensePose and hardware-level spatial sensing graduate A.R.E. attention verification beyond interaction-based measurement</li>
-<li>The ecosystem moves toward deeper internal economic circulation as described in Chapter 6</li>
-</ul>
-<p><strong>EveryWear at this phase:</strong> Agentic OS maturity (Chapter 4, Phase 5). EveryWear as a sovereign runtime hosting agents, vault, wallet, validation, and spatial interaction across every device class.</p>
-<p><strong>Layer U and A.R.E. at this phase:</strong> Expanding city network. Full spatial XR attention economy operational. A.R.E. verification graduating to spatial sensing. Volumetric lease pricing and settlement fully on chain.</p>
-<p><strong>Activation gate:</strong> There is no terminal gate. Maturation is continuous. The system scales as each layer earns the right to expand.</p>
-<h2>What This Roadmap Does Not Include</h2>
-<p>This roadmap describes the technical implementation sequence and the validation thresholds that govern progression between phases. It does not include marketing timelines, partnership announcements, fundraising milestones, or team expansion plans. For broader project updates, see <a href="https://strandsnation.xyz">strandsnation.xyz</a>. The underlying game architecture is detailed in Chapter 2. The platform architecture is detailed in Chapters 3–5. The economic and chain architecture is detailed in Chapters 6–8.</p>
+  title: "Strands Blockchain",
+  part: "PART III: THE CHAIN",
+  html: `<h1>Whitepaper V7 - Chapter 9: Strands Blockchain</h1>
+<h2>Why a Native Chain</h2>
+<p>For the first two phases of $KREDS deployment, external infrastructure is sufficient. The Jetton standard on TON provides circulation, wallet integration, and settlement without requiring Strands to operate its own chain. This is deliberate. The game economy validates in fiat. $KREDS validates as a Jetton. Only once both have proven their respective models does the question of chain sovereignty become relevant.</p>
+<p>The native Strands chain activates when the ecosystem requires capabilities that a hosted token on external infrastructure cannot provide: protocol-level privacy for participant data, succinct verification that allows mobile devices to act as full nodes, and sovereign control over consensus rules, emission logic, and governance execution without dependence on a third-party chain&#39;s roadmap or fee structure.</p>
+<p>The chain does not create the economy. It inherits one that already works.</p>
+<h2>Architecture</h2>
+<p>Strands is designed as a validator construct built around client ledgers. Each participant maintains a cryptographically compiled local ledger representing their operative state within the network ; including spendable balance, participation context, and transaction-relevant application state. This local ledger lives on device and within user-controlled runtimes such as EveryWear and Mymories. The chain does not store that underlying state. It confirms that claimed state and state transitions are cryptographically valid. What settles on chain are proofs, attestations, settlement records, provenance, and state transition confirmations ; not the raw underlying data itself.</p>
+<p>When a transaction is initiated, the network does not rely on a monolithic public ledger of total user history. Instead, it verifies that the sending client ledger is authentic, untampered, and entitled to declare the proposed transition; that the receiving ledger is valid and able to receive; and that the transfer can be accepted without conflict or double spend. The global chain exists to confirm the legitimacy of these state transitions, not to hold the full lived reality of every participant.</p>
+<p>Client-side ledger integrity is maintained through strong cryptographic hashing, with a post-quantum migration path as the network matures. This distinction is foundational. The device carries the continuity. The chain confirms the truthfulness of that continuity.</p>
+<p>The Strands chain is a Rust-implemented sovereign chain derived from Mina Protocol design principles, especially its use of zk-SNARKs and succinct ledger architecture. Mina was selected for one structural reason: its use of zk-SNARKs to maintain a constant-size ledger. Where conventional blockchains grow linearly with transaction history ; requiring ever-larger storage and sync times ; a zk-SNARK chain stores only a compact cryptographic proof of the current state. New nodes verify the entire chain by checking a single proof rather than replaying every historical transaction.</p>
+<p>This has direct consequences for the Strands ecosystem:</p>
+<p><strong>Mobile-first validation.</strong> Because the ledger proof is small enough to verify on a smartphone, any device running EveryWear can participate directly in validation as a network node. There is no mining hardware requirement, no high-bandwidth sync, no storage burden that excludes consumer devices. Validation is accessible to every participant, not gated by infrastructure cost.</p>
+<p><strong>Privacy through zero-knowledge proofs.</strong> Transactions, identity attestations, and participation records are validated without exposing the underlying data. A validator confirms that a proof is correct without learning what the proof contains. This means that A.R.E. settlement records, identity attestations, Trait Shard provenance, and Layer U transaction proofs can all settle on chain without creating a public surveillance ledger.</p>
+<p><strong>Sovereignty over protocol rules.</strong> Emission rates, burn mechanics, governance execution, and consensus parameters are controlled by the Strands network rather than inherited from an external chain. Protocol upgrades do not require permission from or alignment with a third-party foundation.</p>
+<h2>What the Chain Confirms</h2>
+<p>At maturity, the Strands chain provides the attestation, settlement, and verification layer for the ecosystem components described in earlier chapters. In each case, what settles on chain is the proof or record ; not the raw underlying data.</p>
+<p><strong>$KREDS as native asset.</strong> Once bridged from TON, $KREDS becomes the native asset of the Strands chain rather than a hosted token. Minting, burning, staking, and transfer resolve natively within the protocol rather than through external smart contracts.</p>
+<p><strong>Trait Shard provenance and composition.</strong> The composable dNFT architecture described in Chapter 3 settles on chain. Shard provenance, compilation records, and marketplace transactions are recorded as verifiable on-chain attestations. The creative content and behavioural state of a Mait remain on device.</p>
+<p><strong>A.R.E. settlement records.</strong> Once native settlement is active, attention revenue flows can resolve in $KREDS on the Strands chain, completing the transition from the USDT pre-chain phase described in Chapter 5. The chain records settlement outcomes, not raw attention data.</p>
+<p><strong>Layer U lease and governance records.</strong> Spatial lease transactions, SPV revenue distribution, and governance votes can settle on chain with full auditability and zero-knowledge privacy where required.</p>
+<p><strong>Identity and anti-Sybil attestation.</strong> The Telegram-linked identity continuity described in Chapter 6 anchors to on-chain identity attestations, providing the anti-Sybil layer for validator slot allocation without exposing personal data.</p>
+<h2>Scaling Between Device and Chain</h2>
+<p>Not every state transition needs to resolve directly against the global chain. Localised aggregation, rollup-style batching, and staged proof submission can sit between device-held state and final chain confirmation. A device running EveryWear can accumulate local state transitions, compress them into a succinct proof, and submit that proof for chain-level attestation at intervals rather than in real time.</p>
+<p>This is how the one-person-one-node doctrine scales. Every EveryWear instance can participate as a validating node. Devices hold meaningful local state and continuity. The chain avoids becoming a bloated global storage layer. Heavier coordination compresses before final confirmation. Through succinct proofs, localised aggregation, and chain-level attestation, the network preserves privacy, reduces storage burden, and allows mass participation without requiring every node to store or replay the full lived history of the system.</p>
+<h2>Software First, Hardware Later</h2>
+<p>The client ledger model launches on existing consumer devices. Smartphones and standard hardware running EveryWear maintain local ledgers, generate proofs, and participate in validation using software-level cryptographic compilation. No specialised hardware is required at launch.</p>
+<p>As the network matures, dedicated hardware can strengthen the model rather than replace it. Stronger secure local runtimes, better device attestation, hardware-backed signing and integrity guarantees, richer spatial and XR interaction surfaces, and more sovereign node environments all extend the capabilities of the client ledger without changing the fundamental architecture. The sequence remains: software-first client ledgers on existing devices, then stronger hardware-native sovereign runtimes, with the chain always serving as the validation and attestation layer above them.</p>
+<h2>Consensus and Validation</h2>
+<p>The Strands model includes a protocol bond analogous to stake, but it does not operate as conventional proof of stake. Validation rights do not expand through token accumulation. They arise through operation of a validated application or runtime on the network, tied to verified identity, uptime, and ongoing contribution. Consensus is structured to resist capture through unrestricted capital concentration or specialised hardware advantage.</p>
+<p>The hierarchy of validation legitimacy is: verified personhood first, validated application or node presence second, active participation and uptime third, and proof verification plus honest contribution fourth, with the protocol bond operating beneath the surface as a structural commitment rather than a capital-weighted power mechanism. One verified identity holds one active validator slot, as described in Chapter 6. Validators confirm transactions by verifying zk-SNARK proofs of state transitions rather than replaying transaction history.</p>
+<p>Validator rewards follow the emission schedule defined in Chapter 6: epoch-based, with cliff, taper, and liquid phases. The protocol recalculates emission rates per validator each epoch, maintaining a fixed aggregate issuance ceiling so that individual APR decreases as network-wide participation increases. This prevents inflationary runaway while rewarding genuine contribution.</p>
+<p>Because the ledger is succinct, validator hardware requirements remain minimal. A smartphone running EveryWear with a stable connection can validate. This is not a theoretical aspiration ; it is a structural consequence of the zk-SNARK architecture. The chain is designed so that the same devices participants already use for the game, for A.R.E. interaction, and for $KREDS transactions can also secure the network.</p>
+<h2>The Bridge from TON</h2>
+<p>The transition from Jetton on TON to native $KREDS on the Strands chain is an architectural upgrade, not a user migration event. For the user, the bridge is designed to feel like an architectural upgrade rather than a disruptive migration, preserving balance continuity, validator state, and participation history with minimal friction.</p>
+<p>A continuing bridge layer may remain in place after the initial transition, preserving interoperability with TON liquidity and Telegram-linked wallet infrastructure while the native chain ecosystem matures.</p>
 `,
 };
 

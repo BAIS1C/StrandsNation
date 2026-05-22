@@ -1,59 +1,67 @@
 /**
  * build-whitepaper.mjs
  *
- * Reads V6 whitepaper markdown source files and generates
+ * Reads V7 whitepaper markdown source files and generates
  * TypeScript chapter modules for the website.
  *
- * Source: src/data/whitepaper/source/Whitepaper V6 - Ch*.md
+ * V7 structure (14 chapters):
+ *   Ch1-3 : carried over from V6 source files unchanged (Reasons Why, Game, Maits)
+ *   Ch4   : EveryWear (V7 rewrite of V6 Ch4)
+ *   Ch5   : Context-Aware Tooling and Modularisation (NEW in V7)
+ *   Ch6   : Project SON (NEW in V7)
+ *   Ch7   : Layer U and the A.R.E. (V7 rewrite of V6 Ch5)
+ *   Ch8-14: carried over from V6 source files (KREDS through Appendices), renumbered
+ *
+ * Source: src/data/whitepaper/source/Whitepaper V6 - Ch*.md + Whitepaper V7 - Ch*.md
  * Output: src/data/whitepaper/chapter-XX.ts + index.ts
+ *
+ * H1 headings in source files are normalised to V7 chapter numbering at build time.
  *
  * Run: node scripts/build-whitepaper.mjs
  */
 
-import { readFileSync, writeFileSync, readdirSync } from 'fs';
+import { readFileSync, writeFileSync } from 'fs';
 import { join } from 'path';
 import { marked } from 'marked';
 
 const SOURCE_DIR = join(process.cwd(), 'src/data/whitepaper/source');
 const OUTPUT_DIR = join(process.cwd(), 'src/data/whitepaper');
 
-// Chapter metadata: maps chapter number to title and part grouping
 const CHAPTER_META = {
-  '01': { title: 'Strands: Reasons Why',                part: 'PART I: THE THESIS' },
-  '02': { title: 'Strands the Game',                    part: 'PART I: THE THESIS' },
-  '03': { title: 'My Maits',                            part: 'PART II: THE ECOSYSTEM' },
-  '04': { title: 'EveryWear',                           part: 'PART II: THE ECOSYSTEM' },
-  '05': { title: 'Layer U and the A.R.E.',              part: 'PART II: THE ECOSYSTEM' },
-  '06': { title: '$KREDS Tokenomics',                   part: 'PART III: THE CHAIN' },
-  '07': { title: 'Strands Blockchain',                  part: 'PART III: THE CHAIN' },
-  '08': { title: 'Governance, Privacy & Compliance',    part: 'PART IV: OPERATIONS' },
-  '09': { title: 'Roadmap',                             part: 'PART IV: OPERATIONS' },
-  '10': { title: 'Team',                                part: 'PART IV: OPERATIONS' },
-  '11': { title: 'Legal & Regulatory Disclaimer',       part: 'PART V: APPENDICES' },
-  '12': { title: 'Appendices',                          part: 'PART V: APPENDICES' },
+  '01': { title: 'Strands: Reasons Why',                       part: 'PART I: THE THESIS' },
+  '02': { title: 'Strands the Game',                           part: 'PART I: THE THESIS' },
+  '03': { title: 'My Maits',                                   part: 'PART II: THE ECOSYSTEM' },
+  '04': { title: 'EveryWear',                                  part: 'PART II: THE ECOSYSTEM' },
+  '05': { title: 'Context-Aware Tooling and Modularisation',   part: 'PART II: THE ECOSYSTEM' },
+  '06': { title: 'Project SON',                                part: 'PART II: THE ECOSYSTEM' },
+  '07': { title: 'Layer U and the A.R.E.',                     part: 'PART II: THE ECOSYSTEM' },
+  '08': { title: '$KREDS Tokenomics',                          part: 'PART III: THE CHAIN' },
+  '09': { title: 'Strands Blockchain',                         part: 'PART III: THE CHAIN' },
+  '10': { title: 'Governance, Privacy & Compliance',           part: 'PART IV: OPERATIONS' },
+  '11': { title: 'Roadmap',                                    part: 'PART IV: OPERATIONS' },
+  '12': { title: 'Team',                                       part: 'PART IV: OPERATIONS' },
+  '13': { title: 'Legal & Regulatory Disclaimer',              part: 'PART V: APPENDICES' },
+  '14': { title: 'Appendices',                                 part: 'PART V: APPENDICES' },
 };
 
-// Map source filenames to chapter numbers
 const FILE_MAP = {
-  'Whitepaper V6 - Ch1 Strands Reasons Why.md':              '01',
-  'Whitepaper V6 - Ch2 Strands the Game.md':                 '02',
-  'Whitepaper V6 - Ch3 My Maits.md':                         '03',
-  'Whitepaper V6 - Ch4 EveryWear.md':                        '04',
-  'Whitepaper V6 - Ch5 Layer U and the ARE.md':              '05',
-  'Whitepaper V6 - Ch6 KREDS Tokenomics.md':                 '06',
-  'Whitepaper V6 - Ch7 Strands Blockchain.md':               '07',
-  'Whitepaper V6 - Ch8 Governance Privacy Compliance.md':     '08',
-  'Whitepaper V6 - Ch9 Roadmap.md':                          '09',
-  'Whitepaper V6 - Ch10 Team.md':                            '10',
-  'Whitepaper V6 - Ch11 Legal.md':                           '11',
-  'Whitepaper V6 - Ch12 Appendices.md':                      '12',
+  'Whitepaper V6 - Ch1 Strands Reasons Why.md':                          '01',
+  'Whitepaper V6 - Ch2 Strands the Game.md':                             '02',
+  'Whitepaper V6 - Ch3 My Maits.md':                                     '03',
+  'Whitepaper V7 - Ch4 EveryWear.md':                                    '04',
+  'Whitepaper V7 - Ch5 Context-Aware Tooling and Modularisation.md':     '05',
+  'Whitepaper V7 - Ch6 Project SON.md':                                  '06',
+  'Whitepaper V7 - Ch7 Layer U and the ARE.md':                          '07',
+  'Whitepaper V6 - Ch6 KREDS Tokenomics.md':                             '08',
+  'Whitepaper V6 - Ch7 Strands Blockchain.md':                           '09',
+  'Whitepaper V6 - Ch8 Governance Privacy Compliance.md':                '10',
+  'Whitepaper V6 - Ch9 Roadmap.md':                                      '11',
+  'Whitepaper V6 - Ch10 Team.md':                                        '12',
+  'Whitepaper V6 - Ch11 Legal.md':                                       '13',
+  'Whitepaper V6 - Ch12 Appendices.md':                                  '14',
 };
 
-// Configure marked for clean HTML output
-marked.setOptions({
-  gfm: true,
-  breaks: false,
-});
+marked.setOptions({ gfm: true, breaks: false });
 
 const chapters = [];
 
@@ -63,25 +71,25 @@ for (const [filename, chNum] of Object.entries(FILE_MAP)) {
 
   console.log(`Processing Ch${chNum}: ${meta.title}`);
 
-  // Read markdown source
   let md = readFileSync(sourcePath, 'utf-8');
 
-  // Strip "What This Chapter Does Not Cover" sections
+  const v7ChapterNum = parseInt(chNum, 10);
+  md = md.replace(
+    /^# Whitepaper V[67] - Chapter \d+: .*$/m,
+    `# Whitepaper V7 - Chapter ${v7ChapterNum}: ${meta.title}`
+  );
+
   md = md.replace(/## What This Chapter Does Not Cover[\s\S]*?(?=\n## |\n*$)/g, '');
 
-  // Replace em dashes with semicolons
   md = md.replaceAll('\u2014', ';');
 
-  // Convert to HTML
   const html = marked.parse(md);
 
-  // Escape backticks and ${} for template literal safety
   const escapedHtml = html
     .replace(/\\/g, '\\\\')
     .replace(/`/g, '\\`')
     .replace(/\$\{/g, '\\${');
 
-  // Generate TypeScript module
   const tsContent = `import type { WhitepaperChapter } from './index';
 
 const chapter: WhitepaperChapter = {
@@ -101,26 +109,14 @@ export default chapter;
   chapters.push({ num: chNum, varName: `chapter${chNum}` });
 }
 
-// Generate index.ts
-const imports = chapters
-  .map(c => `import ${c.varName} from './chapter-${c.num}';`)
-  .join('\n');
-
-const arrayEntries = chapters
-  .map(c => `  ${c.varName},`)
-  .join('\n');
-
-const namedExports = chapters
-  .map(c => `  ${c.varName},`)
-  .join('\n');
+const imports = chapters.map(c => `import ${c.varName} from './chapter-${c.num}';`).join('\n');
+const arrayEntries = chapters.map(c => `  ${c.varName},`).join('\n');
+const namedExports = chapters.map(c => `  ${c.varName},`).join('\n');
 
 const indexContent = `/**
- * Whitepaper Chapters: Modularised Index (V6)
+ * Whitepaper Chapters: Modularised Index (V7)
  *
  * Auto-generated by scripts/build-whitepaper.mjs
- * Source: src/data/whitepaper/source/
- *
- * Re-run: node scripts/build-whitepaper.mjs
  */
 
 export interface WhitepaperChapter {
@@ -136,7 +132,6 @@ export const whitepaperChapters: WhitepaperChapter[] = [
 ${arrayEntries}
 ];
 
-// Individual chapter exports for lazy loading
 export {
 ${namedExports}
 };

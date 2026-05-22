@@ -4,7 +4,7 @@ const chapter: WhitepaperChapter = {
   id: "03",
   title: "My Maits",
   part: "PART II: THE ECOSYSTEM",
-  html: `<h1>Whitepaper V6 - Chapter 3: My Maits</h1>
+  html: `<h1>Whitepaper V7 - Chapter 3: My Maits</h1>
 <h2>What My Maits Are</h2>
 <p>My Maits are adaptive companion agents assembled from modular Trait Shards. These shards are the composable dNFT elements of the system, encoding different aspects of personality, capability, behaviour, knowledge, and identity. A Mait is not a single static token. It is the compiled outcome of shard composition: a unique entity whose character, skills, and appearance emerge from the specific combination of shards that define it.</p>
 <p>This compositional architecture is the central technical principle of the system. Traditional digital companions are monolithic: a single model, a single personality, a single set of capabilities. Trait Shards make companion design modular. Each shard is an independent, tradable, evolvable dNFT that governs one dimension of the companion&#39;s identity. The player or operator assembles shards into a Mait as a builder assembles components into a system. Change a shard, change the companion. Trade a shard, reshape the personality. Evolve a shard, deepen a capability. The companion is never locked. It is always composable.</p>
