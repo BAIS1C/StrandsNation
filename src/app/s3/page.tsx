@@ -455,7 +455,8 @@ export default function S3ComingSoon() {
             <iframe
               src="https://www.youtube.com/embed/753ltLz5VLY?rel=0&modestbranding=1"
               title="S³ Strands Sound Studio"
-              allow="autoplay; encrypted-media; picture-in-picture"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
               allowFullScreen
             />
           </div>
