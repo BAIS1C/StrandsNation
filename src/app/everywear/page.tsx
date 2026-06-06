@@ -171,4 +171,20 @@ export default function EveryWearPage() {
         <Card variant="pink">
           <div className={styles.cardTitleMd} data-variant="pink">Why Federated Matters</div>
           <p className={styles.body}>
-            Every tool inside EveryWear talks to every
+            Every tool inside EveryWear talks to every other tool through an open protocol. A music
+            model can query the vault. An image model can call the director. A third-party agent can
+            compose the whole chain. You choose where inference runs: local GPU, a friend&rsquo;s node,
+            a federated pool, or an API vendor. EveryWear is the routing layer that makes the choice
+            invisible.
+          </p>
+        </Card>
+
+        <Callout
+          variant="cyan"
+          label="MYMORY CHROME EXTENSION"
+          text="The first EveryWear surface is shipping now as a Chrome extension. Install it to start building your persistent memory graph before the full shell lands. Your browsing context, preferences, decisions: indexed, encrypted, sovereign."
+        />
+      </SectionWrapper>
+    </div>
+  );
+}
