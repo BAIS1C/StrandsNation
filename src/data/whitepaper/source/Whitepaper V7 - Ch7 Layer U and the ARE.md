@@ -52,9 +52,9 @@ This is the structural answer to "what does Strands do that other ad-tech player
 
 The A.R.E. operates through a six-stage interaction pipeline that governs each attention event from consent to payment.
 
-**Consent.** Explicit, informed, revocable. Stored in the player's Mymories vault with timestamp and version hash. Never activated before onboarding completes. The player chooses to participate. They can withdraw at any time.
+**Consent.** Explicit, informed, revocable. Stored in the player's MyMory vault with timestamp and version hash. Never activated before onboarding completes. The player chooses to participate. They can withdraw at any time.
 
-**Context Assembly.** Happens locally within EveryWear using the Mymories data substrate. An anonymous category vector is transmitted to the ad-matching layer. No personally identifiable information leaves the device. The advertiser sees a category request from an anonymous node, not a person.
+**Context Assembly.** Happens locally within EveryWear using the MyMory data substrate. An anonymous category vector is transmitted to the ad-matching layer. No personally identifiable information leaves the device. The advertiser sees a category request from an anonymous node, not a person.
 
 **Diegetic Delivery.** In-game, ads carry the full Proper Gander aesthetic. Out-of-game, the frame is lighter but the structural wrapper remains. The delivery is never a raw interruptive pop-up. It is always contextualised within the Strands visual and narrative language.
 
@@ -66,7 +66,7 @@ The A.R.E. operates through a six-stage interaction pipeline that governs each a
 
 This pipeline is not optional infrastructure. It is the mechanism through which every A.R.E. interaction flows. No stage can be skipped. No data leaves the device without consent. No payment is withheld beyond the relevant reconciliation and settlement cycle.
 
-The first four stages of the pipeline happen entirely on the user's device. Stages five and six involve settlement records reaching the chain. The user's Mymories content, the camera frames, the segmentation outputs, the RF fingerprint, all stay device-local across the entire pipeline. Only an anonymous opaque category vector ever crosses the network, and only as part of stage two.
+The first four stages of the pipeline happen entirely on the user's device. Stages five and six involve settlement records reaching the chain. The user's MyMory content, the camera frames, the segmentation outputs, the RF fingerprint, all stay device-local across the entire pipeline. Only an anonymous opaque category vector ever crosses the network, and only as part of stage two.
 
 ## Consented Data Licensing
 
@@ -195,7 +195,7 @@ The V5 framing of explicit pixel-revenue arithmetic (cubic-metre pricing tables,
 
 Every layer of the Layer U system respects a hard boundary between data that lives on the user's device and data that leaves the device. This boundary is not policy. It is architecture.
 
-The data classes that never leave the device under any circumstance: Mymories vault contents, camera frames, SAM segmentation outputs, DepthAnything depth maps, RF environment fingerprints, local model files, inference artefacts.
+The data classes that never leave the device under any circumstance: MyMory vault contents, camera frames, SAM segmentation outputs, DepthAnything depth maps, RF environment fingerprints, local model files, inference artefacts.
 
 The data classes that leave only in anonymised opaque form: the A.R.E. category vector emitted to the matching layer. The matching layer receives a request from an anonymous participant and returns inventory candidates. There is no session identity maintained at the matching layer, no IP correlation, no return path to the user that bypasses the user's own consent.
 

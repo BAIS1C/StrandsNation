@@ -104,19 +104,19 @@ export default function EcosystemSection() {
         </Card>
       </div>
 
-      {/* Row 2: MyMories + SIGOPS */}
+      {/* Row 2: MyMory + SIGOPS */}
       <div className={styles.gridOneTwo}>
         <Card variant="pink">
           <span className={styles.stage} data-variant="pink">CORE INFRASTRUCTURE</span>
           <span className={styles.label} data-variant="pink">MEMORY</span>
-          <div className={styles.cardTitleSm} data-variant="pink">MyMories Engine</div>
+          <div className={styles.cardTitleSm} data-variant="pink">MyMory Engine</div>
           <p className={styles.bodySm}>
             Semantic memory infrastructure powering every AI system in Strands. NPCs remember your
             promises. Factions track your allegiance across sessions. Your Mait develops genuine
             conversational history. The tech that makes worlds remember.
           </p>
           <div className={styles.maitsTease}>
-            <span className={styles.maitsLabel}>MY MAITS · COMING SOON</span>
+            <span className={styles.maitsLabel}>MY MAIT · COMING SOON</span>
             <p className={styles.maitsBody}>
               Assemble Sentience Maits on your desktop. Unique personalities, distinct
               skill sets, composable from modular trait shards. Trade your best

@@ -10,14 +10,14 @@ const chapter: WhitepaperChapter = {
 <p><strong>A.R.E. (Attention Redistribution Engine)</strong> ; The mechanism through which player attention generates revenue. Players opt into narratively-framed Proper Gander broadcasts and receive 60% of the generated ad revenue. The remaining 40% funds ecosystem operations. Settles in USDT/TON wallet pre-chain, $KREDS/Strands wallet post-chain activation.</p>
 <p><strong>Blank Sync Ledger</strong> ; A player&#39;s native wallet layer, invisible by default. Activated at first purchase threshold. TON-mediated in early phases, later extended into Strands native wallet continuity as the chain matures. The player never sees blockchain mechanics unless they choose to.</p>
 <p><strong>Client Ledger</strong> ; A cryptographically compiled local ledger maintained by each participant on their own device. Contains spendable balance, participation context, and transaction-relevant application state. The Strands chain confirms the truthfulness of client ledger state, not the other way around.</p>
-<p><strong>DeepSync</strong> ; On-chain trade protocol within The Exchange (see CANON_Economy_Systems V2.0). Used for unique, provenance-verified assets such as Mymories and premium cosmetics where ownership and scarcity matter. Activates alongside chain-layer maturity. Visual cue: hexagonal icon.</p>
-<p><strong>EveryWear</strong> ; The sovereign interface layer that hosts the game surface, Mymories vault access, SAL runtime access using Mymories context, A.R.E. delivery, and wallet continuity. In later phases, EveryWear extends to validation participation and spatial functions. Software-first on existing devices; hardware-native extensions as the ecosystem matures.</p>
+<p><strong>DeepSync</strong> ; On-chain trade protocol within The Exchange (see CANON_Economy_Systems V2.0). Used for unique, provenance-verified assets such as MyMory and premium cosmetics where ownership and scarcity matter. Activates alongside chain-layer maturity. Visual cue: hexagonal icon.</p>
+<p><strong>EveryWear</strong> ; The sovereign interface layer that hosts the game surface, MyMory vault access, SAL runtime access using MyMory context, A.R.E. delivery, and wallet continuity. In later phases, EveryWear extends to validation participation and spatial functions. Software-first on existing devices; hardware-native extensions as the ecosystem matures.</p>
 <p><strong>GridScrip</strong> ; In-game resistance currency. Earned through gameplay contribution. Anonymous within the game world. Operates outside corporate oversight. NOT a blockchain token.</p>
 <p><strong>Layer U</strong> ; Within the game, Layer U is the evolved rebellion layer operating beneath SOVcorp&#39;s corporate infrastructure. In the real world, Layer U is the spatial XR commercial layer administered through investible SPVs per jurisdiction, with DAO evolution where local regulatory conditions permit. Revenue generated through volumetric XR ad inventory.</p>
 <p><strong>LocalNet</strong> ; Off-chain standard trade protocol within The Exchange (see CANON_Economy_Systems V2.0). Used for high-volume trading of unbound combat gear, crafting resources, and consumables. Available from early game phases without chain dependency. Visual cue: circular icon.</p>
 <p><strong>MetaXity1</strong> ; The arcology setting of Strands the Game, set in Year 555. A post-collapse megastructure governed by SOVcorp, layered over a decentralised resistance network.</p>
-<p><strong>Mymories</strong> ; Sovereign memory objects stored within the EveryWear data vault. Player-owned, privacy-first, and portable. Memory belongs to Mymories within the EveryWear stack, not to My Maits. SAL personalisation is driven by Mymories context, not by standalone agent memory.</p>
-<p><strong>My Maits</strong> ; Agentic AI companions within the Strands ecosystem. Personality and capability defined by composable Trait Shards. Fainance Ltd. (UK) represents the first B2B production deployment of Mait-powered technology.</p>
+<p><strong>MyMory</strong> ; Sovereign memory objects stored within the EveryWear data vault. Player-owned, privacy-first, and portable. Memory belongs to MyMory within the EveryWear stack, not to My Mait. SAL personalisation is driven by MyMory context, not by standalone agent memory.</p>
+<p><strong>My Mait</strong> ; Agentic AI companions within the Strands ecosystem. Personality and capability defined by composable Trait Shards. Fainance Ltd. (UK) represents the first B2B production deployment of Mait-powered technology.</p>
 <p><strong>Proper Gander</strong> ; The diegetic framing for A.R.E. advertisements within the game world. Presented as in-world corporate or resistance broadcasts rather than disruptive pop-ups.</p>
 <p><strong>Protocol Bond</strong> ; The mechanism analogous to stake within the Strands consensus model, but not conventional proof-of-stake. Validation rights derive from identity, application operation, uptime, and contribution, not from token accumulation.</p>
 <p><strong>SIGOPS Terminal</strong> ; The in-game operational hub for resistance faction activity, housing The Exchange, mission systems, and communication infrastructure.</p>
@@ -116,7 +116,7 @@ const chapter: WhitepaperChapter = {
 <hr>
 <h2>Appendix D: Trait System Overview</h2>
 <h3>Trait Categories</h3>
-<p>My Maits personalities are composed from modular Trait Shards across five primary categories:</p>
+<p>My Mait personalities are composed from modular Trait Shards across five primary categories:</p>
 <p><strong>Personality Shards:</strong> Based on Myers-Briggs type dimensions (Extraversion/Introversion, Sensing/Intuition, Thinking/Feeling, Judging/Perceiving). Eight sub-type shards combine to produce sixteen distinct personality profiles, each influencing communication style, decision-making patterns, and interaction preferences.</p>
 <p><strong>Educational Traits:</strong> Language and Literature, History and Culture, Social Sciences, Earth and Environmental Sciences, Biological Sciences, Space and Astronomy, Technology and Digital Literacy, Philosophy and Ethics, Arts and Creativity, Current Events and Media Literacy. Each trait has depth levels from Novice through Adept to Expert.</p>
 <p><strong>Hobby and Interest Traits:</strong> Over one hundred categories spanning Arts and Crafts, Music and Performance, Literature and Writing, Sports and Fitness, Games and Puzzles, Technology and Digital, Nature and Outdoors, Culinary Arts, Collections and Memorabilia, Science and Exploration, Social and Community, and Lifestyle and Personal Development. Each with Casual, Enthusiast, and Expert engagement levels.</p>
@@ -139,7 +139,7 @@ const chapter: WhitepaperChapter = {
 </tr>
 </thead>
 <tbody><tr>
-<td>Mymories</td>
+<td>MyMory</td>
 <td>Player actions, agent training, faction rewards</td>
 <td>Internal game asset, player-sovereign</td>
 <td>Exportable and chain-bindable when chain layer is active</td>
@@ -181,7 +181,7 @@ const chapter: WhitepaperChapter = {
 <td>Traded for in-game currency only</td>
 </tr>
 </tbody></table>
-<p>The asset ecosystem distinguishes between two categories. On-chain provenance applies where ownership, scarcity, and provenance materially matter: Mymories, cosmetic Trait Shards, and agent cosmetics become exportable and chain-bindable once the Strands chain is active, but function as internal game assets in pre-chain phases. Standard gameplay items remain lightweight internal assets throughout all phases, ensuring frictionless gameplay regardless of chain status. All assets function within the game economy from launch; chain binding is an extension, not a prerequisite.</p>
+<p>The asset ecosystem distinguishes between two categories. On-chain provenance applies where ownership, scarcity, and provenance materially matter: MyMory, cosmetic Trait Shards, and agent cosmetics become exportable and chain-bindable once the Strands chain is active, but function as internal game assets in pre-chain phases. Standard gameplay items remain lightweight internal assets throughout all phases, ensuring frictionless gameplay regardless of chain status. All assets function within the game economy from launch; chain binding is an extension, not a prerequisite.</p>
 `,
 };
 

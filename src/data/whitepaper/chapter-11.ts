@@ -68,7 +68,7 @@ const chapter: WhitepaperChapter = {
 <li>A.R.E. attention data accumulates across seasons, proving advertiser value at sustained scale</li>
 <li>Layer U pilot deployments begin in target cities where the data and commercial readiness support them</li>
 <li>EveryWear evolves from Telegram Mini App through Chromium fork and toward the WebGL bridge as player base and platform requirements demand</li>
-<li>Mymories and SAL begin accumulating meaningful context as the vault and adaptive layers mature</li>
+<li>MyMory and SAL begin accumulating meaningful context as the vault and adaptive layers mature</li>
 <li>The Blank Sync Ledger activates for players who cross the purchase threshold, building the invisible wallet base</li>
 <li>Out-of-game A.R.E. surfaces emerge through the Chromium fork, extending compensated attention beyond game sessions</li>
 </ul>

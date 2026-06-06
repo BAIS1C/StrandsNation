@@ -62,7 +62,7 @@ export default function PhilosophyPage() {
           <p className={styles.prose}>
             The technical and economic blueprint. Token architecture, memory infrastructure,
             governance models, game economy primitives, and the full system design behind Strands
-            Chain, EveryWear, MyMories, and the SIGOPS community development protocol.
+            Chain, EveryWear, MyMory, and the SIGOPS community development protocol.
           </p>
           <p className={styles.prose}>
             If the manifesto is the why, the whitepaper is the how. Every mechanism, every

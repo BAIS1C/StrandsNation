@@ -34,11 +34,11 @@ What the Mini App cannot do is persist data beyond the session, host sovereign s
 
 When the Mini App has proven distribution and retention, EveryWear graduates into a dedicated Chromium-forked browser. This is not merely a browser with game features bolted on. It is a privacy-first sovereign client that carries three capabilities the Mini App could not:
 
-**Mymories.** The sovereign data vault activates at this phase. Mymories is the persistence layer through which the player's interaction history, preference signals, consent records, and contextual data are stored in player-controlled encrypted storage. It is the data substrate that makes My Maits contextually aware across sessions. In Phase 1, the game could only store transient session state. In Phase 2, EveryWear becomes the player's data home.
+**MyMory.** The sovereign data vault activates at this phase. MyMory is the persistence layer through which the player's interaction history, preference signals, consent records, and contextual data are stored in player-controlled encrypted storage. It is the data substrate that makes My Mait contextually aware across sessions. In Phase 1, the game could only store transient session state. In Phase 2, EveryWear becomes the player's data home.
 
 **Wallet integration.** The Blank Sync Ledger, the player's native wallet, activates invisibly at the first purchase threshold, when simple fiat participation graduates into persistent asset ownership and settlement history. The wallet is embedded in EveryWear, not bolted on as an extension. It handles TON settlement, asset provenance, and later, $KREDS when the chain layer activates. The player sees purchase confirmations. The underlying blockchain mechanics remain abstracted by default unless the player chooses to inspect or engage them directly.
 
-**My Maits interface.** EveryWear becomes one of the primary surfaces through which players interact with their compiled Mait agents. The Chromium fork provides the runtime environment for agentic interaction. The Mait can assist with browsing, provide contextual information, and operate as a personal AI layer across the player's digital activity, not only inside the game.
+**My Mait interface.** EveryWear becomes one of the primary surfaces through which players interact with their compiled Mait agents. The Chromium fork provides the runtime environment for agentic interaction. The Mait can assist with browsing, provide contextual information, and operate as a personal AI layer across the player's digital activity, not only inside the game.
 
 The Chromium fork also hosts the first out-of-game A.R.E. surface. When the player browses outside of game sessions, the A.R.E. panel offers consented, compensated attention opportunities. The diegetic framing is lighter than the in-game Proper Gander aesthetic, but the consent architecture and revenue split are identical.
 
@@ -60,7 +60,7 @@ This is the phase where the tension between game fidelity and platform function 
 
 This is the architecturally decisive phase. Unity and Unreal become their own dedicated game experiences, delivering the visual and interactive fidelity that WebGL cannot match. These are no longer "EveryWear" in the narrow sense. They are standalone game clients — rich, immersive, optimised for their respective engines — that launch from and return to the EveryWear shell.
 
-EveryWear itself remains the persistent interface: the launcher, the vault, the wallet, the agent surface, the A.R.E. host, and the continuity layer that ties the player's identity and data across every game client and platform surface they use. A player might run the Unity client on desktop, the Unreal client on console, and the EveryWear browser on mobile. In every case, their Mymories vault, their compiled Mait, their wallet state, and their earning history persist through EveryWear.
+EveryWear itself remains the persistent interface: the launcher, the vault, the wallet, the agent surface, the A.R.E. host, and the continuity layer that ties the player's identity and data across every game client and platform surface they use. A player might run the Unity client on desktop, the Unreal client on console, and the EveryWear browser on mobile. In every case, their MyMory vault, their compiled Mait, their wallet state, and their earning history persist through EveryWear.
 
 The bifurcation is necessary because a high-fidelity game client and a sovereign runtime shell should not remain one bloated object. They have different performance requirements, different update cycles, different scaling characteristics, and different user expectations. Splitting them allows each to evolve at its own pace without compromising the other.
 
@@ -76,9 +76,9 @@ At this phase, five core functions converge:
 
 **Game Client orchestration.** EveryWear launches and coordinates game sessions across multiple engine targets (Unity, Unreal, WebGL) while maintaining persistent identity and state.
 
-**Data Vault.** Mymories at full maturity: the player's sovereign memory stack encompassing interaction history, consent records, asset provenance, spatial data, and the contextual substrate that powers their Mait agents. All data stored in player-controlled encrypted storage, portable across devices.
+**Data Vault.** MyMory at full maturity: the player's sovereign memory stack encompassing interaction history, consent records, asset provenance, spatial data, and the contextual substrate that powers their Mait agents. All data stored in player-controlled encrypted storage, portable across devices.
 
-**SAL Runtime.** The Structured Adaptive Layer operates within EveryWear using context provided by Mymories. As the vault matures, this enables a personalised contextual SAL: a user-shaped adaptive behaviour layer built from Sync Profile, accumulated interaction history, consented data, and contextual signals. This becomes one of the building blocks of future decentralised cognition.
+**SAL Runtime.** The Structured Adaptive Layer operates within EveryWear using context provided by MyMory. As the vault matures, this enables a personalised contextual SAL: a user-shaped adaptive behaviour layer built from Sync Profile, accumulated interaction history, consented data, and contextual signals. This becomes one of the building blocks of future decentralised cognition.
 
 **A.R.E. Host.** The full Attention Redistribution Engine runs through EveryWear: consent management, context assembly, diegetic delivery, attention measurement, revenue calculation, and payment settlement. In XR environments, attention verification graduates from interaction-based measurement to spatial sensing through WiFi DensePose presence detection and, eventually, hardware-level eye tracking.
 
@@ -93,8 +93,8 @@ At full maturity, EveryWear carries five functions simultaneously. Remove any on
 | Function | Role | Phase Activated |
 |---|---|---|
 | Game Client Orchestration | Launches and coordinates game sessions across engine targets | Phase 3 |
-| Data Vault (Mymories) | Sovereign memory, consent, asset provenance, spatial data | Phase 2 |
-| SAL Runtime | Personalised contextual behaviour grounded in the Mymories substrate | Phase 5 |
+| Data Vault (MyMory) | Sovereign memory, consent, asset provenance, spatial data | Phase 2 |
+| SAL Runtime | Personalised contextual behaviour grounded in the MyMory substrate | Phase 5 |
 | A.R.E. Host | Consent-based attention economy with fiat settlement | Phase 2 (basic), Phase 5 (full spatial) |
 | Validation and Spatial Data | Chain validation, XR spatial layer hosting | Phase 5 |
 

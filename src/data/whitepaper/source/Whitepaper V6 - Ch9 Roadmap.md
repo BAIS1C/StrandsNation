@@ -90,7 +90,7 @@ During this period:
 - A.R.E. attention data accumulates across seasons, proving advertiser value at sustained scale
 - Layer U pilot deployments begin in target cities where the data and commercial readiness support them
 - EveryWear evolves from Telegram Mini App through Chromium fork and toward the WebGL bridge as player base and platform requirements demand
-- Mymories and SAL begin accumulating meaningful context as the vault and adaptive layers mature
+- MyMory and SAL begin accumulating meaningful context as the vault and adaptive layers mature
 - The Blank Sync Ledger activates for players who cross the purchase threshold, building the invisible wallet base
 - Out-of-game A.R.E. surfaces emerge through the Chromium fork, extending compensated attention beyond game sessions
 

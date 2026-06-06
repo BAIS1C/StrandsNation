@@ -10,9 +10,9 @@
 
 **Client Ledger** — A cryptographically compiled local ledger maintained by each participant on their own device. Contains spendable balance, participation context, and transaction-relevant application state. The Strands chain confirms the truthfulness of client ledger state, not the other way around.
 
-**DeepSync** — On-chain trade protocol within The Exchange (see CANON_Economy_Systems V2.0). Used for unique, provenance-verified assets such as Mymories and premium cosmetics where ownership and scarcity matter. Activates alongside chain-layer maturity. Visual cue: hexagonal icon.
+**DeepSync** — On-chain trade protocol within The Exchange (see CANON_Economy_Systems V2.0). Used for unique, provenance-verified assets such as MyMory and premium cosmetics where ownership and scarcity matter. Activates alongside chain-layer maturity. Visual cue: hexagonal icon.
 
-**EveryWear** — The sovereign interface layer that hosts the game surface, Mymories vault access, SAL runtime access using Mymories context, A.R.E. delivery, and wallet continuity. In later phases, EveryWear extends to validation participation and spatial functions. Software-first on existing devices; hardware-native extensions as the ecosystem matures.
+**EveryWear** — The sovereign interface layer that hosts the game surface, MyMory vault access, SAL runtime access using MyMory context, A.R.E. delivery, and wallet continuity. In later phases, EveryWear extends to validation participation and spatial functions. Software-first on existing devices; hardware-native extensions as the ecosystem matures.
 
 **GridScrip** — In-game resistance currency. Earned through gameplay contribution. Anonymous within the game world. Operates outside corporate oversight. NOT a blockchain token.
 
@@ -22,9 +22,9 @@
 
 **MetaXity1** — The arcology setting of Strands the Game, set in Year 555. A post-collapse megastructure governed by SOVcorp, layered over a decentralised resistance network.
 
-**Mymories** — Sovereign memory objects stored within the EveryWear data vault. Player-owned, privacy-first, and portable. Memory belongs to Mymories within the EveryWear stack, not to My Maits. SAL personalisation is driven by Mymories context, not by standalone agent memory.
+**MyMory** — Sovereign memory objects stored within the EveryWear data vault. Player-owned, privacy-first, and portable. Memory belongs to MyMory within the EveryWear stack, not to My Mait. SAL personalisation is driven by MyMory context, not by standalone agent memory.
 
-**My Maits** — Agentic AI companions within the Strands ecosystem. Personality and capability defined by composable Trait Shards. Fainance Ltd. (UK) represents the first B2B production deployment of Mait-powered technology.
+**My Mait** — Agentic AI companions within the Strands ecosystem. Personality and capability defined by composable Trait Shards. Fainance Ltd. (UK) represents the first B2B production deployment of Mait-powered technology.
 
 **Proper Gander** — The diegetic framing for A.R.E. advertisements within the game world. Presented as in-world corporate or resistance broadcasts rather than disruptive pop-ups.
 
@@ -126,7 +126,7 @@ All city deployments follow the same SPV structure. Each city represents a stand
 
 ### Trait Categories
 
-My Maits personalities are composed from modular Trait Shards across five primary categories:
+My Mait personalities are composed from modular Trait Shards across five primary categories:
 
 **Personality Shards:** Based on Myers-Briggs type dimensions (Extraversion/Introversion, Sensing/Intuition, Thinking/Feeling, Judging/Perceiving). Eight sub-type shards combine to produce sixteen distinct personality profiles, each influencing communication style, decision-making patterns, and interaction preferences.
 
@@ -152,11 +152,11 @@ Traits across categories interact to produce emergent characteristics. A Mait co
 
 | Asset Type | Creation | Ownership (Pre-Chain) | Ownership (Chain-Active) | Monetisation |
 |-----------|----------|----------------------|-------------------------|--------------|
-| Mymories | Player actions, agent training, faction rewards | Internal game asset, player-sovereign | Exportable and chain-bindable when chain layer is active | Tradeable in premium market post-chain |
+| MyMory | Player actions, agent training, faction rewards | Internal game asset, player-sovereign | Exportable and chain-bindable when chain layer is active | Tradeable in premium market post-chain |
 | Cosmetic Trait Shards | Premium market, seasonal pass | Internal game asset | Chain-bindable when chain layer is active | Alters visual effects; no gameplay impact |
 | Agent Cosmetics | Premium market, seasonal pass, faction-earned | Internal game asset | Chain-bindable when chain layer is active | Cosmetic value and trade post-chain |
 | Faction Badges and Titles | Earned via gameplay and reputation | Internal game record | Internal game record (non-exportable) | Non-tradeable prestige display |
 | Standard Gear and Consumables | Earned and crafted in-game | Internal game asset | Internal game asset | Pure gameplay utility |
 | Ability and Tuning Shards | Earned via gameplay | Internal game asset | Internal game asset | Traded for in-game currency only |
 
-The asset ecosystem distinguishes between two categories. On-chain provenance applies where ownership, scarcity, and provenance materially matter: Mymories, cosmetic Trait Shards, and agent cosmetics become exportable and chain-bindable once the Strands chain is active, but function as internal game assets in pre-chain phases. Standard gameplay items remain lightweight internal assets throughout all phases, ensuring frictionless gameplay regardless of chain status. All assets function within the game economy from launch; chain binding is an extension, not a prerequisite.
+The asset ecosystem distinguishes between two categories. On-chain provenance applies where ownership, scarcity, and provenance materially matter: MyMory, cosmetic Trait Shards, and agent cosmetics become exportable and chain-bindable once the Strands chain is active, but function as internal game assets in pre-chain phases. Standard gameplay items remain lightweight internal assets throughout all phases, ensuring frictionless gameplay regardless of chain status. All assets function within the game economy from launch; chain binding is an extension, not a prerequisite.

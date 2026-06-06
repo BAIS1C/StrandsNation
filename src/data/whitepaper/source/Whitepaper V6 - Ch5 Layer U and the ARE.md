@@ -60,9 +60,9 @@ The logic is sequential and non-negotiable. Each stage generates the data, the r
 
 The A.R.E. operates through a six-stage interaction pipeline that governs each attention event from consent to payment:
 
-**Consent.** Explicit, informed, revocable. Stored in the player's Mymories vault with timestamp and version hash. Never activated before onboarding completes. The player chooses to participate. They can withdraw at any time.
+**Consent.** Explicit, informed, revocable. Stored in the player's MyMory vault with timestamp and version hash. Never activated before onboarding completes. The player chooses to participate. They can withdraw at any time.
 
-**Context Assembly.** Happens locally within EveryWear using the Mymories data substrate. An anonymous category vector is transmitted to the ad-matching layer. No personally identifiable information leaves the device. The advertiser sees a category request from an anonymous node, not a person.
+**Context Assembly.** Happens locally within EveryWear using the MyMory data substrate. An anonymous category vector is transmitted to the ad-matching layer. No personally identifiable information leaves the device. The advertiser sees a category request from an anonymous node, not a person.
 
 **Diegetic Delivery.** In-game, ads carry the full Proper Gander aesthetic. Out-of-game, the frame is lighter but the structural wrapper remains. The delivery is never a raw interruptive pop-up. It is always contextualised within the Strands visual and narrative language.
 

@@ -14,7 +14,7 @@ EveryWear evolves in phases because each capability layer depends on the one ben
 
 Phase 1 is shipping today. It is the Tauri-native desktop OS with the active applet ecosystem and the shared runtime substrate. This is the foundation everything else rests on.
 
-Phase 2 deepens persistence: Mymories vault, wallet integration, A.R.E. client. This work is partially in flight; the Mymories substrate and the wallet are in active build, and the A.R.E. client awaits the upstream Layer U matching layer that Chapter 7 of this whitepaper describes.
+Phase 2 deepens persistence: MyMory vault, wallet integration, A.R.E. client. This work is partially in flight; the MyMory substrate and the wallet are in active build, and the A.R.E. client awaits the upstream Layer U matching layer that Chapter 7 of this whitepaper describes.
 
 Phase 3 introduces high-fidelity game launch from within EveryWear, with WebGL bridging or native engine integration as the game evolves beyond what the desktop OS shell can render directly.
 
@@ -78,7 +78,7 @@ The shell owns OAuth and connected-service authentication. Discourse OAuth flow 
 
 The shell owns the wallet runtime. Ed25519 key generation, transaction signing, balance display, history. TON Jetton integration in the current phase. Native Strands chain integration when the chain activates per Chapter 9 of this whitepaper. The wallet is part of the shell because every applet that needs settlement (Gener8 for paid licences, Vid Studio for paid templates, future Layer U publishing) talks to the wallet through the shell rather than holding its own key material.
 
-The shell owns the Mymories vault. Tantivy text index over the user's memory documents today. Vector index later. AppletDocument schema scoped per applet so each applet sees only what it is entitled to see. The vault is the local context substrate that powers A.R.E. context assembly, Mait personality grounding, and applet personalisation. It is mounted from the user's local disk. It never synchronises raw content to any server.
+The shell owns the MyMory vault. Tantivy text index over the user's memory documents today. Vector index later. AppletDocument schema scoped per applet so each applet sees only what it is entitled to see. The vault is the local context substrate that powers A.R.E. context assembly, Mait personality grounding, and applet personalisation. It is mounted from the user's local disk. It never synchronises raw content to any server.
 
 Heavyweight runtime artefacts live under a central installation tree at `~/.everywear/`. Models, engine binaries, vault index, video encoder, Python sidecar virtual environments for LTX and future diffusion-based applets, shared font caches, shared thumbnail caches. Per the Phase 2.5 shared-surface hoisting plan, this central tree is the install-time hoist destination for anything used by two or more applets. The applets themselves remain thin in their own installation directories; the shared assets sit centrally and are brokered by the shell.
 
@@ -88,7 +88,7 @@ This is the substrate that makes EveryWear feel like an operating system rather 
 
 EveryWear is the only system in the Strands architecture that crosses the user's consent boundary. The boundary is enforced not by policy but by architecture. Specific data classes never leave the device. Specific data classes leave only in anonymised aggregated form. Specific data classes leave only with explicit consent.
 
-The data classes that never leave the device under any circumstance: the Mymories vault contents (the user's interaction history, preferences, consent records), camera frames captured by the user's device or paired glasses (when the XR delivery pipeline is active), the segmentation outputs produced by SAM on the user's NPU, the depth maps produced by DepthAnything on the user's NPU, the RF environment fingerprint captured by the user's phone radios, the user's local model files and inference artefacts.
+The data classes that never leave the device under any circumstance: the MyMory vault contents (the user's interaction history, preferences, consent records), camera frames captured by the user's device or paired glasses (when the XR delivery pipeline is active), the segmentation outputs produced by SAM on the user's NPU, the depth maps produced by DepthAnything on the user's NPU, the RF environment fingerprint captured by the user's phone radios, the user's local model files and inference artefacts.
 
 The data classes that leave only in anonymised opaque form: the A.R.E. category vector emitted to the Layer U matching layer when the user has opted into a content slot. This vector represents the user as an anonymous category profile, not as an identity. The matching layer receives a request from an unknown participant and returns inventory candidates. There is no session identity, no IP correlation maintained at the matching layer, no return path to the user's device that bypasses the user's own consent.
 
@@ -98,17 +98,17 @@ This boundary is what makes the A.R.E. revenue mechanism structurally privacy-pr
 
 Chapter 5 of this whitepaper details how this boundary is implemented operationally across the context-protocol enforcement layer. Chapter 7 details the A.R.E. pipeline that respects this boundary stage by stage. Chapter 9 details the chain architecture that settles the proofs.
 
-## Phase 2: Mymories, Wallet, Agentic Layer Integration
+## Phase 2: MyMory, Wallet, Agentic Layer Integration
 
 **Purpose:** Deepen persistence and connect the runtime to the user's economic and agentic life.
 
-Phase 2 brings the Mymories vault into full daily operation. In Phase 1 the vault exists as a Tantivy-indexed local document store with per-applet scoping. In Phase 2 the vault becomes the substrate that every applet draws from for personalisation and that Kasai uses for cross-session continuity. The user's memory becomes their actual memory in the runtime sense: the agents and tools they use remember what they have done, what they prefer, what they have consented to, without that memory ever leaving the device.
+Phase 2 brings the MyMory vault into full daily operation. In Phase 1 the vault exists as a Tantivy-indexed local document store with per-applet scoping. In Phase 2 the vault becomes the substrate that every applet draws from for personalisation and that Kasai uses for cross-session continuity. The user's memory becomes their actual memory in the runtime sense: the agents and tools they use remember what they have done, what they prefer, what they have consented to, without that memory ever leaving the device.
 
 Phase 2 also brings the wallet into the user's daily flow. The Blank Sync Ledger activates invisibly at the first purchase threshold, when fiat participation graduates into persistent asset ownership. The user sees purchase confirmations. The wallet handles TON Jetton settlement, Discourse-linked OAuth bindings, and the early-stage A.R.E. payment receipts. The underlying blockchain mechanics remain abstracted unless the user chooses to inspect them.
 
 The A.R.E. client integrates into EveryWear in Phase 2 in its early form: consent management for browsing contexts, opaque category vector emission to the Layer U matching layer, and impression receipt logging in USDT-on-TON. The full XR-bound A.R.E. functionality activates later in Phase 5.
 
-The agentic surface deepens. Kasai becomes more than an applet; it becomes a runtime-level agent that can broker tool calls across applets, query the Mymories vault on the user's behalf, and serve as the natural-language interface to the EveryWear runtime. The user can ask Kasai to find a track they made last month, schedule a holographic event publication, draft a release note for a new aesthetic shard, or perform similar cross-applet tasks without context-switching between applet windows.
+The agentic surface deepens. Kasai becomes more than an applet; it becomes a runtime-level agent that can broker tool calls across applets, query the MyMory vault on the user's behalf, and serve as the natural-language interface to the EveryWear runtime. The user can ask Kasai to find a track they made last month, schedule a holographic event publication, draft a release note for a new aesthetic shard, or perform similar cross-applet tasks without context-switching between applet windows.
 
 Phase 2 proves that EveryWear can carry persistent identity, persistent wealth, and persistent context across sessions. What it cannot yet do is render the high-fidelity 3D experience the game requires as it evolves beyond the desktop OS shell. That tension is resolved in Phase 3.
 
@@ -128,7 +128,7 @@ The tension between game fidelity and platform leanness becomes architecturally 
 
 This is the architecturally decisive phase. Unity and Unreal clients become standalone game experiences in their own right, delivering visual and interactive fidelity that no shell-embedded engine can match. These are no longer EveryWear in the narrow sense. They are dedicated game clients that launch from and return to the EveryWear shell.
 
-EveryWear itself remains the persistent interface: the launcher, the vault, the wallet, the agent surface, the A.R.E. host, the continuity layer that ties the player's identity and data across every game client and platform surface. A player might run the Unity client on desktop, the Unreal client on console, and the EveryWear browser companion on mobile. In every case, their Mymories, their Mait, their wallet, and their earning history persist through EveryWear.
+EveryWear itself remains the persistent interface: the launcher, the vault, the wallet, the agent surface, the A.R.E. host, the continuity layer that ties the player's identity and data across every game client and platform surface. A player might run the Unity client on desktop, the Unreal client on console, and the EveryWear browser companion on mobile. In every case, their MyMory, their Mait, their wallet, and their earning history persist through EveryWear.
 
 After bifurcation, EveryWear is definitively not the game client. It is the persistent layer around the game clients, and around every other surface in the Strands ecosystem.
 
@@ -142,9 +142,9 @@ At this phase, six core functions converge.
 
 Game client orchestration. EveryWear launches and coordinates game sessions across multiple engine targets while maintaining persistent identity and state.
 
-Data vault at full maturity. Mymories holds the user's complete sovereign memory: interaction history, consent records, asset provenance, spatial trace data, contextual substrate. All data stored locally, encrypted, portable across user-controlled devices.
+Data vault at full maturity. MyMory holds the user's complete sovereign memory: interaction history, consent records, asset provenance, spatial trace data, contextual substrate. All data stored locally, encrypted, portable across user-controlled devices.
 
-SAL runtime. The Structured Adaptive Layer operates within EveryWear using Mymories context. As the vault matures, this enables a personalised contextual SAL: an adaptive behaviour layer built from the user's accumulated experience, consented data, and contextual signals.
+SAL runtime. The Structured Adaptive Layer operates within EveryWear using MyMory context. As the vault matures, this enables a personalised contextual SAL: an adaptive behaviour layer built from the user's accumulated experience, consented data, and contextual signals.
 
 A.R.E. host at full spatial capability. The complete six-stage A.R.E. pipeline runs through EveryWear: consent management, context assembly, diegetic delivery, attention measurement, revenue calculation, and payment settlement. In XR environments, attention measurement progresses through the maturity ladder: interaction-based dwell metrics, RF presence detection, and eye-tracking on capable hardware.
 
@@ -161,7 +161,7 @@ At full maturity EveryWear carries six functions simultaneously. Remove any one 
 | Function | Role | Phase Activated |
 |---|---|---|
 | Applet Runtime Host | Hosts creator tools, manages shared substrate | Phase 1 |
-| Data Vault (Mymories) | Sovereign memory, consent, asset provenance, spatial trace | Phase 2 |
+| Data Vault (MyMory) | Sovereign memory, consent, asset provenance, spatial trace | Phase 2 |
 | Wallet Runtime | Identity, asset ownership, settlement | Phase 2 |
 | Agent Surface (Kasai) | Cross-applet broker, natural-language runtime interface | Phase 2 |
 | Game Client Orchestration | Launches game sessions across engine targets | Phase 3 |

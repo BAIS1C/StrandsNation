@@ -16,7 +16,9 @@ const HUB_PRODUCTS = [
   { id: 'VIDGEN',      name: '3NVIGEN',                   copy: 'Short-form video generation. WAN 2.2 on consumer hardware, fast iteration, broadcast-clean output. API facilities are available when you want more generative power, or your local GPU is needed for other activities.',                                                                  variant: 'pink'   as const, badge: 'COMING SOON' },
   { id: 'STYLEFORGE',  name: 'STYLE FORGE',               copy: 'Style training and LoRA fabrication. Forge a house aesthetic once, ship it across every visual model in the stack. Local training on consumer GPUs. API facilities are available when you want more generative power, or your local GPU is needed for other activities.',                variant: 'pink'   as const, badge: 'COMING SOON' },
   { id: 'STRANDS',     name: 'STRANDS: THE GAME',         copy: 'The post-capitalist game engine. MetaXity1 as the world, Blanks as the player avatars, Block Gangs as the social fabric, SIGOPS as the agentic economy, Layer U as the substrate. A persistent on-chain civilisation that runs on the same sovereign rails as the rest of the stack.',     variant: 'yellow' as const, badge: 'COMING SOON' },
-  { id: 'MYMORIES',    name: 'MYMORIES',                  copy: 'Decentralised Proof of Valuable Memory. Portable, tradeable, sovereign AI memory. The runtime.',                                                                                                                                                                                            variant: 'purple' as const, badge: 'COMING SOON' },
+  { id: 'MYMAIT',      name: 'MY MAIT',                   copy: 'Your free AI companion and orchestration chassis. Untiered, personality-on, ships with EveryWear. Approves tools, routes memory, and coordinates Educ8 and creative workflows across the stack.',                                                                                            variant: 'purple' as const, badge: 'FREE AT LAUNCH' },
+  { id: 'EDUC8',       name: 'EDUC8',                     copy: 'The free knowledge and education engine. Offline courseware, local document RAG, maps, notes, and a teacher agent that turns your own material into something you can learn from. Online, weak-signal, or fully unplugged.',                                                                 variant: 'purple' as const, badge: 'FREE AT LAUNCH' },
+  { id: 'MYMORY',    name: 'MYMORY',                  copy: 'Decentralised Proof of Valuable Memory. Portable, tradeable, sovereign AI memory. The runtime.',                                                                                                                                                                                            variant: 'purple' as const, badge: 'COMING SOON' },
   { id: 'THIRD',       name: 'THIRD-PARTY APPS',          copy: 'Every developer gets the same rails. Agentic plug-ins, federated apps, distributed services.',                                                                                                                                                                                              variant: 'purple' as const, badge: 'OPEN SDK' },
 ];
 
@@ -49,8 +51,8 @@ export default function EveryWearPage() {
         <div className={styles.hero}>
           <div className={styles.tm}>EVERYWEAR&trade;</div>
           <h1 className={styles.title}>
-            The Browser-Native<br />
-            <span className={styles.titleAccent}>Agentic OS</span>
+            The <span className={styles.titleAccent}>HOME</span> Platform<br />
+            for AI
           </h1>
           <p className={styles.tagline}>
             Everything. EveryWear&trade;. All at once.
@@ -169,20 +171,4 @@ export default function EveryWearPage() {
         <Card variant="pink">
           <div className={styles.cardTitleMd} data-variant="pink">Why Federated Matters</div>
           <p className={styles.body}>
-            Every tool inside EveryWear talks to every other tool through an open protocol. A music
-            model can query the vault. An image model can call the director. A third-party agent can
-            compose the whole chain. You choose where inference runs: local GPU, a friend&rsquo;s node,
-            a federated pool, or an API vendor. EveryWear is the routing layer that makes the choice
-            invisible.
-          </p>
-        </Card>
-
-        <Callout
-          variant="cyan"
-          label="MYMORIES CHROME EXTENSION"
-          text="The first EveryWear surface is shipping now as a Chrome extension. Install it to start building your persistent memory graph before the full shell lands. Your browsing context, preferences, decisions: indexed, encrypted, sovereign."
-        />
-      </SectionWrapper>
-    </div>
-  );
-}
+            Every tool inside EveryWear talks to every

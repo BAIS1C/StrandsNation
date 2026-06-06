@@ -28,7 +28,7 @@ The Strands ecosystem is not a single product. It is a sequenced deployment of i
 
 This sequencing is the defining structural decision of the project. Most Web 3.0 ventures launch tokens first and hope adoption follows. Strands inverts that logic entirely. The blockchain layer is the last component to activate, not the first. It earns its place by being needed, not by being available.
 
-The ecosystem comprises several core modules, each solving a distinct failure in the current landscape: a personalised companion layer (My Maits) that provides adaptive AI interaction within the game and wider ecosystem; a unified client (EveryWear) that evolves from lightweight app to sovereign personal platform; a spatial governance and attention economy infrastructure (Layer U) that deploys consent-based revenue models into real-world urban environments; a native network token ($KREDS) that internalises value circulation so that earning, exchange, and coordination occur within the Strands economy rather than leaking outward; and a privacy-preserving blockchain (Strands Chain) that provides sovereign infrastructure when the ecosystem is ready to govern itself.
+The ecosystem comprises several core modules, each solving a distinct failure in the current landscape: a personalised companion layer (My Mait) that provides adaptive AI interaction within the game and wider ecosystem; a unified client (EveryWear) that evolves from lightweight app to sovereign personal platform; a spatial governance and attention economy infrastructure (Layer U) that deploys consent-based revenue models into real-world urban environments; a native network token ($KREDS) that internalises value circulation so that earning, exchange, and coordination occur within the Strands economy rather than leaking outward; and a privacy-preserving blockchain (Strands Chain) that provides sovereign infrastructure when the ecosystem is ready to govern itself.
 
 These are not co-equal modules launching simultaneously. They are stages in a validation sequence. Each one activates when the prior stage has proven its thesis. The chapters that follow will detail each in full. Chapter 1 establishes why they exist at all.
 
@@ -71,7 +71,7 @@ Three convergences make this the correct moment to build:
 The chapters that follow detail the technical architecture, economic models, and deployment strategies for each component of the Strands ecosystem. The structure mirrors the sequential validation model:
 
 - **Chapter 2** details Strands the Game: architecture, design philosophy, and onboarding logic in practice
-- **Chapter 3** covers My Maits, the personalised companion layer
+- **Chapter 3** covers My Mait, the personalised companion layer
 - **Chapter 4** specifies the EveryWear unified client evolution
 - **Chapter 5** presents Layer U and the Attention Redistribution Engine
 - **Chapter 6** documents $KREDS tokenomics

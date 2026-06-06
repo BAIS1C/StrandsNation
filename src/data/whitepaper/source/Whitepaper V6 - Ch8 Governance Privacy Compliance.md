@@ -34,7 +34,7 @@ Privacy in the Strands ecosystem operates on two complementary principles: data 
 
 ### Data Sovereignty
 
-Meaningful personal and contextual data — including interaction history, preference signals, agent interaction context, consent records, and attention patterns — lives on device, held within the relevant local persistence and context layers provided by Mymories and EveryWear. Not all categories are stored in the same way or in the same structure, but the principle is uniform: personal data does not transit to centralised servers, does not settle on chain, and remains under user control. Only proofs, attestations, settlement records, provenance, and related verifiable outputs move to the chain where required.
+Meaningful personal and contextual data — including interaction history, preference signals, agent interaction context, consent records, and attention patterns — lives on device, held within the relevant local persistence and context layers provided by MyMory and EveryWear. Not all categories are stored in the same way or in the same structure, but the principle is uniform: personal data does not transit to centralised servers, does not settle on chain, and remains under user control. Only proofs, attestations, settlement records, provenance, and related verifiable outputs move to the chain where required.
 
 This is not a policy commitment layered on top of conventional architecture. It is a structural consequence of the client-ledger model described in Chapter 7. The device holds the state. The chain confirms the truthfulness of that state without accessing the underlying data.
 
@@ -50,7 +50,7 @@ The privacy model is not absolute anonymity. It is selective disclosure governed
 
 Consent within Strands is explicit, informed, granular, and revocable. The A.R.E. consent pipeline described in Chapter 5 establishes the pattern: no data collection before onboarding completes, no consent bundling, no dark patterns, and revocation that takes immediate effect.
 
-This consent architecture extends across the ecosystem. Mymories data licensing, Trait Shard marketplace activity, Layer U spatial interaction, and any future data-dependent service all operate under the same consent framework. The user grants consent per context, per purpose, and per duration — and can revoke at any point without penalty.
+This consent architecture extends across the ecosystem. MyMory data licensing, Trait Shard marketplace activity, Layer U spatial interaction, and any future data-dependent service all operate under the same consent framework. The user grants consent per context, per purpose, and per duration — and can revoke at any point without penalty.
 
 ## Regulatory Compliance
 

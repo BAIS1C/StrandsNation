@@ -81,7 +81,7 @@ Second, it enforces the wiki-first rule. Before any code edit, the agent must lo
 
 Third, it provides anti-hallucination guardrails. The agent is required to read every file it intends to edit, in full, within the current session. The agent is forbidden from assuming function signatures, import paths, or auth flows from memory. When working through a deep module chain such as authentication or state management, the agent must map the full call chain before making any change, write it out in the conversation, and get confirmation before editing any link in the chain. If the agent loses track of its position in a file or flow, it must say so explicitly and re-read rather than guess.
 
-Fourth, it integrates with the Mymories vault for persistent memory across sessions. Architectural decisions made in one session are filed to the vault. Subsequent sessions retrieve them rather than reconstructing them.
+Fourth, it integrates with the MyMory vault for persistent memory across sessions. Architectural decisions made in one session are filed to the vault. Subsequent sessions retrieve them rather than reconstructing them.
 
 The skill is not a suggestion. When loaded, it modifies the agent's behaviour mechanically. An agent under the context-protocol skill cannot perform a bulk edit across multiple files without walking through each one. An agent under the skill cannot edit a file it has not read in the current session.
 
@@ -115,19 +115,19 @@ On the runtime install side, the largest single win is the LTX Python virtual en
 
 The decision criterion is simple. If something is shared, ask first whether it is pure logic with no large runtime artefact. If yes, hoist to a crate or package. If it is a heavyweight runtime artefact such as a native binary, Python environment, or large model file, hoist to the central install tree. If it is both, the logic cratifies and the artefact centralises. The `model-manager` crate plus the `~/.everywear/models/` central model store is the template for this combined pattern.
 
-## Mymories as the Context Substrate
+## MyMory as the Context Substrate
 
 Memory is what makes context-aware tooling possible. An AI runtime without memory is a chatbot that forgets between turns. An AI runtime with memory in the wrong place is a surveillance tool.
 
-Strands solves memory through Mymories: a user-held vault that lives on the user's device, encrypted with the user's keys, and queryable by the agents and applets the user has authorised. The vault is the substrate. The agents query it. The applets read scoped subsets of it. The chain stores no copy of it.
+Strands solves memory through MyMory: a user-held vault that lives on the user's device, encrypted with the user's keys, and queryable by the agents and applets the user has authorised. The vault is the substrate. The agents query it. The applets read scoped subsets of it. The chain stores no copy of it.
 
-Mymories at full maturity holds the user's interaction history, consent records, preference signals, contextual data, asset provenance, and (in later phases) spatial trace data. It is the data substrate that powers the SAL runtime described in Chapter 4. It is the consent ledger that the A.R.E. pipeline queries before any inventory request. It is the personalisation source that allows Mait companions to remember their owner across sessions. It is the memory ground that Kasai uses to maintain continuity between conversations.
+MyMory at full maturity holds the user's interaction history, consent records, preference signals, contextual data, asset provenance, and (in later phases) spatial trace data. It is the data substrate that powers the SAL runtime described in Chapter 4. It is the consent ledger that the A.R.E. pipeline queries before any inventory request. It is the personalisation source that allows Mait companions to remember their owner across sessions. It is the memory ground that Kasai uses to maintain continuity between conversations.
 
-The architectural commitment is that Mymories never leaves the device in raw form. The agents reading from Mymories are running on the user's device. The applets reading from Mymories are running on the user's device. When personalisation requires emitting a signal across the network (the A.R.E. category vector being the canonical example), that signal is computed locally from Mymories content and emitted as an anonymous opaque category, never as raw Mymories data.
+The architectural commitment is that MyMory never leaves the device in raw form. The agents reading from MyMory are running on the user's device. The applets reading from MyMory are running on the user's device. When personalisation requires emitting a signal across the network (the A.R.E. category vector being the canonical example), that signal is computed locally from MyMory content and emitted as an anonymous opaque category, never as raw MyMory data.
 
 This commitment is what makes the rest of the context-aware tooling architecture possible. The agent can be context-aware because the context lives on the user's machine. The applet can personalise because the personalisation source is local. The runtime can be intelligent without becoming a surveillance dragnet because the intelligence is grounded in memory the user owns and controls.
 
-Chapter 4 details the vault's role as one of the six core functions of EveryWear. Chapter 7 details how the A.R.E. pipeline consumes the vault stage by stage. Chapter 9 details how Mymories integrity is anchored to the chain through cryptographic attestations rather than by copying vault content on-chain.
+Chapter 4 details the vault's role as one of the six core functions of EveryWear. Chapter 7 details how the A.R.E. pipeline consumes the vault stage by stage. Chapter 9 details how MyMory integrity is anchored to the chain through cryptographic attestations rather than by copying vault content on-chain.
 
 ## Kasai as the Context-Aware Agent Runtime
 
@@ -135,7 +135,7 @@ Kasai is the agentic surface of EveryWear. It is the agent that helps the user n
 
 Kasai is built around Big/Small slot orchestration. A heavy reasoning model handles deep planning, multi-step task decomposition, and decisions that require strong language understanding. A lightweight tool-executing model handles fast bounded actions: file lookups, calendar queries, formatting tasks, structured data extraction. The two swap based on which is needed for the current step. The user experiences this as a single fluid agent. The underlying runtime is two model slots with state-driven handoff.
 
-Kasai dispatches tool calls through a `ToolExecutor` trait. Each tool implementation is a separate cratifiable unit per the Phase 2 plan. The trait surface is fixed; the implementations are replaceable. Tools today include shell command execution, filesystem operations, and web fetches. Tools planned include direct Mymories queries, applet IPC calls (so Kasai can drive other applets directly), and Layer U primitive invocations once that API is live.
+Kasai dispatches tool calls through a `ToolExecutor` trait. Each tool implementation is a separate cratifiable unit per the Phase 2 plan. The trait surface is fixed; the implementations are replaceable. Tools today include shell command execution, filesystem operations, and web fetches. Tools planned include direct MyMory queries, applet IPC calls (so Kasai can drive other applets directly), and Layer U primitive invocations once that API is live.
 
 Kasai runs an audit loop that compares the Big model's planned actions against the Small model's executed actions, flagging drift between intent and execution. This is part of the context-awareness contract. The agent must know not only what it intends to do but what it has actually done, and when those diverge it must say so rather than continuing.
 
@@ -205,7 +205,7 @@ The Phase 2 cratification has been planned but not executed. The promotion of th
 
 The Module Contract Template skeletons have been defined but not populated for every module in the codebase. The current wiki (114 kilobytes, 2,734 lines in `WIKI.md`) will be split into per-module pages following the template, with `WIKI.md` reduced to a ~3,000-token index plus the global pipe diagram.
 
-The Mymories vault is mounted as the source of truth for Strands but is not yet always available during Cowork sessions. Mounting it consistently across all relevant sessions is a current operational concern. The vault MCP integration is in active build to make this seamless.
+The MyMory vault is mounted as the source of truth for Strands but is not yet always available during Cowork sessions. Mounting it consistently across all relevant sessions is a current operational concern. The vault MCP integration is in active build to make this seamless.
 
 The Kasai ToolExecutor real dispatch is partially implemented. The trait surface exists; several concrete implementations exist; full coverage across all expected tool categories remains to be completed.
 

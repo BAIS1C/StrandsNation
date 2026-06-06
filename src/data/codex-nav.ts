@@ -7,7 +7,7 @@ export const codexNav: CodexNavItem[] = [
   { id: 'gangs',     icon: '▽', label: 'Block Gangs' },
   { id: 'economy',   icon: '◆', label: 'Economy',          group: 'SYSTEMS' },
   { id: 'skills',    icon: '△', label: 'Operator Paths' },
-  { id: 'maits',     icon: '⬡', label: 'My Maits' },
+  { id: 'maits',     icon: '⬡', label: 'My Mait' },
   { id: 'sigops',    icon: '⊞', label: 'SIGOPS' },
   { id: 'layeru',    icon: '◉', label: 'Layer U' },
   { id: 'gameplay',  icon: '▷', label: 'Core Loop',        group: 'GAMEPLAY' },

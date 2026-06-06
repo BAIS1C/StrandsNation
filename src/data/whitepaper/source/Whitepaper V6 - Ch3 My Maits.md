@@ -1,22 +1,22 @@
-# Whitepaper V6 - Chapter 3: My Maits
+# Whitepaper V6 - Chapter 3: My Mait
 
-## What My Maits Are
+## What My Mait Are
 
-My Maits are adaptive companion agents assembled from modular Trait Shards. These shards are the composable dNFT elements of the system, encoding different aspects of personality, capability, behaviour, knowledge, and identity. A Mait is not a single static token. It is the compiled outcome of shard composition: a unique entity whose character, skills, and appearance emerge from the specific combination of shards that define it.
+My Mait is an adaptive companion agent assembled from modular Trait Shards. These shards are the composable dNFT elements of the system, encoding different aspects of personality, capability, behaviour, knowledge, and identity. A Mait is not a single static token. It is the compiled outcome of shard composition: a unique entity whose character, skills, and appearance emerge from the specific combination of shards that define it.
 
 This compositional architecture is the central technical principle of the system. Traditional digital companions are monolithic: a single model, a single personality, a single set of capabilities. Trait Shards make companion design modular. Each shard is an independent, tradable, evolvable dNFT that governs one dimension of the companion's identity. The player or operator assembles shards into a Mait as a builder assembles components into a system. Change a shard, change the companion. Trade a shard, reshape the personality. Evolve a shard, deepen a capability. The companion is never locked. It is always composable.
 
-My Maits operate across two domains. Inside the game, the shard composition architecture is emulated diegetically: players collect, trade, and compile shards to create companions suited to their class stack, strategy, and style of play. The act of assembling a Mait from shards teaches modular intelligence design through play rather than instruction. Outside the game, the same compositional logic powers a B2B agentic platform already deployed in production through Fainance Ltd. (UK), where Maits serve as FCA-compliant financial guidance agents.
+My Mait operate across two domains. Inside the game, the shard composition architecture is emulated diegetically: players collect, trade, and compile shards to create companions suited to their class stack, strategy, and style of play. The act of assembling a Mait from shards teaches modular intelligence design through play rather than instruction. Outside the game, the same compositional logic powers a B2B agentic platform already deployed in production through Fainance Ltd. (UK), where Maits serve as FCA-compliant financial guidance agents.
 
 The core compositional architecture is shared in both cases. Its orchestration, permissions, and presentation adapt to context.
 
 ## Role Within the Game
 
-Inside Strands the Game, My Maits are the personalised companion layer that makes the player's experience feel more responsive, contextual, and alive.
+Inside Strands the Game, My Mait is the personalised companion layer that makes the player's experience feel more responsive, contextual, and alive.
 
 A player's Mait operates as an adaptive companion calibrated to their Sync Profile and NKQ baseline. It provides contextual guidance during quests, delivers faction-aligned intelligence, assists with economic decisions across the SOVComp and GridScrip economies, and surfaces narrative connections the player might otherwise miss. The Mait's personality is not generic. It reflects the Trait Shards the player has selected or earned, creating a companion whose behaviour, communication style, and priorities are distinct to that player.
 
-My Maits are defined by composable traits and adaptive behaviour, not by acting as the player's persistence layer. Broader memory and data continuity are handled elsewhere in the Strands stack.
+My Mait is defined by composable traits and adaptive behaviour, not by acting as the player's persistence layer. Broader memory and data continuity are handled elsewhere in the Strands stack.
 
 UBComp (Universal Basic Compute) is the in-game resource used to acquire, compile, or refine certain Trait Shards and Mait modifications that are not directly looted through gameplay. This makes companion development an economic decision rather than a purely cosmetic one. Players must choose how to allocate compute toward personalisation, capability growth, and shard assembly.
 
@@ -52,7 +52,7 @@ The compositional design ensures that no single shard defines the Mait in isolat
 
 ## The B2B Framework
 
-My Maits is not exclusively a game feature. The underlying agentic framework, built by Metafintek, is a general-purpose companion platform applicable across industries.
+My Mait is not exclusively a game feature. The underlying agentic framework, built by Metafintek, is a general-purpose companion platform applicable across industries.
 
 The production deployment at Fainance Ltd. (UK) demonstrates this. Fainance operates a Mait-powered financial guidance agent that provides FCA-compliant advisory interaction, demonstrating that the Trait Shard architecture can be configured for regulated professional contexts, not just game entertainment. The same compositional logic that lets a player build a tactical companion inside the game lets a financial services firm build a compliance-aware advisory agent for its clients.
 
@@ -60,4 +60,4 @@ The B2B model supports several use cases: financial services compliance, educati
 
 ## What This Chapter Does Not Cover
 
-This chapter covers the My Maits companion layer as both a game feature and a standalone product. The on-chain infrastructure that will eventually secure Trait Shard ownership and enable trustless shard trading is detailed across Chapters 6 ($KREDS) and 7 (Strands Chain), and activates only after the fiat-economy game has proven the model. The broader client architecture through which Maits are accessed is detailed in Chapter 4 (EveryWear). The attention economy mechanics that Maits contextualise for the player are detailed in Chapter 5 (Layer U and the A.R.E.).
+This chapter covers the My Mait companion layer as both a game feature and a standalone product. The on-chain infrastructure that will eventually secure Trait Shard ownership and enable trustless shard trading is detailed across Chapters 6 ($KREDS) and 7 (Strands Chain), and activates only after the fiat-economy game has proven the model. The broader client architecture through which Maits are accessed is detailed in Chapter 4 (EveryWear). The attention economy mechanics that Maits contextualise for the player are detailed in Chapter 5 (Layer U and the A.R.E.).

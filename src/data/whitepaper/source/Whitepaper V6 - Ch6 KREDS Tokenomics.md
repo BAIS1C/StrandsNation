@@ -82,7 +82,7 @@ $KREDS is designed for network utility, not speculative holding. Its primary use
 
 **Governance.** $KREDS holders participate in network governance decisions: protocol upgrades, emission parameters, Layer U policy frameworks, and ecosystem fund allocation. Governance rights are weighted by validated participation, not by passive holdings or token accumulation.
 
-**Compute and services.** Premium ecosystem functions — enhanced SAL services, expanded Mymories storage, advanced Mait refinement, and premium EveryWear capabilities — are accessed through $KREDS, creating ongoing demand native to the Strands stack rather than generic platform fees.
+**Compute and services.** Premium ecosystem functions — enhanced SAL services, expanded MyMory storage, advanced Mait refinement, and premium EveryWear capabilities — are accessed through $KREDS, creating ongoing demand native to the Strands stack rather than generic platform fees.
 
 ## Token Distribution
 
