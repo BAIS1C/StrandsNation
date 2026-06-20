@@ -41,12 +41,13 @@ function Accordion({ title, children, defaultOpen = false }: {
   );
 }
 
-/* ── Pricing tiers (2026-05-18 rewrite: hybrid ownership + subscription)
+/* ── Pricing tiers (2026-06-21 rewrite: all one-off LIFETIME LICENCES)
    All generation runs on the user's GPU. No per-track tax, no token meters.
-   EveryWear platform is free. 7-day unlimited demo. Gener8 4ever is a
-   one-time $20 purchase for permanent local gen. Pro and Creator Studio
-   are subscriptions that include 4ever functionality; cancel = lose access
-   unless 4ever is also owned. Steam-aligned, ownership-first psychology. */
+   EveryWear platform is free. No subscriptions anywhere: every paid tier is
+   a one-off lifetime licence. Gener8 4ever $20, Gener8 Pro $49, Creator
+   Studio $100 (first 100 seats). Beta discount = lifetime licence; lock the
+   price for life. Upgrade any time by paying only the difference, never
+   re-buying what you already own. Steam-aligned, ownership-first psychology. */
 const TIERS = [
   {
     id: 'GENER8 4EVER',
@@ -62,15 +63,15 @@ const TIERS = [
       'Vid Studio — 540p music videos, beat-sync',
       'FLAC lossless output',
       'VRAM-aware model selection',
-      'Yours forever. No subscription required.',
+      'Yours forever. One licence, no recurring fees.',
     ],
   },
   {
     id: 'GENER8 PRO',
     name: <>S<sup>3</sup> GENER8 PRO</>,
     tagline: 'Full-quality exports + premium features. Evolves with updates.',
-    price: '$13.37',
-    priceUnit: '/mo',
+    price: '$49',
+    priceUnit: 'one-time',
     flagship: false,
     features: [
       'Everything in Gener8 4ever (included)',
@@ -86,11 +87,11 @@ const TIERS = [
     id: 'CREATOR STUDIO',
     name: <>S<sup>3</sup> CREATOR STUDIO</>,
     tagline: 'Full AI creative workstation. Music, video, story.',
-    price: '$28.88',
-    priceUnit: '/mo',
+    price: '$100',
+    priceUnit: 'one-time',
     flagship: true,
     badge: 'FOUNDING · LOCKED',
-    foundingNote: 'First 500 subscribers lock in $28.88/mo for life. Your rate never moves.',
+    foundingNote: 'First 100 seats lock in $100 for life. One licence, yours forever.',
     features: [
       'Everything in Gener8 Pro (included)',
       <>S<sup>3</sup> AI Director — orchestrated video production</>,
@@ -123,7 +124,7 @@ function PricingGrid() {
             {t.price}<span className={styles.priceUnit}>{t.priceUnit}</span>
           </div>
           <div className={styles.tierSub}>
-            {t.priceUnit === 'one-time' ? 'Buy once. Own forever.' : 'Cancel anytime. Includes all lower tiers.'}
+            {t.priceUnit === 'one-time' ? 'Buy once. Own forever.' : 'Lifetime licence. Includes all lower tiers.'}
           </div>
           <ul className={styles.tierFeatures}>
             {t.features.map((f, j) => (
@@ -200,7 +201,7 @@ function PricingCarousel() {
               {t.price}<span className={styles.priceUnit}>{t.priceUnit}</span>
             </div>
             <div className={styles.tierSub}>
-              {t.priceUnit === 'one-time' ? 'Buy once. Own forever.' : 'Cancel anytime. Includes all lower tiers.'}
+              {t.priceUnit === 'one-time' ? 'Buy once. Own forever.' : 'Lifetime licence. Includes all lower tiers.'}
             </div>
             <ul className={styles.tierFeatures}>
               {t.features.map((f, j) => (
@@ -502,7 +503,7 @@ export default function S3ComingSoon() {
                 <p key={i} className={styles.thesisPara}>{p}</p>
               ))}
               <p className={`${styles.thesisPara} ${styles.thesisHighlight}`}>
-                Own it forever for $20. Or subscribe for the full creative workstation. Every generation runs on your hardware. Your files, your rights, your catalogue.
+                Own it forever for $20. Or step up to the full creative workstation, one licence, yours for life. Every generation runs on your hardware. Your files, your rights, your catalogue.
               </p>
             </Accordion>
           </div>
@@ -513,7 +514,7 @@ export default function S3ComingSoon() {
               <p key={i} className={styles.thesisPara}>{p}</p>
             ))}
             <p className={`${styles.thesisPara} ${styles.thesisHighlight}`}>
-              Own it forever for $20. Or subscribe for the full creative workstation. Every generation runs on your hardware. Your files, your rights, your catalogue.
+              Own it forever for $20. Or step up to the full creative workstation, one licence, yours for life. Every generation runs on your hardware. Your files, your rights, your catalogue.
             </p>
           </div>
         )}
@@ -569,7 +570,7 @@ export default function S3ComingSoon() {
             ['INFERENCE', 'LOCAL GPU · NO CLOUD'],
             ['PLATFORM', 'EVERYWEAR · FREE FOREVER'],
             ['TIERS', 'GENER8 4EVER / PRO / CREATOR STUDIO'],
-            ['PRICING', '$20 ONE-TIME / $13.37 / $28.88 PER MONTH'],
+            ['PRICING', '$20 / $49 / $100 ONE-OFF LIFETIME LICENCE'],
             ['GENERATIONS', 'UNLIMITED · ALL TIERS · YOUR HARDWARE'],
           ].map(([label, val]) => (
             <p key={label} className={styles.statusLine}>
@@ -582,9 +583,9 @@ export default function S3ComingSoon() {
 
         {/* ── PRICING ── desktop: 3-card grid + all-in-one banner. mobile: carousel ── */}
         <div className={styles.pricingSection}>
-          <h2 className={styles.sectionHeading}>Own it or subscribe. Your call.</h2>
+          <h2 className={styles.sectionHeading}>One licence. Own it forever.</h2>
           <p className={styles.pricingSub}>
-            Buy Gener8 4ever for $20 and own local AI music forever. Or subscribe for premium features that evolve with every update. No licence fees. No surprises.
+            Buy Gener8 4ever for $20 and own local AI music forever. Step up to Pro or Creator Studio, one-off lifetime licences, never a subscription. Upgrade any time by paying only the difference. No surprises.
           </p>
           {isMobile ? <PricingCarousel /> : <PricingGrid />}
         </div>
@@ -593,7 +594,7 @@ export default function S3ComingSoon() {
         <GpuMatrix />
 
         <p className={styles.promoLine}>
-          Beta Phase 1 complete. We're acting on your feedback. Join the waitlist for the next beta phase. First 500 Creator Studio subs lock in $28.88/mo for life.
+          Beta Phase 1 complete. We're acting on your feedback. Join the waitlist for the next beta phase. First 100 Creator Studio seats lock in $100 for life, one licence, yours forever.
         </p>
 
         <p className={styles.cursor}>
