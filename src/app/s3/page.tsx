@@ -44,9 +44,10 @@ function Accordion({ title, children, defaultOpen = false }: {
 /* ── Pricing tiers (2026-06-21 rewrite: all one-off LIFETIME LICENCES)
    All generation runs on the user's GPU. No per-track tax, no token meters.
    EveryWear platform is free. No subscriptions anywhere: every paid tier is
-   a one-off lifetime licence. Gener8 4ever $20, Gener8 Pro $49, Creator
-   Studio $100 (first 100 seats). Beta discount = lifetime licence; lock the
-   price for life. Upgrade any time by paying only the difference, never
+   a one-off lifetime licence. Discount (first 100 DAYS from launch): Gener8
+   4ever $20, Gener8 Pro $49, Creator Studio $100. Standard after: $25 / $69 /
+   $159. Buy during the discount and lock that price for life. Upgrade any time
+   by paying only the difference, never
    re-buying what you already own. Steam-aligned, ownership-first psychology. */
 // EDIT NOTE 2026-06-23 (tier delineation): Pro = generators (3nvizen, Vid Studio Pro, 1magen edit/upscale, stem, Style Patch apply); Creator = orchestrators (AI Director, DAW, StyleForge train) and includes everything in Pro. Canon: amended F14 2026-06-23.
 const TIERS = [
@@ -56,6 +57,7 @@ const TIERS = [
     tagline: 'Own local AI music generation. Forever.',
     price: '$20',
     priceUnit: 'one-time',
+    standard: '$25',
     flagship: false,
     features: [
       'Unlimited generation on your GPU — permanently',
@@ -73,6 +75,7 @@ const TIERS = [
     tagline: 'Full-quality exports and the full generator toolkit. One licence, yours forever.',
     price: '$49',
     priceUnit: 'one-time',
+    standard: '$69',
     flagship: false,
     features: [
       'Everything in Gener8 4ever (included)',
@@ -91,9 +94,10 @@ const TIERS = [
     tagline: 'Full AI creative workstation. Music, video, story.',
     price: '$100',
     priceUnit: 'one-time',
+    standard: '$159',
     flagship: true,
     badge: 'FOUNDING · LOCKED',
-    foundingNote: 'First 100 seats lock in $100 for life. One licence, yours forever.',
+    foundingNote: 'First 100 days: the $100 launch price locks for life. $159 standard after. One licence, yours forever.',
     features: [
       'Everything in Gener8 Pro (included)',
       <>S<sup>3</sup> AI Director — orchestrated video production</>,
@@ -123,6 +127,7 @@ function PricingGrid() {
           <div className={styles.tierPrice}>
             {t.price}<span className={styles.priceUnit}>{t.priceUnit}</span>
           </div>
+          <div className={styles.tierSub}>First 100 days launch price · {t.standard} after</div>
           <div className={styles.tierSub}>
             {i === 0 ? 'Buy once. Own forever.' : 'Buy once. Own forever. Includes all lower tiers.'}
           </div>
@@ -200,6 +205,7 @@ function PricingCarousel() {
             <div className={styles.tierPrice}>
               {t.price}<span className={styles.priceUnit}>{t.priceUnit}</span>
             </div>
+            <div className={styles.tierSub}>First 100 days launch price · {t.standard} after</div>
             <div className={styles.tierSub}>
               {i === 0 ? 'Buy once. Own forever.' : 'Buy once. Own forever. Includes all lower tiers.'}
             </div>
@@ -594,7 +600,7 @@ export default function S3ComingSoon() {
         <GpuMatrix />
 
         <p className={styles.promoLine}>
-          Beta Phase 1 complete. We're acting on your feedback. Join the waitlist for the next beta phase. First 100 Creator Studio seats lock in $100 for life, one licence, yours forever.
+          Beta Phase 1 complete. We're acting on your feedback. Join the waitlist for the next beta phase. For the first 100 days from launch, Creator Studio locks in at $100 for life ($159 standard after), one licence, yours forever.
         </p>
 
         <p className={styles.cursor}>
