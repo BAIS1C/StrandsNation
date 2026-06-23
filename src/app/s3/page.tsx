@@ -48,6 +48,7 @@ function Accordion({ title, children, defaultOpen = false }: {
    Studio $100 (first 100 seats). Beta discount = lifetime licence; lock the
    price for life. Upgrade any time by paying only the difference, never
    re-buying what you already own. Steam-aligned, ownership-first psychology. */
+// EDIT NOTE 2026-06-23 (tier delineation): Pro = generators (3nvizen, Vid Studio Pro, 1magen edit/upscale, stem, Style Patch apply); Creator = orchestrators (AI Director, DAW, StyleForge train) and includes everything in Pro. Canon: amended F14 2026-06-23.
 const TIERS = [
   {
     id: 'GENER8 4EVER',
@@ -78,8 +79,10 @@ const TIERS = [
       'Watermark removal on all exports',
       'Full-quality cover & reference (XL Base)',
       'Vid Studio Pro — HD 1080p, social presets, one-click share',
-      '1magen access + premium style packs',
-      '4K upscale · per-platform aspect ratios',
+      '3nvizen — cinematic AI video generation',
+      'Stem Separation — 12-stem extract from any track',
+      '1magen premium edit + 4K upscale · per-platform aspect ratios',
+      'Style Patch apply across audio, image, and video',
       'Future cloud boost credits',
     ],
   },
@@ -95,10 +98,8 @@ const TIERS = [
     features: [
       'Everything in Gener8 Pro (included)',
       <>S<sup>3</sup> AI Director — orchestrated video production</>,
-      '3nvizen — cinematic visual workflows',
-      'Full DAW + Stem Separation (12-stem)',
-      'StyleForge: train your own LoRA patches',
-      'Style Patch marketplace access',
+      'Full DAW — multitrack arrange, mix, and compose',
+      'StyleForge: train your own LoRA / Style Patches',
       'Advanced orchestration + cloud escalation',
     ],
   },
