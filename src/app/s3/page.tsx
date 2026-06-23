@@ -70,7 +70,7 @@ const TIERS = [
   {
     id: 'GENER8 PRO',
     name: <>S<sup>3</sup> GENER8 PRO</>,
-    tagline: 'Full-quality exports + premium features. Evolves with updates.',
+    tagline: 'Full-quality exports and the full generator toolkit. One licence, yours forever.',
     price: '$49',
     priceUnit: 'one-time',
     flagship: false,
@@ -79,10 +79,9 @@ const TIERS = [
       'Watermark removal on all exports',
       'Full-quality cover & reference (XL Base)',
       'Vid Studio Pro — HD 1080p, social presets, one-click share',
-      '3nvizen — cinematic AI video generation',
       'Stem Separation — 12-stem extract from any track',
-      '1magen premium edit + 4K upscale · per-platform aspect ratios',
-      'Style Patch apply across audio, image, and video',
+      'Style Patch apply — audio',
+      'Unlocks every Everywear Pro generator too (3nvizen, 1magen edit) — see Everywear',
       'Future cloud boost credits',
     ],
   },
@@ -125,7 +124,7 @@ function PricingGrid() {
             {t.price}<span className={styles.priceUnit}>{t.priceUnit}</span>
           </div>
           <div className={styles.tierSub}>
-            {t.priceUnit === 'one-time' ? 'Buy once. Own forever.' : 'Lifetime licence. Includes all lower tiers.'}
+            {i === 0 ? 'Buy once. Own forever.' : 'Buy once. Own forever. Includes all lower tiers.'}
           </div>
           <ul className={styles.tierFeatures}>
             {t.features.map((f, j) => (
@@ -202,7 +201,7 @@ function PricingCarousel() {
               {t.price}<span className={styles.priceUnit}>{t.priceUnit}</span>
             </div>
             <div className={styles.tierSub}>
-              {t.priceUnit === 'one-time' ? 'Buy once. Own forever.' : 'Lifetime licence. Includes all lower tiers.'}
+              {i === 0 ? 'Buy once. Own forever.' : 'Buy once. Own forever. Includes all lower tiers.'}
             </div>
             <ul className={styles.tierFeatures}>
               {t.features.map((f, j) => (

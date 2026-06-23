@@ -124,6 +124,39 @@ export default function EveryWearPage() {
         </div>
       </SectionWrapper>
 
+      {/* ─── Free capabilities ─── */}
+      <SectionWrapper bordered>
+        <SectionLabel
+          num="02b // FREE"
+          title="Everything You Get Free"
+          subtitle="The whole platform is free, forever. No subscription, no account lock-in. Paid creative tiers extend the same rails."
+        />
+        <Card variant="purple">
+          <div className={styles.cardTitleMd} data-variant="purple">Free with EveryWear</div>
+          <p className={styles.body}>
+            The whole platform is free, forever. No subscription, no account lock-in. The paid creative
+            tiers (Gener8 4ever, Gener8 Pro generators, Creator Studio orchestrators) are one-off lifetime
+            licences that extend the same rails, never a subscription.
+          </p>
+          <ul style={{ listStyle: 'none', margin: '0.5rem 0 1rem', padding: 0, display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '0.55rem 1.5rem', lineHeight: 1.5 }}>
+            <li><strong>EveryWear OS</strong>, the local-AI desktop shell</li>
+            <li><strong>My Mait</strong>, your untiered AI companion and tool chassis</li>
+            <li><strong>Educ8</strong>, offline tutor, courseware, and document RAG</li>
+            <li><strong>EveryWear Vault</strong>, account-scoped sovereign memory</li>
+            <li><strong>MyMory</strong>, portable recall across the stack</li>
+            <li><strong>Avatar Studio</strong>, free 2D Mait and avatar creation</li>
+            <li><strong>1magen</strong>, local text-to-image generation</li>
+            <li><strong>Vid Studio (light)</strong>, 540p beat-synced music videos</li>
+            <li><strong>Layer U</strong>, OSINT intel, part of the free base</li>
+          </ul>
+          <div className={styles.tags}>
+            <Tag variant="purple">Free Forever</Tag>
+            <Tag>No Subscription</Tag>
+            <Tag variant="cyan">No Lock-In</Tag>
+          </div>
+        </Card>
+      </SectionWrapper>
+
       {/* ─── Roadmap (phases) ─── */}
       <SectionWrapper bordered>
         <SectionLabel
