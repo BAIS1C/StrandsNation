@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Suspense, type ReactNode } from 'react';
 import Nav from '@/components/Nav/Nav';
 import CursorGlow from '@/components/CursorGlow/CursorGlow';
@@ -21,6 +21,12 @@ export const metadata: Metadata = {
     ],
     apple: '/apple-touch-icon.png',
   },
+};
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  themeColor: '#0A0B0D',
 };
 
 /* EWDS boot script — runs before first paint to swap body dataset attrs

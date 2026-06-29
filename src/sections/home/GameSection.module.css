@@ -216,6 +216,19 @@
   .conceptTrack {
     padding: 4px 8px;
   }
+  /* Arrows are hidden on touch; fade the right edge so the row reads as
+     horizontally scrollable instead of looking cut off. */
+  .conceptSlider::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 56px;
+    background: linear-gradient(to right, transparent, var(--c-bg));
+    pointer-events: none;
+    z-index: 1;
+  }
 }
 
 @media (max-width: 480px) {
