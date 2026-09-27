@@ -51,6 +51,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             __html: JSON.stringify([organizationJsonLd(), websiteJsonLd(), videoGameJsonLd()]),
           }}
         />
+        <script
+          type="module"
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon='{"token":"9577274792174199ae69cc7dd586be4f"}'
+        />
       </head>
       <body className="ew" data-skin="classic" data-mode="dark">
         <SiteChrome>
