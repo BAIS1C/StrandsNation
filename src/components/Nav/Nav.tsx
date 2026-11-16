@@ -15,6 +15,7 @@ const navLinks = [
   { href: '/game', label: 'PLAY', external: false },
   { href: '/codex', label: 'CODEX', external: false },
   { href: '/network', label: 'NETWORK', external: false },
+  { href: 'https://community.strandsnation.xyz', label: 'COMMUNITY', external: true },
 ] as const;
 
 export default function Nav() {

@@ -128,7 +128,7 @@
 }
 
 /* ─── Mobile Responsive ─── */
-@media (max-width: 768px) {
+@media (max-width: 1023px) {
   .nav {
     grid-template-columns: auto 1fr auto;
   }
@@ -144,7 +144,8 @@
     top: var(--space-nav-h);
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: auto;
+    height: calc(100dvh - var(--space-nav-h));
     background: rgba(10, 11, 13, 0.98);
     backdrop-filter: blur(20px);
     flex-direction: column;

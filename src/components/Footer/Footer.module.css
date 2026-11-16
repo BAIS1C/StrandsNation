@@ -18,6 +18,23 @@
   line-height: 1.6;
 }
 
+.communityLink {
+  font: 600 11px var(--font-mono);
+  letter-spacing: 0.18em;
+  color: var(--c-accent);
+  text-decoration: none;
+}
+
+.communityLink:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.communityLink:focus-visible {
+  outline: 2px solid var(--c-accent);
+  outline-offset: 5px;
+}
+
 .text {
   font: 400 10px var(--font-mono);
   letter-spacing: 3px;

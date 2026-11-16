@@ -3,6 +3,14 @@ import styles from './Footer.module.css';
 export default function Footer() {
   return (
     <footer className={styles.footer}>
+      <a
+        href="https://community.strandsnation.xyz"
+        className={styles.communityLink}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        COMMUNITY FORUM
+      </a>
       <span className={styles.creed}>
         WE ARE THE ANTI-CORP PLAYING AGAINST THE GAME FROM INSIDE THE CORPO GAME
       </span>
