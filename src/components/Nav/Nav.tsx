@@ -86,7 +86,8 @@ export default function Nav() {
       </div>
     </nav>
     <a href="https://community.strandsnation.xyz/" className={styles.communityBanner}>
-      Community forum
+      <span className={styles.communityNew}>NEW</span>
+      <span>Community forum</span>
     </a>
     </>
   );

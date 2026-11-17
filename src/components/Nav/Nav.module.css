@@ -19,13 +19,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 44px;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  min-height: 56px;
   margin-top: var(--space-nav-h);
-  padding: 8px var(--space-page-x);
-  color: var(--c-accent);
-  background: var(--c-bg);
+  padding: 12px var(--space-page-x);
+  color: #090b10;
+  background: #ffe600;
+  animation: communityColours 32s linear infinite;
   border-bottom: 1px solid var(--c-border);
-  font: 600 12px var(--font-mono);
+  font: 800 clamp(16px, 1.4vw, 20px)/1.4 var(--font-mono);
   letter-spacing: 1px;
   text-transform: uppercase;
   text-align: center;
@@ -36,8 +39,27 @@
 }
 
 .communityBanner:focus-visible {
-  outline: 2px solid var(--c-accent);
+  outline: 3px solid #090b10;
   outline-offset: -3px;
+}
+
+.communityNew {
+  padding: 3px 8px;
+  color: #fff;
+  background: #090b10;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+@keyframes communityColours {
+  0%, 20%, 100% { background-color: #ffe600; }
+  25%, 45% { background-color: #ff4040; }
+  50%, 70% { background-color: #39ff14; }
+  75%, 95% { background-color: #ba55ff; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .communityBanner { animation: none; }
 }
 
 /* ─── Logo ─── */
