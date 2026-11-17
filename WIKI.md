@@ -40,3 +40,7 @@ Drift: the main checkout has uncommitted August relocation edits and its HEAD pr
 ### Verified outcome, 2026-11-16 SGT
 
 BUILT locally by Codex desktop, GPT-6 (gpt-6). Nav and Footer both target the forum. Production build passed. Playwright rendered checks at 1440x900, 1024x768, 820x900 and 390x844 found no horizontal overflow; the 390px menu opens with all nine destinations inside the viewport. The mobile menu has explicit viewport-based height and is used below 1024px. Footer and menu destination attributes match. Console: zero errors, one existing Windows WebGPU warning. No production publication while the forum is unavailable. Receipt: `docs/receipts/COMMUNITY_LINK_20261116.md`.
+
+## Community banner, 2026-11-17 SGT
+
+Codex desktop, GPT-6 (gpt-6). Sean additionally requests a visible banner plus the Community menu item. Under Navigation contract above, Nav renders a native full-width Community forum anchor after the fixed navigation, with existing typography/colour tokens and keyboard focus. Its normal-flow top margin reserves the fixed56px navigation;44px minimum banner height provides a touch target. Existing embed=true path hides both nav andbanner. Mobile menu continues to overlay page content, including the banner. No auth, forms, hosting or user data changes. Read full Nav.tsx/Nav.module.css and RootLayout/MainWrapper callchain beforeedit; no separate component/state pipeline added. Verify desktop/mobile and embedded-route hiding.

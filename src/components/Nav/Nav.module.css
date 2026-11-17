@@ -15,6 +15,31 @@
   align-items: center;
 }
 
+.communityBanner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  margin-top: var(--space-nav-h);
+  padding: 8px var(--space-page-x);
+  color: var(--c-accent);
+  background: var(--c-bg);
+  border-bottom: 1px solid var(--c-border);
+  font: 600 12px var(--font-mono);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.communityBanner:hover {
+  text-decoration: underline;
+}
+
+.communityBanner:focus-visible {
+  outline: 2px solid var(--c-accent);
+  outline-offset: -3px;
+}
+
 /* ─── Logo ─── */
 .logo {
   display: flex;

@@ -27,6 +27,7 @@ export default function Nav() {
   if (searchParams?.get('embed') === 'true') return null;
 
   return (
+    <>
     <nav className={styles.nav}>
       {/* Column 1: Logo */}
       <Link href="/" className={styles.logo}>
@@ -84,5 +85,9 @@ export default function Nav() {
         </div>
       </div>
     </nav>
+    <a href="https://community.strandsnation.xyz/" className={styles.communityBanner}>
+      Community forum
+    </a>
+    </>
   );
 }
