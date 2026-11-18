@@ -15,6 +15,7 @@ const navLinks = [
   { href: '/game', label: 'PLAY', external: false },
   { href: '/codex', label: 'CODEX', external: false },
   { href: '/network', label: 'NETWORK', external: false },
+  { href: 'https://community.strandsnation.xyz', label: 'COMMUNITY', external: true },
 ] as const;
 
 export default function Nav() {
@@ -26,6 +27,7 @@ export default function Nav() {
   if (searchParams?.get('embed') === 'true') return null;
 
   return (
+    <>
     <nav className={styles.nav}>
       {/* Column 1: Logo */}
       <Link href="/" className={styles.logo}>
@@ -83,5 +85,10 @@ export default function Nav() {
         </div>
       </div>
     </nav>
+    <a href="https://community.strandsnation.xyz/" className={styles.communityBanner}>
+      <span className={styles.communityNew}>NEW</span>
+      <span>Community forum</span>
+    </a>
+    </>
   );
 }

@@ -15,6 +15,53 @@
   align-items: center;
 }
 
+.communityBanner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  min-height: 56px;
+  margin-top: var(--space-nav-h);
+  padding: 12px var(--space-page-x);
+  color: #090b10;
+  background: #ffe600;
+  animation: communityColours 32s linear infinite;
+  border-bottom: 1px solid var(--c-border);
+  font: 800 clamp(16px, 1.4vw, 20px)/1.4 var(--font-mono);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.communityBanner:hover {
+  text-decoration: underline;
+}
+
+.communityBanner:focus-visible {
+  outline: 3px solid #090b10;
+  outline-offset: -3px;
+}
+
+.communityNew {
+  padding: 3px 8px;
+  color: #fff;
+  background: #090b10;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+@keyframes communityColours {
+  0%, 20%, 100% { background-color: #ffe600; }
+  25%, 45% { background-color: #ff4040; }
+  50%, 70% { background-color: #39ff14; }
+  75%, 95% { background-color: #ba55ff; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .communityBanner { animation: none; }
+}
+
 /* ─── Logo ─── */
 .logo {
   display: flex;
@@ -128,7 +175,7 @@
 }
 
 /* ─── Mobile Responsive ─── */
-@media (max-width: 768px) {
+@media (max-width: 1023px) {
   .nav {
     grid-template-columns: auto 1fr auto;
   }
@@ -144,7 +191,8 @@
     top: var(--space-nav-h);
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: auto;
+    height: calc(100dvh - var(--space-nav-h));
     background: rgba(10, 11, 13, 0.98);
     backdrop-filter: blur(20px);
     flex-direction: column;
